@@ -1,0 +1,1153 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/prabasco/PRG/ut/ut10/1002_UsoFlujos.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Uso de flujos - Programación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra_index.css">
+    
+      <link rel="stylesheet" href="../../css/extra_pd.css">
+    
+      <link rel="stylesheet" href="../../css/extra_tablasresumen.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#uso-de-flujos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../index.html" title="Programación" class="md-header__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Uso de flujos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo noche" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo día" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Programación" class="md-nav__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    Programación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 01. Elementos de un programa informático
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 01. Elementos de un programa informático
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/011_ProgramaLenguajes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1. Programa y lenguajes de programación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/012_LenguajeJava.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2. El lenguaje de programación Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/013_Estructura.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3. Estructura y bloques fundamentales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/014_IDE.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4. IDE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/021_TiposDatos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1. Tipos de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/022_Fechas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2. Fechas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/023_ConstantesLiterales.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.3. Constanstes literales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/024_Variables.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.4. Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/025_OperadoresExpresiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.5. Operadores y expresiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/026_Precedencia.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.6. Precedencia de operadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/027_Casting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.7. Casting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/028_Comentarios.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.8. Comentarios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/029_IOConsola.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.9. Entrada y salida de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="uso-de-flujos">Uso de flujos<a class="headerlink" href="#uso-de-flujos" title="Permanent link">¶</a></h1>
+<p>Los Streams son una interesante incorporación a Java, ya que me aportan varias ventajas:</p>
+<ol>
+<li>Hacen que el código para procesar los datos sea uniforme, conciso y legible. Tiene una forma similar a SQL.</li>
+<li>Cuando se trabaja con grandes colecciones, los flujos paralelos proporcionan una ventaja de rendimiento.</li>
+</ol>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut10/10_2.png" data-desc-position="bottom"><img alt="Streams" src="../../img/ut10/10_2.png" width="600"></a>
+</figure>
+<p>De forma genérica existen 3 partes que componen un Stream:</p>
+<ol>
+<li>Un Stream funciona a partir de una lista o colección, que también se la conoce como la fuente de donde obtienen información.</li>
+<li>Operaciones intermedias como por ejemplo el método filter, que permite hacer una selección a partir de un predicado.</li>
+<li>Operaciones terminales, como por ejemplo los métodos <code>max</code>, <code>min</code>, <code>forEach</code>, <code>findFirst</code> etc.</li>
+</ol>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut10/10_3.png" data-desc-position="bottom"><img alt="Streams" src="../../img/ut10/10_3.png" width="600"></a>
+</figure>
+<p>Se pueden clasificar las funciones relacionados con Streams en dos grandes bloques: <strong>intermedias</strong> y <strong>finales</strong>.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut10/10_4.png" data-desc-position="bottom"><img alt="Streams" src="../../img/ut10/10_4.png" width="600"></a>
+</figure>
+<div class="admonition info">
+<p class="admonition-title">Son perezosas</p>
+<p>Las operaciones intermedias son perezosas (<em>lazy</em>). Esto significa que se invocarán solo si es necesario para la ejecución de la operación del terminal.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="err">“</span><span class="n">abc1</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="err">“</span><span class="n">abc2</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="err">“</span><span class="n">abc3</span><span class="err">”</span><span class="p">);</span>
+</span><span id="__span-0-2"><span class="linenos" data-linenos="2 "></span><span class="n">Stream</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lista</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">filter</span><span class="p">(</span><span class="n">valor</span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Procesando elemento: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valor</span><span class="p">);</span>
+</span><span id="__span-0-4"><span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">valor</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">"2"</span><span class="p">);</span>
+</span><span id="__span-0-5"><span class="linenos" data-linenos="5 "></span><span class="p">});</span>
+</span></code></pre></div>
+<p>Como tenemos una fuente de tres elementos, podemos suponer que el método <code>filter()</code> se llamará tres veces y se imprimirá por pantalla “Procesando elemento: ” 3 veces. Sin embargo, ejecutar este código no imprime nada por pantalla, por lo que el método <code>filter()</code> ni siquiera se llamó una vez. La razón por la que falta la operación de la terminal. Si en vez de eso llamamos al final a una operación terminal:
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos="1 "></span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="err">“</span><span class="n">abc1</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="err">“</span><span class="n">abc2</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="err">“</span><span class="n">abc3</span><span class="err">”</span><span class="p">);</span>
+</span><span id="__span-1-2"><span class="linenos" data-linenos="2 "></span><span class="kt">long</span><span class="w"> </span><span class="n">contador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lista</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">filter</span><span class="p">(</span><span class="n">valor</span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Procesando elemento: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valor</span><span class="p">);</span>
+</span><span id="__span-1-4"><span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">valor</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">"2"</span><span class="p">);</span>
+</span><span id="__span-1-5"><span class="linenos" data-linenos="5 "></span><span class="p">}).</span><span class="na">count</span><span class="p">();</span>
+</span></code></pre></div>
+El resultado muestra que llamamos al método <code>filter()</code> 3 veces y al método <code>count()</code> una vez. Esto se debe a que la canalización se ejecuta verticalmente.<p></p>
+</div>
+<h2 id="operaciones-intermedias">Operaciones intermedias<a class="headerlink" href="#operaciones-intermedias" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Operación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>distinct()</td>
+<td>Elimina los valores duplicados del Stream.</td>
+</tr>
+<tr>
+<td>filter(Predicate)</td>
+<td>Los elementos que coinciden con el filtro de Predicate se mantienen en el stream de salida para las operaciones.</td>
+</tr>
+<tr>
+<td>takeWhile(Predicate)</td>
+<td>Similar a filter. Con la diferencia de que la primera vez que se evalúa a falsa la condición, deja de comprobar el resto de elementos.</td>
+</tr>
+<tr>
+<td>dropWhile(Predicate)</td>
+<td>Eliminará o filtrará cualquier elemento mientras coincida con la condición del Predicate. Cuando la condición se evalúa como falso la primera vez, la condición ya no se comprueba.</td>
+</tr>
+<tr>
+<td>limit(long maxSize)</td>
+<td>Reduce el stream al tamaño especificados en el parámetro.</td>
+</tr>
+<tr>
+<td>skip(long n)</td>
+<td>Este método omite elementos, es decir, no formarán parte del stream resultante</td>
+</tr>
+</tbody>
+</table>
+<p>Además de estas operaciones básicas, hay otras que son de gran interés:</p>
+<h3 id="peek">Peek()<a class="headerlink" href="#peek" title="Permanent link">¶</a></h3>
+<p>Este método existe principalmente para la depuración del programa, donde se desea ver los elementos a medida que pasan por un punto determinado en el pipeline.</p>
+<p><code>peek()</code> también se utiliza cuando queremos alterar el estado interno de un elemento (aunque esto no es muy común).
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos="1 "></span><span class="n">Stream</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">"one"</span><span class="p">,</span><span class="w"> </span><span class="s">"two"</span><span class="p">,</span><span class="w"> </span><span class="s">"three"</span><span class="p">,</span><span class="w"> </span><span class="s">"four"</span><span class="p">)</span>
+</span><span id="__span-2-2"><span class="linenos" data-linenos="2 "></span><span class="w">  </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-2-3"><span class="linenos" data-linenos="3 "></span><span class="w">  </span><span class="p">.</span><span class="na">peek</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Filtered value: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">))</span>
+</span><span id="__span-2-4"><span class="linenos" data-linenos="4 "></span><span class="w">  </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">String</span><span class="p">::</span><span class="n">toUpperCase</span><span class="p">)</span>
+</span><span id="__span-2-5"><span class="linenos" data-linenos="5 "></span><span class="w">  </span><span class="p">.</span><span class="na">peek</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Mapped value: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">))</span>
+</span><span id="__span-2-6"><span class="linenos" data-linenos="6 "></span><span class="w">  </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+</span></code></pre></div><p></p>
+<h3 id="sorted">Sorted()<a class="headerlink" href="#sorted" title="Permanent link">¶</a></h3>
+<p>Se utiliza para ordenar los elementos del stream. Recibe como parámetro una expresión lambda de tipo Comparator para que podamos indicar la lógica de la ordenación.</p>
+<h3 id="map">Map()<a class="headerlink" href="#map" title="Permanent link">¶</a></h3>
+<p>El método map recibe como parámetro una expresión lambda de tipo Function, por lo que debemos especificar una función que recibe como parámetro de entrada cada elemento del stream, y devuelve un objeto que puede ser un tipo de dato distinto o el mismo.</p>
+<p>La función se aplica a cada uno de los elementos del stream para realizar alguna transformación sobre cada elemento y devuelve otro Stream sobre el cual puedes seguir trabajando. Se utiliza para modificar el contenido del stream. </p>
+<p><code>map()</code> devuelve un stream nuevo que consta de los resultados de aplicar la función dada a los elementos del stream.
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><span class="linenos" data-linenos="1 "></span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">);</span>
+</span><span id="__span-3-2"><span class="linenos" data-linenos="2 "></span><span class="c1">//Mostramos el nuevo stream devuelto por map</span>
+</span><span id="__span-3-3"><span class="linenos" data-linenos="3 "></span><span class="n">list</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">map</span><span class="p">(</span><span class="n">number</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">).</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+</span><span id="__span-3-4"><span class="linenos" data-linenos="4 "></span><span class="c1">//[9 18 27 36 45]</span>
+</span></code></pre></div><p></p>
+<h3 id="flatmap">FlatMap<a class="headerlink" href="#flatmap" title="Permanent link">¶</a></h3>
+<p>Cuando nos encontramos con estructuras más complejas, como por ejemplo una lista con otra lista, trabajar con <code>map()</code> no es suficiente, por ello, utilizamos <code>flatMap()</code> que lo que hace es "aplanar" listas anidadas y quedarnos con un stream plano.</p>
+<p>Es una función que recibe una entrada y devuelve varias salidas para esa entrada. Esa es la diferencia con respecto a <code>map()</code> que recibe solo un parámetro de entrada y devuelve una salida.</p>
+<p><code>flatMap()</code> es una operación intermedia y devuelve un nuevo Stream. Devuelve un Stream que consiste en los resultados de reemplazar cada elemento del stream dado con el contenido de un stream mapeado producido al aplicar la función de mapeo provista a cada elemento. La función de mapeo utilizada para la transformación en <code>flatMap()</code> es una función sin estado y solo devuelve una secuencia de nuevos valores.</p>
+<p>En el siguiente ejemplo el programa usa la operación <code>flatMap()</code> para convertir una lista de una lista <code>List&lt;List&lt;Integer&gt;&gt;</code> a una lista <code>List&lt;Integer&gt;</code>.
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><span class="linenos" data-linenos="1 "></span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+</span><span id="__span-4-2"><span class="linenos" data-linenos="2 "></span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">);</span>
+</span><span id="__span-4-3"><span class="linenos" data-linenos="3 "></span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">);</span>
+</span><span id="__span-4-4"><span class="linenos" data-linenos="4 "></span><span class="n">List</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">listOfLists</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">list1</span><span class="p">,</span><span class="w"> </span><span class="n">list2</span><span class="p">,</span><span class="w"> </span><span class="n">list3</span><span class="p">);</span>
+</span><span id="__span-4-5"><span class="linenos" data-linenos="5 "></span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">listOfAllIntegers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOfLists</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+</span><span id="__span-4-6"><span class="linenos" data-linenos="6 "></span><span class="w">          </span><span class="p">.</span><span class="na">flatMap</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="na">stream</span><span class="p">())</span>
+</span><span id="__span-4-7"><span class="linenos" data-linenos="7 "></span><span class="w">          </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+</span><span id="__span-4-8"><span class="linenos" data-linenos="8 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">listOfAllIntegers</span><span class="p">);</span>
+</span><span id="__span-4-9"><span class="linenos" data-linenos="9 "></span><span class="c1">//[1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+</span></code></pre></div><p></p>
+<h2 id="operaciones-terminales">Operaciones terminales<a class="headerlink" href="#operaciones-terminales" title="Permanent link">¶</a></h2>
+<p>Las operaciones terminales significan el final del ciclo de vida del steam. Lo más importante para nuestro escenario es que inician el trabajo en la tubería. </p>
+<h3 id="foreach">forEach()<a class="headerlink" href="#foreach" title="Permanent link">¶</a></h3>
+<p>Recorremos cada elemento del stream para realizar alguna acción con él. 
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><span class="linenos" data-linenos="1 "></span><span class="n">list</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">map</span><span class="p">(</span><span class="n">number</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">).</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+</span></code></pre></div><p></p>
+<h3 id="collect">collect()<a class="headerlink" href="#collect" title="Permanent link">¶</a></h3>
+<p>Es una operación terminal, se utiliza para indicar el tipo de colección en la que se devolverá el resultado final de todas las operaciones realizadas en el stream.
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-6-1"><span class="linenos" data-linenos="1 "></span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="s">"Texto1"</span><span class="p">,</span><span class="w"> </span><span class="s">"Texto2"</span><span class="p">);</span>
+</span><span id="__span-6-2"><span class="linenos" data-linenos="2 "></span><span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lista</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toSet</span><span class="p">());</span>
+</span></code></pre></div><p></p>
+<div class="admonition info">
+<p class="admonition-title">Clase Optional</p>
+<p><code>Optional</code> es una clase genérica, cuyo propósito es ser un contenedor para un valor que puede o no ser nulo. Fue creado por los ingenieros de Java, para abordar el problema o excepción tan conocida la <code>NullPointerException</code>.</p>
+<p>La documentación oficial de Java dice que este tipo está pensado principalmente para un uso como tipo de retorno de método, bajo condiciones específicas.</p>
+<p><code>Optional</code> trata de resolver el problema cuando hay ausencia de resultados o datos y no queremos que esto sea un error. Por ejemplo, no todas las personas tienen 2o apellido. Esto sería válido para un <code>optional</code>, pero por ejemplo todo el mundo tenemos fecha de nacimiento, esto sí que es un error.</p>
+</div>
+<h3 id="findfirst">findFirst()<a class="headerlink" href="#findfirst" title="Permanent link">¶</a></h3>
+<p>Se utiliza para devolver el primer elemento encontrado del stream. Se suele utilizar en combinación con otras funciones cuando hay que seleccionar un único valor del stream que cumpla determinadas condiciones.</p>
+<p><code>findFirst</code> devuelve un objeto de tipo Optional para poder indicar un valor por defecto en caso de que no se pueda devolver ningún elemento del stream.</p>
+<h3 id="toarray">toArray()<a class="headerlink" href="#toarray" title="Permanent link">¶</a></h3>
+<p>Con este método se puede convertir cualquier tipo de Collection en un array de forma sencilla.</p>
+<h3 id="min">min()<a class="headerlink" href="#min" title="Permanent link">¶</a></h3>
+<p>Con <code>min</code> se obtiene el elemento del stream con el valor mínimo calculado a partir de una expresión lambda de tipo Comparator que indicamos como parámetro.</p>
+<p><code>min</code> devuelve un objeto de tipo <code>Optional</code> para poder indicar un valor por defecto en caso de que no se pueda devolver ningún elemento del stream.</p>
+<h3 id="max">max()<a class="headerlink" href="#max" title="Permanent link">¶</a></h3>
+<p>Con <code>max</code> se obtiene el elemento del stream con el valor máximo calculado a partir de una expresión lambda de tipo Comparator que indicamos como parámetro de la expresión.</p>
+<p><code>max</code> devuelve un objeto de tipo <code>Optional</code> para poder indicar un valor por defecto en caso de que no se pueda devolver ningún elemento del stream.</p>
+<h3 id="match">Match()<a class="headerlink" href="#match" title="Permanent link">¶</a></h3>
+<p>La API Stream ofrece un práctico conjunto de instrumentos para validar elementos de una secuencia de acuerdo con algún predicado. Para hacer esto, se puede usar uno de los siguientes métodos: <code>anyMatch()</code>, <code>allMatch()</code>, <code>noneMatch()</code>. </p>
+<p>Sus nombres se explican por sí mismos. Esas son operaciones de terminal que devuelven un valor booleano:
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-7-1"><span class="linenos" data-linenos="1 "></span><span class="kt">boolean</span><span class="w"> </span><span class="n">alMenosUnoContieneHMinuscula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">anyMatch</span><span class="p">(</span><span class="n">element</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">element</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">"h"</span><span class="p">));</span><span class="w"> </span><span class="c1">// verdadero</span>
+</span><span id="__span-7-2"><span class="linenos" data-linenos="2 "></span><span class="kt">boolean</span><span class="w"> </span><span class="n">todosContienenHMinuscula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">allMatch</span><span class="p">(</span><span class="n">element</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">element</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">"h"</span><span class="p">));</span><span class="w"> </span><span class="c1">// falso</span>
+</span><span id="__span-7-3"><span class="linenos" data-linenos="3 "></span><span class="kt">boolean</span><span class="w"> </span><span class="n">ningunoContieneHMinuscula</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">noneMatch</span><span class="p">(</span><span class="n">element</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">element</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">"h"</span><span class="p">));</span><span class="w"> </span><span class="c1">// falso</span>
+</span></code></pre></div><p></p>
+<h3 id="reduce">Reduce()<a class="headerlink" href="#reduce" title="Permanent link">¶</a></h3>
+<p>La API Stream permite reducir una secuencia de elementos a algún valor de acuerdo con una función específica con la ayuda del método <code>reduce()</code> del tipo Stream. Este método toma dos parámetros: primero, valor de inicio, segundo, una función de acumulador.</p>
+<p>Imagina que tienes un List y quieres tener una suma de todos estos elementos y algún Integer inicial (en este ejemplo 23). Entonces, puede ejecutar el siguiente código y el resultado será 26 (23 + 1 + 1 + 1).
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-8-1"><span class="linenos" data-linenos="1 "></span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">integers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-8-2"><span class="linenos" data-linenos="2 "></span><span class="n">Integer</span><span class="w"> </span><span class="n">reducido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">integers</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">reduce</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+</span></code></pre></div><p></p>
+<h3 id="collect_1">Collect()<a class="headerlink" href="#collect_1" title="Permanent link">¶</a></h3>
+<p>La reducción también puede proporcionarse mediante el método <code>collect()</code> de tipo Stream. Esta operación es muy útil en el caso de convertir un stream en una colección o un mapa y representar un stream en forma de una sola cadena. Hay una clase de utilidad Collectors que proporciona una solución para casi todas las operaciones de recolección típicas. Para algunas tareas no triviales, se puede crear un recopilador personalizado.
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-9-1"><span class="linenos" data-linenos="1 "></span><span class="n">Lista</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">resultados</span><span class="o">&lt;</span><span class="n">br</span><span class="o">&gt;=</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">map</span><span class="p">(</span><span class="n">element</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">element</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">()).</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+</span></code></pre></div>
+Este código usa la operación de terminal <code>collect()</code> para reducir un Stream a List.<p></p>
+<h2 id="ventajas-e-inconvenientes">Ventajas e inconvenientes<a class="headerlink" href="#ventajas-e-inconvenientes" title="Permanent link">¶</a></h2>
+<p>Ventajas de Streams</p>
+<ul>
+<li>Código conciso y más limpio.</li>
+<li>Programación funcional: se programa escribiendo el "qué" en lugar del "cómo" para que sea comprensible de un vistazo.</li>
+<li>Puede leer y comprender fácilmente el código que tiene una serie de operaciones complejas.</li>
+<li>Ejecutar tan rápido como bucles for (o más rápido con operaciones paralelas)</li>
+<li>Ideal para listas grandes.</li>
+</ul>
+<p>Desventajas</p>
+<ul>
+<li>Excesivo para pequeñas colecciones.</li>
+<li>Difícil de aprender si está acostumbrado a la codificación de estilo imperativo tradicional</li>
+</ul>
+<h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 1001</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). Crea una lista de números enteros, utiliza programación funcional para filtrar y obtener solo los números pares.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 1002</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). Crea una lista de números enteros, utiliza programación funcional para obtener la suma de los cuadrados de todos los elementos.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 1003</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). Crea una lista de cadenas, utiliza programación funcional para convertir todas las cadenas a mayúsculas.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 1004</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). Crea una lista de números, utiliza programación funcional para verificar si al menos uno de los números es mayor que 10.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 1005</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). Crea una lista de cadenas, utiliza programación funcional para contar cuántas cadenas tienen más de 3 caracteres.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 1006</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). A partir de una lista de nombres, conviértelos todos a mayúsculas, ordénalos alfabéticamente y muestra cada paso intermedio utilizando <code>peek</code>.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 1007</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). Disponemos de una lista de productos con nombre y precio, ordénalos de menor a mayor precio utilizando <code>sorted</code> y muéstralos en la consola.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 1008</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). Dada una lista de números enteros, eleva cada número al cuadrado y luego devuelve una lista con los resultados usando <code>map</code>.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 1009</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). A partir de una lista formada por frases, obtener una nueva lista con todas las palabras almacenadas de forma individual utilizando <code>flatMap</code>.</p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 1010</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p). Crea una gestor de libros con el título y el nombre de su autor o autores, descripción y año de publicación. Luego da la posubilidad de obtener una lista con el nombre de todos los autores que hay sin repetir, los libros por autor, añadir nuevos libros y borrar libros. Verifica que el año sea correcto.</p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 1011</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p). Dado un listado de empleados, cada uno con un nombre y un salario, debes escribir un programa en Java que realice las siguientes operaciones utilizando programación funcional (con streams):</p>
+<ol>
+<li>Filtra a los empleados cuyo salario sea superior a 3000.</li>
+<li>Obtén una lista con los nombres de los empleados que cumplen con el criterio de salario anterior.</li>
+<li>Ordena alfabéticamente los nombres de los empleados filtrados.</li>
+<li>Calcula el salario promedio de estos empleados.</li>
+</ol>
+</li>
+</ul>
+<!-- Resultados de Aprendizaje & Criterios de Evaluación -->
+<!-- Instrumentos de Evaluación -->
+<!-- Instrumentos de Calificación -->
+<!-- Tipo de actividades -->
+<!-- Otras abreviaciones -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Pablo Rabasco Rodríguez
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/prabasco" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:&lt;p.rabascorodriguez@edu.gva.es&gt;" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "toc.follow", "content.tooltips", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

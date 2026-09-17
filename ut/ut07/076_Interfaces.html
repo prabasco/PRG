@@ -1,0 +1,1168 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/prabasco/PRG/ut/ut07/076_Interfaces.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Interfaces - Programación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra_index.css">
+    
+      <link rel="stylesheet" href="../../css/extra_pd.css">
+    
+      <link rel="stylesheet" href="../../css/extra_tablasresumen.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#interfaces" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../index.html" title="Programación" class="md-header__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Interfaces
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo noche" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo día" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Programación" class="md-nav__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    Programación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 01. Elementos de un programa informático
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 01. Elementos de un programa informático
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/011_ProgramaLenguajes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1. Programa y lenguajes de programación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/012_LenguajeJava.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2. El lenguaje de programación Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/013_Estructura.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3. Estructura y bloques fundamentales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/014_IDE.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4. IDE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/021_TiposDatos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1. Tipos de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/022_Fechas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2. Fechas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/023_ConstantesLiterales.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.3. Constanstes literales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/024_Variables.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.4. Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/025_OperadoresExpresiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.5. Operadores y expresiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/026_Precedencia.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.6. Precedencia de operadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/027_Casting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.7. Casting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/028_Comentarios.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.8. Comentarios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/029_IOConsola.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.9. Entrada y salida de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">¶</a></h1>
+<p>Una <strong>interfaz</strong> es un archivo <code>.java</code> formado por un conjunto de métodos abstractos. Además, puede contener un conjunto de constantes públicas. Podemos considerar una interfaz como una clase abstracta pura: todos sus métodos son abstractos y, si tiene atributos, son todos constantes. En Java una interfaz se crea de forma similar a como se crea una clase utilizando la palabra clave interface en lugar de <code>class</code>.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span><span class="o">[</span><span class="kd">public</span><span class="o">]</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">NombreInterface</span><span class="p">{</span>
+</span><span id="__span-0-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="n">declaraciones</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">métodos</span><span class="w"> </span><span class="n">abstractos</span><span class="p">;</span>
+</span><span id="__span-0-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="o">[</span><span class="n">atributos</span><span class="w"> </span><span class="n">constantes</span><span class="p">;</span><span class="o">]</span>
+</span><span id="__span-0-4"><span class="linenos" data-linenos="4 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p>Lo que aparece entre corchetes es opcional. La interfaz puede definirse <code>public</code> o sin modificador de acceso, y tiene el mismo significado que para las clases. Si tiene el modificador <code>public</code> el archivo .java que la contiene debe tener el mismo nombre que la interfaz. Igual que las clases, al compilar el archivo .java de la interfaz se genera un archivo .class. Todos los métodos de una interface son públicos y abstractos, aunque no se indique explícitamente. Por lo tanto, no es necesario escribir en cada momento <code>public abstract</code>. Una interfaz puede contener atributos constantes. Las constantes declaradas son públicas y estáticas, aunque no se indique explícitamente. Por lo tanto, se pueden omitir los modificadores public static final cuando se declara el atributo. Las constantes se deben inicializar en la misma instrucción de declaración.</p>
+<div class="admonition note">
+<p class="admonition-title">clase abstracta vs interfaz</p>
+<ul>
+<li>En la interfaz todo método es abstracto y público sin necesidad de declararlo, mientras que una clase abstracta puede tener métodos abstractos y no abstractos.</li>
+<li>Los atributos declarados en una interfaz son <code>public static final</code>. Por el contrario, una clase abstracta puede contener también atributos de otro tipo (de instancia, no constantes, private, etc).</li>
+<li>Las interfaces juegan un papel fundamental en la creación de aplicaciones Java ya que permiten interactuar a objetos no relacionados entre sí. Utilizando interfaces es posible que clases no relacionadas, situadas en distintas jerarquías de clases sin relaciones de herencia, tengan comportamientos comunes.</li>
+</ul>
+</div>
+<p>Las interfaces definen un protocolo de comportamiento y proporcionan un formato común para implementarlo en las clases. Los nombres de las interfaces suelen acabar en <em>able</em> aunque no es necesario: configurable, arrancable, dibujable, etc.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">EjemploInterface.java</label><label for="__tabbed_1_2">Jugador.java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos=" 1 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+</span><span id="__span-1-2"><span class="linenos" data-linenos=" 2 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EjemploInterface</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">        </span><span class="n">Jugador</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">jugadores</span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Jugador</span><span class="o">[</span><span class="mi">7</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">//array de objetos Jugador</span>
+</span><span id="__span-1-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="n">jugadores</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Jugador</span><span class="p">(</span><span class="s">"Gasol"</span><span class="p">,</span><span class="w"> </span><span class="s">"pivot"</span><span class="p">,</span><span class="w"> </span><span class="mi">37</span><span class="p">);</span>
+</span><span id="__span-1-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="n">jugadores</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Jugador</span><span class="p">(</span><span class="s">"Rubio"</span><span class="p">,</span><span class="w"> </span><span class="s">"base"</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">);</span>
+</span><span id="__span-1-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="n">jugadores</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Jugador</span><span class="p">(</span><span class="s">"Rodriguez"</span><span class="p">,</span><span class="w"> </span><span class="s">"base"</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="p">);</span>
+</span><span id="__span-1-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="n">jugadores</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Jugador</span><span class="p">(</span><span class="s">"Hernangomez"</span><span class="p">,</span><span class="w"> </span><span class="s">"pivot"</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">);</span>
+</span><span id="__span-1-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="n">jugadores</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Jugador</span><span class="p">(</span><span class="s">"Abrines"</span><span class="p">,</span><span class="w"> </span><span class="s">"escolta/alero"</span><span class="p">,</span><span class="w"> </span><span class="mi">29</span><span class="p">);</span>
+</span><span id="__span-1-10"><span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="n">jugadores</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Jugador</span><span class="p">(</span><span class="s">"Aguilar"</span><span class="p">,</span><span class="w"> </span><span class="s">"ala-pivot"</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">);</span>
+</span><span id="__span-1-11"><span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="n">jugadores</span><span class="o">[</span><span class="mi">6</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Jugador</span><span class="p">(</span><span class="s">"Oriola"</span><span class="p">,</span><span class="w"> </span><span class="s">"ala-pivot"</span><span class="p">,</span><span class="w"> </span><span class="mi">29</span><span class="p">);</span>
+</span><span id="__span-1-12"><span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">jugadores</span><span class="p">);</span>
+</span><span id="__span-1-13"><span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="n">Jugador</span><span class="w"> </span><span class="n">j</span><span class="p">:</span><span class="w"> </span><span class="n">jugadores</span><span class="p">){</span>
+</span><span id="__span-1-14"><span class="linenos" data-linenos="14 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">j</span><span class="p">);</span>
+</span><span id="__span-1-15"><span class="linenos" data-linenos="15 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-16"><span class="linenos" data-linenos="16 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-17"><span class="linenos" data-linenos="17 "></span><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">class</span> <span class="nc">Jugador</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Comparable</span><span class="p">{</span>
+</span><span id="__span-2-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">apellido</span><span class="p">;</span>
+</span><span id="__span-2-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">puesto</span><span class="p">;</span>
+</span><span id="__span-2-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+</span><span id="__span-2-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Jugador</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">apellido</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">puesto</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">){</span>
+</span><span id="__span-2-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">apellido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apellido</span><span class="p">;</span>
+</span><span id="__span-2-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">puesto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">puesto</span><span class="p">;</span>
+</span><span id="__span-2-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+</span><span id="__span-2-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-10"><span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getApellido</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">apellido</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-11"><span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getPuesto</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">puesto</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-12"><span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getEdad</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-13"><span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setApellido</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">apellido</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">apellido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apellido</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-14"><span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setPuesto</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">puesto</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">puesto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">puesto</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-15"><span class="linenos" data-linenos="15 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setEdad</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-16"><span class="linenos" data-linenos="16 "></span>
+</span><span id="__span-2-17"><span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="nd">@Override</span><span class="w"> </span>
+</span><span id="__span-2-18"><span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">(){</span>
+</span><span id="__span-2-19"><span class="linenos" data-linenos="19 "></span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">"Apellido: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">apellido</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" Puesto: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">puesto</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" Edad: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" años."</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-20"><span class="linenos" data-linenos="20 "></span>
+</span><span id="__span-2-21"><span class="linenos" data-linenos="21 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compareTo</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">o</span><span class="p">){</span>
+</span><span id="__span-2-22"><span class="linenos" data-linenos="22 "></span><span class="w">        </span><span class="n">Jugador</span><span class="w"> </span><span class="n">auxJugador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Jugador</span><span class="p">)</span><span class="w"> </span><span class="n">o</span><span class="p">;</span><span class="w"> </span><span class="c1">//se realiza downcasting</span>
+</span><span id="__span-2-23"><span class="linenos" data-linenos="23 "></span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">edadauxJugador</span><span class="p">.</span><span class="na">edad</span><span class="p">){</span><span class="w"> </span>
+</span><span id="__span-2-24"><span class="linenos" data-linenos="24 "></span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-2-25"><span class="linenos" data-linenos="25 "></span><span class="w">        </span><span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span><span id="__span-2-26"><span class="linenos" data-linenos="26 "></span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-2-27"><span class="linenos" data-linenos="27 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-2-28"><span class="linenos" data-linenos="28 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-29"><span class="linenos" data-linenos="29 "></span><span class="p">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>El método <code>sort()</code> (según se expresa en la Documentación API) requiere que todos los elementos del array implementen la interfaz <code>Comparable</code>. Esta interfaz tiene el método abstracto <code>compareTo(Object o)</code> que deberá ser implementado en la clase a la que pertenecen los objetos a comparar.</p>
+<p>El método <code>compareTo(Object o)</code> deberá devolver -1, 0 ó 1 en función de si la edad del primer jugador es menor, igual o mayor que la del segundo, respectivamente.</p>
+<h2 id="implementando-una-interfaz">Implementando una interfaz<a class="headerlink" href="#implementando-una-interfaz" title="Permanent link">¶</a></h2>
+<p>Para indicar que una clase implementa los métodos de una interfaz se utiliza la palabra clave <code>implements</code>. Las clases que implementan una interfaz deben <strong>implementar todos los métodos abstractos contenidos en la interfaz</strong>. De lo contrario, serán clases abstractas y deberán declararse como tal. </p>
+<div class="admonition info">
+<p class="admonition-title">A tener en cuenta</p>
+<p>Si una clase implementa una interfaz, todas sus clases derivadas heredan los métodos implementados en la clase base y las constantes definidas en la interfaz.</p>
+</div>
+<p>Una clase puede implementar más de una interfaz. En este caso, los nombres de las interfaces se escriben a continuación de implements y separadas por comas:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UnaClase</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">NombreInterface1</span><span class="p">,</span><span class="w"> </span><span class="n">NombreInterface2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Java y herencia múltiple</p>
+<p>El lenguaje Java no permite herencia múltiple, pero las interfaces proporcionan una alternativa para implementar algo parecido a la herencia múltiple de otros lenguajes. En Java una clase solo puede tener una clase base pero puede implementar múltiples interfaces.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ClaseDerivada</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ClaseBase</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Interface1</span><span class="p">,</span><span class="w"> </span><span class="n">Interface2</span><span class="p">,</span><span class="w"> </span><span class="n">Interface3</span><span class="p">,</span><span class="w"> </span><span class="err">…</span>
+</span></code></pre></div>
+</div>
+<p>Cuando hay una implementación múltiple, es posible que dos interfaces tengan atributos o métodos con el mismo nombre. La clase que implementa las interfaces recibirá métodos o atributos con el mismo nombre. A esto se le llama colisión. Java establece una serie de reglas para solucionar las colisiones. Para las colisiones de nombres de atributos se obliga a especificar el nombre de la interfaz base a la que pertenecen al utilizarlos:</p>
+<p></p><div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><span class="linenos" data-linenos="1 "></span><span class="n">NombreInterfaz</span><span class="p">.</span><span class="na">atributo</span><span class="p">;</span>
+</span></code></pre></div>
+Para las colisiones de los nombres de métodos:<p></p>
+<ul>
+<li>Si tiene el mismo nombre y diferentes parámetros se produce sobrecarga de métodos, permitiéndose que existan varias maneras de llamar al método.</li>
+<li>Si solo cambia el valor devuelto, da un error de compilación indicando que no se pueden implementar los dos.</li>
+<li>Si coinciden en sus declaraciones, se debe eliminar uno de los dos.</li>
+</ul>
+<p>Se puede establecer una jerarquía de herencia entre interfaces, igual que con las clases.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-6-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Interface2</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Interface1</span><span class="p">{</span><span class="w"> </span><span class="err">…</span><span class="p">}</span>
+</span><span id="__span-6-2"><span class="linenos" data-linenos="2 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Interface3</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Interface1</span><span class="p">{</span><span class="w"> </span><span class="err">…</span><span class="p">}</span>
+</span></code></pre></div>
+<p>La definición de una interfaz implica una definición de un nuevo tipo de referencia y por ello se puede usar el nombre de la interfaz como nombre de tipo. El nombre de una interfaz se puede utilizar en cualquier lugar donde pueda aparecer el nombre de un tipo de datos. Si se define una variable cuyo tipo es una interfaz, se le puede asignar un objeto que sea una instancia de una clase que implementa la interfaz.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-7-1"><span class="linenos" data-linenos=" 1 "></span><span class="n">Relacionable</span><span class="w"> </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Linea</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-7-2"><span class="linenos" data-linenos=" 2 "></span><span class="n">Relacionable</span><span class="w"> </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Fraccion</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">);</span>
+</span><span id="__span-7-3"><span class="linenos" data-linenos=" 3 "></span>
+</span><span id="__span-7-4"><span class="linenos" data-linenos=" 4 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">r1</span><span class="p">);</span><span class="w"> </span><span class="c1">//ejecuta toString de Línea</span>
+</span><span id="__span-7-5"><span class="linenos" data-linenos=" 5 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">r2</span><span class="p">);</span><span class="w"> </span><span class="c1">//ejecuta toString de Fracción</span>
+</span><span id="__span-7-6"><span class="linenos" data-linenos=" 6 "></span>
+</span><span id="__span-7-7"><span class="linenos" data-linenos=" 7 "></span><span class="n">Relacionable</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Relacionable</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span>
+</span><span id="__span-7-8"><span class="linenos" data-linenos=" 8 "></span><span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Línea</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-7-9"><span class="linenos" data-linenos=" 9 "></span><span class="n">array</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Fracción</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">);</span>
+</span><span id="__span-7-10"><span class="linenos" data-linenos="10 "></span><span class="n">array</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Línea</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-7-11"><span class="linenos" data-linenos="11 "></span><span class="k">for</span><span class="p">(</span><span class="n">Relacionable</span><span class="w"> </span><span class="n">r</span><span class="p">:</span><span class="w"> </span><span class="n">array</span><span class="p">)</span>
+</span><span id="__span-7-12"><span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">r</span><span class="p">);</span>
+</span></code></pre></div>
+<p>En este caso dos clases no relacionadas, <code>Linea</code> y <code>Fraccion</code>, por implementar la misma interfaz <code>Relacionable</code> podemos manejarlas a través de referencias a la interfaz y aplicar polimorfismo. Las interfaces proporcionan más polimorfismo que el que se puede obtener de una simple jerarquía de clases.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut07/07_interfaz.png" data-desc-position="bottom"><img alt="Interfaz" src="../../img/ut07/07_interfaz.png" width="300"></a>
+</figure>
+<h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 712</strong> (<abbr title="Desarrolla programas aplicando características avanzadas de los lenguajes orientados a objetos y del entorno de programación.">RA7</abbr>/ <abbr title="Se han identificado los conceptos de herencia, superclase y subclase.">CE7a</abbr> <abbr title="Se han utilizado modificadores para bloquear y forzar la herencia de clases y métodos.">CE7b</abbr> <abbr title="Se ha reconocido la incidencia de los constructores en la herencia.">CE7c</abbr> <abbr title="Se han creado clases heredadas que sobrescriben la implementación de métodos de la superclase.">CE7d</abbr> <abbr title="Se han diseñado y aplicado jerarquías de clases.">CE7e</abbr> <abbr title="Se han probado y depurado las jerarquías de clases.">CE7f</abbr> <abbr title="Se han realizado programas que implementen y utilicen jerarquías de clases.">CE7g</abbr> <abbr title="Se ha comentado y documentado el código.">CE7h</abbr> <abbr title="Se han identificado y evaluado los escenarios de uso de interfaces.">CE7i</abbr> <abbr title="Se han identificado y evaluado los escenarios de utilización de la herencia y la composición.">CE7j</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Crea tres clases: <code>Circulo</code>, <code>Cuadrado</code> y <code>TrianguloEquilatero</code>, tendrán un atributo cada clase que permite calcular el perímetro o área (ya sea lado o radio). Crea una interfaz llamada <code>ShapeOperable</code> que cada clase deberá implementar para seguir una estandarización con métodos de cálculo de perímetro y área y la constante PI.</p>
+<p>Desarrolla un <code>main</code> que pida al usuario seleccionar la forma y luego una dimensión (lado o radio). Utilizando el polimorfismo, el programa usará la instancia correcta de la forma seleccionada e imprimirá la forma seleccionada por el usuario y luego le preguntará que cálculo desea realizar si perímetro o área e imprimirá el resultado.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 713</strong> (<abbr title="Desarrolla programas aplicando características avanzadas de los lenguajes orientados a objetos y del entorno de programación.">RA7</abbr>/ <abbr title="Se han identificado los conceptos de herencia, superclase y subclase.">CE7a</abbr> <abbr title="Se han utilizado modificadores para bloquear y forzar la herencia de clases y métodos.">CE7b</abbr> <abbr title="Se ha reconocido la incidencia de los constructores en la herencia.">CE7c</abbr> <abbr title="Se han creado clases heredadas que sobrescriben la implementación de métodos de la superclase.">CE7d</abbr> <abbr title="Se han diseñado y aplicado jerarquías de clases.">CE7e</abbr> <abbr title="Se han probado y depurado las jerarquías de clases.">CE7f</abbr> <abbr title="Se han realizado programas que implementen y utilicen jerarquías de clases.">CE7g</abbr> <abbr title="Se ha comentado y documentado el código.">CE7h</abbr> <abbr title="Se han identificado y evaluado los escenarios de uso de interfaces.">CE7i</abbr> <abbr title="Se han identificado y evaluado los escenarios de utilización de la herencia y la composición.">CE7j</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). Escribe un programa llamado <code>Herencia3</code> para una biblioteca que contenga libros y
+revistas. En primer lugar, para prevenir posibles cambios en el programa se tiene que implementar una interfaz <code>Prestable</code> con los métodos <code>prestar</code> y <code>devolver</code>, sin valor de retorno, y prestado quien retorna un <code>booleano</code>. La clase <code>Libro</code> implementará esta interfaz.</p>
+<p>Será necesario crear la clase base <code>Publicación</code>, de la que heredarán las clases <code>Libro</code> y <code>Revista</code>. Las características comunes que se almacenan tanto para las revistas como para los libros son el código, el titulo y el año de publicación. Estas tres características se pasan por parámetro en el momento de crear los objetos.</p>
+<p>Los libros tienen además un atributo <code>prestado</code>. Los libros cuando se crean no están prestados.</p>
+<p>Las revistas tienen un número. En el momento de crearlas se pasa el número por parámetro.</p>
+<p>Tanto las revistas como los libros deben de tener (aparte de los constructores) un método <code>toString</code> que devuelve el valor de todos los atributos en una cadena de caracteres. También tienen un método que devuelve el año de publicación y otro para el código.</p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 714</strong> (<abbr title="Desarrolla programas aplicando características avanzadas de los lenguajes orientados a objetos y del entorno de programación.">RA7</abbr>/ <abbr title="Se han identificado los conceptos de herencia, superclase y subclase.">CE7a</abbr> <abbr title="Se han utilizado modificadores para bloquear y forzar la herencia de clases y métodos.">CE7b</abbr> <abbr title="Se ha reconocido la incidencia de los constructores en la herencia.">CE7c</abbr> <abbr title="Se han creado clases heredadas que sobrescriben la implementación de métodos de la superclase.">CE7d</abbr> <abbr title="Se han diseñado y aplicado jerarquías de clases.">CE7e</abbr> <abbr title="Se han probado y depurado las jerarquías de clases.">CE7f</abbr> <abbr title="Se han realizado programas que implementen y utilicen jerarquías de clases.">CE7g</abbr> <abbr title="Se ha comentado y documentado el código.">CE7h</abbr> <abbr title="Se han identificado y evaluado los escenarios de uso de interfaces.">CE7i</abbr> <abbr title="Se han identificado y evaluado los escenarios de utilización de la herencia y la composición.">CE7j</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 10p). Se pretende realizar una aplicación para una facultad que gestione la información sobre las personas vinculadas con la misma, que se pueden clasificar en tres tipos: estudiantes, profesores y personal de servicio. </p>
+<ul>
+<li>
+<p>1) A continuación, se detalla qué tipo de información debe gestionar esta aplicación:</p>
+<ul>
+<li>Por cada persona, se debe conocer, al menos, su nombre y apellidos, su número de identificación y su estado civil.</li>
+<li>Con respecto a los empleados, sean del tipo que sean, hay que saber su año de incorporación a la facultad y qué número de despacho tienen asignado.</li>
+<li>En cuanto a los estudiantes, se requiere almacenar el curso en el que están matriculados.</li>
+<li>Por lo que se refiere a los profesores, es necesario gestionar a qué departamento pertenecen (lenguajes, matemáticas, arquitectura, ...).</li>
+<li>Sobre el personal de servicio, hay que conocer a qué sección están  asignados (biblioteca, decanato, secretaría, ...).</li>
+</ul>
+</li>
+<li>
+<p>2) Seguidamente se debe programar las clases definidas en las que, además de los constructores, hay que desarrollar los métodos correspondientes a las siguientes
+acciones:</p>
+<ul>
+<li>Cambio del estado civil de una persona.</li>
+<li>Reasignación de despacho a un empleado.</li>
+<li>Matriculación de un estudiante en un nuevo curso.</li>
+<li>Cambio de departamento de un profesor.</li>
+<li>Traslado de sección de un empleado del personal de servicio.</li>
+<li>Imprimir toda la información de cada tipo de individuo.</li>
+</ul>
+<p>Llegados a este punto, incluye un programa de prueba que instancie objetos de los distintos tipos y pruebe los métodos desarrollados.</p>
+</li>
+<li>
+<p>3) Una vez comprobado lo anterior, se plantea extender el punto anterior incluyendo una clase que represente al centro docente. Esa clase incluirá 3 contenedores, uno por cada tipo de persona vinculada con el centro. En una primera fase deben incluirse los siguiente métodos:</p>
+<ul>
+<li>Uno para dar de alta una persona, que incoporará a la persona en la lista correspondiente.</li>
+<li>Otro para dar de baja una persona, dado su DNI. Añada un método a la clase persona para poder obtener el DNI de un objeto de esa clase.</li>
+<li>Uno último para imprimir toda la información de las personas vinculadas con el centro.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Piensa primero</p>
+<p>Dado que hay múltiples altenativas a la hora de afrontar este problema, a continuación, se explican las características de la solución implementada, aunque el alumno podrá realizar el diseño que considere oportuno:</p>
+<ul>
+<li>El método de alta recibe como parámetro un objeto del tipo persona correspondiente, existiendo, por tanto, tres versiones sobrecargadas del mismo.</li>
+<li>Se ha de usar array de objetos.</li>
+</ul>
+</div>
+<p>El método de baja busca, en primer lugar, un objeto en las listas que tenga el DNI recibido como parámetro. Una vez encontrado, lo inicializa a 0.</p>
+<div class="admonition danger">
+<p class="admonition-title">Ten en cuenta</p>
+<p>Guarda la versión anterior y realiza este ejercicio sobre una copia de la misma, puesto que dicha versión previa será utilizada en ejercicios posteriores.</p>
+</div>
+</li>
+<li>
+<p>4) En la aplicación anterior, se detecta que en el futuro se va a necesitar crear nuevos tipos de empleados (por ejemplo, investigadores) y distinguir entre distintos tipos de estudiantes. Por tanto, para que el diseño se pueda adaptar a estas necesidades futuras, se plantea unificar todos los contenedores del tipo centro, de manera que sólo haya un único contenedor de personas, y usar polimorfismo para gestionar los distintos tipos de personas.</p>
+<p>Modifica el programa anterior para adaptarlo a este nuevo diseño. Ten en cuenta que debe desaparecer cualquier referencia a profesores, personal de servicio y estudiantes en el código de la clase que representa al centro. Asimismo, haz que las clases que corresponden a personas y empleados sean abstractas.</p>
+<div class="admonition danger">
+<p class="admonition-title">Entrega</p>
+<p>Esta parte se diferenceciará del anterior con la nomenclatura <code>XXXXXXXAlt.java</code>, haciendo referencia a una versión alternativa.</p>
+</div>
+</li>
+<li>
+<p>5) En la versión correspondiente al tercer punto, se va a añadir un nuevo método a las clases profesor y personal de servicio para calcular su salario. Se va a suponer que la forma de calcular el salario para estos dos tipos de empleados es totalmente distinta y que no se puede sacar ningún código común para incluirlo en la clase empleado. Haga la suposición que considere oportuna sobre cómo calcular el sueldo de cada tipo de empleado, dado que no es importante para el ejemplo. </p>
+<div class="admonition info">
+<p class="admonition-title">Una propuesta</p>
+<p>Aquí va una propuesta bastante ridícula: el personal de servicio cobra una cantidad fija más un 5% si están casados; el personal docente gana un fijo más un 8% si su fecha de incorporación es anterior al 2000. Habilite los métodos en la clase base que necesite para obtener los datos que requiera para el cálculo del sueldo.</p>
+</div>
+<p>Una vez añadidos los métodos para calcular el salario en cada una de las dos clases, debe añadir un método en la clase que representa el centro que imprima el salario de todos los empleados del centro (nombre y apellidos más el sueldo).</p>
+</li>
+<li>
+<p>6) Se plantea mejorar las clases diseñadas hasta ahora en los siguientes aspectos:</p>
+<ul>
+<li>Añadir una operación leer en cada clase persona para leer los datos de la clase.</li>
+<li>Sobrecargar el operador constructor para que lea los datos de cada clase persona.</li>
+<li>Polimorfismo en el operador toString para que imprima los datos del centro.</li>
+</ul>
+</li>
+<li>
+<p>7) Hagamos algunas mejoras adicionales en la aplicación desarrollada. Haz que el programa principal dialoge con el usuario pidiéndolo qué tipo de operación quiere llevar a cabo (alta, baja, imprimir listado o imprimir nóminas) y vaya pidiendo los datos que necesite para llevar a cabo la operación.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 715</strong> (<abbr title="Desarrolla programas aplicando características avanzadas de los lenguajes orientados a objetos y del entorno de programación.">RA7</abbr>/ <abbr title="Se han identificado los conceptos de herencia, superclase y subclase.">CE7a</abbr> <abbr title="Se han utilizado modificadores para bloquear y forzar la herencia de clases y métodos.">CE7b</abbr> <abbr title="Se ha reconocido la incidencia de los constructores en la herencia.">CE7c</abbr> <abbr title="Se han creado clases heredadas que sobrescriben la implementación de métodos de la superclase.">CE7d</abbr> <abbr title="Se han diseñado y aplicado jerarquías de clases.">CE7e</abbr> <abbr title="Se han probado y depurado las jerarquías de clases.">CE7f</abbr> <abbr title="Se han realizado programas que implementen y utilicen jerarquías de clases.">CE7g</abbr> <abbr title="Se ha comentado y documentado el código.">CE7h</abbr> <abbr title="Se han identificado y evaluado los escenarios de uso de interfaces.">CE7i</abbr> <abbr title="Se han identificado y evaluado los escenarios de utilización de la herencia y la composición.">CE7j</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p). Realiza un programa de nombre <code>AppAnimal</code> formado por los siguientes elementos:</p>
+<ul>
+<li>Clase <code>Animal</code>, con el atributo <code>protected</code> <code>nombre</code> de tipo <code>String</code>, y los métodos abstractos <code>comer</code> sin valor de retorno y al que se le pasa como parámetro el <code>String</code> alimento mostrando la siguiente línea “El [nombre_animal] come alimento.”, y <code>nacer</code> que devuelve un <code>String</code> (vivíparos u ovíparos).</li>
+<li>Interfaz <code>Alimentable</code>, con un método <code>segunAlimento</code> al que se le pasa el <code>String</code> alimento y devuelve un <code>String</code> indicando si el animal es carnívoro, omnívoro u herbívoro.</li>
+<li>Clase <code>Mamifero</code> que hereda de <code>Animal</code>, e implementa los métodos <code>comer</code> y <code>nacer</code>, y la interfaz <code>Alimentable</code>.</li>
+<li>En el <code>main</code> de la clase <code>AppAnimal</code>:<ul>
+<li>Crea un objeto <code>Mamifero</code> m.</li>
+<li>Solicita al usuario el nombre del mamífero.</li>
+<li>Pide al usuario que indique la alimentación del mamífero.</li>
+<li>Invoca al método comer.</li>
+<li>Invoca al método segunAlimento.</li>
+<li>Invoca al método nacer.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- Resultados de Aprendizaje & Criterios de Evaluación -->
+<!-- Instrumentos de Evaluación -->
+<!-- Instrumentos de Calificación -->
+<!-- Tipo de actividades -->
+<!-- Otras abreviaciones -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Pablo Rabasco Rodríguez
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/prabasco" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:&lt;p.rabascorodriguez@edu.gva.es&gt;" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "toc.follow", "content.tooltips", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

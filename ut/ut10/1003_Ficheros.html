@@ -1,0 +1,1632 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/prabasco/PRG/ut/ut10/1003_Ficheros.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Ficheros de datos - Programación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra_index.css">
+    
+      <link rel="stylesheet" href="../../css/extra_pd.css">
+    
+      <link rel="stylesheet" href="../../css/extra_tablasresumen.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ficheros-de-datos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../index.html" title="Programación" class="md-header__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ficheros de datos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo noche" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo día" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Programación" class="md-nav__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    Programación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 01. Elementos de un programa informático
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 01. Elementos de un programa informático
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/011_ProgramaLenguajes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1. Programa y lenguajes de programación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/012_LenguajeJava.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2. El lenguaje de programación Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/013_Estructura.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3. Estructura y bloques fundamentales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/014_IDE.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4. IDE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/021_TiposDatos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1. Tipos de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/022_Fechas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2. Fechas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/023_ConstantesLiterales.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.3. Constanstes literales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/024_Variables.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.4. Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/025_OperadoresExpresiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.5. Operadores y expresiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/026_Precedencia.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.6. Precedencia de operadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/027_Casting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.7. Casting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/028_Comentarios.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.8. Comentarios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/029_IOConsola.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.9. Entrada y salida de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ficheros-de-datos">Ficheros de datos<a class="headerlink" href="#ficheros-de-datos" title="Permanent link">¶</a></h1>
+<p>Normalmente, cuando se codifica un programa, se hace con la intención de que ese programa pueda interactuar con los usuarios del mismo, es decir, que el usuario pueda pedirle que realice cosas y pueda suministrarle datos con los que se quiere que haga algo. Una vez introducidos los datos y las órdenes, se espera que el programa manipule de alguna forma esos datos para proporcionarnos una respuesta a lo solicitado.</p>
+<h2 id="lectura-y-escritura-secuencial-en-un-archivo">Lectura y escritura secuencial en un archivo<a class="headerlink" href="#lectura-y-escritura-secuencial-en-un-archivo" title="Permanent link">¶</a></h2>
+<p>En Java es posible utilizar dos tipos de ficheros (de texto o binarios) y dos tipos de acceso a los ficheros (secuencial o aleatorio). Los ficheros de texto están compuestos de caracteres legibles, mientras que los binarios pueden almacenar cualquier tipo de datos (int, float, boolean,...).</p>
+<p>Una lectura secuencial implica tener que acceder a un elemento antes de acceder al siguiente, es decir, de una manera lineal (sin saltos). Sin embargo los ficheros de acceso aleatorio permiten acceder a sus datos de una forma aleatoria, esto es indicando una determinada posición desde la que leer/escribir.</p>
+<p>Para tratar con un fichero siempre hay que actuar de la misma manera:</p>
+<ol>
+<li>Se abre el fichero.</li>
+<li>Se utiliza el fichero.</li>
+<li>Gestión de excepciones (opcional, pero recomendada)</li>
+<li>Se cierra el fichero y se destruye el objeto.</li>
+</ol>
+<h2 id="la-clase-file">La clase File<a class="headerlink" href="#la-clase-file" title="Permanent link">¶</a></h2>
+<p>La clase <code>File</code> (Fichero) se usa para obtener información sobre ficheros (también llamado archivos) y directorios. Además, permite crear esos ficheros y directorios. Un objeto de la clase File representa un archivo o directorio. Para hacer un de esta clase, seguiremos la siguiente estructura:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span><span class="n">File</span><span class="w"> </span><span class="n">nombreFichero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="p">(</span><span class="s">"nombreFichero.extension"</span><span class="p">);</span><span class="w"> </span><span class="c1">// si se considera que esta</span>
+</span><span id="__span-0-2"><span class="linenos" data-linenos="2 "></span><span class="w">                                                          </span><span class="c1">//en el mismo directorio</span>
+</span><span id="__span-0-3"><span class="linenos" data-linenos="3 "></span><span class="n">File</span><span class="w"> </span><span class="n">nombreFichero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="p">(</span><span class="s">"ruta/nombreFichero.extension"</span><span class="p">);</span><span class="w"> </span><span class="c1">// si se considera que </span>
+</span><span id="__span-0-4"><span class="linenos" data-linenos="4 "></span><span class="w">                                                               </span><span class="c1">// no esta  en el mismo directorio                                                               </span>
+</span><span id="__span-0-5"><span class="linenos" data-linenos="5 "></span><span class="n">File</span><span class="w"> </span><span class="n">nombreFichero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="p">(</span><span class="s">"ruta"</span><span class="p">,</span><span class="s">"nombreFichero.extension"</span><span class="p">);</span>
+</span><span id="__span-0-6"><span class="linenos" data-linenos="6 "></span>
+</span><span id="__span-0-7"><span class="linenos" data-linenos="7 "></span><span class="c1">//Podemos hacer uso de File para crear directorios para ello:</span>
+</span><span id="__span-0-8"><span class="linenos" data-linenos="8 "></span><span class="n">File</span><span class="w"> </span><span class="n">nombreRuta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="p">(</span><span class="s">"ruta"</span><span class="p">);</span>
+</span><span id="__span-0-9"><span class="linenos" data-linenos="9 "></span><span class="n">File</span><span class="w"> </span><span class="n">nombreFichero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="p">(</span><span class="n">nombreRuta</span><span class="p">,</span><span class="s">"nombreFichero.extension"</span><span class="p">);</span>
+</span></code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>En todos los casos la ruta o <em>path</em> puede ser absoluta o relativa. Debemos tener en cuenta que crear un objeto File no significa que deba existir el fichero o el directorio o que el <em>path</em> sea correcto. Si no existen no se lanzará ningún tipo de excepción, ni tampoco serán creados.</p>
+<p>Es por ello que debemos conocer los métodos que nos proporciona la clase <code>File</code> para conocer lo que se puede desarrollar con ella. A continuación, se exponen algunos métodos que pueden ser de utilidad, pero es recomendable que se haga uso de la <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/File.html">documentación oficial</a>.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boolean createNewFile()</code></td>
+<td>Crea el fichero asociado al objeto File. Devuelve <code>true</code> si se ha podido crear o <code>false</code> si ya existe. Si ocurre un error I/O lanza una excepción del tipo <code>IOException</code>.</td>
+</tr>
+<tr>
+<td><code>boolean delete()</code></td>
+<td>Elimina el fichero o directorio. Si es un directorio debe estar vacío. Devuelve <code>true</code> si se ha podido eliminar.</td>
+</tr>
+<tr>
+<td><code>boolean exists()</code></td>
+<td>Devuelve <code>true</code> si el fichero o directorio existe.</td>
+</tr>
+<tr>
+<td><code>String getName()</code></td>
+<td>Devuelve el nombre del fichero o directorio.</td>
+</tr>
+<tr>
+<td><code>String getAbsolutePath()</code></td>
+<td>Devuelve la ruta absoluta asociada al objeto File.</td>
+</tr>
+<tr>
+<td><code>String getPath()</code></td>
+<td>Devuelve la ruta con la que se creó el objeto File. Puede ser relativa o no.</td>
+</tr>
+<tr>
+<td><code>String getParent()</code></td>
+<td>Devuelve un <code>String</code> conteniendo el directorio padre del File. Devuelve <code>null</code> si no tiene directorio padre.</td>
+</tr>
+<tr>
+<td><code>File getParentFile()</code></td>
+<td>Devuelve un objeto File conteniendo el directorio padre del File. Devuelve <code>null</code> si no tiene directorio padre.</td>
+</tr>
+<tr>
+<td><code>boolean isDirectory()</code></td>
+<td>Devuelve <code>true</code> si es un directorio válido.</td>
+</tr>
+<tr>
+<td><code>boolean isFile()</code></td>
+<td>Devuelve <code>true</code> si es un fichero válido.</td>
+</tr>
+<tr>
+<td><code>long length()</code></td>
+<td>Devuelve el tamaño en bytes del fichero. Devuelve <code>0</code> si no existe. Devuelve un valor indeterminado si es un directorio.</td>
+</tr>
+<tr>
+<td><code>String[] list()</code></td>
+<td>Devuelve un array de <code>String</code> con el nombre de los archivos y directorios que contiene el directorio indicado en el objeto File. Si no es un directorio devuelve <code>null</code>. Si el directorio está vacío devuelve un array vacío.</td>
+</tr>
+<tr>
+<td><code>String[] list(FilenameFilter filtro)</code></td>
+<td>Similar al anterior. Devuelve un array de <code>String</code> con el nombre de los archivos y directorios que contiene el directorio indicado en el objeto File que cumplen con el filtro indicado.</td>
+</tr>
+<tr>
+<td><code>boolean mkdir()</code></td>
+<td>Crea el directorio. Devuelve <code>true</code> si se ha podido crear.</td>
+</tr>
+<tr>
+<td><code>boolean renameTo(File dest)</code></td>
+<td>Cambia el nombre del fichero por el indicado en el parámetro <code>dest</code>. Devuelve <code>true</code> si se ha realizado el cambio.</td>
+</tr>
+</tbody>
+</table>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Ejemplo 1</label><label for="__tabbed_1_2">Ejemplo 2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos=" 1 "></span><span class="cm">/*El siguiente programa muestra el uso de algunos métodos de la clase File. </span>
+</span><span id="__span-1-2"><span class="linenos" data-linenos=" 2 "></span><span class="cm">Se crea un objeto File ruta asociado al directorio c:/ficheros y un objeto File f </span>
+</span><span id="__span-1-3"><span class="linenos" data-linenos=" 3 "></span><span class="cm">asociado al fichero datos.txt que se encuentra en ese directorio. </span>
+</span><span id="__span-1-4"><span class="linenos" data-linenos=" 4 "></span><span class="cm">Si el fichero y/o el directorio no existen se crean, </span>
+</span><span id="__span-1-5"><span class="linenos" data-linenos=" 5 "></span><span class="cm">si el fichero ya existía se muestra el tamaño del mismo.*/</span>
+</span><span id="__span-1-6"><span class="linenos" data-linenos=" 6 "></span>
+</span><span id="__span-1-7"><span class="linenos" data-linenos=" 7 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.File</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-1-8"><span class="linenos" data-linenos=" 8 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+</span><span id="__span-1-9"><span class="linenos" data-linenos=" 9 "></span>
+</span><span id="__span-1-10"><span class="linenos" data-linenos="10 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo1</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-11"><span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-12"><span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="n">File</span><span class="w"> </span><span class="n">ruta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">"c:/ficheros"</span><span class="p">);</span><span class="w"> </span><span class="c1">// ruta absoluta</span>
+</span><span id="__span-1-13"><span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="n">File</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="n">ruta</span><span class="p">,</span><span class="w"> </span><span class="s">"datos.txt"</span><span class="p">);</span><span class="w"> </span><span class="c1">// tercer constructor explicado</span>
+</span><span id="__span-1-14"><span class="linenos" data-linenos="14 "></span>
+</span><span id="__span-1-15"><span class="linenos" data-linenos="15 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="na">getAbsolutePath</span><span class="p">());</span><span class="w"> </span><span class="c1">// path absoluto de datos.txt</span>
+</span><span id="__span-1-16"><span class="linenos" data-linenos="16 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="na">getParent</span><span class="p">());</span><span class="w"> </span><span class="c1">// path del directorio raíz de datos.txt</span>
+</span><span id="__span-1-17"><span class="linenos" data-linenos="17 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ruta</span><span class="p">.</span><span class="na">getAbsolutePath</span><span class="p">());</span><span class="w"> </span><span class="c1">// path absoluto de c:/ficheros</span>
+</span><span id="__span-1-18"><span class="linenos" data-linenos="18 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ruta</span><span class="p">.</span><span class="na">getParent</span><span class="p">());</span><span class="w"> </span><span class="c1">// path del directorio raíz de c:/ficheros</span>
+</span><span id="__span-1-19"><span class="linenos" data-linenos="19 "></span>
+</span><span id="__span-1-20"><span class="linenos" data-linenos="20 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">f</span><span class="p">.</span><span class="na">exists</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// se comprueba si el fichero existe o no</span>
+</span><span id="__span-1-21"><span class="linenos" data-linenos="21 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Fichero "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" no existe"</span><span class="p">);</span>
+</span><span id="__span-1-22"><span class="linenos" data-linenos="22 "></span>
+</span><span id="__span-1-23"><span class="linenos" data-linenos="23 "></span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">ruta</span><span class="p">.</span><span class="na">exists</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// se comprueba si la ruta existe o no</span>
+</span><span id="__span-1-24"><span class="linenos" data-linenos="24 "></span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"El directorio "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ruta</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" no existe"</span><span class="p">);</span>
+</span><span id="__span-1-25"><span class="linenos" data-linenos="25 "></span>
+</span><span id="__span-1-26"><span class="linenos" data-linenos="26 "></span><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ruta</span><span class="p">.</span><span class="na">mkdir</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// se crea la ruta. Si se ha creado correctamente</span>
+</span><span id="__span-1-27"><span class="linenos" data-linenos="27 "></span><span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Directorio creado"</span><span class="p">);</span>
+</span><span id="__span-1-28"><span class="linenos" data-linenos="28 "></span>
+</span><span id="__span-1-29"><span class="linenos" data-linenos="29 "></span><span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="na">createNewFile</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// se crea el fichero. Si lo crea correctamente</span>
+</span><span id="__span-1-30"><span class="linenos" data-linenos="30 "></span><span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Fichero "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" creado"</span><span class="p">);</span>
+</span><span id="__span-1-31"><span class="linenos" data-linenos="31 "></span><span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-32"><span class="linenos" data-linenos="32 "></span><span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"No se ha podido crear "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+</span><span id="__span-1-33"><span class="linenos" data-linenos="33 "></span><span class="w">                    </span><span class="p">}</span>
+</span><span id="__span-1-34"><span class="linenos" data-linenos="34 "></span><span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-35"><span class="linenos" data-linenos="35 "></span><span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"No se ha podido crear "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ruta</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+</span><span id="__span-1-36"><span class="linenos" data-linenos="36 "></span><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-1-37"><span class="linenos" data-linenos="37 "></span><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// si la ruta existe creamos el fichero</span>
+</span><span id="__span-1-38"><span class="linenos" data-linenos="38 "></span><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="na">createNewFile</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-39"><span class="linenos" data-linenos="39 "></span><span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Fichero "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" creado"</span><span class="p">);</span>
+</span><span id="__span-1-40"><span class="linenos" data-linenos="40 "></span><span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-41"><span class="linenos" data-linenos="41 "></span><span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"No se ha podido crear "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+</span><span id="__span-1-42"><span class="linenos" data-linenos="42 "></span><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-1-43"><span class="linenos" data-linenos="43 "></span><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-1-44"><span class="linenos" data-linenos="44 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// el fichero existe. Mostramos el tamaño</span>
+</span><span id="__span-1-45"><span class="linenos" data-linenos="45 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Fichero "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" existe"</span><span class="p">);</span>
+</span><span id="__span-1-46"><span class="linenos" data-linenos="46 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Tamaño "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" bytes"</span><span class="p">);</span>
+</span><span id="__span-1-47"><span class="linenos" data-linenos="47 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-48"><span class="linenos" data-linenos="48 "></span><span class="w">    </span><span class="p">}</span><span class="w">   </span>
+</span><span id="__span-1-49"><span class="linenos" data-linenos="49 "></span><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos=" 1 "></span><span class="cm">/*El siguiente programa muestra cómo eliminar un fichero </span>
+</span><span id="__span-2-2"><span class="linenos" data-linenos=" 2 "></span><span class="cm">y cómo cambiar el nombre de un fichero usando la clase File.</span>
+</span><span id="__span-2-3"><span class="linenos" data-linenos=" 3 "></span><span class="cm">*/</span>
+</span><span id="__span-2-4"><span class="linenos" data-linenos=" 4 "></span>
+</span><span id="__span-2-5"><span class="linenos" data-linenos=" 5 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.File</span><span class="p">;</span>
+</span><span id="__span-2-6"><span class="linenos" data-linenos=" 6 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+</span><span id="__span-2-7"><span class="linenos" data-linenos=" 7 "></span>
+</span><span id="__span-2-8"><span class="linenos" data-linenos=" 8 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo2</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-10"><span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+</span><span id="__span-2-11"><span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+</span><span id="__span-2-12"><span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="n">File</span><span class="w"> </span><span class="n">ruta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">"c:/ficheros"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Ruta absoluta</span>
+</span><span id="__span-2-13"><span class="linenos" data-linenos="13 "></span>
+</span><span id="__span-2-14"><span class="linenos" data-linenos="14 "></span><span class="w">        </span><span class="c1">// Eliminar un fichero</span>
+</span><span id="__span-2-15"><span class="linenos" data-linenos="15 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Introduce el nombre del fichero a eliminar: "</span><span class="p">);</span>
+</span><span id="__span-2-16"><span class="linenos" data-linenos="16 "></span><span class="w">        </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+</span><span id="__span-2-17"><span class="linenos" data-linenos="17 "></span><span class="w">        </span><span class="n">File</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="n">ruta</span><span class="p">,</span><span class="w"> </span><span class="n">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">// Tercer constructor explicado</span>
+</span><span id="__span-2-18"><span class="linenos" data-linenos="18 "></span>
+</span><span id="__span-2-19"><span class="linenos" data-linenos="19 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="na">exists</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-20"><span class="linenos" data-linenos="20 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="na">getAbsolutePath</span><span class="p">());</span>
+</span><span id="__span-2-21"><span class="linenos" data-linenos="21 "></span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="na">delete</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-22"><span class="linenos" data-linenos="22 "></span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Fichero eliminado"</span><span class="p">);</span>
+</span><span id="__span-2-23"><span class="linenos" data-linenos="23 "></span><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-24"><span class="linenos" data-linenos="24 "></span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"No se ha podido eliminar"</span><span class="p">);</span>
+</span><span id="__span-2-25"><span class="linenos" data-linenos="25 "></span><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-2-26"><span class="linenos" data-linenos="26 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-27"><span class="linenos" data-linenos="27 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"El fichero "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="na">getAbsolutePath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" no existe"</span><span class="p">);</span>
+</span><span id="__span-2-28"><span class="linenos" data-linenos="28 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-2-29"><span class="linenos" data-linenos="29 "></span>
+</span><span id="__span-2-30"><span class="linenos" data-linenos="30 "></span><span class="w">        </span><span class="c1">// Cambiar el nombre de un fichero</span>
+</span><span id="__span-2-31"><span class="linenos" data-linenos="31 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Introduce el nombre del fichero a renombrar: "</span><span class="p">);</span>
+</span><span id="__span-2-32"><span class="linenos" data-linenos="32 "></span><span class="w">        </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+</span><span id="__span-2-33"><span class="linenos" data-linenos="33 "></span><span class="w">        </span><span class="n">File</span><span class="w"> </span><span class="n">f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="n">ruta</span><span class="p">,</span><span class="w"> </span><span class="n">nombre</span><span class="p">);</span>
+</span><span id="__span-2-34"><span class="linenos" data-linenos="34 "></span>
+</span><span id="__span-2-35"><span class="linenos" data-linenos="35 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">f1</span><span class="p">.</span><span class="na">exists</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-36"><span class="linenos" data-linenos="36 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">f1</span><span class="p">.</span><span class="na">getAbsolutePath</span><span class="p">());</span>
+</span><span id="__span-2-37"><span class="linenos" data-linenos="37 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Introduce nuevo nombre: "</span><span class="p">);</span>
+</span><span id="__span-2-38"><span class="linenos" data-linenos="38 "></span><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">nuevoNombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+</span><span id="__span-2-39"><span class="linenos" data-linenos="39 "></span><span class="w">            </span><span class="n">File</span><span class="w"> </span><span class="n">f2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="n">ruta</span><span class="p">,</span><span class="w"> </span><span class="n">nuevoNombre</span><span class="p">);</span>
+</span><span id="__span-2-40"><span class="linenos" data-linenos="40 "></span>
+</span><span id="__span-2-41"><span class="linenos" data-linenos="41 "></span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">f1</span><span class="p">.</span><span class="na">renameTo</span><span class="p">(</span><span class="n">f2</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-42"><span class="linenos" data-linenos="42 "></span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Se ha cambiado el nombre"</span><span class="p">);</span>
+</span><span id="__span-2-43"><span class="linenos" data-linenos="43 "></span><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-44"><span class="linenos" data-linenos="44 "></span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"No se ha podido cambiar el nombre"</span><span class="p">);</span>
+</span><span id="__span-2-45"><span class="linenos" data-linenos="45 "></span><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-2-46"><span class="linenos" data-linenos="46 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-47"><span class="linenos" data-linenos="47 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"El fichero "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f1</span><span class="p">.</span><span class="na">getAbsolutePath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" no existe"</span><span class="p">);</span>
+</span><span id="__span-2-48"><span class="linenos" data-linenos="48 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-2-49"><span class="linenos" data-linenos="49 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-50"><span class="linenos" data-linenos="50 "></span><span class="p">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="filtros">Filtros<a class="headerlink" href="#filtros" title="Permanent link">¶</a></h3>
+<p>Un filtro sirve para que el método list devuelva solo aquellos archivos o carpetas que cumplan una determinada condición (que sean de una extensión determinada, que contengan en su nombre cierta cadena, empiecen por una cadena, etc…). Un filtro es un objeto de una clase que implementa la interfaz FilenameFilter (Filtro de nombres de fichero). Esta interface tiene un solo método llamado accept que devuelve un valor de tipo boolean: 
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">FilenameFilter</span><span class="p">{</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">accept</span><span class="w"> </span><span class="p">(</span><span class="n">File</span><span class="w"> </span><span class="n">ruta</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
+</span></code></pre></div><p></p>
+<p>El método recibe el directorio donde se encuentra el archivo (objeto <code>File</code>) y el nombre del archivo (<code>String</code>). Este método lo utiliza el método list de <code>File</code> para decidir si un archivo o directorio determinado se incluye o no en el array que devuelve. Si accept devuelve true se incluye y si devuelve false no se incluye. El método list llama de forma automática al método accept para cada uno de los archivos o directorios.</p>
+<div class="language-java highlight"><span class="filename">Filtro.java</span><pre><span></span><code><span id="__span-4-1"><span class="linenos" data-linenos=" 1 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.File</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-4-2"><span class="linenos" data-linenos=" 2 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FilenameFilter</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-4-3"><span class="linenos" data-linenos=" 3 "></span><span class="c1">//Clase Filtro implementa el interface FilenameFilter </span>
+</span><span id="__span-4-4"><span class="linenos" data-linenos=" 4 "></span><span class="kd">class</span> <span class="nc">Filtro</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">FilenameFilter</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-4-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">extension</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-4-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="n">Filtro</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">extension</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-4-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">extension</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">extension</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-4-8"><span class="linenos" data-linenos=" 8 "></span><span class="p">}</span><span class="w"> </span>
+</span><span id="__span-4-9"><span class="linenos" data-linenos=" 9 "></span><span class="c1">//implementación del método accept del interface </span>
+</span><span id="__span-4-10"><span class="linenos" data-linenos="10 "></span><span class="nd">@Override</span><span class="w"> </span>
+</span><span id="__span-4-11"><span class="linenos" data-linenos="11 "></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">accept</span><span class="p">(</span><span class="n">File</span><span class="w"> </span><span class="n">ruta</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-4-12"><span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">.</span><span class="na">endsWith</span><span class="p">(</span><span class="n">extension</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-4-13"><span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-14"><span class="linenos" data-linenos="14 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p>Que de forma práctica se puede aplicar:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><span class="linenos" data-linenos=" 1 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.File</span><span class="p">;</span>
+</span><span id="__span-5-2"><span class="linenos" data-linenos=" 2 "></span>
+</span><span id="__span-5-3"><span class="linenos" data-linenos=" 3 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo5</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="n">File</span><span class="w"> </span><span class="n">ruta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">"/temas/teoria"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Ruta absoluta</span>
+</span><span id="__span-5-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Archivos .pdf en el directorio "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ruta</span><span class="p">.</span><span class="na">getAbsolutePath</span><span class="p">());</span>
+</span><span id="__span-5-7"><span class="linenos" data-linenos=" 7 "></span>
+</span><span id="__span-5-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="c1">// Crear el filtro</span>
+</span><span id="__span-5-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ruta</span><span class="p">.</span><span class="na">list</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Filtro</span><span class="p">(</span><span class="s">".pdf"</span><span class="p">));</span>
+</span><span id="__span-5-10"><span class="linenos" data-linenos="10 "></span>
+</span><span id="__span-5-11"><span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="c1">// Verificar y listar los archivos</span>
+</span><span id="__span-5-12"><span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lista</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-13"><span class="linenos" data-linenos="13 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Total: 0 archivos"</span><span class="p">);</span>
+</span><span id="__span-5-14"><span class="linenos" data-linenos="14 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-15"><span class="linenos" data-linenos="15 "></span><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">lista</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-16"><span class="linenos" data-linenos="16 "></span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">lista</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+</span><span id="__span-5-17"><span class="linenos" data-linenos="17 "></span><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-5-18"><span class="linenos" data-linenos="18 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Total: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lista</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>
+</span><span id="__span-5-19"><span class="linenos" data-linenos="19 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-5-20"><span class="linenos" data-linenos="20 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-5-21"><span class="linenos" data-linenos="21 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="clases-filewriter-y-filereader">Clases FileWriter y FileReader<a class="headerlink" href="#clases-filewriter-y-filereader" title="Permanent link">¶</a></h2>
+<h3 id="filewriter">FileWriter<a class="headerlink" href="#filewriter" title="Permanent link">¶</a></h3>
+<p>Para <strong>escribir en un fichero de texto</strong> utilizaremos dos clases: <code>FileWriter</code> (Escritor de ficheros) y <code>PrintWriter</code> (Impresor con formato). La clase <code>FileWriter</code> permite tener acceso al fichero en modo escritura. Para crear objetos <code>FileWriter</code> podemos utilizar los constructores:
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-6-1"><span class="linenos" data-linenos="1 "></span><span class="n">FileWriter</span><span class="w"> </span><span class="n">fw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="w"> </span><span class="p">(</span><span class="n">Path</span><span class="p">);</span>
+</span><span id="__span-6-2"><span class="linenos" data-linenos="2 "></span><span class="n">FileWriter</span><span class="w"> </span><span class="n">fw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="w"> </span><span class="p">(</span><span class="n">File</span><span class="w"> </span><span class="n">Objeto</span><span class="p">);</span>
+</span></code></pre></div>
+El fichero se crea y si ya existe su contenido se pierde. Si lo que necesitamos es abrir un fichero de texto existente sin perder su contenido y añadir más contenido al final utilizaremos los constructores:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-7-1"><span class="linenos" data-linenos="1 "></span><span class="n">FileWriter</span><span class="w"> </span><span class="n">fw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="w"> </span><span class="p">(</span><span class="n">Path</span><span class="p">,</span><span class="w"> </span><span class="n">append</span><span class="p">);</span>
+</span><span id="__span-7-2"><span class="linenos" data-linenos="2 "></span><span class="n">FileWriter</span><span class="w"> </span><span class="n">fw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="w"> </span><span class="p">(</span><span class="n">File</span><span class="w"> </span><span class="n">Objeto</span><span class="p">,</span><span class="w"> </span><span class="n">append</span><span class="p">);</span>
+</span></code></pre></div>
+Si el parámetro append es true significa que los datos se van a añadir a los existentes. Si es false los datos existentes se pierden. La clase <code>FileWriter</code> proporciona el método <code>write()</code> para escribir cadenas de caracteres aunque lo normal es utilizar esta clase junto con la clase <code>PrintWriter</code> para facilitar la escritura. La clase <code>PrintWriter</code> permite escribir caracteres en el fichero de la misma forma que en la pantalla.<p></p>
+<p>Si lo queremos ver en un ejemplo:
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-8-1"><span class="linenos" data-linenos="1 "></span><span class="n">FileWriter</span><span class="w"> </span><span class="n">fw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="p">(</span><span class="s">"c:/ficheros/datos.txt"</span><span class="p">);</span>
+</span><span id="__span-8-2"><span class="linenos" data-linenos="2 "></span><span class="n">PrintWriter</span><span class="w"> </span><span class="n">salida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintWriter</span><span class="p">(</span><span class="s">"c:/ficheros/datos.txt"</span><span class="p">);</span>
+</span></code></pre></div>
+En este caso, si el fichero no existe se crea. Si no se puede crear un archivo con ese nombre o si ocurre algún error se lanza una excepción <code>FileNotFoundException</code>. <p></p>
+<p>Una vez creado el objeto PrintWriter podemos utilizar <code>print()</code>, <code>println()</code> y <code>printf()</code> para escribir en el fichero como si fuese en pantalla</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-9-1"><span class="linenos" data-linenos=" 1 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileNotFoundException</span><span class="p">;</span>
+</span><span id="__span-9-2"><span class="linenos" data-linenos=" 2 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.PrintWriter</span><span class="p">;</span>
+</span><span id="__span-9-3"><span class="linenos" data-linenos=" 3 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+</span><span id="__span-9-4"><span class="linenos" data-linenos=" 4 "></span>
+</span><span id="__span-9-5"><span class="linenos" data-linenos=" 5 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo6</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+</span><span id="__span-9-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="n">PrintWriter</span><span class="w"> </span><span class="n">salida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-9-9"><span class="linenos" data-linenos=" 9 "></span>
+</span><span id="__span-9-10"><span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-11"><span class="linenos" data-linenos="11 "></span><span class="w">            </span><span class="n">salida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintWriter</span><span class="p">(</span><span class="s">"c:/ficheros/datos.txt"</span><span class="p">);</span>
+</span><span id="__span-9-12"><span class="linenos" data-linenos="12 "></span><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">cadena</span><span class="p">;</span>
+</span><span id="__span-9-13"><span class="linenos" data-linenos="13 "></span>
+</span><span id="__span-9-14"><span class="linenos" data-linenos="14 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Introduce texto. Para acabar introduce la cadena FIN:"</span><span class="p">);</span>
+</span><span id="__span-9-15"><span class="linenos" data-linenos="15 "></span><span class="w">            </span><span class="n">cadena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+</span><span id="__span-9-16"><span class="linenos" data-linenos="16 "></span>
+</span><span id="__span-9-17"><span class="linenos" data-linenos="17 "></span><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">cadena</span><span class="p">.</span><span class="na">equalsIgnoreCase</span><span class="p">(</span><span class="s">"FIN"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-18"><span class="linenos" data-linenos="18 "></span><span class="w">                </span><span class="n">salida</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">cadena</span><span class="p">);</span>
+</span><span id="__span-9-19"><span class="linenos" data-linenos="19 "></span><span class="w">                </span><span class="n">cadena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+</span><span id="__span-9-20"><span class="linenos" data-linenos="20 "></span><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-9-21"><span class="linenos" data-linenos="21 "></span>
+</span><span id="__span-9-22"><span class="linenos" data-linenos="22 "></span><span class="w">            </span><span class="n">salida</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</span><span id="__span-9-23"><span class="linenos" data-linenos="23 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-24"><span class="linenos" data-linenos="24 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+</span><span id="__span-9-25"><span class="linenos" data-linenos="25 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-9-26"><span class="linenos" data-linenos="26 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-9-27"><span class="linenos" data-linenos="27 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="filereader">FileReader<a class="headerlink" href="#filereader" title="Permanent link">¶</a></h3>
+<p>Para <strong>leer en un fichero de texto</strong> utilizaremos dos clases: <code>FileReader</code> (Lector de ficheros) y <code>BufferedReader</code> (Lector con buffer). La clase <code>FileReader</code> permite tener acceso al fichero en modo lectura.
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-10-1"><span class="linenos" data-linenos="1 "></span><span class="n">FileReaderfw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="w"> </span><span class="p">(</span><span class="n">Path</span><span class="p">);</span>
+</span><span id="__span-10-2"><span class="linenos" data-linenos="2 "></span><span class="n">FileReaderfw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="w"> </span><span class="p">(</span><span class="n">File</span><span class="w"> </span><span class="n">Objeto</span><span class="p">);</span>
+</span></code></pre></div>
+Ambos lanzan una excepción <code>FileNotFoundException</code> si el fichero no existe. La clase <code>FileReader</code> proporciona el método <code>read()</code> para leer caracteres del fichero aunque lo normal es realizar la lectura mediante la clase <code>BufferedReader</code>. Para leer utilizando la clase <code>BufferedReader</code> se debe crear un objeto <code>BufferedReader</code> a partir de un objeto <code>FileReader</code>.
+<div class="language-java highlight"><pre><span></span><code><span id="__span-11-1"><span class="linenos" data-linenos="1 "></span><span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="s">"c:/ficheros/datos.txt"</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-11-2"><span class="linenos" data-linenos="2 "></span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">entrada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Buffered</span><span class="p">(</span><span class="n">fr</span><span class="p">);</span><span class="w"> </span>
+</span></code></pre></div>
+Una vez creado el objeto <code>BufferedReader</code> podemos utilizar: <p></p>
+<ul>
+<li>El método <code>readLine()</code> para leer líneas de texto del fichero (String). Este método devuelve <em>null</em> cuando no hay más líneas para leer. </li>
+<li>El método <code>read()</code> para leer carácter a carácter. Devuelve un entero que representa el código Unicode del carácter leído. Devuelve -1 si no hay más caracteres. </li>
+</ul>
+<p>Ambos métodos lanzan una excepción <code>IOException</code> si ocurre un error de lectura. El fichero se debe cerrar cuando ya no se use, mediante el método <code>close()</code>. Este método lanza una excepción <code>IOException</code>.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-12-1"><span class="linenos" data-linenos=" 1 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedReader</span><span class="p">;</span><span class="w"> </span><span class="c1">// Para leer caracteres almacenados en un buffer</span>
+</span><span id="__span-12-2"><span class="linenos" data-linenos=" 2 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileNotFoundException</span><span class="p">;</span>
+</span><span id="__span-12-3"><span class="linenos" data-linenos=" 3 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileReader</span><span class="p">;</span>
+</span><span id="__span-12-4"><span class="linenos" data-linenos=" 4 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+</span><span id="__span-12-5"><span class="linenos" data-linenos=" 5 "></span>
+</span><span id="__span-12-6"><span class="linenos" data-linenos=" 6 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo7</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-12-9"><span class="linenos" data-linenos=" 9 "></span>
+</span><span id="__span-12-10"><span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-11"><span class="linenos" data-linenos="11 "></span><span class="w">            </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="s">"c:/ficheros/datos.txt"</span><span class="p">);</span>
+</span><span id="__span-12-12"><span class="linenos" data-linenos="12 "></span><span class="w">            </span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">entrada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="n">fr</span><span class="p">);</span>
+</span><span id="__span-12-13"><span class="linenos" data-linenos="13 "></span><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">cadena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
+</span><span id="__span-12-14"><span class="linenos" data-linenos="14 "></span>
+</span><span id="__span-12-15"><span class="linenos" data-linenos="15 "></span><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">cadena</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-16"><span class="linenos" data-linenos="16 "></span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">cadena</span><span class="p">);</span>
+</span><span id="__span-12-17"><span class="linenos" data-linenos="17 "></span><span class="w">                </span><span class="n">cadena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
+</span><span id="__span-12-18"><span class="linenos" data-linenos="18 "></span><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-12-19"><span class="linenos" data-linenos="19 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-20"><span class="linenos" data-linenos="20 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+</span><span id="__span-12-21"><span class="linenos" data-linenos="21 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-22"><span class="linenos" data-linenos="22 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+</span><span id="__span-12-23"><span class="linenos" data-linenos="23 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-24"><span class="linenos" data-linenos="24 "></span><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-25"><span class="linenos" data-linenos="25 "></span><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fr</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-26"><span class="linenos" data-linenos="26 "></span><span class="w">                    </span><span class="n">fr</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</span><span id="__span-12-27"><span class="linenos" data-linenos="27 "></span><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-12-28"><span class="linenos" data-linenos="28 "></span><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-29"><span class="linenos" data-linenos="29 "></span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+</span><span id="__span-12-30"><span class="linenos" data-linenos="30 "></span><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-12-31"><span class="linenos" data-linenos="31 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-12-32"><span class="linenos" data-linenos="32 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-12-33"><span class="linenos" data-linenos="33 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="flujos-de-datos-outputstream-y-inputstream">Flujos de datos OutputStream y InputStream<a class="headerlink" href="#flujos-de-datos-outputstream-y-inputstream" title="Permanent link">¶</a></h2>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut10/10_5.png" data-desc-position="bottom"><img alt="Flujos de datos" src="../../img/ut10/10_5.png" width="600"></a>
+</figure>
+<h3 id="outputstream">OutputStream<a class="headerlink" href="#outputstream" title="Permanent link">¶</a></h3>
+<p>Para escribir datos en un fichero binario utilizaremos las clases <code>FileOutputStream</code> (Flujo de salida de ficheros) y <code>DataOutputStream</code> (Flujo de salida de datos), derivadas de OutputStream (Flujo de salida).</p>
+<p>La clase <strong><code>FileOutputStream</code> permite tener acceso al fichero para escribir bytes</strong>. El fichero se crea y si ya existe su contenido se pierde. Si lo que necesitamos es abrir un fichero binario existente sin perder su contenido y añadir más contenido al final utilizaremos los constructores con el append correspondiente.
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-13-1"><span class="linenos" data-linenos="1 "></span><span class="n">FileOutputStream</span><span class="w"> </span><span class="n">fos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="p">(</span><span class="n">Path</span><span class="p">,</span><span class="w"> </span><span class="n">append</span><span class="p">);</span>
+</span><span id="__span-13-2"><span class="linenos" data-linenos="2 "></span><span class="n">FileOutputStream</span><span class="w"> </span><span class="n">fos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="p">(</span><span class="n">File</span><span class="w"> </span><span class="n">Objeto</span><span class="p">,</span><span class="w"> </span><span class="n">append</span><span class="p">);</span>
+</span></code></pre></div>
+Los constructores lanzan una excepción FileNotFoundException si no existe y no se ha podido crear el fichero. La clase FileOutputStream proporciona el método <code>write()</code> para escribir bytes en el fichero. Este método lanza una <code>IOException</code>. <p></p>
+<p>A partir de un objeto FileOutputStream se puede crear un objeto DataOutputStream, que proporciona métodos para escribir datos de tipo primitivo en el fichero. La clase proporciona métodos <code>writeXxx()</code> donde Xxx es el nombre del tipo primitivo. Lanza una <code>IOException</code>.</p>
+<p>Ejemplo: Programa que lee enteros por teclado y los escribe en el fichero datos.dat. La lectura de datos acaba cuando se introduce -1.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-14-1"><span class="linenos" data-linenos=" 1 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.DataOutputStream</span><span class="p">;</span>
+</span><span id="__span-14-2"><span class="linenos" data-linenos=" 2 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileNotFoundException</span><span class="p">;</span>
+</span><span id="__span-14-3"><span class="linenos" data-linenos=" 3 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileOutputStream</span><span class="p">;</span>
+</span><span id="__span-14-4"><span class="linenos" data-linenos=" 4 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+</span><span id="__span-14-5"><span class="linenos" data-linenos=" 5 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+</span><span id="__span-14-6"><span class="linenos" data-linenos=" 6 "></span>
+</span><span id="__span-14-7"><span class="linenos" data-linenos=" 7 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo12</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+</span><span id="__span-14-10"><span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="n">fos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-14-11"><span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="n">DataOutputStream</span><span class="w"> </span><span class="n">salida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-14-12"><span class="linenos" data-linenos="12 "></span>
+</span><span id="__span-14-13"><span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-14"><span class="linenos" data-linenos="14 "></span><span class="w">            </span><span class="n">fos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="s">"c:/ficheros/datos.dat"</span><span class="p">);</span>
+</span><span id="__span-14-15"><span class="linenos" data-linenos="15 "></span><span class="w">            </span><span class="n">salida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataOutputStream</span><span class="p">(</span><span class="n">fos</span><span class="p">);</span>
+</span><span id="__span-14-16"><span class="linenos" data-linenos="16 "></span>
+</span><span id="__span-14-17"><span class="linenos" data-linenos="17 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Introduce número entero. -1 para acabar: "</span><span class="p">);</span>
+</span><span id="__span-14-18"><span class="linenos" data-linenos="18 "></span><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+</span><span id="__span-14-19"><span class="linenos" data-linenos="19 "></span>
+</span><span id="__span-14-20"><span class="linenos" data-linenos="20 "></span><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-21"><span class="linenos" data-linenos="21 "></span><span class="w">                </span><span class="n">salida</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="c1">// Se escribe el número entero en el fichero</span>
+</span><span id="__span-14-22"><span class="linenos" data-linenos="22 "></span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Introduce número entero. -1 para acabar: "</span><span class="p">);</span>
+</span><span id="__span-14-23"><span class="linenos" data-linenos="23 "></span><span class="w">                </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+</span><span id="__span-14-24"><span class="linenos" data-linenos="24 "></span><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-14-25"><span class="linenos" data-linenos="25 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-26"><span class="linenos" data-linenos="26 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+</span><span id="__span-14-27"><span class="linenos" data-linenos="27 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-28"><span class="linenos" data-linenos="28 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+</span><span id="__span-14-29"><span class="linenos" data-linenos="29 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-30"><span class="linenos" data-linenos="30 "></span><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-31"><span class="linenos" data-linenos="31 "></span><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fos</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-32"><span class="linenos" data-linenos="32 "></span><span class="w">                    </span><span class="n">fos</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</span><span id="__span-14-33"><span class="linenos" data-linenos="33 "></span><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-14-34"><span class="linenos" data-linenos="34 "></span><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">salida</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-35"><span class="linenos" data-linenos="35 "></span><span class="w">                    </span><span class="n">salida</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</span><span id="__span-14-36"><span class="linenos" data-linenos="36 "></span><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-14-37"><span class="linenos" data-linenos="37 "></span><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-38"><span class="linenos" data-linenos="38 "></span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+</span><span id="__span-14-39"><span class="linenos" data-linenos="39 "></span><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-14-40"><span class="linenos" data-linenos="40 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-14-41"><span class="linenos" data-linenos="41 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-14-42"><span class="linenos" data-linenos="42 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="inputstream">InputStream<a class="headerlink" href="#inputstream" title="Permanent link">¶</a></h3>
+<p>Para leer de un fichero binario utilizaremos las clases <code>FileInputStream</code> (Flujo de entrada de ficheros) y <code>DataInputStream</code> (Flujo de entrada de datos), derivadas de <code>InputStream</code> (Flujo de entrada).</p>
+<p>La clase <strong><code>FileInputStream</code> permite leer bytes de un fichero</strong>. Ambos lanzan una excepción <code>FileNotFoundException</code> si el fichero no existe. La clase proporciona el método <code>read()</code> para leer bytes del fichero. El método read() lanza una excepción <code>IOException</code>.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-15-1"><span class="linenos" data-linenos="1 "></span><span class="n">FileInputStream</span><span class="w"> </span><span class="n">fis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="w"> </span><span class="p">(</span><span class="n">Path</span><span class="p">);</span>
+</span><span id="__span-15-2"><span class="linenos" data-linenos="2 "></span><span class="n">FileInputStream</span><span class="w"> </span><span class="n">fis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="w"> </span><span class="p">(</span><span class="n">File</span><span class="w"> </span><span class="n">Objeto</span><span class="p">);</span>
+</span></code></pre></div>
+<p>La clase proporciona métodos <code>readXxx()</code> donde Xxx es el nombre del tipo primitivo. Lanzan una excepción <code>IOException</code>.</p>
+<p>Ejemplo: Programa que lee el contenido del fichero creado en el ejemplo anterior. Utilizaremos un bucle infinito para leer datos. Cuando se llega al final del fichero se lanza la excepción EOFException que se utiliza para salir del bucle while.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-16-1"><span class="linenos" data-linenos=" 1 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.DataInputStream</span><span class="p">;</span>
+</span><span id="__span-16-2"><span class="linenos" data-linenos=" 2 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.EOFException</span><span class="p">;</span>
+</span><span id="__span-16-3"><span class="linenos" data-linenos=" 3 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileInputStream</span><span class="p">;</span>
+</span><span id="__span-16-4"><span class="linenos" data-linenos=" 4 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileNotFoundException</span><span class="p">;</span>
+</span><span id="__span-16-5"><span class="linenos" data-linenos=" 5 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+</span><span id="__span-16-6"><span class="linenos" data-linenos=" 6 "></span>
+</span><span id="__span-16-7"><span class="linenos" data-linenos=" 7 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo14</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="n">FileInputStream</span><span class="w"> </span><span class="n">fis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-16-10"><span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="n">DataInputStream</span><span class="w"> </span><span class="n">entrada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-16-11"><span class="linenos" data-linenos="11 "></span>
+</span><span id="__span-16-12"><span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-13"><span class="linenos" data-linenos="13 "></span><span class="w">            </span><span class="n">fis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="s">"c:/ficheros/datos.dat"</span><span class="p">);</span>
+</span><span id="__span-16-14"><span class="linenos" data-linenos="14 "></span><span class="w">            </span><span class="n">entrada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataInputStream</span><span class="p">(</span><span class="n">fis</span><span class="p">);</span>
+</span><span id="__span-16-15"><span class="linenos" data-linenos="15 "></span><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+</span><span id="__span-16-16"><span class="linenos" data-linenos="16 "></span>
+</span><span id="__span-16-17"><span class="linenos" data-linenos="17 "></span><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-18"><span class="linenos" data-linenos="18 "></span><span class="w">                </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entrada</span><span class="p">.</span><span class="na">readInt</span><span class="p">();</span><span class="w"> </span><span class="c1">// Se lee un entero del fichero</span>
+</span><span id="__span-16-19"><span class="linenos" data-linenos="19 "></span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="c1">// Se muestra en pantalla</span>
+</span><span id="__span-16-20"><span class="linenos" data-linenos="20 "></span><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-16-21"><span class="linenos" data-linenos="21 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-22"><span class="linenos" data-linenos="22 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+</span><span id="__span-16-23"><span class="linenos" data-linenos="23 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">EOFException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-24"><span class="linenos" data-linenos="24 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Fin de fichero"</span><span class="p">);</span>
+</span><span id="__span-16-25"><span class="linenos" data-linenos="25 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-26"><span class="linenos" data-linenos="26 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+</span><span id="__span-16-27"><span class="linenos" data-linenos="27 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-28"><span class="linenos" data-linenos="28 "></span><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-29"><span class="linenos" data-linenos="29 "></span><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fis</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-30"><span class="linenos" data-linenos="30 "></span><span class="w">                    </span><span class="n">fis</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</span><span id="__span-16-31"><span class="linenos" data-linenos="31 "></span><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-16-32"><span class="linenos" data-linenos="32 "></span><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">entrada</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-33"><span class="linenos" data-linenos="33 "></span><span class="w">                    </span><span class="n">entrada</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</span><span id="__span-16-34"><span class="linenos" data-linenos="34 "></span><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-16-35"><span class="linenos" data-linenos="35 "></span><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-36"><span class="linenos" data-linenos="36 "></span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+</span><span id="__span-16-37"><span class="linenos" data-linenos="37 "></span><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-16-38"><span class="linenos" data-linenos="38 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-16-39"><span class="linenos" data-linenos="39 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-16-40"><span class="linenos" data-linenos="40 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="lectura-y-escritura-aleatoria-en-un-archivo">Lectura y escritura aleatoria en un archivo<a class="headerlink" href="#lectura-y-escritura-aleatoria-en-un-archivo" title="Permanent link">¶</a></h2>
+<p>La clase <code>RandomAccessFile</code> (Fichero de acceso aleatorio) se utiliza para acceder a un fichero sobre cualquier posición.
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-17-1"><span class="linenos" data-linenos="1 "></span><span class="n">RandomAccessFile</span><span class="w"> </span><span class="n">fichero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RandomAccessFile</span><span class="p">(</span><span class="s">"ruta"</span><span class="p">,</span><span class="w"> </span><span class="s">"modo"</span><span class="p">);</span>
+</span><span id="__span-17-2"><span class="linenos" data-linenos="2 "></span><span class="n">RandomAccessFile</span><span class="w"> </span><span class="n">fichero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RandomAccessFile</span><span class="p">(</span><span class="n">Objeto</span><span class="p">,</span><span class="w"> </span><span class="s">"modo"</span><span class="p">);</span>
+</span></code></pre></div>
+Lanzan una excepción <code>FileNotFoundException</code>. El argumento mode indica el modo de acceso en el que se abre el fichero. Los valores permitidos para este parámetro son:<p></p>
+<table>
+<thead>
+<tr>
+<th>Modo</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>r</code></td>
+<td>Abre el fichero en modo solo lectura. El fichero debe existir. Una operación de escritura en este fichero lanzará una excepción <code>IOException</code>.</td>
+</tr>
+<tr>
+<td><code>rw</code></td>
+<td>Abre el fichero en modo lectura y escritura. Si el fichero no existe se intentará crear.</td>
+</tr>
+</tbody>
+</table>
+<p>Abrir un fichero aleatorio para lectura. Se abre el fichero clientes.dat para lectura usando el primer constructor. 
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-18-1"><span class="linenos" data-linenos="1 "></span><span class="n">RandomAccessFile</span><span class="w"> </span><span class="n">fichero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RandomAccessFile</span><span class="p">(</span><span class="s">"/ficheros/clientes.dat"</span><span class="p">,</span><span class="w"> </span><span class="s">"r"</span><span class="p">);</span><span class="w"> </span>
+</span></code></pre></div>
+Abrir un fichero aleatorio para lectura/escritura. Se abre el fichero personas.dat para lectura/escritura usando el segundo constructor. Si el fichero no existe se crea. 
+<div class="language-java highlight"><pre><span></span><code><span id="__span-19-1"><span class="linenos" data-linenos="1 "></span><span class="n">File</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="w"> </span><span class="p">(</span><span class="s">"/ficheros/personas.dat"</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-19-2"><span class="linenos" data-linenos="2 "></span><span class="n">RandomAccessFile</span><span class="w"> </span><span class="n">fichero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RandomAccessFile</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="s">"rw"</span><span class="p">)</span>
+</span></code></pre></div><p></p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>long getFilePointer()</code></td>
+<td>Devuelve la posición actual del puntero del fichero. Indica la posición (en bytes) donde se va a leer o escribir.</td>
+</tr>
+<tr>
+<td><code>long length()</code></td>
+<td>Devuelve la longitud del fichero en bytes.</td>
+</tr>
+<tr>
+<td><code>void seek(long pos)</code></td>
+<td>Coloca el puntero del fichero en una posición <code>pos</code> determinada. La posición se da como un desplazamiento en bytes desde el comienzo del fichero. La posición <code>0</code> indica el principio del fichero y la posición <code>length()</code> indica el final del fichero.</td>
+</tr>
+<tr>
+<td><code>int read()</code></td>
+<td>Devuelve el byte leído en la posición marcada por el puntero. Devuelve <code>-1</code> si alcanza el final del fichero. Se debe utilizar este método para leer los caracteres de un fichero de texto.</td>
+</tr>
+<tr>
+<td><code>final String readLine()</code></td>
+<td>Devuelve la cadena de caracteres que se lee, desde la posición marcada por el puntero, hasta el siguiente salto de línea que se encuentre. El modificador <code>final</code> indica que no puede ser sobrescrito.</td>
+</tr>
+<tr>
+<td><code>xxx readXxx()</code></td>
+<td>Hay un método <code>read</code> para cada tipo de dato básico: <code>readChar</code>, <code>readInt</code>, <code>readDouble</code>, <code>readBoolean</code>, etc.</td>
+</tr>
+<tr>
+<td><code>void write(int b)</code></td>
+<td>Escribe en el fichero el byte indicado por parámetro. Se debe utilizar este método para escribir caracteres en un fichero de texto.</td>
+</tr>
+<tr>
+<td><code>final void writeBytes(String s)</code></td>
+<td>Escribe en el fichero la cadena de caracteres indicada por parámetro.</td>
+</tr>
+<tr>
+<td><code>final void writeXxx(argumento)</code></td>
+<td>También existe un método <code>write</code> para cada tipo de dato básico: <code>writeChar</code>, <code>writeInt</code>, <code>writeDouble</code>, <code>writeBoolean</code>, etc.</td>
+</tr>
+</tbody>
+</table>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Ejemplo 1</label><label for="__tabbed_2_2">Ejemplo 2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Programa que pide un número entero por teclado y lo añade al final de un fichero binario enteros.dat que contiene números enteros. El programa utiliza el método mostrarFichero() que se llama dos veces. La primera muestra el contenido del fichero antes de añadir el nuevo número y la segunda llamada muestra el fichero después de añadirlo.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-20-1"><span class="linenos" data-linenos=" 1 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.EOFException</span><span class="p">;</span>
+</span><span id="__span-20-2"><span class="linenos" data-linenos=" 2 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileNotFoundException</span><span class="p">;</span>
+</span><span id="__span-20-3"><span class="linenos" data-linenos=" 3 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+</span><span id="__span-20-4"><span class="linenos" data-linenos=" 4 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.RandomAccessFile</span><span class="p">;</span>
+</span><span id="__span-20-5"><span class="linenos" data-linenos=" 5 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+</span><span id="__span-20-6"><span class="linenos" data-linenos=" 6 "></span>
+</span><span id="__span-20-7"><span class="linenos" data-linenos=" 7 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo16</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+</span><span id="__span-20-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="n">RandomAccessFile</span><span class="w"> </span><span class="n">fichero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-20-10"><span class="linenos" data-linenos="10 "></span>
+</span><span id="__span-20-11"><span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-12"><span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">;</span>
+</span><span id="__span-20-13"><span class="linenos" data-linenos="13 "></span>
+</span><span id="__span-20-14"><span class="linenos" data-linenos="14 "></span><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-15"><span class="linenos" data-linenos="15 "></span><span class="w">            </span><span class="c1">// Se abre el fichero para lectura y escritura</span>
+</span><span id="__span-20-16"><span class="linenos" data-linenos="16 "></span><span class="w">            </span><span class="n">fichero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RandomAccessFile</span><span class="p">(</span><span class="s">"c:/ficheros/enteros.dat"</span><span class="p">,</span><span class="w"> </span><span class="s">"rw"</span><span class="p">);</span>
+</span><span id="__span-20-17"><span class="linenos" data-linenos="17 "></span>
+</span><span id="__span-20-18"><span class="linenos" data-linenos="18 "></span><span class="w">            </span><span class="n">mostrarFichero</span><span class="p">();</span><span class="w"> </span><span class="c1">// Muestra el contenido original del fichero</span>
+</span><span id="__span-20-19"><span class="linenos" data-linenos="19 "></span>
+</span><span id="__span-20-20"><span class="linenos" data-linenos="20 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Introduce un número entero para añadir al final del fichero: "</span><span class="p">);</span>
+</span><span id="__span-20-21"><span class="linenos" data-linenos="21 "></span><span class="w">            </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w"> </span><span class="c1">// Se lee el entero a añadir en el fichero</span>
+</span><span id="__span-20-22"><span class="linenos" data-linenos="22 "></span>
+</span><span id="__span-20-23"><span class="linenos" data-linenos="23 "></span><span class="w">            </span><span class="n">fichero</span><span class="p">.</span><span class="na">seek</span><span class="p">(</span><span class="n">fichero</span><span class="p">.</span><span class="na">length</span><span class="p">());</span><span class="w"> </span><span class="c1">// Nos situamos al final del fichero</span>
+</span><span id="__span-20-24"><span class="linenos" data-linenos="24 "></span><span class="w">            </span><span class="n">fichero</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="n">numero</span><span class="p">);</span><span class="w"> </span><span class="c1">// Se escribe el entero</span>
+</span><span id="__span-20-25"><span class="linenos" data-linenos="25 "></span>
+</span><span id="__span-20-26"><span class="linenos" data-linenos="26 "></span><span class="w">            </span><span class="n">mostrarFichero</span><span class="p">();</span><span class="w"> </span><span class="c1">// Muestra el contenido del fichero después de añadir el número</span>
+</span><span id="__span-20-27"><span class="linenos" data-linenos="27 "></span>
+</span><span id="__span-20-28"><span class="linenos" data-linenos="28 "></span><span class="w">            </span><span class="n">fichero</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</span><span id="__span-20-29"><span class="linenos" data-linenos="29 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-30"><span class="linenos" data-linenos="30 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+</span><span id="__span-20-31"><span class="linenos" data-linenos="31 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-32"><span class="linenos" data-linenos="32 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+</span><span id="__span-20-33"><span class="linenos" data-linenos="33 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-20-34"><span class="linenos" data-linenos="34 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-20-35"><span class="linenos" data-linenos="35 "></span><span class="w">    </span><span class="c1">// Método para mostrar los datos del fichero</span>
+</span><span id="__span-20-36"><span class="linenos" data-linenos="36 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrarFichero</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-37"><span class="linenos" data-linenos="37 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+</span><span id="__span-20-38"><span class="linenos" data-linenos="38 "></span>
+</span><span id="__span-20-39"><span class="linenos" data-linenos="39 "></span><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-40"><span class="linenos" data-linenos="40 "></span><span class="w">            </span><span class="n">fichero</span><span class="p">.</span><span class="na">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// Nos situamos al principio del fichero</span>
+</span><span id="__span-20-41"><span class="linenos" data-linenos="41 "></span><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-42"><span class="linenos" data-linenos="42 "></span><span class="w">                </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fichero</span><span class="p">.</span><span class="na">readInt</span><span class="p">();</span><span class="w"> </span><span class="c1">// Se lee un entero del fichero</span>
+</span><span id="__span-20-43"><span class="linenos" data-linenos="43 "></span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="c1">// Se muestra en pantalla</span>
+</span><span id="__span-20-44"><span class="linenos" data-linenos="44 "></span><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-20-45"><span class="linenos" data-linenos="45 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">EOFException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-46"><span class="linenos" data-linenos="46 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Fin de fichero"</span><span class="p">);</span>
+</span><span id="__span-20-47"><span class="linenos" data-linenos="47 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-48"><span class="linenos" data-linenos="48 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+</span><span id="__span-20-49"><span class="linenos" data-linenos="49 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-20-50"><span class="linenos" data-linenos="50 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-20-51"><span class="linenos" data-linenos="51 "></span><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Programa Java para modificar un entero dentro del fichero enteros.dat con acceso aleatorio. Para ello se pide la posición que ocupa el entero a modificar dentro del fichero, a continuación, se lee y muestra el valor actual, se pide el nuevo valor y finalmente se escribe el nuevo valor en la posición indicada, modificando de esta forma el valor antiguo por el nuevo. La posición deberá estar comprendida entre 1 y el número de enteros que contiene el fichero. La cantidad de enteros que contiene el fichero se calcula así:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-21-1"><span class="linenos" data-linenos=" 1 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileNotFoundException</span><span class="p">;</span>
+</span><span id="__span-21-2"><span class="linenos" data-linenos=" 2 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+</span><span id="__span-21-3"><span class="linenos" data-linenos=" 3 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.RandomAccessFile</span><span class="p">;</span>
+</span><span id="__span-21-4"><span class="linenos" data-linenos=" 4 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+</span><span id="__span-21-5"><span class="linenos" data-linenos=" 5 "></span>
+</span><span id="__span-21-6"><span class="linenos" data-linenos=" 6 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo17</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+</span><span id="__span-21-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="n">RandomAccessFile</span><span class="w"> </span><span class="n">fichero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-21-10"><span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">numero</span><span class="p">;</span>
+</span><span id="__span-21-11"><span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="kt">long</span><span class="w"> </span><span class="n">size</span><span class="p">;</span>
+</span><span id="__span-21-12"><span class="linenos" data-linenos="12 "></span>
+</span><span id="__span-21-13"><span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-14"><span class="linenos" data-linenos="14 "></span><span class="w">            </span><span class="c1">// Abrir el fichero para lectura y escritura</span>
+</span><span id="__span-21-15"><span class="linenos" data-linenos="15 "></span><span class="w">            </span><span class="n">fichero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RandomAccessFile</span><span class="p">(</span><span class="s">"c:/ficheros/enteros.dat"</span><span class="p">,</span><span class="w"> </span><span class="s">"rw"</span><span class="p">);</span>
+</span><span id="__span-21-16"><span class="linenos" data-linenos="16 "></span>
+</span><span id="__span-21-17"><span class="linenos" data-linenos="17 "></span><span class="w">            </span><span class="c1">// Calcular cuántos enteros tiene el fichero</span>
+</span><span id="__span-21-18"><span class="linenos" data-linenos="18 "></span><span class="w">            </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fichero</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
+</span><span id="__span-21-19"><span class="linenos" data-linenos="19 "></span><span class="w">            </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// Cada entero ocupa 4 bytes</span>
+</span><span id="__span-21-20"><span class="linenos" data-linenos="20 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"El fichero tiene "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" enteros"</span><span class="p">);</span>
+</span><span id="__span-21-21"><span class="linenos" data-linenos="21 "></span>
+</span><span id="__span-21-22"><span class="linenos" data-linenos="22 "></span><span class="w">            </span><span class="c1">// Modificar el entero que se encuentra en una posición determinada</span>
+</span><span id="__span-21-23"><span class="linenos" data-linenos="23 "></span><span class="w">            </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-24"><span class="linenos" data-linenos="24 "></span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Introduce una posición (&gt;= 1 y &lt;= "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"): "</span><span class="p">);</span>
+</span><span id="__span-21-25"><span class="linenos" data-linenos="25 "></span><span class="w">                </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+</span><span id="__span-21-26"><span class="linenos" data-linenos="26 "></span><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
+</span><span id="__span-21-27"><span class="linenos" data-linenos="27 "></span>
+</span><span id="__span-21-28"><span class="linenos" data-linenos="28 "></span><span class="w">            </span><span class="n">pos</span><span class="o">--</span><span class="p">;</span><span class="w"> </span><span class="c1">// Ajustar a la indexación 0 (la posición 1 realmente es la 0)</span>
+</span><span id="__span-21-29"><span class="linenos" data-linenos="29 "></span>
+</span><span id="__span-21-30"><span class="linenos" data-linenos="30 "></span><span class="w">            </span><span class="c1">// Nos situamos en la posición (byte de inicio) del entero a modificar</span>
+</span><span id="__span-21-31"><span class="linenos" data-linenos="31 "></span><span class="w">            </span><span class="n">fichero</span><span class="p">.</span><span class="na">seek</span><span class="p">(</span><span class="n">pos</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// Cada entero ocupa 4 bytes</span>
+</span><span id="__span-21-32"><span class="linenos" data-linenos="32 "></span>
+</span><span id="__span-21-33"><span class="linenos" data-linenos="33 "></span><span class="w">            </span><span class="c1">// Leemos y mostramos el valor actual</span>
+</span><span id="__span-21-34"><span class="linenos" data-linenos="34 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Valor actual: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fichero</span><span class="p">.</span><span class="na">readInt</span><span class="p">());</span>
+</span><span id="__span-21-35"><span class="linenos" data-linenos="35 "></span>
+</span><span id="__span-21-36"><span class="linenos" data-linenos="36 "></span><span class="w">            </span><span class="c1">// Pedimos que se introduzca el nuevo valor</span>
+</span><span id="__span-21-37"><span class="linenos" data-linenos="37 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Introduce nuevo valor: "</span><span class="p">);</span>
+</span><span id="__span-21-38"><span class="linenos" data-linenos="38 "></span><span class="w">            </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+</span><span id="__span-21-39"><span class="linenos" data-linenos="39 "></span>
+</span><span id="__span-21-40"><span class="linenos" data-linenos="40 "></span><span class="w">            </span><span class="c1">// Nos situamos de nuevo en la posición del entero a modificar</span>
+</span><span id="__span-21-41"><span class="linenos" data-linenos="41 "></span><span class="w">            </span><span class="n">fichero</span><span class="p">.</span><span class="na">seek</span><span class="p">(</span><span class="n">pos</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+</span><span id="__span-21-42"><span class="linenos" data-linenos="42 "></span>
+</span><span id="__span-21-43"><span class="linenos" data-linenos="43 "></span><span class="w">            </span><span class="c1">// Escribimos el entero</span>
+</span><span id="__span-21-44"><span class="linenos" data-linenos="44 "></span><span class="w">            </span><span class="n">fichero</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="n">numero</span><span class="p">);</span>
+</span><span id="__span-21-45"><span class="linenos" data-linenos="45 "></span>
+</span><span id="__span-21-46"><span class="linenos" data-linenos="46 "></span><span class="w">            </span><span class="n">fichero</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</span><span id="__span-21-47"><span class="linenos" data-linenos="47 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-48"><span class="linenos" data-linenos="48 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+</span><span id="__span-21-49"><span class="linenos" data-linenos="49 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-50"><span class="linenos" data-linenos="50 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+</span><span id="__span-21-51"><span class="linenos" data-linenos="51 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-21-52"><span class="linenos" data-linenos="52 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-21-53"><span class="linenos" data-linenos="53 "></span><span class="p">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 1012</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). Diseña un programa que muestre únicamente los ficheros de un directorio cuya primera letra sea “A”. Para ello deberás crear primero una clase llamada FiltroPrimeraLetra, la cual implemente la interface FilenameFilter.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 1013</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). Escribe un programa que escriba los 100 primeros números naturales en un archivo de nombre numNaturales.txt Escribe un programa que utilice un método, de nombre obtenerSumaNumerosArchivo, que reciba por parámetro el nombre del archivo numNaturales.txt con la serie de cantidades enteras y positivas. El método leerá todos los valores del archivo, calculará su suma y la devolverá.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 1014</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). Escribe un programa que contenga un método, de nombre escribirCadenasEnArchivo, que reciba un array de cadenas de caracteres y vuelque su contenido a un archivo cuyo nombre también se recibirá por parámetro. Las cadenas quedarán separadas en el archivo por un guión bajo.</p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 1015</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p). A partir del fichero <a href="../../files/UT10-FicherosPR.zip">empleados.csv</a> que contiene los empleados de una empresa multinacional. Los nombres de los campos están en la primera linea y los valores separados por comas.</p>
+<ul>
+<li>a. Importa adecuadamente los datos del fichero proporcionado de forma que cada empleado será un objeto que se almacenará en una colección adecuada.</li>
+<li>
+<p>b. Genera el correo de todos los empleados independientemente del que tengan.</p>
+<div class="admonition note">
+<p class="admonition-title">Ejemplo</p>
+<ul>
+<li><code>formato: nombre.apellidos@location.multinacional.com</code></li>
+<li>Nombre y apellidos en minúsculas.</li>
+<li>
+<p>Location: en minúscula y si hay espacios los sustituyes por guiones.</p>
+<p><strong>Ejemplo</strong></p>
+<p>Jhon Doe New York --&gt; jhon.doe@new-york.multinacional.com</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>c. Completa el teléfono de los empleados que no tienen pidiéndolos por consola. Comprueba adecuadamente el formato de todos los email y teléfonos.</p>
+</li>
+<li>d. El programa deberá permitir contar los empleados de cada departamento y ciudad, pidiendo el departamento o ciudad por consola. </li>
+<li>e. El programa deberá mostrar los empleados de mayor y menor edad de cada departamento y ciudad, pidiendo el departamento o ciudad por consola.</li>
+<li>f. El programa deberá generar un listado de texto plano, ordenado por apellido, solamente con los empleados del departamento o la ciudad indicados por el usuario. El fichero deberá llamarse como el departamento o la ciudad indicados.</li>
+</ul>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 1016</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p) A partir del fichero <a href="../../files/UT10-FicherosPR.zip">coches.csv</a> que contiene los datos de coches de un concesionario de venta de segunda mano. Los nombres de los campos están en la primera línea y los valores separados por comas.</p>
+<ul>
+<li>a. Importa adecuadamente los datos del fichero proporcionado de forma que cada coche será un objeto que se almacenará en una colección adecuada.</li>
+<li>b. Calcula el precio final de cada coche aplicando el descuento en caso de que lo tenga, y los impuestos que son del 21% si el coche tiene 20 años o menos y del 10% si tiene más.</li>
+<li>c. El programa deberá permitir guardar la colección que contiene los coches del concesionario en un fichero binario, es decir, guardo y recupero el objeto colección que contiene todos los coches. Guardará los coches de la Marca indicada por consola y los que tengan menos de los km indicados, ordenados adecuadamente.</li>
+<li>d. El programa deberá de permitir recuperar el fichero binario guardado en el apartado anterior, llevarlo a la colección adecuada y mostrarlo por pantalla.</li>
+<li>e. El programa deberá permitir guardar los coches individuales del concesionario en un fichero binario, es decir, recorro la colección y guardo los coches uno a uno. Guardará los coches del tipo de combustible indicado y los que tengan un precio menor que el indicado, ordenados adecuadamente.</li>
+<li>f. El programa deberá permitir recuperar el fichero binario guardado en el apartado anterior, llevarlo a la colección adecuada y mostrarlo por pantalla.</li>
+</ul>
+</li>
+</ul>
+<!-- Resultados de Aprendizaje & Criterios de Evaluación -->
+<!-- Instrumentos de Evaluación -->
+<!-- Instrumentos de Calificación -->
+<!-- Tipo de actividades -->
+<!-- Otras abreviaciones -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Pablo Rabasco Rodríguez
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/prabasco" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:&lt;p.rabascorodriguez@edu.gva.es&gt;" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "toc.follow", "content.tooltips", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

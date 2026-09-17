@@ -1,0 +1,1120 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/prabasco/PRG/ut/ut07/072_Herencia.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Herencia - Programación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra_index.css">
+    
+      <link rel="stylesheet" href="../../css/extra_pd.css">
+    
+      <link rel="stylesheet" href="../../css/extra_tablasresumen.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#herencia" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../index.html" title="Programación" class="md-header__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Herencia
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo noche" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo día" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Programación" class="md-nav__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    Programación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 01. Elementos de un programa informático
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 01. Elementos de un programa informático
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/011_ProgramaLenguajes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1. Programa y lenguajes de programación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/012_LenguajeJava.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2. El lenguaje de programación Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/013_Estructura.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3. Estructura y bloques fundamentales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/014_IDE.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4. IDE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/021_TiposDatos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1. Tipos de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/022_Fechas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2. Fechas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/023_ConstantesLiterales.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.3. Constanstes literales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/024_Variables.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.4. Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/025_OperadoresExpresiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.5. Operadores y expresiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/026_Precedencia.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.6. Precedencia de operadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/027_Casting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.7. Casting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/028_Comentarios.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.8. Comentarios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/029_IOConsola.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.9. Entrada y salida de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="herencia">Herencia<a class="headerlink" href="#herencia" title="Permanent link">¶</a></h1>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut07/01_Herencia.png" data-desc-position="bottom"><img align="right" alt="Herencia" src="../../img/ut07/01_Herencia.png" width="200"></a></p>
+<p>La herencia es una de las características fundamentales de la Programación Orientada a Objetos (<abbr title="Programación Orientada a Objetos">POO</abbr>). Mediante la herencia podemos definir una clase a partir de otra ya existente. La clase nueva se llama clase derivada o subclase y la clase existente se llama clase base o superclase. La clase derivada hereda los miembros (atributos y métodos) de la clase base.</p>
+<p>La finalidad de la herencia es:</p>
+<ul>
+<li>Extender la funcionalidad de la clase base: en la clase derivada se pueden añadir atributos y métodos nuevos.</li>
+<li>Especializar el comportamiento de la clase base: en la clase derivada se pueden modificar (sobrescribir, <code>override</code>) los métodos heredados para adaptarlos a sus necesidades.</li>
+</ul>
+<p>La herencia permite la reutilización del código, ya que evita tener que reescribir de nuevo una clase existente cuando necesitamos ampliarla en cualquier sentido. Todas las clases derivadas pueden utilizar el código de la clase base sin tener que volver a definirlo en cada una de ellas.</p>
+<h2 id="tipos-de-herencia-en-los-lenguajes">Tipos de herencia en los lenguajes<a class="headerlink" href="#tipos-de-herencia-en-los-lenguajes" title="Permanent link">¶</a></h2>
+<p>Existen dos tipos de herencias: <strong>simples</strong> y <strong>múltiples</strong>.</p>
+<p>La herencia múltiple es básicamente que una clase puede heredar de dos clases base. Aunque la típica afirmación de que Java no soporta herencia múltiple no es del todo exacta (se simula mediante interfaces), no es recomendable su uso, ya que, a pesar de su potencia, nos puede llevar a complicaciones en la estructura como es la temida herencia con estructura diamante.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut07/02_TiposHerencia.png" data-desc-position="bottom"><img alt="Herencia múltiple" src="../../img/ut07/02_TiposHerencia.png" width="300"></a>
+</figure>
+<p>Es por ello que, salvo que sea realmente estricto nos quedaremos con la herencia simple. Una clase base puede serlo de tantas derivadas como se desee: <em><strong>Un solo padre, varios hijos</strong></em>.</p>
+<h2 id="herencia-en-java">Herencia en Java<a class="headerlink" href="#herencia-en-java" title="Permanent link">¶</a></h2>
+<p>Un objeto de una clase derivada es, a su vez, un objeto de su clase base, por lo tanto, se puede sustituir en cualquier lugar donde aparezca un objeto de la clase base. Si esto no fuese posible entonces la herencia no está bien planteada.</p>
+<div class="admonition note">
+<p class="admonition-title">Ejemplo de planteamiento de herencia</p>
+<p>A partir de la clase <code>Persona</code>, que tiene como atributos el nif y el nombre, podemos obtener una clase derivada <code>Alumno</code>. Un <code>Alumno</code> es una <code>Persona</code> que tendrá como atributos nif, nombre y curso. Su uso es correcto ya que un <code>Alumno</code> es una <code>Persona</code>.</p>
+</div>
+<p>A la hora de visualizar la herencia de nuestro programa se puede llegar a complicar con conceptos como generalizaciones o especializaciones. Siguiendo con el ejemplo de <code>Persona</code>, se podría llegar a algo como a lo de la imagen:</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut07/03_HerenciaJava.png" data-desc-position="bottom"><img alt="Herencia" src="../../img/ut07/03_HerenciaJava.png" width="700"></a>
+</figure>
+<p>Las clases más generales se sitúan en lo más alto de la jerarquía. Cuánto más arriba en la jerarquía, menor nivel de detalle. Cada clase derivada debe implementar únicamente lo que la distingue de su clase base. En Java todas las clases derivan directa o indirectamente de la clase <code>Object</code>. Esta es la clase base de toda la jerarquía de clases Java. Todos los objetos en un programa Java son <code>Object</code>.</p>
+<p>Las clases derivadas cumplen una serie de propiedades:</p>
+<ul>
+<li>Una clase derivada hereda de la clase base sus componentes (atributos y métodos).</li>
+<li>Los constructores no se heredan. Las clases derivadas deberán implementar sus propios constructores.</li>
+<li>Una clase derivada puede acceder a los miembros públicos y protegidos de la clase base como si fuesen miembros propios.</li>
+<li>Una clase derivada no tiene acceso a los miembros privados de la clase base. Deberá acceder a través de métodos heredados de la clase base.</li>
+<li>Si se necesita tener acceso directo a los miembros privados de la clase base se deben declarar <code>protected</code> en lugar de <code>private</code> en la clase base.</li>
+<li>Una clase derivada puede añadir a los miembros heredados, sus propios atributos y métodos (extender la funcionalidad de la clase).</li>
+<li>También puede modificar los métodos heredados (especializar el comportamiento de la clase base).</li>
+<li>Una clase derivada puede, a su vez, ser una clase base, dando lugar a una jerarquía de clases.</li>
+</ul>
+<h2 id="extension-de-una-clase">Extensión de una clase<a class="headerlink" href="#extension-de-una-clase" title="Permanent link">¶</a></h2>
+<p>La herencia en Java se expresa mediante la palabra extends, es decir se extiende la clase base a la clase derivada. Por ejemplo, para declarar una clase B que hereda de una clase A:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span>public class B extends A { … }
+</span></code></pre></div>
+<p>Si lo vemos con un ejemplo </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Clase padre</label><label for="__tabbed_1_2">Clase hija</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-java highlight"><span class="filename">Persona.java</span><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">dni</span><span class="p">;</span>
+</span><span id="__span-1-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+</span><span id="__span-1-4"><span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getDni</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">dni</span><span class="p">;}</span>
+</span><span id="__span-1-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setDni</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">dni</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">dni</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dni</span><span class="p">;}</span>
+</span><span id="__span-1-6"><span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">;}</span>
+</span><span id="__span-1-7"><span class="linenos" data-linenos="7 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNombre</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;}</span>
+</span><span id="__span-1-8"><span class="linenos" data-linenos="8 "></span><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-java highlight"><span class="filename">Alumno.java</span><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Alumno</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Persona</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">curso</span><span class="p">;</span>
+</span><span id="__span-2-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getCurso</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">curso</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-4"><span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setCurso</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">curso</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">curso</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curso</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-5"><span class="linenos" data-linenos="5 "></span><span class="p">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>La clase <code>Alumno</code> hereda los atributos nombre y dni de la clase <code>Persona</code>, y añade el atributo curso. Por lo tanto:</p>
+<ul>
+<li>Los atributos de la clase Alumno son dni, nombre y curso.</li>
+<li>Los métodos de la clase Alumno son: <code>getDni()</code>, <code>setDni(String dni)</code>, <code>getNombre()</code>, <code>setNombre(String nombre)</code>, <code>getCurso()</code>, <code>setCurso(String curso)</code>.</li>
+</ul>
+<p>La clase <code>Alumno</code>, aunque hereda los atributos dni y nombre, no puede acceder a ellos de forma directa ya que son privados a la clase <code>Persona</code>. Se acceden a través de los métodos heredados de la clase base. La clase <code>Alumno</code> puede utilizar los miembros public y protected de la clase <code>Persona</code> como si fueran propios.</p>
+<div class="admonition note">
+<p class="admonition-title">Jerarquía de clases</p>
+<p>En una jerarquía de clases, cuando un objeto invoca a un método:</p>
+<ol>
+<li>Se busca en su clase el método correspondiente.</li>
+<li>Si no se encuentra, se busca en su clase base.</li>
+<li>Si no se encuentra, se sigue buscando hacia arriba en la jerarquía de clases hasta que el método se encuentra.</li>
+<li>Si al llegar a la clase raíz el método no se ha encontrado se producirá un error.</li>
+</ol>
+</div>
+<h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 701</strong> (<abbr title="Desarrolla programas organizados en clases analizando y aplicando los principios de la programación orientada a objetos.">RA4</abbr>/ <abbr title="Se han definido y utilizado clases heredadas.">CE4g</abbr> <abbr title="Se han creado y utilizado métodos estáticos.">CE4h</abbr> <abbr title="Se han creado y utilizado conjuntos y librerías de clases.">CE4i</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). Realiza la implementación de la siguiente imagen:</p>
+<p></p><figure markdown="span">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut07/03_HerenciaJava.png" data-desc-position="bottom"><img alt="Herencia" src="../../img/ut07/03_HerenciaJava.png" width="700"></a>
+</figure><p></p>
+<ul>
+<li><code>Persona</code> tiene como atributos: <code>dni</code>, <code>sexo</code> y <code>anyoNacimiento</code>. Además de los métodos que accedan y modifiquen las propiedades, se ha de programar un método que calcule la edad (solo el año).</li>
+<li><code>Alumno</code> tiene como atributo <code>etapaEducativa</code> y <code>provinciaVive</code>.</li>
+<li><code>Ingeniero</code> tiene como atributo <code>colegioAdscrito</code>. Y un método que es <code>calculoCuota</code> que si es industrial es gratuito, si es otro son 50€.</li>
+<li><code>Tecnico</code> tiene como atributo <code>gradoProfesional</code> y <code>anyoComienzo</code>. Además tiene un método que es <code>anyoExperiencia</code> que nos calcula cuantos años lleva trabajados desde su comienzo.</li>
+<li><code>Administrativo</code> tiene el atributo <code>administración</code>.</li>
+<li><code>Profesor</code> tiene el atributo <code>especialidad</code> y <code>anyoInicioTrabajo</code>. Tiene un método que es <code>anyosComoDocente</code> que calcula los años que lleva en el cuerpo.</li>
+<li><code>Interino</code> tiene como atributo bolsa, que indica el número de bolsas en las que está. En el constructor por defecto deberá marcar 1, pero en el sobrecargado sólo si se introduce 0.</li>
+<li><code>Plantilla</code> tiene <code>anyoOposicion</code> y el método <code>anyosFuncionarioCarrera</code>.</li>
+<li><code>Catedrático</code> un boolean que sea <code>esCatedratico</code>.</li>
+</ul>
+<p>Además hay que generar un main en el que se comprueben todos los objetos y métodos que se programen.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 702</strong> (<abbr title="Desarrolla programas organizados en clases analizando y aplicando los principios de la programación orientada a objetos.">RA4</abbr>/ <abbr title="Se han definido y utilizado clases heredadas.">CE4g</abbr> <abbr title="Se han creado y utilizado métodos estáticos.">CE4h</abbr> <abbr title="Se han creado y utilizado conjuntos y librerías de clases.">CE4i</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). Implementa una clase base llamada <code>Vehiculo</code>, luego desarrolla una clase <code>Coche</code> que herede de la clase base. Por último, crea una nueva clase que tú quieras y sea específica de <code>Coche</code>, es decir, que herede de la clase <code>Coche</code>. Habrá que almacenar información sobre su estado y comportamiento (atributos y métodos) como, por ejemplo, nombre, velocidad, marcha, mover, ruedas, etc. </p>
+<p>Incluye los métodos cambiar de marchas, acelerar/desacelerar velocidad. Tendrás que decidir en qué clase se almacena qué información. Para el tipo más concreto de coche que has definido tendrás que añadir algo específico para ese tipo de coche. No olvides los constructores con todos los parámetros.</p>
+<p>Crea un método main de prueba</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 703</strong> (<abbr title="Desarrolla programas organizados en clases analizando y aplicando los principios de la programación orientada a objetos.">RA4</abbr>/ <abbr title="Se han definido y utilizado clases heredadas.">CE4g</abbr> <abbr title="Se han creado y utilizado métodos estáticos.">CE4h</abbr> <abbr title="Se han creado y utilizado conjuntos y librerías de clases.">CE4i</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). Escribe una clase con el nombre <code>Circulo</code>. La clase necesita un campo (variable de instancia) con radio de nombre de tipo doble. La clase debe tener un constructor con un parámetro de radio de tipo doble y debe inicializar los campos. En caso de que el parámetro de radio sea menor que 0, debe establecer el valor del campo de radio en 0.</p>
+<p>Escribe los siguientes métodos (métodos de instancia):</p>
+<ul>
+<li><code>getRadio</code> sin ningún parámetro, debe devolver el valor del campo de radio.</li>
+<li><code>getArea</code> sin ningún parámetro, debe devolver el área calculada (radio * radio * PI). Para PI use la constante Math.PI.</li>
+</ul>
+<p>Escriba una clase con el nombre <code>Cilindro</code> que extienda la clase <code>Circulo</code>. La clase necesita un campo (variable de instancia) de nombre altura de tipo doble. La clase necesita tener un constructor con dos parámetros radio y altura, ambos de tipo doble. En caso de que el parámetro de altura sea inferior a 0, debe establecer el valor del campo de altura en 0. Crea los siguientes métodos (métodos de instancia):</p>
+<ul>
+<li><code>getAltura</code> sin ningún parámetro, debe devolver el valor del campo de altura.</li>
+<li><code>getVolume</code> sin ningún parámetro, debe devolver el volumen calculado. Para calcular el volumen multiplica el área por la altura.</li>
+</ul>
+<p>Crea un método main con código de prueba</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 704</strong> (<abbr title="Desarrolla programas organizados en clases analizando y aplicando los principios de la programación orientada a objetos.">RA4</abbr>/ <abbr title="Se han definido y utilizado clases heredadas.">CE4g</abbr> <abbr title="Se han creado y utilizado métodos estáticos.">CE4h</abbr> <abbr title="Se han creado y utilizado conjuntos y librerías de clases.">CE4i</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p).Escribe una clase <code>Herencia1</code> que contendrá el <code>main()</code> y una clase <code>Multimedia</code> para almacenar información de objetos de tipo multimedia (películas, discos, …). La clase <code>Multimedia</code>: </p>
+<ul>
+<li>Contendrá título, autor, formato y duración como atributos privados.</li>
+<li>El formato puede ser uno de los siguientes: wav, mp3, midi, avi, mov, mpg, cdaudio y dvd.</li>
+<li>El valor de todos esos atributos se pasa como parámetros al constructor al crear el objeto.</li>
+<li>Esta clase tiene, además, un método para devolver cada uno de los atributos y un método <code>toString</code> que devuelve la información del objeto.</li>
+</ul>
+<p>En la clase <code>Herencia1</code> se generarán los siguientes objetos:</p>
+<ul>
+<li>obj1 Blade Runner Ridley Scott DVD 117</li>
+<li>obj2 León, el profesional Luc Besson AVI 110</li>
+</ul>
+<p>La información de estos objetos se mostrará por pantalla mediante el método <code>toString</code></p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 705</strong> (<abbr title="Desarrolla programas organizados en clases analizando y aplicando los principios de la programación orientada a objetos.">RA4</abbr>/ <abbr title="Se han definido y utilizado clases heredadas.">CE4g</abbr> <abbr title="Se han creado y utilizado métodos estáticos.">CE4h</abbr> <abbr title="Se han creado y utilizado conjuntos y librerías de clases.">CE4i</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). Escribe una clase <code>Película</code> que herede de la clase <code>Multimedia</code> anterior (<abbr title="Actividades de clase.">AC</abbr> 704):</p>
+<ul>
+<li>Esta clase tiene, además de los atributos heredados, los atributos privados actor principal y actriz principal.</li>
+<li>Se permite que uno de los dos sea nulo (no exista o se desconozca), pero no los dos.</li>
+<li>La clase debe tener dos métodos para obtener los nuevos atributos y debe sobrescribir el método toString para que devuelva, además de la información que hereda, la nueva información.</li>
+<li>Modifica la clase principal <code>Herencia1</code> para que los objetos instanciados tengan la siguiente información:<ul>
+<li>Objeto Título Autor Formato Duración Actor princ. Actriz princ.</li>
+<li>obj1 Blade Runner Ridley Scott DVD 117 Harrison Ford</li>
+<li>obj2 León, el profesional Luc Besson AVI 110 Jean Reno Natalie Portman</li>
+</ul>
+</li>
+<li>La información de estos objetos se mostrará por pantalla mediante el método <code>toString()</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 706</strong> (<abbr title="Desarrolla programas organizados en clases analizando y aplicando los principios de la programación orientada a objetos.">RA4</abbr>/ <abbr title="Se han definido y utilizado clases heredadas.">CE4g</abbr> <abbr title="Se han creado y utilizado métodos estáticos.">CE4h</abbr> <abbr title="Se han creado y utilizado conjuntos y librerías de clases.">CE4i</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p). Escribe una clase <code>Disco</code> que herede de la clase <code>Multimedia</code>:</p>
+<ul>
+<li>Esta clase tiene, además de los atributos heredados, un atributo privado para almacenar el género al que pertenece (rock, pop, funk, etc).</li>
+<li>La clase debe tener un método para obtener el nuevo atributo y debe sobrescribir el método <code>toString</code> para que devuelva, además de la información que hereda, la nueva información.</li>
+<li>Modifica la clase principal <code>Herencia1</code> para que los objetos instanciados tengan la siguiente información:<ul>
+<li>Objeto Título Autor Formato Duración Género</li>
+<li>obj1 Live at Wembley Queen MP3 40 Rock</li>
+<li>obj2 Aidalai Mecano CDAUDIO 50 Pop</li>
+</ul>
+</li>
+<li>La información de estos objetos se mostrará por pantalla mediante el método <code>toString()</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 707</strong> (<abbr title="Desarrolla programas aplicando características avanzadas de los lenguajes orientados a objetos y del entorno de programación.">RA7</abbr>/ <abbr title="Se han identificado los conceptos de herencia, superclase y subclase.">CE7a</abbr> <abbr title="Se han utilizado modificadores para bloquear y forzar la herencia de clases y métodos.">CE7b</abbr> <abbr title="Se ha reconocido la incidencia de los constructores en la herencia.">CE7c</abbr> <abbr title="Se han creado clases heredadas que sobrescriben la implementación de métodos de la superclase.">CE7d</abbr> <abbr title="Se han diseñado y aplicado jerarquías de clases.">CE7e</abbr> <abbr title="Se han probado y depurado las jerarquías de clases.">CE7f</abbr> <abbr title="Se han realizado programas que implementen y utilicen jerarquías de clases.">CE7g</abbr> <abbr title="Se ha comentado y documentado el código.">CE7h</abbr> <abbr title="Se han identificado y evaluado los escenarios de utilización de la herencia y la composición.">CE7j</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p). Diseña y programa las clases necesarias para implementar los pedidos de un restaurante de comida rápida. El restaurante tiene una carta
+dividida en distintas categorías: entradas, bocadillos, hamburguesas y postres.</p>
+<p>Todos los productos pertenecen a una sola categoría y tienen un nombre, descripción y precio.
+Cuando un cliente quiere hacer un pedido, navega por la carta y selecciona los productos que desea. Al elegir un producto, podrá elegir la cantidad y opcionalmente hacer un comentario sobre el pedido. Se pueden hacer dos tipos de pedidos, para recoger y para llevar. </p>
+<p>Si el pedido es para recoger, solo se requiere el nombre del cliente. Si es para llevar, además se requiere la dirección y el teléfono. Cuando se finaliza el pedido, el restaurante lo almacena para procesarlo, e informa al cliente del coste total de su pedido, añadiendo 2€ de coste si el pedido es para llevar, y le informará aproximadamente del tiempo que tardará, siendo 10 minutos por producto distinto que incluya el pedido más 15 minutos de llevarlo en caso de servicio a domicilio.</p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 708</strong> (<abbr title="Desarrolla programas aplicando características avanzadas de los lenguajes orientados a objetos y del entorno de programación.">RA7</abbr>/ <abbr title="Se han identificado los conceptos de herencia, superclase y subclase.">CE7a</abbr> <abbr title="Se han utilizado modificadores para bloquear y forzar la herencia de clases y métodos.">CE7b</abbr> <abbr title="Se ha reconocido la incidencia de los constructores en la herencia.">CE7c</abbr> <abbr title="Se han creado clases heredadas que sobrescriben la implementación de métodos de la superclase.">CE7d</abbr> <abbr title="Se han diseñado y aplicado jerarquías de clases.">CE7e</abbr> <abbr title="Se han probado y depurado las jerarquías de clases.">CE7f</abbr> <abbr title="Se han realizado programas que implementen y utilicen jerarquías de clases.">CE7g</abbr> <abbr title="Se ha comentado y documentado el código.">CE7h</abbr> <abbr title="Se han identificado y evaluado los escenarios de utilización de la herencia y la composición.">CE7j</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p). Diseña y programa las clases necesarias para implementar el sistema de reservas de un restaurante.</p>
+<p>El restaurante está formado por gran salón con una capacidad máxima de 50 personas que no se puede superar en ningún caso. </p>
+<p>El salón lo podemos configurar con distintos tipos de mesas, cuadradas para 4 comensales, mesas redondas pequeñas para 8 y mesas redondas grandes para 12 comensales. Tenemos un n.º limitado de cada tipo de mesa, a definir por el programador.</p>
+<p>Cuando se hace una reserva, hay que asignarle el número adecuado de mesas, teniendo en cuenta que las mesas redondas no se pueden juntar, y que cuando juntamos las cuadradas perdemos capacidad, las de las esquinas solo admitirán 3 comensales y las del centro 2. Además del salón, el restaurante dispone de 2 reservados con un capacidad máxima de 8 y de 15 comensales.</p>
+<p>Los reservados solo admiten una única reserva, mientras que en el salón puede haber un número indefinido siempre que no se supere su capacidad máxima.</p>
+<p>Cuando se realiza una reserva, el cliente indicará su nombre, teléfono, número de comensales y si desea reservado. El restaurante, procesará la reserva y la almacenará si es posible indicando el n.º y tipo de mesas que requiere e informará al cliente de que su reserva ha sido guardada. En caso de que la reserva no sea posible, también informará al cliente.</p>
+</li>
+</ul>
+<!-- Resultados de Aprendizaje & Criterios de Evaluación -->
+<!-- Instrumentos de Evaluación -->
+<!-- Instrumentos de Calificación -->
+<!-- Tipo de actividades -->
+<!-- Otras abreviaciones -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Pablo Rabasco Rodríguez
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/prabasco" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:&lt;p.rabascorodriguez@edu.gva.es&gt;" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "toc.follow", "content.tooltips", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

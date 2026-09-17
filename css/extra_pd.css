@@ -1,0 +1,145 @@
+#propuesta-didactica{
+    font-size: 0.64rem;
+}
+#propuesta-didactica #head{
+    display: flex;
+}
+#propuesta-didactica #head > section:nth-child(1) {
+    width: 50%; 
+}
+
+#propuesta-didactica #head > section:nth-child(1) p:last-child{
+    border-left: 1px solid #e0e0e0;
+}
+
+#propuesta-didactica #head > section:last-child p:last-child{
+    border-right: 1px solid #e0e0e0;
+}
+#propuesta-didactica #head > section:nth-child(2), #propuesta-didactica #head > section:nth-child(3){
+    width: 25%;
+}
+
+#propuesta-didactica #head > section p{
+    margin: 0;
+    padding: 10px 0;
+}
+
+#propuesta-didactica #head > section > p:first-child{
+    background: #2094f3;
+    color: #fff;
+}
+
+#propuesta-didactica #head > section > p{
+    text-align: center;
+}
+
+#body-pd-head{
+    display: flex;
+    background: #ff6e42;
+    color: #fff;
+    align-items: center;
+}
+
+#body-pd-head > p {
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    width: 6%;
+}
+
+#body-pd-head > p{
+    width: 35%;
+}
+
+
+#body-pd-head > p:first-child,#body-pd-head > p:nth-child(2) {
+    width: 15%;
+}
+
+#body-pd-div{
+    background:#bd5231;
+    color: #fff;
+    text-align: center;
+}
+
+#body-pd-div p{
+    margin: 0;
+    padding: 10px 0;
+}
+
+.body-pd{
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-top: 0;
+}
+
+.body-pd > p {
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    min-width: 6%;
+    width: 6%;
+}
+
+.body-pd > p:last-child, .body-pd > p:nth-child(11) {
+    min-width: 10.5%;
+    width: 10.5%;
+}
+
+.body-pd> p:first-child {
+    text-align: left;
+    min-width: 25%;
+    width: 25%;
+    padding-left: 10px;
+}
+
+#body-pd-ra{
+    background:#ff6e42;
+    color: #fff;
+    text-align: center;
+}
+#body-pd-ra p{
+    margin: 0;
+    padding: 10px 0;
+}
+
+.body-pd-ra{
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-top: 0;
+}
+.body-pd-ra p{
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    min-width: 10.5%;
+    width: 10.5%;
+}
+
+.body-pd-ra p:first-child{
+    text-align: left;
+    padding: 10px 10px;
+    width: 79%;
+}
+
+.body-pd-sesion{
+    display: flex;
+
+}
+
+.body-pd-sesion > p, .body-pd-sesion > ul{
+    width: 35%;
+    margin: 0;
+    border: 1px solid #e0e0e0;
+    padding: 15px 0;
+    padding-left: .625em;
+}
+
+
+.body-pd-sesion > p:first-child,.body-pd-sesion > p:nth-child(2) {
+    width: 15%;
+    text-align: center;
+    padding-left: 0px;
+}
