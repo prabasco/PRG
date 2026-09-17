@@ -1,0 +1,1125 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/prabasco/PRG/ut/ut12/1205_Eventos.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Eventos en JavaFX - Programación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra_index.css">
+    
+      <link rel="stylesheet" href="../../css/extra_pd.css">
+    
+      <link rel="stylesheet" href="../../css/extra_tablasresumen.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#eventos-en-javafx" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../index.html" title="Programación" class="md-header__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Eventos en JavaFX
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo noche" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo día" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Programación" class="md-nav__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    Programación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 01. Elementos de un programa informático
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 01. Elementos de un programa informático
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/011_ProgramaLenguajes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1. Programa y lenguajes de programación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/012_LenguajeJava.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2. El lenguaje de programación Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/013_Estructura.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3. Estructura y bloques fundamentales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/014_IDE.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4. IDE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/021_TiposDatos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1. Tipos de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/022_Fechas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2. Fechas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/023_ConstantesLiterales.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.3. Constanstes literales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/024_Variables.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.4. Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/025_OperadoresExpresiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.5. Operadores y expresiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/026_Precedencia.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.6. Precedencia de operadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/027_Casting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.7. Casting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/028_Comentarios.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.8. Comentarios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/029_IOConsola.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.9. Entrada y salida de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="eventos-en-javafx">Eventos en JavaFX<a class="headerlink" href="#eventos-en-javafx" title="Permanent link">¶</a></h1>
+<p>Cada vez que un usuario interactúa con la aplicación (nodos), se dice que ha ocurrido un evento. Existe un UIThread que está escuchando cuando lanzamos la aplicación. Cuando el usuario hace algo el UIThread que está escuchando, mira a ver si se lanza un evento, y si es así, envía el evento al controlador de eventos (event handler). El Event Handler se ejecuta en el subproceso del hilo UIThread. Mientras se ejecuta un evento del UIThread el usuario no puede interactuar con la aplicación. </p>
+<p>Por ejemplo, hacer clic en un botón, mover el ratón, ingresar un carácter a través del teclado, seleccionar un elemento de la lista, desplazarse por la página, etc. son ejemplos de actividades que provocan que suceda un evento. </p>
+<p>Un evento notifica que ha ocurrido algo importante. Los eventos suelen ser la parte "primitiva" de un sistema de eventos (también conocido como bus de eventos). Generalmente, un sistema de eventos tiene las siguientes 3 responsabilidades: </p>
+<ol>
+<li>Trigger an event (disparar un evento)</li>
+<li>Notify listeners (notificar a los oyentes partes interesadas) sobre el evento </li>
+<li>Handle the event (manejar o procesar el evento). </li>
+</ol>
+<p>El mecanismo de notificación de eventos lo realiza la plataforma JavaFX automáticamente. Por lo tanto, solo consideraremos cómo disparar eventos, escuchar eventos y cómo manejarlos. </p>
+<h2 id="tipos-de-eventos">Tipos de eventos.<a class="headerlink" href="#tipos-de-eventos" title="Permanent link">¶</a></h2>
+<ul>
+<li>Eventos en primer plano (foreground events): requieren la interacción directa de un usuario. Se generan como consecuencia de la interacción de una persona con los componentes gráficos en una interfaz gráfica de usuario. Por ejemplo, hacer clic en un botón, mover el ratón, ingresar un carácter a través del teclado, seleccionar un elemento de la lista, desplazarse por la página, etc. </li>
+<li>Eventos de fondo (background events): no requieren la interacción del usuario final. Las interrupciones del sistema operativo, fallas de hardware o software, vencimiento del temporizador, finalización de la operación son ejemplos de eventos en segundo plano.</li>
+</ul>
+<h2 id="algunos-eventos-en-javafx">Algunos eventos en JavaFX.<a class="headerlink" href="#algunos-eventos-en-javafx" title="Permanent link">¶</a></h2>
+<p>La clase denominada Event del paquete <code>javafx.event</code> es la clase base para un evento. Una instancia de cualquiera de sus subclases es un evento. JavaFX proporciona una amplia variedad de eventos. Algunos de ellos son:</p>
+<ul>
+<li>Mouse event: evento de entrada que ocurre cuando se hace clic con el ratón. Está representado por la clase denominada MouseEvent. Incluye acciones como hacer clic con el ratón, presionarlo, soltarlo, moverlo, objetivo ingresado con el ratón, objetivo salido del ratón, etc. </li>
+<li>Key event: evento de entrada que indica que se produjo una pulsación de tecla en un nodo. Está representado por la clase denominada KeyEvent. Este evento incluye acciones como pulsación de tecla, liberación de tecla y escritura de tecla. </li>
+<li>Drag event: evento de entrada que ocurre cuando se arrastra el ratón. Está representado por la clase llamada DragEvent. Incluye acciones como arrastrar para insertar, arrastrar para soltar, etc. </li>
+<li>Window event: evento relacionado con las acciones de mostrar/ocultar ventanas. Está representado por la clase llamada WindowEvent.</li>
+</ul>
+<h2 id="manejo-de-eventos">Manejo de eventos.<a class="headerlink" href="#manejo-de-eventos" title="Permanent link">¶</a></h2>
+<p>El Manejo de Eventos es el mecanismo que controla el evento y decide qué debe suceder, si ocurre un evento. Este mecanismo tiene el código conocido como controlador de eventos que se ejecuta cuando ocurre un evento. JavaFX proporciona controladores y filtros para manejar eventos. En JavaFX cada evento tiene: </p>
+<ul>
+<li>Destino (Target): el nodo en el que ocurrió un evento. Un objetivo puede ser una ventana, una escena y un nodo.</li>
+<li>Fuente (Source): la fuente a partir de la cual se genera el evento será la fuente del evento. En el escenario anterior, el ratón es la fuente del evento. </li>
+<li>Tipo (Type): tipo de evento ocurrido; en el caso de un evento de ratón, el tipo de evento puede ser botón del ratón presionado, botón del ratón soltado…</li>
+</ul>
+<h2 id="fases-del-manejo-de-eventos">Fases del manejo de eventos.<a class="headerlink" href="#fases-del-manejo-de-eventos" title="Permanent link">¶</a></h2>
+<h3 id="fase-de-captura-de-eventos">Fase de captura de eventos<a class="headerlink" href="#fase-de-captura-de-eventos" title="Permanent link">¶</a></h3>
+<p>Después de la construcción de la cadena de distribución de eventos, el nodo raíz de la aplicación distribuye el evento. Este evento viaja a todos los nodos de la cadena de distribución (de arriba a abajo). Si alguno de estos nodos tiene un filtro registrado para el evento generado, se ejecutará. Si ninguno de los nodos en la cadena de distribución tiene un filtro para el evento generado, entonces se pasa al nodo de destino y finalmente el nodo de destino procesa el evento. </p>
+<p>En el ejemplo anterior, si hacemos clic en botón de play, la ruta que se seguiría en esta fase sería: </p>
+<p>Stage→Scene→Group→Play Button </p>
+<h3 id="fase-de-burbujeo-del-evento">Fase de burbujeo del evento<a class="headerlink" href="#fase-de-burbujeo-del-evento" title="Permanent link">¶</a></h3>
+<p>En la fase de burbujeo de eventos, el evento viaja desde el nodo de destino al nodo de etapa (de abajo hacia arriba). Si alguno de los nodos de la cadena de distribución de eventos tiene un controlador registrado para el evento generado, se ejecutará. Si ninguno de estos nodos tiene manejadores para manejar el evento, entonces el evento llega al nodo raíz y finalmente se completará el proceso. </p>
+<p>En el ejemplo anterior, si hacemos clic en botón de play, la ruta que se seguiría en esta fase sería: </p>
+<p>Play Button→Group→Scene→Stage </p>
+<h3 id="controladores-y-filtros-de-eventos">Controladores y filtros de eventos<a class="headerlink" href="#controladores-y-filtros-de-eventos" title="Permanent link">¶</a></h3>
+<p>Los filtros y controladores de eventos son aquellos que contienen lógica de aplicación para procesar un evento. Un nodo puede registrarse en más de un controlador/filtro. En el caso de los nodos padre-hijo, se puede proporcionar un filtro/controlador común a los padres, que se procesa de forma predeterminada para todos los nodos secundarios.</p>
+<p>Los filtros de eventos se llaman antes que los controladores de eventos. Como se mencionó anteriormente, durante el evento, el procesamiento es un filtro que se ejecuta y durante la fase de propagación del evento, se ejecuta un controlador. Todos los manejadores y filtros implementan la interfaz EventHandler del paquete javafx.event. </p>
+<p>Crear filtros y controladores de eventos es tan simple como crear objetos de la clase que implementan la interfaz EventHandler. Antes de Java 8, usaba clases internas para crear controladores y filtros de eventos, como en el siguiente código:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span><span class="n">EventHandler</span><span class="o">&lt;</span><span class="n">MouseEvent</span><span class="o">&gt;</span><span class="w"> </span><span class="n">aHandler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EventHandler</span><span class="o">&lt;</span><span class="n">MouseEvent</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="nd">@Override</span>
+</span><span id="__span-0-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handle</span><span class="p">(</span><span class="n">MouseEvent</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-4"><span class="linenos" data-linenos="4 "></span><span class="w">        </span><span class="c1">// Aquí metemos el código que queremos ejecutar en respuesta al evento</span>
+</span><span id="__span-0-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-6"><span class="linenos" data-linenos="6 "></span><span class="p">};</span>
+</span></code></pre></div>
+<p>A partir de Java 8, el uso de expresiones lambda es la mejor opción para crear los filtros y controladores de eventos, como en el siguiente código:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos="1 "></span><span class="n">EventHandler</span><span class="o">&lt;</span><span class="n">MouseEvent</span><span class="o">&gt;</span><span class="w"> </span><span class="n">aHandler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="c1">// El código de manejo del evento va aquí</span>
+</span><span id="__span-1-3"><span class="linenos" data-linenos="3 "></span><span class="p">};</span>
+</span></code></pre></div>
+<h3 id="creacion-y-registro-de-un-eventfilter">Creación y registro de un EventFilter.<a class="headerlink" href="#creacion-y-registro-de-un-eventfilter" title="Permanent link">¶</a></h3>
+<p>En el siguiente ejemplo se crea un EventFilter que se activará cuando se haga clic en un botón. Cuando se active el filtro se llamará al manejador de eventos llamado handler. Este manejador de eventos imprimirá un mensaje por pantalla y cambiará el color del botón. Para este ejemplo se utiliza la sintaxis “clásica” previa al uso de expresiones lambda.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos=" 1 "></span><span class="c1">// Creación de un manejador de evento</span>
+</span><span id="__span-2-2"><span class="linenos" data-linenos=" 2 "></span><span class="n">EventHandler</span><span class="o">&lt;</span><span class="n">MouseEvent</span><span class="o">&gt;</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EventHandler</span><span class="o">&lt;</span><span class="n">MouseEvent</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="nd">@Override</span>
+</span><span id="__span-2-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handle</span><span class="p">(</span><span class="n">MouseEvent</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">);</span>
+</span><span id="__span-2-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="n">boton</span><span class="p">.</span><span class="na">setFill</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="na">DARKSLATEBLUE</span><span class="p">);</span>
+</span><span id="__span-2-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-8"><span class="linenos" data-linenos=" 8 "></span><span class="p">};</span>
+</span><span id="__span-2-9"><span class="linenos" data-linenos=" 9 "></span>
+</span><span id="__span-2-10"><span class="linenos" data-linenos="10 "></span><span class="c1">// Creación de un EventFilter</span>
+</span><span id="__span-2-11"><span class="linenos" data-linenos="11 "></span><span class="n">boton</span><span class="p">.</span><span class="na">addEventFilter</span><span class="p">(</span><span class="n">MouseEvent</span><span class="p">.</span><span class="na">MOUSE_CLICKED</span><span class="p">,</span><span class="w"> </span><span class="n">handler</span><span class="p">);</span>
+</span></code></pre></div>
+<p>El siguiente código muestra el mismo ejemplo, pero gestionando el evento mediante un EventHandler, en vez de un EventFilter. En este ejemplo se utiliza una expresión lambda para escribir el código del manejador</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><span class="linenos" data-linenos="1 "></span><span class="c1">// Creación de un manejador de evento</span>
+</span><span id="__span-3-2"><span class="linenos" data-linenos="2 "></span><span class="n">EventHandler</span><span class="o">&lt;</span><span class="n">MouseEvent</span><span class="o">&gt;</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">);</span>
+</span><span id="__span-3-4"><span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="n">boton</span><span class="p">.</span><span class="na">setFill</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="na">DARKSLATEBLUE</span><span class="p">);</span>
+</span><span id="__span-3-5"><span class="linenos" data-linenos="5 "></span><span class="p">};</span>
+</span><span id="__span-3-6"><span class="linenos" data-linenos="6 "></span>
+</span><span id="__span-3-7"><span class="linenos" data-linenos="7 "></span><span class="c1">// Creación de un EventHandler</span>
+</span><span id="__span-3-8"><span class="linenos" data-linenos="8 "></span><span class="n">boton</span><span class="p">.</span><span class="na">addEventHandler</span><span class="p">(</span><span class="n">MouseEvent</span><span class="p">.</span><span class="na">MOUSE_CLICKED</span><span class="p">,</span><span class="w"> </span><span class="n">handler</span><span class="p">);</span>
+</span></code></pre></div>
+<h2 id="eventos-de-raton">Eventos de ratón.<a class="headerlink" href="#eventos-de-raton" title="Permanent link">¶</a></h2>
+<p>Un evento de ratón está representado por la clase MouseEvent. </p>
+<ul>
+<li><code>ANY</code>: Es el supertipo de todos los tipos de eventos de ratón. Si un nodo desea recibir todos los tipos de eventos de ratón, debe registrar controladores para este tipo. <code>InputEvent.ANY</code> es el supertipo de este tipo de evento. </li>
+<li><code>MOUSE_PRESSED</code>: presionar un botón del ratón genera este evento. El método getButton() de la clase MouseEvent devuelve el botón del mouse que es responsable del evento. Un botón del ratón está representado por las constantes <code>NONE</code>, <code>PRIMARY</code>, <code>MIDDLE</code> y <code>SECONDARY</code> definidas en la enumeración MouseButton. </li>
+<li><code>MOUSE_RELEASED</code>: Soltar un botón del ratón genera este evento. Este evento se envía al mismo nodo en el que se presionó el ratón. Por ejemplo, puede presionar un botón del ratón en un círculo, arrastrar el ratón fuera del círculo y soltar el botón del ratón. El evento <code>MOUSE_RELEASED</code> se enviará al círculo, no al nodo en el que se soltó el botón del ratón. </li>
+<li><code>MOUSE_CLICKED</code>: este evento se genera cuando se hace clic con un botón del ratón en un nodo. El botón debe presionarse y soltarse en el mismo nodo para que ocurra este evento. </li>
+<li><code>MOUSE_MOVED</code>: Mover el ratón sin presionar ningún botón genera este evento. </li>
+<li><code>MOUSE_ENTERED</code>: Este evento se genera cuando el ratón ingresa a un nodo. La captura de eventos y las fases de propagación no tienen lugar para este evento. Es decir, los filtros de eventos y los controladores de los nodos principales del destino del evento de este evento no son llamados. </li>
+<li><code>MOUSE_ENTERED_TARGET</code>: Este evento se genera cuando el ratón ingresa a un nodo. Es una variante del tipo de evento <code>MOUSE_ENTERED</code>. A diferencia del evento <code>MOUSE_ENTERED</code>, la captura de eventos y las fases de propagación tienen lugar para este evento. </li>
+<li><code>MOUSE_EXITED_TARGET</code>: este evento se genera cuando el ratón sale de un nodo. Es una variante del tipo de evento <code>MOUSE_EXITED</code>. A diferencia del evento <code>MOUSE_EXITED</code>, la captura de eventos y las fases de propagación tienen lugar para este evento. </li>
+<li><code>DRAG_DETECTED</code>: este evento se genera cuando se presiona el ratón y se arrastra sobre un nodo sobre un umbral de distancia específico.</li>
+<li><code>MOUSE_DRAGGED</code>: Mover el ratón con un botón presionado genera este evento. Este evento se envía al mismo nodo en el que se presionó el botón del ratón, independientemente de la ubicación del puntero del ratón durante el arrastre.</li>
+</ul>
+<h2 id="eventos-de-teclado">Eventos de teclado.<a class="headerlink" href="#eventos-de-teclado" title="Permanent link">¶</a></h2>
+<p>Un evento de ratón está representado por la clase KeyEvent. A continuación, se enumeran todas las constantes de la clase KeyEvent, que representan tipos de eventos de teclado: </p>
+<ul>
+<li><code>ANY</code> es el supertipo de todos. </li>
+<li><code>KEY_PRESSED</code> ocurre cuando se presiona una Tecla. </li>
+<li><code>KEY_RELEASED</code> cuando la Tecla es soltada. </li>
+<li><code>KEY_TYPED</code> cuando se teclea un carácter Unicode. </li>
+</ul>
+<p>El método <code>getCode()</code> devuelve una constante de enumeración KeyCode que está asociada con la tecla que se presiona o suelta. Es válido para los eventos <code>KEY_PRESSED</code> y <code>KEY_RELEASED</code>. Para el evento <code>KEY_TYPED</code> se puede utilizar el método <code>getCharacter()</code> que devuelve un String con la representación de las teclas pulsadas.</p>
+<h2 id="eventos-de-ventana">Eventos de ventana.<a class="headerlink" href="#eventos-de-ventana" title="Permanent link">¶</a></h2>
+<p>Un evento de ventana ocurre cuando una ventana se muestra, oculta o cierra. Una instancia de la clase WindowEvent en el paquete <code>javafx.stage</code> representa un evento de ventana. Las constantes de la clase WindowEvent son: </p>
+<ul>
+<li><code>ANY</code> es el supertipo de todos los eventos de ventana. </li>
+<li><code>WINDOW_SHOWING</code> ocurre justo antes de que se muestre la ventana. </li>
+<li><code>WINDOW_SHOWN</code> ocurre justo después de que se muestre la ventana. </li>
+<li><code>WINDOW_HIDING</code> ocurre justo antes de que se oculte la Ventana. </li>
+<li><code>WINDOW_HIDDEN</code> ocurre justo después de que se oculte la Ventana. </li>
+<li><code>WINDOW_CLOSE_REQUEST</code> Se produce cuando hay una solicitud externa para cerrar esta ventana.</li>
+</ul>
+<h2 id="eventos-mediante-metodos-de-conveniencia">Eventos mediante métodos de conveniencia.<a class="headerlink" href="#eventos-mediante-metodos-de-conveniencia" title="Permanent link">¶</a></h2>
+<p>Existe la posibilidad de registrar controladores (no de filtros) de algunos eventos específicos mediante el uso de métodos de conveniencia. Estos métodos tienen el nombre <code>setOnXXX()</code>, donde XXX hace referencia al evento concreto. </p>
+<p>Por ejemplo, el método <code>setOnMouseClicked()</code> registra un controlador de eventos para el evento en el que se hace clic con el ratón, mientras que el método <code>setOnKeyTyped()</code> lo hace para un evento de tipo <code>key</code> (teclado).</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><span class="linenos" data-linenos="1 "></span><span class="c1">// Registra un controlador de evento para un evento de clic del ratón. </span>
+</span><span id="__span-4-2"><span class="linenos" data-linenos="2 "></span><span class="n">botonx</span><span class="p">.</span><span class="na">setOnMouseClicked</span><span class="p">(</span><span class="n">handler</span><span class="p">);</span>
+</span></code></pre></div>
+<h2 id="resumen-de-eventos">Resumen de eventos<a class="headerlink" href="#resumen-de-eventos" title="Permanent link">¶</a></h2>
+<p>Hay una gran variedad, y es recomendable <a href="https://jenkov.com/tutorials/javafx/index.html">investigarlos</a>, a continuación se muestra un resumen.</p>
+<table>
+<thead>
+<tr>
+<th>Evento</th>
+<th>Descripción</th>
+<th>Ejemplo de Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>ActionEvent</code></strong></td>
+<td>Ocurre cuando se realiza una acción en un control (ej. botón).</td>
+<td><code>button.setOnAction(e -&gt; System.out.println("Botón presionado!"));</code></td>
+</tr>
+<tr>
+<td><strong><code>MouseEvent</code></strong></td>
+<td>Se activa cuando ocurre un evento del ratón (clic, mover).</td>
+<td><code>node.setOnMouseClicked(e -&gt; System.out.println("Clic detectado!"));</code></td>
+</tr>
+<tr>
+<td><strong><code>KeyEvent</code></strong></td>
+<td>Se produce cuando se presiona, suelta o escribe una tecla.</td>
+<td><code>scene.setOnKeyPressed(e -&gt; System.out.println("Tecla presionada: " + e.getCode()));</code></td>
+</tr>
+<tr>
+<td><strong><code>ScrollEvent</code></strong></td>
+<td>Generado cuando se usa la rueda de desplazamiento del ratón.</td>
+<td><code>node.setOnScroll(e -&gt; System.out.println("Scroll detectado!"));</code></td>
+</tr>
+<tr>
+<td><strong><code>DragEvent</code></strong></td>
+<td>Ocurre durante operaciones de arrastrar y soltar.</td>
+<td><code>node.setOnDragDropped(e -&gt; System.out.println("Elemento soltado!"));</code></td>
+</tr>
+<tr>
+<td><strong><code>FocusEvent</code></strong></td>
+<td>Se genera cuando un nodo gana o pierde el foco.</td>
+<td><code>textField.focusedProperty().addListener((obs, oldVal, newVal) -&gt; System.out.println("Foco cambiado!"));</code></td>
+</tr>
+<tr>
+<td><strong><code>TouchEvent</code></strong></td>
+<td>Detecta toques en dispositivos táctiles.</td>
+<td><code>node.setOnTouchPressed(e -&gt; System.out.println("Pantalla táctil presionada!"));</code></td>
+</tr>
+<tr>
+<td><strong><code>ContextMenuEvent</code></strong></td>
+<td>Generado al abrir un menú contextual (botón derecho).</td>
+<td><code>node.setOnContextMenuRequested(e -&gt; System.out.println("Menú contextual solicitado!"));</code></td>
+</tr>
+<tr>
+<td><strong><code>WindowEvent</code></strong></td>
+<td>Ocurre durante eventos de la ventana (abrir, cerrar, enfocar).</td>
+<td><code>stage.setOnCloseRequest(e -&gt; System.out.println("Ventana cerrándose!"));</code></td>
+</tr>
+<tr>
+<td><strong><code>InputEvent</code></strong></td>
+<td>Clase base para eventos de entrada (ratón, teclado, etc.).</td>
+<td><code>node.addEventFilter(InputEvent.ANY, e -&gt; System.out.println("Evento de entrada detectado!"));</code></td>
+</tr>
+<tr>
+<td><strong><code>ChangeEvent</code></strong></td>
+<td>Indica cambios en un estado observable.</td>
+<td><code>slider.valueProperty().addListener((obs, oldVal, newVal) -&gt; System.out.println("Valor cambiado: " + newVal));</code></td>
+</tr>
+</tbody>
+</table>
+<!-- Resultados de Aprendizaje & Criterios de Evaluación -->
+<!-- Instrumentos de Evaluación -->
+<!-- Instrumentos de Calificación -->
+<!-- Tipo de actividades -->
+<!-- Otras abreviaciones -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Pablo Rabasco Rodríguez
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/prabasco" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:&lt;p.rabascorodriguez@edu.gva.es&gt;" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "toc.follow", "content.tooltips", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

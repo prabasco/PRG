@@ -1,0 +1,1085 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/prabasco/PRG/ut/ut06/064_CrearClases.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Creación de clases - Programación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra_index.css">
+    
+      <link rel="stylesheet" href="../../css/extra_pd.css">
+    
+      <link rel="stylesheet" href="../../css/extra_tablasresumen.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creacion-de-clases" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../index.html" title="Programación" class="md-header__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Creación de clases
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo noche" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo día" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Programación" class="md-nav__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    Programación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 01. Elementos de un programa informático
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 01. Elementos de un programa informático
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/011_ProgramaLenguajes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1. Programa y lenguajes de programación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/012_LenguajeJava.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2. El lenguaje de programación Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/013_Estructura.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3. Estructura y bloques fundamentales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/014_IDE.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4. IDE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/021_TiposDatos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1. Tipos de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/022_Fechas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2. Fechas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/023_ConstantesLiterales.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.3. Constanstes literales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/024_Variables.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.4. Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/025_OperadoresExpresiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.5. Operadores y expresiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/026_Precedencia.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.6. Precedencia de operadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/027_Casting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.7. Casting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/028_Comentarios.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.8. Comentarios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/029_IOConsola.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.9. Entrada y salida de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="creacion-de-clases">Creación de clases<a class="headerlink" href="#creacion-de-clases" title="Permanent link">¶</a></h1>
+<p>Cuando se definen los datos de una determinada clase, se debe indicar el tipo de propiedad o atributo que es (<code>String</code>, <code>int</code>, <code>double</code>, <code>char</code>, ...) y el especificador de acceso (<code>public</code>, <code>private</code>, ...).</p>
+<p></p><div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span><span class="kd">class</span> <span class="nc">Persona</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><span class="linenos" data-linenos="2 "></span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"> </span><span class="c1">//Se puede acceder desde cualquier clase</span>
+</span><span id="__span-0-3"><span class="linenos" data-linenos="3 "></span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">contrasenya</span><span class="p">;</span><span class="w"> </span><span class="c1">//Solo se puede acceder desde la clase Persona</span>
+</span><span id="__span-0-4"><span class="linenos" data-linenos="4 "></span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">direccion</span><span class="p">;</span><span class="w"> </span><span class="c1">//A esta propiedad acceden tanto esta clase como sus descendientes</span>
+</span><span id="__span-0-5"><span class="linenos" data-linenos="5 "></span><span class="p">......</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+Por lo general, las propiedades de una clase suelen ser privadas o protegidas, a no ser que se trate de un valor constante, en cuyo caso se declararán como públicos.<p></p>
+<h2 id="definicion-de-metodos-de-clase">Definición de métodos de clase<a class="headerlink" href="#definicion-de-metodos-de-clase" title="Permanent link">¶</a></h2>
+<p>Un método es una llamada a una operación de un determinado objeto. Al realizar esta llamada (también se le llama enviar un mensaje), el control del programa pasa a ese método y lo mantendrá hasta que el método finalice o se haga uso de <code>return</code>.</p>
+<p>Para que un método pueda trabajar, normalmente hay que pasarle unos datos en forma de argumentos o parámetros, cada uno de los cuales se separa por comas. Al definir el método hay que indicar qué argumento se necesitan y de qué tipo son.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos="1 "></span><span class="n">balon</span><span class="p">.</span><span class="na">botar</span><span class="p">();</span><span class="w"> </span><span class="c1">//sin argumentos</span>
+</span><span id="__span-1-2"><span class="linenos" data-linenos="2 "></span><span class="n">miCoche</span><span class="p">.</span><span class="na">acelerar</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</span><span id="__span-1-3"><span class="linenos" data-linenos="3 "></span><span class="n">ficha</span><span class="p">.</span><span class="na">comer</span><span class="p">(</span><span class="n">posicion15</span><span class="p">);</span>
+</span><span id="__span-1-4"><span class="linenos" data-linenos="4 "></span><span class="n">partida</span><span class="p">.</span><span class="na">empezarPartida</span><span class="p">(</span><span class="s">"18:15"</span><span class="p">,</span><span class="n">colores</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Los métodos de la clase se definen dentro de ella. Hay que indicar un modificador de acceso (<code>public</code>, <code>private</code>, <code>protected</code> o ninguno, al igual que ocurre con las variables y con la propia clase) y un tipo de datos, que indica qué tipo de valores devuelve el método.</p>
+<p>Esto último se debe a que los métodos son funciones que pueden devolver un determinado valor (un entero, una cadena de texto, un valor lógico, ...) mediante el comando <code>return</code>. Si el método no devuelve ningún valor, entonces se utiliza el tipo <code>void</code> que significa que no devuelve valores (en ese caso el método no tendrá instrucción <code>return</code>).</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Coche</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ruedas</span><span class="p">;</span>
+</span><span id="__span-2-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">velocidad</span><span class="p">;</span><span class="w"> </span><span class="c1">// por defecto vale 0</span>
+</span><span id="__span-2-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+</span><span id="__span-2-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">direccion</span><span class="p">;</span>
+</span><span id="__span-2-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="cm">/* Aumenta la velocidad*/</span>
+</span><span id="__span-2-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">acelerar</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">cantidad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="n">velocidad</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">cantidad</span><span class="p">;</span><span class="w"> </span><span class="c1">// velocidad = velocidad + cantidad</span>
+</span><span id="__span-2-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-10"><span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="cm">/* Disminuye la velocidad*/</span>
+</span><span id="__span-2-11"><span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">frenar</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">cantidad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-12"><span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="n">velocidad</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">cantidad</span><span class="p">;</span><span class="w"> </span><span class="c1">// velocidad = velocidad - cantidad</span>
+</span><span id="__span-2-13"><span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-14"><span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="cm">/* Devuelve la velocidad*/</span>
+</span><span id="__span-2-15"><span class="linenos" data-linenos="15 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">obtenerVelocidad</span><span class="p">(){</span>
+</span><span id="__span-2-16"><span class="linenos" data-linenos="16 "></span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">velocidad</span><span class="p">;</span>
+</span><span id="__span-2-17"><span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-18"><span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
+</span><span id="__span-2-19"><span class="linenos" data-linenos="19 "></span><span class="w">        </span><span class="n">Coche</span><span class="w"> </span><span class="n">miCoche</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Coche</span><span class="p">();</span>
+</span><span id="__span-2-20"><span class="linenos" data-linenos="20 "></span><span class="w">        </span><span class="n">miCoche</span><span class="p">.</span><span class="na">acelerar</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
+</span><span id="__span-2-21"><span class="linenos" data-linenos="21 "></span><span class="w">        </span><span class="n">miCoche</span><span class="p">.</span><span class="na">frenar</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</span><span id="__span-2-22"><span class="linenos" data-linenos="22 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">miCoche</span><span class="p">.</span><span class="na">obtenerVelocidad</span><span class="p">());</span><span class="w"> </span><span class="c1">//Da 7.0</span>
+</span><span id="__span-2-23"><span class="linenos" data-linenos="23 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-24"><span class="linenos" data-linenos="24 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 601</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr>/ <abbr title="Se han instanciado objetos a partir de clases predefinidas.">CE2c</abbr> <abbr title="Se han incorporado y utilizado librerías de objetos.">CE2g</abbr> <abbr title="Se han utilizado constructores.">CE2h</abbr>/ <abbr title="Escala de valores.">IC1</abbr> / 1p). Genera una clase <code>Noria</code> que tenga como atributo radio de tipo <code>double</code> y como métodos <code>parar</code> al cual no se le pasan argumentos y <code>girar</code> al que se le pasa una variable de tipo entero. Todos los miembros de la clase pueden ser accedidos desde clases que se encuentren en su mismo paquete. Si la noria está parada el método parar devolverá “La noria está parada”, de lo contrario mostrará “Iniciando frenado” hacer un delay de 1000ms y mostrar “Parada”. </p>
+<p>Podéis añadir tantos atributos a la clase como consideréis. En el <code>main</code> realizar la simulación y comprobación que consideréis.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 602</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr>/ <abbr title="Se han instanciado objetos a partir de clases predefinidas.">CE2c</abbr> <abbr title="Se han incorporado y utilizado librerías de objetos.">CE2g</abbr> <abbr title="Se han utilizado constructores.">CE2h</abbr>/ <abbr title="Escala de valores.">IC1</abbr> / 1p). Genera una clase <code>Cuenta</code> que tenga como atributos nombre y número de cuenta de tipo <code>String</code>, y tipo de interés y saldo de tipo <code>double</code>. Por otro lado, tiene el método <code>ingreso</code> al que se le pasa un valor tipo <code>double</code> y devolverá un mensaje en función de una comprobación: que se ingresen mínimo 99,99 y máximo 999,99. Además deberá tener otro método que nos muestre el saldo de la cuenta. Ningún miembro de la clase puede ser accedido desde fuera de esta. </p>
+<p>Podéis añadir tantos atributos a la clase como consideréis. En el <code>main</code> realizar la simulación y comprobación que consideréis.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 603</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr>/ <abbr title="Se han instanciado objetos a partir de clases predefinidas.">CE2c</abbr> <abbr title="Se han incorporado y utilizado librerías de objetos.">CE2g</abbr> <abbr title="Se han utilizado constructores.">CE2h</abbr>/ <abbr title="Escala de valores.">IC1</abbr> / 1p). Genera una clase <code>Coche</code> que tenga como atributos <code>ruedas</code> (con modificador
+packageprivate), <code>velocidad</code> (de tipo double y accesible solo desde clase <code>Coche</code>), <code>nombre</code> (con acceso desde cualquier clase), y <code>dirección</code> (accesible desde cualquier clase dentro de su paquete y por cualquier subclase independientemente del paquete). </p>
+<p>Los métodos de esta clase son <code>acelerar</code> (el cual requerirá de una variable tipo <code>double</code> y no devolverá ningún valor), <code>frenar</code> (que requiere también un <code>double</code> como parámetro de entrada y tampoco devuelve nada) y <code>obtenerVelocidad</code> (sin parámetros y devolverá una variable de tipo <code>double</code>). Los tres métodos pueden ser accedidos desde cualquier clase. <code>obtenerVelocidad</code> será la que nos muestre la velocidad. No puede haber velocidades negativas. </p>
+<p>Podéis añadir tantos atributos a la clase como consideréis. En el <code>main</code> realizar la simulación y comprobación que consideréis.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 604</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr>/ <abbr title="Se han instanciado objetos a partir de clases predefinidas.">CE2c</abbr> <abbr title="Se han incorporado y utilizado librerías de objetos.">CE2g</abbr> <abbr title="Se han utilizado constructores.">CE2h</abbr>/ <abbr title="Escala de valores.">IC1</abbr> / 3p). Desarrolla un programa que sirva para tener registrada la entrada y salida de empleados en la sede
+de una empresa.</p>
+<ul>
+<li>Constará de una clase <code>EmpleadoMain</code> que contendrá el método <code>main</code> y una clase <code>Empleado</code> con los atributos nombre (de empleado), departamento y sala accesibles desde cualquier clase, y también los atributos dni, hora_ent (hora entrada) y hora_sal (hora salida) que serán privados.</li>
+<li>La clase <code>Empleado</code> tiene además todos sus métodos públicos: el método <code>identificacion</code> que devolverá el dni, el método <code>entrada</code> que devolverá la hora de entrada y el método <code>salida</code> que devolverá la hora de salida.</li>
+<li>En la clase <code>EmpleadoMain</code> se debe construir o instanciar un objeto <code>emp1</code> con los siguientes atributos: <ul>
+<li>nombre: “Antonio López”, departamento: "Investigación", sala: ‘A’, dni: “12345678A”, hora_ent: 9 y hora_sal: 15. </li>
+</ul>
+</li>
+<li>También en la clase principal se debe instanciar un nuevo objeto <code>emp2</code> con los atributos: <ul>
+<li>nombre: “María Ruiz”, departamento: "Desarrollo", sala: ‘C’, dni: “23456781B”, hora_ent: 15 y hora_sal: 21. </li>
+</ul>
+</li>
+<li>Finalmente el programa debe imprimir los atributos de los objetos por pantalla.</li>
+</ul>
+<p>Podéis añadir tantos atributos a la clase como consideréis. En el <code>main</code> realizar la simulación y comprobación que consideréis.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 605</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr>/ <abbr title="Se han instanciado objetos a partir de clases predefinidas.">CE2c</abbr> <abbr title="Se han incorporado y utilizado librerías de objetos.">CE2g</abbr> <abbr title="Se han utilizado constructores.">CE2h</abbr>/ <abbr title="Escala de valores.">IC1</abbr> / 3p). Genera una clase <code>Gato</code> que tenga como atributos edad (de tipo entero), peso (de tipo double y accesible solo desde clase Gato), nombre (con acceso desde cualquier clase), y raza (de tipo <code>String</code> y accesible desde cualquier clase dentro de su paquete y por cualquier subclase independientemente del paquete). Los métodos de esta clase son <code>correr</code> (el cual requerirá de una variable tipo <code>double</code> y no
+devolverá ningún valor) y <code>saltar</code> (sin parámetros de entrada y que devuelve un <code>double</code> con la altura alcanzada). Ningún método de la clase puede ser accedido desde fuera de esta.</p>
+<p>Podéis añadir tantos atributos a la clase como consideréis. En el main realizar la simulación y comprobación que consideréis.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 606</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr>/ <abbr title="Se han instanciado objetos a partir de clases predefinidas.">CE2c</abbr> <abbr title="Se han incorporado y utilizado librerías de objetos.">CE2g</abbr> <abbr title="Se han utilizado constructores.">CE2h</abbr>/ <abbr title="Escala de valores.">IC1</abbr> / 3p). Escribe un programa que disponga de una clase para representar los módulos de un
+ciclo superior.</p>
+<ul>
+<li>Un módulo tiene un nombre, un código de 4 dígitos, el número del curso en el cual se imparte y el número de horas. </li>
+<li>Se debe construir o instanciar un objeto <code>mod1</code> con los siguientes atributos: <ul>
+<li>nombre: "Bases de Datos", código: "0484", curso: 1 y horas: 160.</li>
+</ul>
+</li>
+<li>También se debe instanciar un nuevo objeto <code>mod2</code> sin indicar atributos. Estos deben ser introducidos después: <ul>
+<li>nombre: "Programación", código: "0485", curso: 1 y horas: 192. </li>
+</ul>
+</li>
+<li>Para ello la clase ha de tener métodos para escribir los valores de los atributos.</li>
+<li>Finalmente, el programa debe imprimir los atributos de los objetos por pantalla.</li>
+</ul>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 607</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr>/ <abbr title="Se han instanciado objetos a partir de clases predefinidas.">CE2c</abbr> <abbr title="Se han incorporado y utilizado librerías de objetos.">CE2g</abbr> <abbr title="Se han utilizado constructores.">CE2h</abbr>/ <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p). Escribe un programa que sirva para tener registradas las ventas de zapatos en una zapatería. Se requiere:</p>
+<ul>
+<li>Una clase <code>ZapatoMain</code> en un fichero .java que contendrá el método <code>main</code>.</li>
+<li>Una clase <code>Zapato</code> en otro fichero .java distinto, con los atributos tipo, color, número y liquidación de acceso público, y los atributos cantidad (pares de ese tipo almacenados) y precio, ambos de acceso privado.</li>
+<li>La clase <code>Zapato</code> tiene además todos sus métodos públicos: el método <code>almacenado</code> que devolverá la cantidad de pares disponibles de ese tipo y el método <code>precioVenta</code> que devolverá el precio de un par concreto.</li>
+<li>En la clase <code>ZapatoMain</code> se debe construir o instanciar un objeto <code>par1</code> con los siguientes atributos: <ul>
+<li>tipo: "Náutico", color: "Azul", número: 42, liquidación: false, cantidad: 10 y precio: 40, </li>
+</ul>
+</li>
+<li>Otro objeto <code>par2</code> con los atributos: <ul>
+<li>nombre: "De salón", color: "Rojo", número: 38, liquidación: true, cantidad: 3 y precio: 25.</li>
+</ul>
+</li>
+<li>Finalmente, el programa debe imprimir los atributos de los objetos por pantalla.</li>
+</ul>
+<p>Genera un método <code>main</code> donde pruebes todos los métodos. Recuerda que siempre que se puedan pedir datos por teclado, se han de pedir.</p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 608</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr>/ <abbr title="Se han instanciado objetos a partir de clases predefinidas.">CE2c</abbr> <abbr title="Se han incorporado y utilizado librerías de objetos.">CE2g</abbr> <abbr title="Se han utilizado constructores.">CE2h</abbr>/ <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p). Se necesita crear un programa que solicite, almacene y presente información sobre los alumnos de un Instituto. Para ello:</p>
+<ul>
+<li>Crea tanto la clase <code>AlumnoMain</code> con el método <code>main</code>, como la clase <code>Alumno</code> cuyos atributos serán privados. Ambas clases deben estar en ficheros diferentes.</li>
+<li>La información que interesa almacenar de cada estudiante es el nombre del alumno, su NIA (ej: “123”), el nombre del ciclo y su curso.</li>
+<li>El programa deberá solicitar al usuario la inserción de los datos de al menos 2 alumnos, y al finalizar deberá mostrarlos por pantalla.</li>
+</ul>
+<p>Genera un método <code>main</code> donde pruebes todos los métodos. Recuerda que siempre que se puedan pedir datos por teclado, se han de pedir.</p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 609</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr>/ <abbr title="Se han instanciado objetos a partir de clases predefinidas.">CE2c</abbr> <abbr title="Se han incorporado y utilizado librerías de objetos.">CE2g</abbr> <abbr title="Se han utilizado constructores.">CE2h</abbr>/ <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p). Se necesita crear un programa que solicite, almacene y presente información sobre distintos animales registrados en un centro zoológico. Para ello:</p>
+<ul>
+<li>Crea tanto la clase  <code>AnimalMain</code> con el método <code>main</code>, como la clase Animal cuyos atributos serán privados. Cada clase debe estar en un fichero distinto.</li>
+<li>
+<p>La información que interesa almacenar de cada animal es:</p>
+<ul>
+<li>Nombre del animal (ej.: "Toby", "Luna")</li>
+<li>Especie (ej.: "Tigre", "Delfín", "Águila")</li>
+<li>Identificador del animal (un código tipo “A123”)</li>
+<li>Edad del animal</li>
+</ul>
+</li>
+<li>
+<p>El programa deberá solicitar al usuario la introducción de número de animales que se van a almacenar, y al finalizar deberá mostrarlos por pantalla.</p>
+</li>
+</ul>
+</li>
+</ul>
+<!-- Resultados de Aprendizaje & Criterios de Evaluación -->
+<!-- Instrumentos de Evaluación -->
+<!-- Instrumentos de Calificación -->
+<!-- Tipo de actividades -->
+<!-- Otras abreviaciones -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Pablo Rabasco Rodríguez
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/prabasco" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:&lt;p.rabascorodriguez@edu.gva.es&gt;" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "toc.follow", "content.tooltips", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

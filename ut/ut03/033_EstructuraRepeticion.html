@@ -1,0 +1,1202 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/prabasco/PRG/ut/ut03/033_EstructuraRepeticion.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Estructuras de repetición - Programación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra_index.css">
+    
+      <link rel="stylesheet" href="../../css/extra_pd.css">
+    
+      <link rel="stylesheet" href="../../css/extra_tablasresumen.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#estructuras-de-repeticion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../index.html" title="Programación" class="md-header__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Estructuras de repetición
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo noche" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo día" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Programación" class="md-nav__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    Programación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 01. Elementos de un programa informático
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 01. Elementos de un programa informático
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/011_ProgramaLenguajes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1. Programa y lenguajes de programación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/012_LenguajeJava.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2. El lenguaje de programación Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/013_Estructura.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3. Estructura y bloques fundamentales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/014_IDE.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4. IDE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/021_TiposDatos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1. Tipos de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/022_Fechas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2. Fechas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/023_ConstantesLiterales.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.3. Constanstes literales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/024_Variables.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.4. Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/025_OperadoresExpresiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.5. Operadores y expresiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/026_Precedencia.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.6. Precedencia de operadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/027_Casting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.7. Casting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/028_Comentarios.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.8. Comentarios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/029_IOConsola.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.9. Entrada y salida de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="estructuras-de-repeticion">Estructuras de repetición<a class="headerlink" href="#estructuras-de-repeticion" title="Permanent link">¶</a></h1>
+<p>Permiten ejecutar de forma repetida un bloque específico de instrucciones. Las instrucciones se repiten mientras o hasta que se cumpla una determinada condición. Esta condición se conoce como condición de salida. Tipos de estructuras repetitivas:</p>
+<ul>
+<li>Ciclo while.</li>
+<li>Ciclo do – while.</li>
+<li>Ciclo for.</li>
+</ul>
+<h2 id="bucle-while">Bucle while<a class="headerlink" href="#bucle-while" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut03/08_while.png" data-desc-position="bottom"><img align="right" alt="Bucle while" src="../../img/ut03/08_while.png" width="200px"></a></p>
+<p>Las instrucciones se repiten mientras la condición sea cierta. La condición se comprueba al principio del bucle por lo que las acciones se pueden ejecutar cero o más veces. La ejecución del bucle while sigue los siguientes pasos:</p>
+<ol>
+<li>Primero se evalúa la condición.</li>
+<li>Si el resultado es false, las instrucciones no se ejecutan y el programa sigue ejecutándose por la siguiente instrucción a continuación del while.</li>
+<li>Si el resultado es true, se ejecutan las instrucciones del while y se vuelve al paso 1.</li>
+</ol>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos=" 1 "></span><span class="cm">/* Programa que lee números hasta que se lee un negativo y muestra la * suma de los</span>
+</span><span id="__span-0-2"><span class="linenos" data-linenos=" 2 "></span><span class="cm">números leídos */</span>
+</span><span id="__span-0-3"><span class="linenos" data-linenos=" 3 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+</span><span id="__span-0-4"><span class="linenos" data-linenos=" 4 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo1While</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+</span><span id="__span-0-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+</span><span id="__span-0-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Introduzca un número: "</span><span class="p">);</span>
+</span><span id="__span-0-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+</span><span id="__span-0-10"><span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+</span><span id="__span-0-11"><span class="linenos" data-linenos="11 "></span><span class="w">            </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+</span><span id="__span-0-12"><span class="linenos" data-linenos="12 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Introduzca un número: "</span><span class="p">);</span>
+</span><span id="__span-0-13"><span class="linenos" data-linenos="13 "></span><span class="w">            </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+</span><span id="__span-0-14"><span class="linenos" data-linenos="14 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-15"><span class="linenos" data-linenos="15 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"La suma es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="p">);</span>
+</span><span id="__span-0-16"><span class="linenos" data-linenos="16 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-17"><span class="linenos" data-linenos="17 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="bucle-do-while">Bucle do-while<a class="headerlink" href="#bucle-do-while" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut03/06_EstructurasSeleccion.png" data-desc-position="bottom"><img align="right" alt="Bucle do-while" src="../../img/ut03/06_EstructurasSeleccion.png" width="200px"></a></p>
+<p>Las instrucciones se ejecutan mientras la condición sea cierta. La condición se comprueba al final del bucle, por lo que el bloque de instrucciones se ejecutará al menos una vez.</p>
+<p>Esta es la diferencia fundamental con la instrucción while. Las instrucciones de un bucle while no ejecutaban si la condición inicialmente era falsa. La ejecución del bucle do - while sigue los siguientes pasos:</p>
+<ol>
+<li>Primero se ejecutan las instrucciones a partir de do{...</li>
+<li>Se evalúa la condición.</li>
+<li>Si el resultado es false, el programa sigue ejecutándose por la siguiente instrucción a continuación del while.</li>
+<li>Si el resultado es true, se vuelve al paso 1.</li>
+</ol>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos=" 1 "></span><span class="cm">/* Programa que obliga al usuario a introducir un número menor que 100 */</span>
+</span><span id="__span-1-2"><span class="linenos" data-linenos=" 2 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scaner</span><span class="p">;</span>
+</span><span id="__span-1-3"><span class="linenos" data-linenos=" 3 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo1DoWhile</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
+</span><span id="__span-1-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+</span><span id="__span-1-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Escribe un entero &lt; 100: "</span><span class="p">);</span>
+</span><span id="__span-1-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">            </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+</span><span id="__span-1-10"><span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="p">}</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">valor</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+</span><span id="__span-1-11"><span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Ha introducido: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valor</span><span class="p">);</span>
+</span><span id="__span-1-12"><span class="linenos" data-linenos="12 "></span>
+</span><span id="__span-1-13"><span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-14"><span class="linenos" data-linenos="14 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="bucle-for">Bucle for<a class="headerlink" href="#bucle-for" title="Permanent link">¶</a></h2>
+<p>La instrucción for hace que una instrucción o bloque de instrucciones se repitan un número determinado de veces mientras se cumpla la condición. La estructura general de una instrucción for en Java es la siguiente:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos="1 "></span>for(inicialización; condición; incremento/decremento){
+</span><span id="__span-2-2"><span class="linenos" data-linenos="2 "></span>    instrucción 1;
+</span><span id="__span-2-3"><span class="linenos" data-linenos="3 "></span>    ...........
+</span><span id="__span-2-4"><span class="linenos" data-linenos="4 "></span>    instrucción N;
+</span><span id="__span-2-5"><span class="linenos" data-linenos="5 "></span>}
+</span></code></pre></div>
+<p>A continuación de la palabra for y entre paréntesis debe haber siempre tres zonas separadas por punto y coma:</p>
+<ul>
+<li>zona de inicialización.</li>
+<li>zona de condición o evaluación.</li>
+<li>zona de incremento o decremento.</li>
+</ul>
+<p>Si en alguna ocasión no es necesario escribir alguna de ellas se pueden dejar en blanco, pero los dos punto y coma deben aparecer.</p>
+<p>Inicialización: es la parte en la que la variable o variables de control del bucle toman su valor inicial. Puede haber una o más instrucciones en la inicialización, separadas por comas. La inicialización se realiza una sola vez.</p>
+<p>Evaluación: es una expresión booleana que hace que se ejecute la sentencia o bloque de sentencias mientras dicha expresión sea cierta. Generalmente en la condición se compara la variable de control con un valor límite.</p>
+<p>Incremento/decremento: es una expresión que decrementa o incrementa la variable o variables de control de bucle.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut03/07_EstructurasRepeticion.png" data-desc-position="bottom"><img align="right" alt="Bucle for" src="../../img/ut03/07_EstructurasRepeticion.png" width="200px"></a></p>
+<p>La ejecución de un bucle for sigue los siguientes pasos:</p>
+<ol>
+<li>Se inicializa la variable o variables de control (inicialización).</li>
+<li>Se evalúa la condición (evaluación).<ul>
+<li>Si la condición es cierta se ejecutan las instrucciones.</li>
+<li>Si es falsa, finaliza la ejecución del bucle y continúa el programa en la siguiente instrucción después del for.</li>
+</ul>
+</li>
+<li>Se actualiza la variable o variables de control (incremento / decremento).</li>
+<li>Se vuelve al paso 2.</li>
+</ol>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><span class="linenos" data-linenos="1 "></span><span class="cm">/* programa que muestra los números del 1 al 10 */</span>
+</span><span id="__span-3-2"><span class="linenos" data-linenos="2 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo0For</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-4"><span class="linenos" data-linenos="4 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+</span><span id="__span-3-5"><span class="linenos" data-linenos="5 "></span><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span><span id="__span-3-6"><span class="linenos" data-linenos="6 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" "</span><span class="p">);</span>
+</span><span id="__span-3-7"><span class="linenos" data-linenos="7 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-3-8"><span class="linenos" data-linenos="8 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-9"><span class="linenos" data-linenos="9 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 315</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Se requiere un algoritmo para determinar, de N cantidades, cuántas son menores o iguales a cero y cuántas mayores a cero. Ten en cuenta que el valor N se solicita al usuario por entrada estándar (mediante la clase Scanner). Resuélvelo con la estructura de control <code>While</code>.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 316</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p)  Con un bucle imprime línea por línea los números de ordenadores de una clase de 6 ordenadores por fila, teniendo en cuenta que siguen la siguiente numeración fila.numOrdenador. Por ejemplo, el primer ordenador será 7.1 y el último 7.6.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 317</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Desarrolla un programa utilizando un bucle <code>do-while</code> que imprima “Hola caracola” 5 veces.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 318</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Escribe un programa que pida que se introduzcan dos números enteros N1 y N2 por teclado (mediante la clase Scanner) y muestre los números pares que hay entre ellos. N1 debe ser menor que N2. Si no es así se mostrará un mensaje indicándolo y se vuelven a introducir. Utiliza la estructura de control <code>for</code>.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 319</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Genera un programa que permita seleccionar por teclado una opción de las que
+aparecen en el siguiente menú:</p>
+<ol>
+<li>Primera opción.</li>
+<li>Segunda opción.</li>
+<li>Tercera opción.</li>
+<li>Salir del programa.</li>
+</ol>
+<p>Al escoger cualquiera de las opciones 1 a 3 mostrará por pantalla el texto: “Has escogido la opción 1”, “Has escogido la opción 2” ó “Has escogido la opción 3” y, tras ello, permitirá escoger de nuevo una opción. En caso de escoger la opción 4 el programa seguirá su ejecución y acabará. Utiliza la estructura de control <code>Do..While</code>.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 320</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Utiliza un bucle for para escribir las siguientes secuencias.</p>
+<ol>
+<li>1 3 5 7 9</li>
+<li>1 2 4 8 16</li>
+</ol>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 321</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Crea un programa que lea una fecha representada por dos enteros solicitados al usuario, mes y año, y dé como resultado los días que tiene ese mes teniendo en cuenta el año. El programa finaliza tras mostrar un resultado.</p>
+<p>Hay que tener en cuenta que febrero puede tener 28 días, o bien 29 si el año es bisiesto. Un año es bisiesto cuando es múltiplo de 4 y no de 100 o cuando es múltiplo de 400.</p>
+<p>Por ejemplo, el año 2000 por las dos primeras condiciones no sería bisiesto, pero sí lo es porque es múltiplo de 400; el año 2100 no es bisiesto porque, aunque sea múltiplo de 4, también lo es de 100 y no es múltiplo de 400.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 322</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se han creado programas ejecutables utilizando diferentes estructuras de control.">CE3e</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Desarrolla un programa que pida al usuario introducir números por teclado, haga la suma de éstos y muestre el resultado al salir del programa. El usuario controla si desea continuar o no ingresando números, ya que si inserta un 0 sale del bucle, el mensaje que se muestra al usuario iterativamente es: “Inserta un número (0 para salir)”. Al finalizar se muestra: “La suma de los valores es X”, donde X es el total.</p>
+<p>Además de mostrar la suma de los valores introducidos por el usuario, muestra también el número de valores totales distintos de cero que se insertaron. Para ello, necesitarás agregar otra variable, llámala contador, y dado que cualquier número distinto de cero ejecutará el cuerpo del bucle, todo lo que necesitas hacer es contador++ en el cuerpo del bucle para contar. Muestra el recuento en la salida después de mostrar la suma.</p>
+<ul>
+<li>Ejemplo. Usuario inserta 1 2 3 0.</li>
+<li>Output: “La suma de los valores es 6. Total de número insertados 3”</li>
+</ul>
+<p>Agrega al programa anterior instrucciones para contar y mostrar también el número de valores de entrada que son impares. Para saber si el valor es impar, se comprueba si el resto es 1, valor % 2 = 1. Esto requerirá otra variable más para contar el número de entradas impares. Inicialízala a 0, y añade una sentencia if en el cuerpo del bucle para probar si el valor es impar e incrementar esta variable. Finalmente, muestra un mensaje al final, antes de mostrar la suma que diga el número de valores impares insertados.</p>
+<p>Agrega otra variable que se le solicitará al usuario antes del bucle y antes de pedirle los números. Este valor será almacenado en la variable y será un número objetivo. Con otra instrucción if en el cuerpo del bucle, comprueba si el valor de entrada o número es igual a este objetivo y, si es así, incrementa en uno otra variable de contador. Después del bucle, muestra tanto el valor objetivo como el número de veces que el usuario insertó ese valor objetivo.</p>
+<p>Ejemplo. Usuario entra 7 como número objetivo.</p>
+<ul>
+<li>Usuario inserta 2 5 7 8 1 7 0</li>
+<li>Output: “La suma de los valores es 30. Total de número insertados 6 .El número de valores impares es 4. El valor 7 se insertó 2 veces”</li>
+</ul>
+<p>Añade otra variable, max, inicializada a cero, para almacenar el valor más grande insertado. En el cuerpo del bucle, determine si el nuevo número o valor insertado por el usuario, es mayor que max (valor &gt; max) y, si es así, establezca max en este nuevo valor. Añade max a la salida del programa.</p>
+<p>Ejemplo. Usuario entra 7 como número objetivo.</p>
+<ul>
+<li>Usuario inserta 2 5 7 8 1 7 0</li>
+<li>Output: “La suma de los valores es 30. Total de número insertados 6. El número de valores impares es 4. El valor 7 se insertó 2 veces. El máximo valor insertado es 8”</li>
+</ul>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 323</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Pide tres números enteros y decide cuál es el mayor. Resuélvelo solo con<code>if/else if/else</code> (sin bucles ni <code>switch</code>). Indica también si hay empates.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 324</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Lee un número del 1 al 7 y muestra el día de la semana correspondiente (1=Lunes, …, 7=Domingo). Resuélvelo exclusivamente con <code>switch</code>. Si el valor no está en el rango, muestra “Día inválido”.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 325</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Solicita un número entero N ≥ 1 y muestra del 1 a N en líneas separadas. Resuélvelo solo con <code>for</code> (sin <code>if</code>, <code>while</code> ni <code>do-while</code>). Si N &lt; 1, no imprimas nada.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 326</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Lee números enteros hasta que el usuario introduzca 0 y cuenta cuántos eran pares y cuántos impares (sin incluir el 0). Resuélvelo solo con <code>while</code> (sin <code>if</code> para cortar; el if sólo para par/impar es válido). </p>
+<p>Al final, muestra ambos totales.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 327</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Crea un menú que se repita al menos una vez con opciones </p>
+<ul>
+<li>
+<ol>
+<li>Hola </li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>Adiós </li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>Salir. </li>
+</ol>
+</li>
+</ul>
+<p>Tras cada elección 1 o 2 muestra el texto correspondiente y vuelve a mostrar el menú; al elegir 3 termina. Resuélvelo exclusivamente con <code>do-while</code> y sin <code>switch</code>.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 328</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Pide un entero N y muestra la tabla de multiplicar del N del 1 al 10. Usa <code>for</code> para recorrer del 1 al 10 y <code>if</code> para remarcar (por ejemplo con “*”) los múltiplos pares del resultado.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 329</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Implementa un validador de PIN: el usuario tiene 3 intentos para acertar un PIN predefinido (por ejemplo, 1234). Usa <code>while</code> para los intentos y <code>if</code> para comprobar aciertos. Si se acierta, muestra “Acceso concedido”; si se agotan, “Tarjeta bloqueada”.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 330</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Lee N (N&gt;0) y luego N números reales. Calcula y muestra cuántos son positivos, negativos o cero. Usa for para leer y if para clasificar. Valida que N&gt;0 con un while de reintento.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 331</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Muestra un menú con switch:</p>
+<ul>
+<li>Área de círculo</li>
+<li>Área de rectángulo</li>
+<li>Área de triángulo</li>
+<li>Salir</li>
+</ul>
+<p>Tras resolver 1–3, vuelve a mostrar el menú; 4 termina.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 332</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Pide números enteros hasta introducir -1. Muestra al final suma y media de los introducidos (excluyendo el -1).</p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 333</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se han creado programas ejecutables utilizando diferentes estructuras de control.">CE3e</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p) Realiza un programa que solicite un número n y genere esta sucesión hasta n. Utiliza 3 procedimientos distintos para solucionarlo empleando los bucles <code>for</code>, <code>while</code> y <code>do-while</code>. Por ejemplo: -1 2 -3 4 -5 6 -7 8 -9 … n</p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 334</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se han creado programas ejecutables utilizando diferentes estructuras de control.">CE3e</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p) Crea un programa que pida por teclado la nota obtenida por cada alumno, de un total de n alumnos, en un examen, y calcule y muestre la nota media de la clase, la nota mayor y la nota menor.</p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 335</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se han creado programas ejecutables utilizando diferentes estructuras de control.">CE3e</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p) Crea un programa que pida por teclado el nombre de barcos de cada banda, de un total de 5 bandas, has de sacar la longitud media de los nombres, el de menor longitud y el de mayor longitud.</p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 336</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se han creado programas ejecutables utilizando diferentes estructuras de control.">CE3e</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p) Escribe un bucle for anidado por cada uno de los siguientes patrones:</p>
+<p></p><figure>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut03/320.png" data-desc-position="bottom"><img alt="AP 320" src="../../img/ut03/320.png"></a>
+</figure><p></p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 337</strong>(<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se han creado programas ejecutables utilizando diferentes estructuras de control.">CE3e</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p) Números primos en un rango. Pide dos enteros A ≤ B y muestra todos los primos entre A y B, además del conteo. </p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 338</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se han creado programas ejecutables utilizando diferentes estructuras de control.">CE3e</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p) Estadísticas de temperaturas. Solicita N (N≥1) y luego N temperaturas reales. Muestra: media, máxima y mínima. </p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 339</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se han creado programas ejecutables utilizando diferentes estructuras de control.">CE3e</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p) Cajero simple. Menú repetitivo:</p>
+<ol>
+<li>Ingresar</li>
+<li>Retirar</li>
+<li>Consultar saldo</li>
+<li>Salir</li>
+</ol>
+<p>El saldo inicia en 0. Valida que no se pueda retirar más de lo disponible y que los importes sean positivos. </p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 340</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se han creado programas ejecutables utilizando diferentes estructuras de control.">CE3e</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p) Serie y filtros. Pide N y genera los N primeros números de la serie de Fibonacci (comenzando 0, 1, 1, 2, …). Muestra la lista completa, la suma y cuántos de ellos son pares. </p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de profundización.">AP</abbr> 341</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se han creado programas ejecutables utilizando diferentes estructuras de control.">CE3e</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p) Análisis de notas con tramos. Pide N (N≥1) y después N notas en [0,10]. Calcula: media, aprobados (≥5), suspensos (&lt;5), y distribución por tramos [0,4], [5,6], [7,8], [9,10]. Repite entrada si una nota no está en rango. </p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de refuerzo.">AR</abbr> 342</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se han creado programas ejecutables utilizando diferentes estructuras de control.">CE3e</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p) Adivina el número con niveles. El programa genera un número aleatorio en un rango elegido por el usuario (p. ej., 1–100 por defecto). Muestra un menú de dificultad:</p>
+<ul>
+<li>Fácil (intentos ilimitados)</li>
+<li>Media (10 intentos)</li>
+<li>Difícil (5 intentos)</li>
+</ul>
+<p>Tras cada intento indica “mayor” o “menor”. Al acertar o agotar intentos, pregunta si se desea jugar otra partida.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de refuerzo.">AR</abbr> 343</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 4p) Ticket de compra con validación, IVA y descuentos. Se van introduciendo importes de artículos hasta teclear 0 (que no se suma). No se permiten importes negativos; si aparece uno, repite la petición (valídalo con while). Calcula y muestra: subtotal, IVA 21%, descuento (10% si subtotal ≥ 100; 15% si ≥ 200) y total final. Luego solicita cantidad entregada y, si es insuficiente, vuelve a pedirla hasta que sea válida. Muestra el cambio. Emplea while/do-while para la lectura y if para validaciones/tramos.</p>
+</li>
+<li><strong><abbr title="Actividades de refuerzo.">AR</abbr> 344</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se han creado programas ejecutables utilizando diferentes estructuras de control.">CE3e</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p) Pide mes (1–12), año (≥1583) y el día de la semana del 1.º de mes (1=Lunes…7=Domingo). Calcula los días del mes usando switch y la regla de año bisiesto. Imprime el calendario en texto, alineando las semanas y dejando huecos antes del primer día. Valida entradas y repite peticiones erróneas con while. </li>
+</ul>
+<!-- Resultados de Aprendizaje & Criterios de Evaluación -->
+<!-- Instrumentos de Evaluación -->
+<!-- Instrumentos de Calificación -->
+<!-- Tipo de actividades -->
+<!-- Otras abreviaciones -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Pablo Rabasco Rodríguez
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/prabasco" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:&lt;p.rabascorodriguez@edu.gva.es&gt;" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "toc.follow", "content.tooltips", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

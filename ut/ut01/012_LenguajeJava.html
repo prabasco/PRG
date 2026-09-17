@@ -1,0 +1,1336 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/prabasco/PRG/ut/ut01/012_LenguajeJava.html">
+      
+      
+        <link rel="prev" href="011_ProgramaLenguajes.html">
+      
+      
+        <link rel="next" href="013_Estructura.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>1.2. El lenguaje de programación Java - Programación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra_index.css">
+    
+      <link rel="stylesheet" href="../../css/extra_pd.css">
+    
+      <link rel="stylesheet" href="../../css/extra_tablasresumen.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#el-lenguaje-de-programacion-java" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../index.html" title="Programación" class="md-header__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1.2. El lenguaje de programación Java
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo noche" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo día" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Programación" class="md-nav__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    Programación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 01. Elementos de un programa informático
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 01. Elementos de un programa informático
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="011_ProgramaLenguajes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1. Programa y lenguajes de programación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2. El lenguaje de programación Java
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="012_LenguajeJava.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2. El lenguaje de programación Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#la-maquina-virtual-de-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La máquina virtual de Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristicas-del-lenguaje-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Características del lenguaje Java
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Características del lenguaje Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compilado-e-interpretado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compilado e interpretado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplataforma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiplataforma
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orientado-a-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orientado a objetos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robusto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robusto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multitarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multitarea
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-necesito-para-programar-en-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué necesito para programar en Java?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividades
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="013_Estructura.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3. Estructura y bloques fundamentales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="014_IDE.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4. IDE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/021_TiposDatos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1. Tipos de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/022_Fechas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2. Fechas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/023_ConstantesLiterales.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.3. Constanstes literales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/024_Variables.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.4. Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/025_OperadoresExpresiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.5. Operadores y expresiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/026_Precedencia.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.6. Precedencia de operadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/027_Casting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.7. Casting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/028_Comentarios.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.8. Comentarios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/029_IOConsola.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.9. Entrada y salida de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="el-lenguaje-de-programacion-java">El lenguaje de programación Java<a class="headerlink" href="#el-lenguaje-de-programacion-java" title="Permanent link">¶</a></h1>
+<p>Java es un <strong>lenguaje de programación orientado</strong> a objetos desarrollado por <em>Sun Microsystems</em> a principios de los años 90. Su creador, James Gosling, lo bautizó como <em>Oak</em>. <em>Sun</em> deseaba disponer de un lenguaje para programar pequeños dispositivos electrónicos (electrodomésticos y otros aparatos electrónicos de consumo). La dificultad de estos dispositivos es que cambian continuamente y para que un programa funcione en el siguiente dispositivo aparecido, hay que reescribir el código. Por eso Sun quería crear un lenguaje independiente del dispositivo.</p>
+<p>En 1995, <em>Oak</em> pasa a llamarse Java. El lenguaje Java debe su nombre a un tipo de café. En EEUU se conoce como Java al café, y tomarse una taza de Java es tomarse una taza de café. De ahí que el logotipo oficial de Java es una taza humeante de café.</p>
+<figure>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut01/03_LogoJava.jpg" data-desc-position="bottom"><img alt="Evolución logo Java" src="../../img/ut01/03_LogoJava.jpg"></a>
+<br>
+<figcaption>Evolución logo Java</figcaption>
+</figure>
+<p>Desde su lanzamiento en 1995 Java se da a conocer al público y adquiere notoriedad rápidamente. Se comienza a hablar de Java y de sus applets. Un applet es un programa Java que se ejecuta en el contexto de una página web en cualquier ordenador independientemente de su Sistema Operativo y de la arquitectura de su procesador. El entorno de ejecución era relativamente seguro y los principales navegadores web pronto incorporaron la posibilidad de ejecutar applets Java incrustadas en las páginas web, si bien es cierto que hoy en día ha decaído su uso.</p>
+<div class="admonition info">
+<p class="admonition-title">Eslogan de Java</p>
+<p><em>Write Once, Run Anywhere</em></p>
+</div>
+<p>En 2010 <a href="https://www.xataka.com/historia-tecnologica/asi-es-como-oracle-ha-sometido-a-sun-microsystems-a-una-muerte-larga-y-agonica">Oracle compró Sun Microsystems por 7.400 millones de dólares</a>. Java ha continuado su evolución añadiendo nuevas características para la programación web como los JSP y Servlets, los EJBs para el desarrollo de aplicaciones empresariales e introdujo además las clases necesarias para la programación de móviles.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>En este curso no veremos nada relacionado con JSP ni Servlets ni EJBs por no usarse en la actualidad más allá del mantenimiento que hace alguna empresa de soluciones pasadas.</p>
+</div>
+<p>En la actualidad existen tres distribuciones principales de Java:</p>
+<ul>
+<li>Java SE (Java Platform, Standard Edition), anteriormente conocido como J2SE. Es la versión estándar de Java y es la base de las otras distribuciones. Contiene todos los fundamentos básicos del lenguaje. Está orientada al desarrollo de aplicaciones de escritorio.</li>
+<li>Jakarta EE (Java Platform, Enterprise Edition), anteriormente conocido como Java EE y J2EE. Utiliza muchos de los componentes de J2SE y añade nuevas funcionalidades. Está orientada al desarrollo de servicios web, networking, aplicaciones en el lado del servidor y aplicaciones basadas en la web. Es uno de los estándares para el desarrollo de aplicaciones web.</li>
+<li>Java ME (Java Platform, Micro Edition), anteriormente conocido como J2ME. Esta distribución de Java está orientada a la programación de dispositivos móviles, dispositivos inalámbricos y pequeños dispositivos.</li>
+</ul>
+<h2 id="la-maquina-virtual-de-java">La máquina virtual de Java<a class="headerlink" href="#la-maquina-virtual-de-java" title="Permanent link">¶</a></h2>
+<p>La gran innovación que introdujo Java respecto a los demás lenguajes de programación existentes que hizo posible que un programa funcionara en cualquier plataforma, fue la creación de la Java Virtual Machine (JVM) o Máquina Virtual Java.</p>
+<figure>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut01/04_JVM1.png" data-desc-position="bottom"><img alt="Evolución logo Java" src="../../img/ut01/04_JVM1.png"></a>
+</figure>
+<p>Normalmente un programa escrito en un lenguaje de programación (código fuente) se debe traducir a un lenguaje entendible por la máquina (código máquina o ejecutable). La traducción la realiza un programa traductor, generalmente un compilador.</p>
+<p>Este código máquina o código ejecutable es distinto para cada arquitectura. Ordenadores con sistemas operativos y/o hardware distintos tienen distinto código máquina.
+Si cambia el código fuente hay que realizar una compilación para cada tipo de arquitectura donde ese vaya a ejecutar el programa. Para eliminar la dependencia de la máquina:</p>
+<ul>
+<li>En Java un programa no se traduce directamente a código ejecutable.</li>
+<li>Un programa Java se compila y se obtiene un código intermedio llamado bytecode.</li>
+<li>El bytecode lo interpreta la Máquina Virtual de Java (JVM) y obtiene el código ejecutable.</li>
+</ul>
+<figure>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut01/05JVM2.png" data-desc-position="bottom"><img alt="Evolución logo Java" src="../../img/ut01/05JVM2.png"></a>
+</figure>
+<p>La máquina virtual de Java (o JVM) se distribuye gratuitamente para prácticamente todos los sistemas operativos. Un archivo .class (bytecode) se puede ejecutar en cualquier ordenador que tenga instalada la máquina virtual Java.</p>
+<p>La JVM forma parte del JRE (Java Runtime Environment) o entorno de ejecución de Java.</p>
+<h2 id="caracteristicas-del-lenguaje-java">Características del lenguaje Java<a class="headerlink" href="#caracteristicas-del-lenguaje-java" title="Permanent link">¶</a></h2>
+<h3 id="simple">Simple<a class="headerlink" href="#simple" title="Permanent link">¶</a></h3>
+<p>El estilo de programación es simple y el código es fácil de entender. La sintaxis es similar a la de C++ y a la de otros lenguajes como C, C#, PHP... , por lo que si se conoce alguno de estos lenguajes se facilita su aprendizaje. Además, cuando sabemos Java se puede aprender uno de estos lenguajes con mayor facilidad. Aunque la sintaxis sea similar a C++ elimina algunas de las características más conflictivas de este lenguaje:</p>
+<ul>
+<li>No hay punteros.</li>
+<li>No hay sobrecarga operadores.</li>
+<li>No permite la herencia múltiple.</li>
+<li>No hay necesidad de liberar memoria manualmente. La gestión de memoria dinámica se hace automáticamente (recolector de basura).</li>
+</ul>
+<h3 id="compilado-e-interpretado">Compilado e interpretado<a class="headerlink" href="#compilado-e-interpretado" title="Permanent link">¶</a></h3>
+<p>Normalmente un lenguaje es compilado o interpretado. Java es ambas cosas. El código fuente se compila para obtener los bytecodes y posteriormente la máquina virtual interpreta esos bytecodes y los convierte en código máquina.</p>
+<h3 id="multiplataforma">Multiplataforma<a class="headerlink" href="#multiplataforma" title="Permanent link">¶</a></h3>
+<p>Java es independiente de la plataforma y puede ejecutarse en cualquier máquina que tenga instalada la máquina virtual de Java.</p>
+<h3 id="orientado-a-objetos">Orientado a objetos<a class="headerlink" href="#orientado-a-objetos" title="Permanent link">¶</a></h3>
+<p>Es un lenguaje orientado a objetos por lo que facilitará el diseño y mantenimiento de programas grandes.</p>
+<h3 id="robusto">Robusto<a class="headerlink" href="#robusto" title="Permanent link">¶</a></h3>
+<p>Es capaz de manejar errores en tiempo de ejecución mediante el controlador de excepciones. Utiliza un recolector de basura para eliminar de la memoria todos los objetos que ya no se usan quitando esa responsabilidad al programador. Realiza la comprobación de tipos en cualquier operación avisando si intervienen tipos incompatibles lo que hace que se eviten errores de cálculo. Al no haber punteros, no se puede acceder de forma directa a la memoria del ordenador.</p>
+<h3 id="multitarea">Multitarea<a class="headerlink" href="#multitarea" title="Permanent link">¶</a></h3>
+<p>Permite crear programas con varios hilos (threads) de ejecución. Esto quiere decir que puede ejecutar diferentes líneas de código al mismo tiempo lo que permite aprovechar las características de los procesadores con múltiples núcleos. Los hilos son importantes en programación multimedia, aplicaciones web, etc.</p>
+<h2 id="que-necesito-para-programar-en-java">¿Qué necesito para programar en Java?<a class="headerlink" href="#que-necesito-para-programar-en-java" title="Permanent link">¶</a></h2>
+<p>A la hora de empezar a programar en Java necesitamos:</p>
+<ol>
+<li>
+<p>El JDK (Java Development Kit o Kit de Desarrollo en Java). Es el software que nos permite crear aplicaciones Java de distintos tipos. Es lo primero que debemos tener instalado en nuestro ordenador. El JDK incluye:</p>
+<ul>
+<li>El JRE (Java Runtime Environment). Es la máquina virtual de Java que traduce el bytecode a código ejecutable.</li>
+<li>El compilador de Java. Es el encargado de convertir nuestro código fuente a bytecode.</li>
+<li>API de Java (Application Programming Interface). Contiene todos los paquetes, clases e interfaces del lenguaje Java. Es el código que proporciona Java para que el programador desarrolle sus propias aplicaciones.</li>
+</ul>
+<p>El entorno JDK funciona única y exclusivamente mediante comandos de consola:</p>
+<ul>
+<li><code>javac</code> Es el comando compilador de Java. Su sintaxis es: <code>javac ejemplo.java</code> La entrada de este comando ha de ser necesariamente un fichero que contenga código escrito en lenguaje Java y con extensión .java. El comando nos creará un fichero .class por cada clase que contenga el fichero Java.</li>
+<li><code>java</code> Es el intérprete de Java. Permite ejecutar aplicaciones que previamente hayan sido compiladas y transformadas en ficheros .class. Su sintaxis es: <code>java ejemplo</code>. No es necesario aquí suministrar la extensión del fichero, ya que siempre ha de ser un fichero .class.</li>
+</ul>
+</li>
+<li>
+<p>Un IDE (Integrated Development Environment). Los entornos de desarrollo son herramientas software que ayudan al programador el desarrollo de los programas avanzados.
+Entre otras muchas funciones, un entorno de desarrollo contiene distintas herramientas en una sola interfaz gráfica. Generalmente contiene:</p>
+<ul>
+<li>Un editor de texto que ayuda a escribir el código resaltando la sintaxis con indicaciones visuales.</li>
+<li>Un depurador que sirve para probar y depurar el código.</li>
+<li>Herramientas para compilar y ejecutar el programa.</li>
+</ul>
+<p>Mediante un IDE, el desarrollador de aplicaciones puede escribir, compilar y ejecutar programas de forma sencilla.</p>
+</li>
+</ol>
+<h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 101</strong> (<abbr title="Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.">RA1</abbr> / <abbr title="Se han identificado los bloques que componen la estructura de un programa informático.">CE1a</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 1p) Crea un fichero llamado <code>HolaMundo.java</code>. Guarda el archivo "HolaMundo.java" en una ubicación de tu elección en tu sistema. Abre la terminal o línea de comandos de tu sistema operativo. Navega hasta la ubicación donde guardaste el archivo <code>HolaMundo.java</code>. Compila el fichero desde la consola o terminal usando el compilador de Java.</p>
+<div class="admonition note">
+<p class="admonition-title">Entrega</p>
+<p>Además de los ficheros, responde a las siguientes cuestiones:</p>
+<ul>
+<li>a. ¿Se ha generado algún fichero extra al realizar el paso de compilación?, Si es así, ¿cómo se llama el fichero compilado?</li>
+<li>b. ¿Qué incluye dicho fichero?</li>
+<li>c. Si ahora quisiera ejecutar el programa HolaMundo desde otro sistema operativo ¿qué pasos tendría que realizar?</li>
+</ul>
+<p>Crea capturas de pantalla donde se vea el resultado de ejecutar el programa HolaMundo.</p>
+</div>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 102</strong> (<abbr title="Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.">RA1</abbr> / <abbr title="Se han identificado los bloques que componen la estructura de un programa informático.">CE1a</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 1p) Crea dos archivos Java, uno llamado <code>Calculadora.java</code> y otro <code>MainApp.java</code>, con el siguiente código:</p>
+<p></p><div class="language-java highlight"><span class="filename">Calculadora.java</span><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Calculadora</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sumar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">){</span>
+</span><span id="__span-0-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-0-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">restar</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">){</span>
+</span><span id="__span-0-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-0-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">multiplicar</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">){</span>
+</span><span id="__span-0-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-0-10"><span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-11"><span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">dividir</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">){</span>
+</span><span id="__span-0-12"><span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span><span class="w"> </span>
+</span><span id="__span-0-13"><span class="linenos" data-linenos="13 "></span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-0-14"><span class="linenos" data-linenos="14 "></span><span class="w">        </span><span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-0-15"><span class="linenos" data-linenos="15 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Error"</span><span class="p">);</span>
+</span><span id="__span-0-16"><span class="linenos" data-linenos="16 "></span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-0-17"><span class="linenos" data-linenos="17 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-18"><span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-19"><span class="linenos" data-linenos="19 "></span><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-java highlight"><span class="filename">MainApp.java</span><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainApp</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Uso incorrecto. Debes proporcionar dos números y una operación."</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-1-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Ejemplo: java MainApp 5 + 3"</span><span class="p">);</span>
+</span><span id="__span-1-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">            </span><span class="k">return</span><span class="p">;</span>
+</span><span id="__span-1-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-8"><span class="linenos" data-linenos=" 8 "></span>
+</span><span id="__span-1-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-1-10"><span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">operacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+</span><span id="__span-1-11"><span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">args</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span>
+</span><span id="__span-1-12"><span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-1-13"><span class="linenos" data-linenos="13 "></span>
+</span><span id="__span-1-14"><span class="linenos" data-linenos="14 "></span><span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">operacion</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-15"><span class="linenos" data-linenos="15 "></span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">"+"</span><span class="p">:</span>
+</span><span id="__span-1-16"><span class="linenos" data-linenos="16 "></span><span class="w">                </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Calculadora</span><span class="p">.</span><span class="na">sumar</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="n">num2</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-1-17"><span class="linenos" data-linenos="17 "></span><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-1-18"><span class="linenos" data-linenos="18 "></span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">"-"</span><span class="p">:</span>
+</span><span id="__span-1-19"><span class="linenos" data-linenos="19 "></span><span class="w">                </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Calculadora</span><span class="p">.</span><span class="na">restar</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="n">num2</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-1-20"><span class="linenos" data-linenos="20 "></span><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-1-21"><span class="linenos" data-linenos="21 "></span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">"*"</span><span class="p">:</span>
+</span><span id="__span-1-22"><span class="linenos" data-linenos="22 "></span><span class="w">                </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Calculadora</span><span class="p">.</span><span class="na">multiplicar</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="n">num2</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-1-23"><span class="linenos" data-linenos="23 "></span><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-1-24"><span class="linenos" data-linenos="24 "></span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">"/"</span><span class="p">:</span>
+</span><span id="__span-1-25"><span class="linenos" data-linenos="25 "></span><span class="w">                </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Calculadora</span><span class="p">.</span><span class="na">dividir</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="n">num2</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-1-26"><span class="linenos" data-linenos="26 "></span><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-1-27"><span class="linenos" data-linenos="27 "></span><span class="w">            </span><span class="k">default</span><span class="p">:</span>
+</span><span id="__span-1-28"><span class="linenos" data-linenos="28 "></span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Operación no válida. Las operaciones válidas son +, -, *, y /."</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-1-29"><span class="linenos" data-linenos="29 "></span><span class="w">                </span><span class="k">return</span><span class="p">;</span>
+</span><span id="__span-1-30"><span class="linenos" data-linenos="30 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-31"><span class="linenos" data-linenos="31 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Resultado: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultado</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-1-32"><span class="linenos" data-linenos="32 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-33"><span class="linenos" data-linenos="33 "></span><span class="p">}</span>
+</span></code></pre></div><p></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Guarda ambos archivos en la misma ubicación. Abre la terminal o línea de comandos y navega hasta la ubicación donde guardaste los archivos. Compila ambos archivos Java 
+Una vez que la compilación se complete sin errores, puedes ejecutar el programa MainApp con argumentos de línea de comandos. </p>
+<p>Por ejemplo, para sumar 5 y 3, escribe: 
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos="1 "></span><span class="n">javac</span><span class="w"> </span><span class="n">MainApp</span><span class="p">.</span><span class="na">java</span>
+</span><span id="__span-2-2"><span class="linenos" data-linenos="2 "></span><span class="n">java</span><span class="w"> </span><span class="n">MainApp</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span>
+</span></code></pre></div><p></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Entrega</p>
+<ul>
+<li>a. Experimenta con diferentes operaciones (+, -, *, /) y números para ver cómo funciona la calculadora simple y realiza capturas de pantalla.</li>
+<li>b. Mirando el código, ¿qué líneas de código contienen los números que se ejecutan por línea de comandos?</li>
+<li>c. ¿Qué pasa cuando haces una operación que no existe? Realiza capturas de pantalla.</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong><abbr title="Actividades de refuerzo.">AR</abbr> 103</strong> (<abbr title="Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.">RA1</abbr> / <abbr title="Se han identificado los bloques que componen la estructura de un programa informático.">CE1a</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 1p) Genera la clase <code>Programa103.java</code>, este programa ha de devolver un saludo con el nombre que se le pase por parámetro a través del terminal.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de refuerzo.">AR</abbr> 104</strong> (<abbr title="Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.">RA1</abbr> / <abbr title="Se han identificado los bloques que componen la estructura de un programa informático.">CE1a</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 1p) Genera la clase <code>Programa104.java</code>, este programa ha de devolver el día que se le pase por parámetro a través del terminal.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de profundización.">AP</abbr> 105</strong> (<abbr title="Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.">RA1</abbr> / <abbr title="Se han identificado los bloques que componen la estructura de un programa informático.">CE1a</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Escribe un nuevo programa <code>Programa105.java</code> que muestre el promedio de tres número, por ejemplo, se le pasa por terminal 9, 7 y 5 y ha de mostrar el promedio.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de profundización.">AP</abbr> 106</strong> (<abbr title="Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.">RA1</abbr> / <abbr title="Se han identificado los bloques que componen la estructura de un programa informático.">CE1a</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Escribe un nuevo programa <code>Programa106.java</code> el cuadrado del número introducido, por ejemplo, se le pasa por terminal 9, debe devolver 81.</p>
+</li>
+</ul>
+<!-- Resultados de Aprendizaje & Criterios de Evaluación -->
+<!-- Instrumentos de Evaluación -->
+<!-- Instrumentos de Calificación -->
+<!-- Tipo de actividades -->
+<!-- Otras abreviaciones -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie">
+        
+          
+          <a href="011_ProgramaLenguajes.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 1.1. Programa y lenguajes de programación">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                1.1. Programa y lenguajes de programación
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="013_Estructura.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 1.3. Estructura y bloques fundamentales">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                1.3. Estructura y bloques fundamentales
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Pablo Rabasco Rodríguez
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/prabasco" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:&lt;p.rabascorodriguez@edu.gva.es&gt;" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "toc.follow", "content.tooltips", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

@@ -1,0 +1,1168 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/prabasco/PRG/ut/ut03/032_EstructuraSeleccion.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Estructuras de selección - Programación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra_index.css">
+    
+      <link rel="stylesheet" href="../../css/extra_pd.css">
+    
+      <link rel="stylesheet" href="../../css/extra_tablasresumen.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#estructuras-de-seleccion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../index.html" title="Programación" class="md-header__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Estructuras de selección
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo noche" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="blue" aria-label="Cambiar a modo día" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Programación" class="md-nav__button md-logo" aria-label="Programación" data-md-component="logo">
+      
+  <img src="../../img/logofp.png" alt="logo">
+
+    </a>
+    Programación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 01. Elementos de un programa informático
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 01. Elementos de un programa informático
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/011_ProgramaLenguajes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1. Programa y lenguajes de programación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/012_LenguajeJava.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2. El lenguaje de programación Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/013_Estructura.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3. Estructura y bloques fundamentales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut01/014_IDE.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4. IDE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT 02. Elementos básicos de un lenguaje de programación
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta didáctica UT 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/021_TiposDatos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1. Tipos de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/022_Fechas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2. Fechas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/023_ConstantesLiterales.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.3. Constanstes literales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/024_Variables.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.4. Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/025_OperadoresExpresiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.5. Operadores y expresiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/026_Precedencia.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.6. Precedencia de operadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/027_Casting.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.7. Casting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/028_Comentarios.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.8. Comentarios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut02/029_IOConsola.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.9. Entrada y salida de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="estructuras-de-seleccion">Estructuras de selección<a class="headerlink" href="#estructuras-de-seleccion" title="Permanent link">¶</a></h1>
+<p>La estructura condicional determina si se ejecutan unas instrucciones u otras según se cumpla o no una determinada condición.</p>
+<p>En Java la estructura condicional se implementa mediante:</p>
+<ul>
+<li>Instrucción <code>if</code>.</li>
+<li>Instrucción <code>switch</code>.</li>
+<li>Instrucción condicional <code>? :</code></li>
+</ul>
+<h2 id="if">if<a class="headerlink" href="#if" title="Permanent link">¶</a></h2>
+<p>La declaración <code>if</code> es la más básica de todas las declaraciones de flujo de control. Le dice a su programa que ejecute una determinada sección de código solo si una prueba en particular se evalúa como verdadera. Puede ser del tipo:</p>
+<ul>
+<li>Condicional simple: <code>if</code></li>
+<li>Condicional doble: <code>if … else …</code></li>
+<li>Condicional múltiple: <code>if … else if …</code></li>
+</ul>
+<p>La condición debe ser una expresión booleana es decir debe dar como resultado un valor booleano (<code>true</code> o <code>false</code>). </p>
+<h3 id="condicional-simple">Condicional simple<a class="headerlink" href="#condicional-simple" title="Permanent link">¶</a></h3>
+<p>Se evalúa la condición y si esta se cumple se ejecuta una determinada acción o grupo de acciones. En caso contrario se saltan dicho grupo de acciones.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut03/02_Simple.png" data-desc-position="bottom"><img alt="Condicional simple" src="../../img/ut03/02_Simple.png" width="500"></a>
+</figure>
+<p>Si el bloque de instrucciones tiene una sola instrucción no es necesario escribir las llaves <code>{ }</code> aunque para evitar confusiones se recomienda escribir las llaves siempre.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos=" 1 "></span><span class="cm">/* Programa que pide una nota por teclado y muestra un mensaje si la nota * es mayor o igual que 5 */</span>
+</span><span id="__span-0-2"><span class="linenos" data-linenos=" 2 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+</span><span id="__span-0-3"><span class="linenos" data-linenos=" 3 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo0If</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="p">){</span>
+</span><span id="__span-0-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="w"> </span><span class="p">);</span>
+</span><span id="__span-0-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Nota: "</span><span class="p">);</span>
+</span><span id="__span-0-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">nota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+</span><span id="__span-0-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nota</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">){</span>
+</span><span id="__span-0-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"¡¡Enhorabuena!!"</span><span class="p">);</span>
+</span><span id="__span-0-10"><span class="linenos" data-linenos="10 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Has aprobado"</span><span class="p">);</span>
+</span><span id="__span-0-11"><span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-12"><span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-13"><span class="linenos" data-linenos="13 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="condicional-doble">Condicional doble<a class="headerlink" href="#condicional-doble" title="Permanent link">¶</a></h3>
+<p>Se evalúa la condición y si esta se cumple se ejecuta una determinada instrucción o grupo de instrucciones. Si no se cumple se ejecuta otra instrucción o grupo de instrucciones.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut03/03_Doble.png" data-desc-position="bottom"><img alt="Condicional doble" src="../../img/ut03/03_Doble.png" width="500"></a>
+</figure>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos=" 1 "></span><span class="cm">/* Programa que pide una nota por teclado y muestra si se ha aprobado o no */</span>
+</span><span id="__span-1-2"><span class="linenos" data-linenos=" 2 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+</span><span id="__span-1-3"><span class="linenos" data-linenos=" 3 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo0If</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="p">){</span>
+</span><span id="__span-1-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="w"> </span><span class="p">);</span>
+</span><span id="__span-1-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Nota: "</span><span class="p">);</span>
+</span><span id="__span-1-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">nota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+</span><span id="__span-1-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nota</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">){</span>
+</span><span id="__span-1-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enorabuena!!"</span><span class="p">);</span>
+</span><span id="__span-1-10"><span class="linenos" data-linenos="10 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Has aprobado"</span><span class="p">);</span>
+</span><span id="__span-1-11"><span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="p">{</span>
+</span><span id="__span-1-12"><span class="linenos" data-linenos="12 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Lo Siento, has suspendido"</span><span class="p">);</span>
+</span><span id="__span-1-13"><span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-14"><span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-15"><span class="linenos" data-linenos="15 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="condicional-multiple">Condicional múltiple<a class="headerlink" href="#condicional-multiple" title="Permanent link">¶</a></h3>
+<p>Se obtiene anidando sentencias <code>if … else</code>. Permite construir estructuras de selección más complejas.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut03/04_Multiple.png" data-desc-position="bottom"><img alt="Condicional múltiple" src="../../img/ut03/04_Multiple.png" width="500"></a>
+</figure>
+<p>Cada <code>else</code> se corresponde con el <code>if</code> más próximo que no haya sido emparejado. Una vez que se ejecuta un bloque de instrucciones, la ejecución continúa en la siguiente instrucción que aparezca después de las sentencias <code>if … else</code> anidadas.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos=" 1 "></span><span class="cm">/* Programa que muestra un saludo distinto según la hora introducida */</span>
+</span><span id="__span-2-2"><span class="linenos" data-linenos=" 2 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+</span><span id="__span-2-3"><span class="linenos" data-linenos=" 3 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo2If</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+</span><span id="__span-2-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">hora</span><span class="p">;</span>
+</span><span id="__span-2-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Introduzca una hora (un valor entero): "</span><span class="p">);</span>
+</span><span id="__span-2-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="n">hora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+</span><span id="__span-2-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hora</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">hora</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">12</span><span class="p">){</span>
+</span><span id="__span-2-10"><span class="linenos" data-linenos="10 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Buenos días"</span><span class="p">);</span>
+</span><span id="__span-2-11"><span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hora</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">hora</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">21</span><span class="p">){</span>
+</span><span id="__span-2-12"><span class="linenos" data-linenos="12 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Buenas tardes"</span><span class="p">);</span>
+</span><span id="__span-2-13"><span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hora</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">21</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">hora</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">24</span><span class="p">){</span>
+</span><span id="__span-2-14"><span class="linenos" data-linenos="14 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Buenas noches"</span><span class="p">);</span>
+</span><span id="__span-2-15"><span class="linenos" data-linenos="15 "></span><span class="w">        </span><span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span><span id="__span-2-16"><span class="linenos" data-linenos="16 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hora no válida"</span><span class="p">);</span>
+</span><span id="__span-2-17"><span class="linenos" data-linenos="17 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-2-18"><span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-19"><span class="linenos" data-linenos="19 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p>Un correcto uso de if junto con else, nos permitirá tener un control sobre las posibilidades que tiene que tener nuestro algoritmo. El concepto es que se emplee la parte del else como el valor por defecto o el valor que queremos mostrar u obtener si no ha ido bien la cosa o los datos no son válidos. Esto es una forma de tener un control de excepciones, que los veremos en profundidad a lo largo del curso.</p>
+<h2 id="switch">Switch<a class="headerlink" href="#switch" title="Permanent link">¶</a></h2>
+<p>Se utiliza para seleccionar una de entre múltiples alternativas. La forma general de la instrucción switch en Java es la siguiente:</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut03/05_Switch.png" data-desc-position="bottom"><img alt="Condicional múltiple" src="../../img/ut03/05_Switch.png" width="500"></a>
+</figure>
+<p>La instrucción switch se puede usar con datos de tipo byte, short, char e int. A partir de Java 7 también pueden usarse datos de tipo String en un switch. Funcionamiento de la instrucción switch:</p>
+<ul>
+<li>Primero se evalúa la expresión y salta al case cuya constante coincida con el valor de la expresión.</li>
+<li>Se ejecutan las instrucciones que siguen al case seleccionado hasta que se encuentra un break o hasta el final del switch. El break produce un salto a la siguiente instrucción a continuación del switch.</li>
+<li>Si ninguno de estos casos se cumple se ejecuta el bloque default (si existe). No es obligatorio que exista un bloque default y no tiene porqué ponerse siempre al final, aunque es lo habitual.</li>
+</ul>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><span class="linenos" data-linenos=" 1 "></span><span class="cm">/* Programa que pide un número de mes y muestra el nombre correspondiente */</span>
+</span><span id="__span-3-2"><span class="linenos" data-linenos=" 2 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+</span><span id="__span-3-3"><span class="linenos" data-linenos=" 3 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo0Switch</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">mes</span><span class="p">;</span>
+</span><span id="__span-3-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+</span><span id="__span-3-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Introduzca un numero de mes: "</span><span class="p">);</span>
+</span><span id="__span-3-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="n">mes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+</span><span id="__span-3-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">mes</span><span class="p">){</span>
+</span><span id="__span-3-10"><span class="linenos" data-linenos="10 "></span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ENERO"</span><span class="p">);</span>
+</span><span id="__span-3-11"><span class="linenos" data-linenos="11 "></span><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-3-12"><span class="linenos" data-linenos="12 "></span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"FEBRERO"</span><span class="p">);</span>
+</span><span id="__span-3-13"><span class="linenos" data-linenos="13 "></span><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-3-14"><span class="linenos" data-linenos="14 "></span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"MARZO"</span><span class="p">);</span>
+</span><span id="__span-3-15"><span class="linenos" data-linenos="15 "></span><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-3-16"><span class="linenos" data-linenos="16 "></span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">4</span><span class="p">:</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ABRIL"</span><span class="p">);</span>
+</span><span id="__span-3-17"><span class="linenos" data-linenos="17 "></span><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-3-18"><span class="linenos" data-linenos="18 "></span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"MAYO"</span><span class="p">);</span>
+</span><span id="__span-3-19"><span class="linenos" data-linenos="19 "></span><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-3-20"><span class="linenos" data-linenos="20 "></span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">6</span><span class="p">:</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"JUNIO"</span><span class="p">);</span>
+</span><span id="__span-3-21"><span class="linenos" data-linenos="21 "></span><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-3-22"><span class="linenos" data-linenos="22 "></span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">7</span><span class="p">:</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"JULIO"</span><span class="p">);</span>
+</span><span id="__span-3-23"><span class="linenos" data-linenos="23 "></span><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-3-24"><span class="linenos" data-linenos="24 "></span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">8</span><span class="p">:</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"AGOSTO"</span><span class="p">);</span>
+</span><span id="__span-3-25"><span class="linenos" data-linenos="25 "></span><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-3-26"><span class="linenos" data-linenos="26 "></span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">9</span><span class="p">:</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"SEPTIEMBRE"</span><span class="p">);</span>
+</span><span id="__span-3-27"><span class="linenos" data-linenos="27 "></span><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-3-28"><span class="linenos" data-linenos="28 "></span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">10</span><span class="p">:</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"OCTUBRE"</span><span class="p">);</span>
+</span><span id="__span-3-29"><span class="linenos" data-linenos="29 "></span><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-3-30"><span class="linenos" data-linenos="30 "></span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">11</span><span class="p">:</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"NOVIEMBRE"</span><span class="p">);</span>
+</span><span id="__span-3-31"><span class="linenos" data-linenos="31 "></span><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-3-32"><span class="linenos" data-linenos="32 "></span><span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">12</span><span class="p">:</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"DICIEMBRE"</span><span class="p">);</span>
+</span><span id="__span-3-33"><span class="linenos" data-linenos="33 "></span><span class="w">                </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-3-34"><span class="linenos" data-linenos="34 "></span><span class="w">            </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Mes no válido"</span><span class="p">);</span>
+</span><span id="__span-3-35"><span class="linenos" data-linenos="35 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-3-36"><span class="linenos" data-linenos="36 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-37"><span class="linenos" data-linenos="37 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="instruccion-condicional">Instrucción condicional<a class="headerlink" href="#instruccion-condicional" title="Permanent link">¶</a></h2>
+<p>Se puede utilizar en sustitución de la sentencia de control <code>if-else</code>. Mediante los caracteres <code>?</code> y <code>:</code> Se utiliza de la forma siguiente:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><span class="linenos" data-linenos="1 "></span>expresión1 ? expresión2 : expresión3
+</span></code></pre></div>
+<p>Si expresión1 es cierta entonces se evalúa expresión2 y éste será el valor de la expresión condicional. Si expresión1 es falsa, se evalúa expresión3 y éste será el valor de la expresión condicional.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><span class="linenos" data-linenos="1 "></span><span class="cm">/* programa que pide un número por teclado y calcula si es par o impar */</span>
+</span><span id="__span-5-2"><span class="linenos" data-linenos="2 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+</span><span id="__span-5-3"><span class="linenos" data-linenos="3 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ejemplo1OperadorCondicional</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-4"><span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-5"><span class="linenos" data-linenos="5 "></span><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+</span><span id="__span-5-6"><span class="linenos" data-linenos="6 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Introduzca numero: "</span><span class="p">);</span>
+</span><span id="__span-5-7"><span class="linenos" data-linenos="7 "></span><span class="w">        </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">((</span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">"PAR"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">"IMPAR"</span><span class="p">);</span>
+</span><span id="__span-5-8"><span class="linenos" data-linenos="8 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-5-9"><span class="linenos" data-linenos="9 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 301</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se ha escrito y probado código que haga uso de estructuras de selección.">CE3a</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 1p) En la taquilla de un cine, a una persona menor de 13 años se le cobra la "tarifa para niños". De lo contrario, a una persona se le cobra la "tarifa de adulto". Completa un programa para que a una persona menor de 13 años se le cobre la tarifa de niño, con mostrar un mensaje será suficiente.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 302</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se ha escrito y probado código que haga uso de estructuras de selección.">CE3a</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 1p) Un hipermercado quiere un programa que calcule el impuesto sobre un aparato electrónico. Un artículo que cuesta 300€ o más tiene un impuesto del 5% (0.05); y un artículo que cuesta menos de 300€ está libre de impuestos. Desarrolla un programa que solicite por teclado un precio, luego calcule e imprima el impuesto y luego imprima el coste total (precio + impuesto).</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 303</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se ha escrito y probado código que haga uso de estructuras de selección.">CE3a</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Quiero alquilar un coche en una agencia de alquiler de coches. Las condiciones para alquilar un coche son: tener al menos 21 años o más y 10.000 o más euros de crédito en mi tarjeta. Escribe un programa que pida al usuario introducir su edad y su crédito disponible y verifique si es apto para alquilar un coche o no. Muestra un mensaje al usuario de si es apto. </p>
+<ul>
+<li>¿Podría alguien con 25 años y 10.000 € alquilar un coche? </li>
+<li>¿Y alguien con 21 años y 9000€? </li>
+<li>¿Qué pasaría si cambiamos el y por un o, es decir, tener 21 años o más o tener 10.000? </li>
+</ul>
+<p>Explica cómo afectaría a las preguntas anteriores, si obtendríamos el mismo resultado.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de refuerzo.">AR</abbr> 304</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se ha escrito y probado código que haga uso de estructuras de selección.">CE3a</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Los sabores de helado se representan como números enteros, donde 0 es vainilla, 1 es chocolate y 2 es fresa. Escribe un switch que pida al usuario un sabor de helado por pantalla y verifique el sabor e imprima el nombre del sabor del helado o imprima "Error" en el caso predeterminado.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 305</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se ha escrito y probado código que haga uso de estructuras de selección.">CE3a</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) El director de una escuela está organizando un viaje de estudios, y requiere determinar cuánto debe cobrar a cada alumno y cuánto debe pagar a la compañía de viajes por el servicio.</p>
+<p>La forma de cobrar es la siguiente: si son 100 alumnos o más, el costo por cada alumno es de 65.0 euros; de 50 a 99 alumnos, el costo es de 70.5 euros, de 30 a 49, de 95.0 euros, y si son menos de 30, el costo del alquiler del autobús es de 400.0 euros, sin importar el número de alumnos.</p>
+<p>Realiza un programa que permita determinar el pago a la compañía de autobuses y lo que debe pagar cada alumno por el viaje. Al realizar un análisis del problema, se puede deducir que las variables que se requieren como datos son el número de alumnos (NA) que se introducirán por entrada estándar (mediante la clase Scanner), con lo que se puede calcular el pago por alumno (PA) y el costo total del viaje (TOT), que deberán ser mostrados por salida estándar (impresión por pantalla). Determina qué tipo de dato es más adecuado para cada variable.</p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 306</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se ha escrito y probado código que haga uso de estructuras de selección.">CE3a</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p) Crea un programa que lea por teclado tres números enteros, calcule el mayor de los tres y lo muestre por salida estándar.</p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 307</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se ha escrito y probado código que haga uso de estructuras de selección.">CE3a</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p) Crea un programa que solicite un número de mes, calcule la estación a la que
+pertenece y la muestre por pantalla.</p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 308</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se ha escrito y probado código que haga uso de estructuras de selección.">CE3a</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p) Crea un programa que permita adivinar un número aleatorio entre 0 y 100. El usuario va introduciendo números y el programa le indicará si el número buscado es mayor o menor que el introducido. El proceso finaliza cuando el usuario acierta mostrándose el número de intentos. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Para que el programa genere un número al azar utilizamos el método random() que genera un número aleatorio entre 0 y 1. Entonces lo multiplicaremos por 100 y lo convertiremos a entero mediante el mecanismo de casting de tipos.</p>
+</div>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 309</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se ha escrito y probado código que haga uso de estructuras de selección.">CE3a</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p) Crea un programa que pida al usuario introducir un año y determine si es bisiesto o no.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Un año es bisiesto si es divisible por 4, pero no por 100, excepto si también es divisible por 400.</p>
+</div>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 310</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se ha escrito y probado código que haga uso de estructuras de selección.">CE3a</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p) Crea un programa que lea una nota numérica (0–10) y muestre por pantalla la calificación textual:</p>
+<ul>
+<li>0–4: Suspenso</li>
+<li>5: Aprobado</li>
+<li>6: Bien</li>
+<li>7–8: Notable</li>
+<li>9–10: Sobresaliente</li>
+</ul>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 311</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se ha escrito y probado código que haga uso de estructuras de selección.">CE3a</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p) Crea un programa que pida al usuario introducir tres números enteros y los muestre ordenados de menor a mayor.</p>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 312</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se ha escrito y probado código que haga uso de estructuras de selección.">CE3a</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p) Crea un programa que pida una fecha (día y mes) y determine el signo del zodiaco correspondiente.</p>
+</li>
+<li>
+<p><strong><abbr title="Actividades de profundización.">AP</abbr> 313</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se ha escrito y probado código que haga uso de estructuras de selección.">CE3a</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p) Crea un programa que lea por teclado una hora del día en formato hh:mm y muestre un saludo dependiendo del tramo horario:</p>
+<ul>
+<li>06:00 – 12:00 → "Buenos días"</li>
+<li>12:01 – 20:00 → "Buenas tardes"</li>
+<li>20:01 – 05:59 → "Buenas noches"</li>
+</ul>
+</li>
+<li>
+<p><strong><abbr title="Actividades de profundización.">AP</abbr> 314</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se ha escrito y probado código que haga uso de estructuras de selección.">CE3a</abbr> <abbr title="Se han probado y depurado los programas.">CE3f</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p) Crea un programa que pida al usuario introducir el importe de una compra y un código de descuento (por ejemplo: SIN, BRONCE, PLATA, ORO). El programa calculará el precio final aplicando los siguientes descuentos:</p>
+<ul>
+<li>SIN → 0%</li>
+<li>BRONCE → 5%</li>
+<li>PLATA → 10%</li>
+<li>ORO → 20%</li>
+</ul>
+<p>Finalmente, mostrará el precio original, el descuento aplicado y el precio final.</p>
+</li>
+</ul>
+<!-- Resultados de Aprendizaje & Criterios de Evaluación -->
+<!-- Instrumentos de Evaluación -->
+<!-- Instrumentos de Calificación -->
+<!-- Tipo de actividades -->
+<!-- Otras abreviaciones -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Pablo Rabasco Rodríguez
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/prabasco" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:&lt;p.rabascorodriguez@edu.gva.es&gt;" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "toc.follow", "content.tooltips", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
