@@ -1041,7 +1041,6 @@
 </span></code></pre></div>
 <p>La variable continúa llamándose <code>puntos</code>, pero su valor ha cambiado.</p>
 </div>
-<hr>
 <h2 id="declaracion-de-variables">Declaración de variables<a class="headerlink" href="#declaracion-de-variables" title="Permanent link">¶</a></h2>
 <p>Java es un lenguaje de <strong>tipado estático</strong>. Esto significa que cada variable tiene un tipo determinado y Java comprueba durante la compilación que los valores utilizados sean compatibles con ese tipo.</p>
 <p>Para declarar una variable debemos indicar:</p>
@@ -1088,7 +1087,6 @@
 </span></code></pre></div>
 <p>Modificamos el valor almacenado anteriormente.</p>
 </div>
-<hr>
 <h2 id="tipo-de-dato-de-una-variable">Tipo de dato de una variable<a class="headerlink" href="#tipo-de-dato-de-una-variable" title="Permanent link">¶</a></h2>
 <p>Cuando declaramos una variable debemos indicar qué <strong>tipo de información</strong> va a almacenar.</p>
 <p>Por ejemplo:</p>
@@ -1161,7 +1159,6 @@
 <p><code>String</code> <strong>no es uno de los ocho tipos primitivos ni una palabra reservada de Java</strong>.</p>
 <p><code>String</code> es una clase utilizada para representar cadenas de caracteres.</p>
 </div>
-<hr>
 <h2 id="el-tipo-de-una-variable-no-puede-cambiar">El tipo de una variable no puede cambiar<a class="headerlink" href="#el-tipo-de-una-variable-no-puede-cambiar" title="Permanent link">¶</a></h2>
 <p>Una vez declarada una variable, su tipo queda establecido.</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-17-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
@@ -1174,7 +1171,6 @@
 </span><span id="__span-18-3"><span class="linenos" data-linenos="3 "></span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Pedro"</span><span class="p">;</span><span class="w"> </span><span class="c1">// ERROR</span>
 </span></code></pre></div>
 <p>La variable <code>edad</code> es de tipo <code>int</code>, por lo que debe almacenar valores compatibles con dicho tipo.</p>
-<hr>
 <h2 id="declarar-varias-variables">Declarar varias variables<a class="headerlink" href="#declarar-varias-variables" title="Permanent link">¶</a></h2>
 <p>Es posible declarar varias variables del mismo tipo en una única instrucción:</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-19-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">,</span><span class="w"> </span><span class="n">curso</span><span class="p">,</span><span class="w"> </span><span class="n">numeroAlumnos</span><span class="p">;</span>
@@ -1187,7 +1183,6 @@
 </span><span id="__span-21-2"><span class="linenos" data-linenos="2 "></span><span class="kt">int</span><span class="w"> </span><span class="n">curso</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 </span><span id="__span-21-3"><span class="linenos" data-linenos="3 "></span><span class="kt">int</span><span class="w"> </span><span class="n">numeroAlumnos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
 </span></code></pre></div>
-<hr>
 <h2 id="reglas-para-nombrar-variables">Reglas para nombrar variables<a class="headerlink" href="#reglas-para-nombrar-variables" title="Permanent link">¶</a></h2>
 <p>Los identificadores utilizados para nombrar variables deben cumplir determinadas reglas.</p>
 <h3 id="reglas-obligatorias">Reglas obligatorias<a class="headerlink" href="#reglas-obligatorias" title="Permanent link">¶</a></h3>
@@ -1221,7 +1216,6 @@
 </span></code></pre></div>
 <p>son tres variables diferentes.</p>
 <p>No es recomendable hacerlo porque dificulta la lectura del código.</p>
-<hr>
 <h2 id="convenciones-para-nombrar-variables">Convenciones para nombrar variables<a class="headerlink" href="#convenciones-para-nombrar-variables" title="Permanent link">¶</a></h2>
 <p>Además de las reglas obligatorias existen <strong>convenciones</strong> que permiten escribir código más legible.</p>
 <p>Los nombres de las variables deben describir claramente qué información contienen.</p>
@@ -1258,7 +1252,6 @@
 </span></code></pre></div>
 <p>El código se escribe una vez, pero se lee muchas veces.</p>
 </div>
-<hr>
 <h1 id="visibilidad-y-vida-de-las-variables">Visibilidad y vida de las variables<a class="headerlink" href="#visibilidad-y-vida-de-las-variables" title="Permanent link">¶</a></h1>
 <p>No todas las variables existen durante el mismo tiempo ni pueden utilizarse desde cualquier parte del programa.</p>
 <p>Según el lugar donde se declaran podemos distinguir principalmente:</p>
@@ -1267,7 +1260,6 @@
 <li><strong>Variables de instancia</strong></li>
 <li><strong>Variables de clase o estáticas</strong></li>
 </ol>
-<hr>
 <h2 id="variables-locales">Variables locales<a class="headerlink" href="#variables-locales" title="Permanent link">¶</a></h2>
 <p>Una variable local se declara dentro de un método, constructor o bloque de código.</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-30-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1307,7 +1299,6 @@
 </span><span id="__span-32-7"><span class="linenos" data-linenos="7 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numero</span><span class="p">);</span><span class="w">    </span><span class="c1">// Correcto</span>
 </span></code></pre></div>
 </div>
-<hr>
 <h2 id="variables-de-instancia">Variables de instancia<a class="headerlink" href="#variables-de-instancia" title="Permanent link">¶</a></h2>
 <p>Las variables de instancia se declaran <strong>dentro de una clase pero fuera de sus métodos, constructores y bloques</strong>.</p>
 <p>Representan características o propiedades de los objetos.</p>
@@ -1339,7 +1330,6 @@
 </span><span id="__span-36-2"><span class="linenos" data-linenos="2 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">alumno2</span><span class="p">.</span><span class="na">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">// Carlos</span>
 </span></code></pre></div>
 <p>Cada objeto mantiene su propio estado.</p>
-<hr>
 <h2 id="variables-de-clase-o-estaticas">Variables de clase o estáticas<a class="headerlink" href="#variables-de-clase-o-estaticas" title="Permanent link">¶</a></h2>
 <p>Una variable declarada utilizando <code>static</code> pertenece a la <strong>clase</strong> y no a cada objeto individual.</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-37-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Alumno</span><span class="w"> </span><span class="p">{</span>
@@ -1367,7 +1357,6 @@
 <p>En Java no existen variables globales en el mismo sentido que en algunos otros lenguajes.</p>
 <p>Una variable <code>static</code> sigue perteneciendo a una <strong>clase</strong>, aunque exista una única copia compartida por todos sus objetos.</p>
 </div>
-<hr>
 <h2 id="diferencias-principales">Diferencias principales<a class="headerlink" href="#diferencias-principales" title="Permanent link">¶</a></h2>
 <table>
 <thead>
@@ -1420,7 +1409,6 @@
 </span><span id="__span-41-18"><span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-41-19"><span class="linenos" data-linenos="19 "></span><span class="p">}</span>
 </span></code></pre></div>
-<hr>
 <h1 id="scope-ambito">Scope – Ámbito<a class="headerlink" href="#scope-ambito" title="Permanent link">¶</a></h1>
 <p>El <strong>ámbito</strong> (<em>scope</em>) de una variable determina <strong>desde qué partes del código podemos utilizarla</strong>.</p>
 <p>En las variables locales, su ámbito comienza en el punto donde se declaran y termina al finalizar el bloque <code>{ }</code> que las contiene.</p>
@@ -1466,7 +1454,6 @@
 </span><span id="__span-43-10"><span class="linenos" data-linenos="10 "></span>                                     │
 </span><span id="__span-43-11"><span class="linenos" data-linenos="11 "></span>} ← termina x ────────────────────────┘
 </span></code></pre></div>
-<hr>
 <h2 id="variables-con-el-mismo-nombre">Variables con el mismo nombre<a class="headerlink" href="#variables-con-el-mismo-nombre" title="Permanent link">¶</a></h2>
 <p>No podemos declarar dos variables locales con el mismo nombre cuando sus ámbitos se solapan.</p>
 <p>Esto produce un error:</p>
@@ -1493,7 +1480,6 @@
 </span><span id="__span-45-7"><span class="linenos" data-linenos="7 "></span><span class="p">}</span>
 </span></code></pre></div>
 <p>No existe ningún conflicto porque cada variable pertenece al ámbito de su propio método.</p>
-<hr>
 <h1 id="constantes">Constantes<a class="headerlink" href="#constantes" title="Permanent link">¶</a></h1>
 <p>En ocasiones necesitamos almacenar un valor que <strong>no queremos que pueda modificarse</strong> durante la ejecución del programa.</p>
 <p>Para ello Java proporciona la palabra reservada <code>final</code>.</p>
@@ -1518,7 +1504,6 @@
 </span><span id="__span-49-2"><span class="linenos" data-linenos="2 "></span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PRECIO_BASE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">29.95</span><span class="p">;</span>
 </span><span id="__span-49-3"><span class="linenos" data-linenos="3 "></span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAXIMO_INTENTOS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 </span></code></pre></div>
-<hr>
 <h2 id="constantes-de-clase-static-final">Constantes de clase: <code>static final</code><a class="headerlink" href="#constantes-de-clase-static-final" title="Permanent link">¶</a></h2>
 <p>Es muy habitual que una constante pertenezca a toda la clase.</p>
 <p>En ese caso se utilizan conjuntamente <code>static</code> y <code>final</code>:</p>
@@ -1534,7 +1519,6 @@
 </span><span id="__span-51-2"><span class="linenos" data-linenos="2 "></span>
 </span><span id="__span-51-3"><span class="linenos" data-linenos="3 "></span><span class="kt">double</span><span class="w"> </span><span class="n">impuestos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">precio</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Configuracion</span><span class="p">.</span><span class="na">IVA</span><span class="p">;</span>
 </span></code></pre></div>
-<hr>
 <h1 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">¶</a></h1>
 <p>Al estudiar variables en Java debemos diferenciar varios conceptos:</p>
 <table>
