@@ -723,22 +723,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#visibilidad-y-vida-de-las-variables" class="md-nav__link">
+  <a href="#declaracion-de-variables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Visibilidad y vida de las variables
+        Declaración de variables
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Visibilidad y vida de las variables">
+    <nav class="md-nav" aria-label="Declaración de variables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#visibilidad" class="md-nav__link">
+  <a href="#inicializacion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Visibilidad
+        Inicialización
       
     </span>
   </a>
@@ -751,10 +751,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scope-ambito" class="md-nav__link">
+  <a href="#tipo-de-dato-de-una-variable" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scope – Ámbito
+        Tipo de dato de una variable
       
     </span>
   </a>
@@ -762,10 +762,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#actividades" class="md-nav__link">
+  <a href="#el-tipo-de-una-variable-no-puede-cambiar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Actividades
+        El tipo de una variable no puede cambiar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declarar-varias-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Declarar varias variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reglas-para-nombrar-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reglas para nombrar variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reglas para nombrar variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reglas-obligatorias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reglas obligatorias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-distingue-mayusculas-y-minusculas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Java distingue mayúsculas y minúsculas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convenciones-para-nombrar-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convenciones para nombrar variables
       
     </span>
   </a>
@@ -946,47 +1007,606 @@
 
 
 <h1 id="variables-en-java">Variables en Java<a class="headerlink" href="#variables-en-java" title="Permanent link">¶</a></h1>
-<p>Las variables en Java es una forma de almacenar información en nuestro ordenador. Definimos variables asignándoles un nombre. De igual manera se puede acceder a la información que guardar las variable, simplemente accediendo por el nombre que le hemos dado. Es el ordenador el que se encarga de averiguar dónde se almacena internamente en la memoria RAM del ordenador.</p>
-<p>Como su nombre indica "variable", se puede modificar el contenido que ésta almacena, es decir, es variable. Lo único que tenemos que hacer es decirle al PC qué tipo de información queremos guardar en nuestra variable y darle un nombre. Existe diferentes tipos de información que podemos utilizar para definir nuestras variables. Se les conoce como tipos de datos o data types. Los tipos de datos son palabras reservas keywords en Java, es decir, no podemos utilizarlas fuera del contexto de tipo de datos. Para definir una variable, necesitamos especificar el tipo de datos, luego darle un nombre a nuestra variable, y opcionalmente, podemos agregar una expresión para inicializar la variable con un valor.</p>
-<p>Reglas para el nombrado de variables</p>
-<ul>
-<li>Tiene que comenzar con una letra o '_', nunca con números.</li>
-<li>Puede contener números. No debe contener espacios en blanco.</li>
-<li>No debe ser muy largo y debe expresar algo en el contexto.</li>
-<li>No se pueden usar palabras reservadas.</li>
-<li>Mayúsculas y minúsculas se tratan diferente.</li>
-</ul>
-<h2 id="visibilidad-y-vida-de-las-variables">Visibilidad y vida de las variables<a class="headerlink" href="#visibilidad-y-vida-de-las-variables" title="Permanent link">¶</a></h2>
-<p>Las variables son memorias reservadas para almacenar valores en RAM. Estas posiciones de memoria se liberan tan pronto como termina la vida de la variable. Según la vida de las variables, hay tres tipos de Variables.</p>
-<ol>
-<li>Variables locales: La vida permanece dentro de un bloque donde se ha declarado.</li>
-<li>Variables de instancia: Declaradas dentro de la clase pero fuera de los métodos. No debería ser estático.</li>
-<li>Variables estáticas: es como una variable global. Declarado como estático en la clase pero fuera de los métodos.</li>
-</ol>
-<h3 id="visibilidad">Visibilidad<a class="headerlink" href="#visibilidad" title="Permanent link">¶</a></h3>
-<p>En las variables locales, su ámbito y uso se encuentra dentro del método o bloque en el que se definió y se destruyen después de la ejecución del método. Es decir, no se puede usar una variable local fuera del método actual. A las variables de instancia se puede acceder solo a través de objetos de la clase para la que se definió.</p>
-<p>Un campo / variable estático pertenece a la clase y se cargará en la memoria junto con la clase. Se invocan sin crear un objeto. (Usando el nombre de la clase como referencia). Solo hay una copia de la variable estática disponible en toda la clase, es decir, el valor de la variable estática será el mismo en todos los objetos. Puede definir una variable estática utilizando la palabra clave static.</p>
-<h2 id="scope-ambito">Scope – Ámbito<a class="headerlink" href="#scope-ambito" title="Permanent link">¶</a></h2>
-<p>El alcance o ámbito (scope) de una variable es la parte de un programa en la que existe. En Java, el alcance de una variable comienza donde se declara y termina cuando se alcanza la llave de cierre del bloque que la contiene.</p>
-<div class="admonition example">
-<p class="admonition-title">Ejemplo</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-</span><span id="__span-0-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
-</span><span id="__span-0-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-4"><span class="linenos" data-linenos="4 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-</span><span id="__span-0-5"><span class="linenos" data-linenos="5 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="c1">// ¡x todavía está dentro del alcance aquí!</span>
-</span><span id="__span-0-6"><span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-7"><span class="linenos" data-linenos="7 "></span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="c1">// ¡x todavía está dentro del alcance aquí también! </span>
-</span><span id="__span-0-8"><span class="linenos" data-linenos="8 "></span><span class="p">}</span>
+<p>Una <strong>variable</strong> es un espacio que utiliza un programa para <strong>almacenar información temporalmente en memoria</strong>. Cada variable tiene un <strong>nombre</strong> que permite identificarla y acceder al valor que contiene.</p>
+<p>Por ejemplo, si queremos almacenar la edad de una persona podemos crear una variable llamada <code>edad</code>:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
 </span></code></pre></div>
-<ul>
-<li>x está dentro del alcance entre su declaración en la línea 2 y la llave que la encierra en la línea 8.</li>
-<li>y está dentro del alcance entre su declaración en la línea 4 y la llave que la encierra en la línea 6.</li>
-<li>Las variables de bucle están dentro del alcance entre sus bucles for { }. Entonces, i está dentro del alcance entre las líneas 3 - 6.
-```</li>
-</ul>
+<p>A partir de ese momento podemos utilizar el nombre de la variable para consultar su valor:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos="1 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">edad</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Salida:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos="1 "></span>18
+</span></code></pre></div>
+<p>No necesitamos conocer la posición concreta de memoria donde se encuentra almacenado ese valor. Java y la JVM se encargan de gestionar estos detalles.</p>
+<p>Como su propio nombre indica, el contenido de una <strong>variable puede cambiar durante la ejecución del programa</strong>.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span><span id="__span-3-2"><span class="linenos" data-linenos="2 "></span>
+</span><span id="__span-3-3"><span class="linenos" data-linenos="3 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">edad</span><span class="p">);</span>
+</span><span id="__span-3-4"><span class="linenos" data-linenos="4 "></span>
+</span><span id="__span-3-5"><span class="linenos" data-linenos="5 "></span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">19</span><span class="p">;</span>
+</span><span id="__span-3-6"><span class="linenos" data-linenos="6 "></span>
+</span><span id="__span-3-7"><span class="linenos" data-linenos="7 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">edad</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Salida:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><span class="linenos" data-linenos="1 "></span>18
+</span><span id="__span-4-2"><span class="linenos" data-linenos="2 "></span>19
+</span></code></pre></div>
+<p>En este ejemplo seguimos teniendo una única variable llamada <code>edad</code>, pero su valor ha cambiado de <code>18</code> a <code>19</code>.</p>
+<div class="admonition info">
+<p class="admonition-title">Variable y valor no son lo mismo</p>
+<p>Una <strong>variable</strong> es el elemento identificado mediante un nombre que utilizamos para almacenar información.</p>
+<p>El <strong>valor</strong> es la información que contiene en un momento determinado.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">puntos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-5-2"><span class="linenos" data-linenos="2 "></span><span class="n">puntos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+</span></code></pre></div>
+<p>La variable continúa llamándose <code>puntos</code>, pero su valor ha cambiado.</p>
 </div>
-<p>Dos variables con el mismo nombre no pueden existir dentro del mismo ámbito (<code>scope</code>).</p>
+<hr>
+<h2 id="declaracion-de-variables">Declaración de variables<a class="headerlink" href="#declaracion-de-variables" title="Permanent link">¶</a></h2>
+<p>Java es un lenguaje de <strong>tipado estático</strong>. Esto significa que cada variable tiene un tipo determinado y Java comprueba durante la compilación que los valores utilizados sean compatibles con ese tipo.</p>
+<p>Para declarar una variable debemos indicar:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><span class="linenos" data-linenos="1 "></span>tipo nombreVariable;
+</span></code></pre></div>
+<p>Por ejemplo:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-7-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+</span><span id="__span-7-2"><span class="linenos" data-linenos="2 "></span><span class="kt">double</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
+</span><span id="__span-7-3"><span class="linenos" data-linenos="3 "></span><span class="kt">boolean</span><span class="w"> </span><span class="n">aprobado</span><span class="p">;</span>
+</span><span id="__span-7-4"><span class="linenos" data-linenos="4 "></span><span class="kt">char</span><span class="w"> </span><span class="n">grupo</span><span class="p">;</span>
+</span></code></pre></div>
+<p>En estas instrucciones hemos declarado las variables, pero todavía no les hemos asignado un valor.</p>
+<h3 id="inicializacion">Inicialización<a class="headerlink" href="#inicializacion" title="Permanent link">¶</a></h3>
+<p>La <strong>inicialización</strong> consiste en proporcionar el primer valor a una variable.</p>
+<p>Podemos declarar primero la variable y asignarle posteriormente un valor:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-8-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+</span><span id="__span-8-2"><span class="linenos" data-linenos="2 "></span>
+</span><span id="__span-8-3"><span class="linenos" data-linenos="3 "></span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span></code></pre></div>
+<p>También podemos declarar e inicializar la variable en una única instrucción:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-9-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Esta última forma será la más habitual.</p>
+<p>Otros ejemplos:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-10-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">numeroAlumnos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+</span><span id="__span-10-2"><span class="linenos" data-linenos="2 "></span><span class="kt">double</span><span class="w"> </span><span class="n">notaMedia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">7.5</span><span class="p">;</span>
+</span><span id="__span-10-3"><span class="linenos" data-linenos="3 "></span><span class="kt">boolean</span><span class="w"> </span><span class="n">aprobado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</span><span id="__span-10-4"><span class="linenos" data-linenos="4 "></span><span class="kt">char</span><span class="w"> </span><span class="n">grupo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'A'</span><span class="p">;</span>
+</span><span id="__span-10-5"><span class="linenos" data-linenos="5 "></span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Laura"</span><span class="p">;</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Declaración, inicialización y asignación</p>
+<p>Conviene distinguir estos tres conceptos:</p>
+<p><strong>Declaración</strong></p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-11-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Creamos una variable llamada <code>edad</code> de tipo <code>int</code>.</p>
+<p><strong>Inicialización</strong></p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-12-1"><span class="linenos" data-linenos="1 "></span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Le proporcionamos su primer valor.</p>
+<p><strong>Asignación</strong></p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-13-1"><span class="linenos" data-linenos="1 "></span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">19</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Modificamos el valor almacenado anteriormente.</p>
+</div>
+<hr>
+<h2 id="tipo-de-dato-de-una-variable">Tipo de dato de una variable<a class="headerlink" href="#tipo-de-dato-de-una-variable" title="Permanent link">¶</a></h2>
+<p>Cuando declaramos una variable debemos indicar qué <strong>tipo de información</strong> va a almacenar.</p>
+<p>Por ejemplo:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-14-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span><span id="__span-14-2"><span class="linenos" data-linenos="2 "></span><span class="kt">double</span><span class="w"> </span><span class="n">altura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.75</span><span class="p">;</span>
+</span><span id="__span-14-3"><span class="linenos" data-linenos="3 "></span><span class="kt">boolean</span><span class="w"> </span><span class="n">matriculado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</span><span id="__span-14-4"><span class="linenos" data-linenos="4 "></span><span class="kt">char</span><span class="w"> </span><span class="n">grupo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'A'</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Java dispone de ocho <strong>tipos primitivos</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Ejemplo</th>
+<th>Información almacenada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>byte</code></td>
+<td><code>byte edad = 18;</code></td>
+<td>Números enteros pequeños</td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td><code>short unidades = 1500;</code></td>
+<td>Números enteros</td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td><code>int alumnos = 30;</code></td>
+<td>Números enteros</td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td><code>long poblacion = 8000000000L;</code></td>
+<td>Números enteros grandes</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td><code>float temperatura = 23.5F;</code></td>
+<td>Números decimales</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><code>double precio = 19.95;</code></td>
+<td>Números decimales</td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td><code>char grupo = 'A';</code></td>
+<td>Un carácter</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>boolean aprobado = true;</code></td>
+<td>Valores <code>true</code> o <code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p>Los nombres de los tipos primitivos (<code>int</code>, <code>double</code>, <code>boolean</code>, etc.) son <strong>palabras reservadas de Java</strong> (<em>keywords</em>), por lo que no pueden utilizarse como nombres de variables.</p>
+<p>Por ejemplo, esto es incorrecto:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-15-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// ERROR</span>
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title"><code>String</code> no es un tipo primitivo</p>
+<p>Aunque lo utilizaremos constantemente:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-16-1"><span class="linenos" data-linenos="1 "></span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ana"</span><span class="p">;</span>
+</span></code></pre></div>
+<p><code>String</code> <strong>no es uno de los ocho tipos primitivos ni una palabra reservada de Java</strong>.</p>
+<p><code>String</code> es una clase utilizada para representar cadenas de caracteres.</p>
+</div>
+<hr>
+<h2 id="el-tipo-de-una-variable-no-puede-cambiar">El tipo de una variable no puede cambiar<a class="headerlink" href="#el-tipo-de-una-variable-no-puede-cambiar" title="Permanent link">¶</a></h2>
+<p>Una vez declarada una variable, su tipo queda establecido.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-17-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span><span id="__span-17-2"><span class="linenos" data-linenos="2 "></span>
+</span><span id="__span-17-3"><span class="linenos" data-linenos="3 "></span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span><span class="w">      </span><span class="c1">// Correcto</span>
+</span></code></pre></div>
+<p>Pero no podemos almacenar posteriormente un dato incompatible:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-18-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span><span id="__span-18-2"><span class="linenos" data-linenos="2 "></span>
+</span><span id="__span-18-3"><span class="linenos" data-linenos="3 "></span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Pedro"</span><span class="p">;</span><span class="w"> </span><span class="c1">// ERROR</span>
+</span></code></pre></div>
+<p>La variable <code>edad</code> es de tipo <code>int</code>, por lo que debe almacenar valores compatibles con dicho tipo.</p>
+<hr>
+<h2 id="declarar-varias-variables">Declarar varias variables<a class="headerlink" href="#declarar-varias-variables" title="Permanent link">¶</a></h2>
+<p>Es posible declarar varias variables del mismo tipo en una única instrucción:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-19-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">,</span><span class="w"> </span><span class="n">curso</span><span class="p">,</span><span class="w"> </span><span class="n">numeroAlumnos</span><span class="p">;</span>
+</span></code></pre></div>
+<p>También pueden inicializarse:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-20-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Aunque Java lo permite, cuando las variables representan conceptos diferentes suele ser más legible declararlas por separado:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-21-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span><span id="__span-21-2"><span class="linenos" data-linenos="2 "></span><span class="kt">int</span><span class="w"> </span><span class="n">curso</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-21-3"><span class="linenos" data-linenos="3 "></span><span class="kt">int</span><span class="w"> </span><span class="n">numeroAlumnos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+</span></code></pre></div>
+<hr>
+<h2 id="reglas-para-nombrar-variables">Reglas para nombrar variables<a class="headerlink" href="#reglas-para-nombrar-variables" title="Permanent link">¶</a></h2>
+<p>Los identificadores utilizados para nombrar variables deben cumplir determinadas reglas.</p>
+<h3 id="reglas-obligatorias">Reglas obligatorias<a class="headerlink" href="#reglas-obligatorias" title="Permanent link">¶</a></h3>
+<ul>
+<li>No pueden comenzar por un número.</li>
+<li>Pueden comenzar por una letra, <code>_</code> o <code>$</code>.</li>
+<li>Después del primer carácter pueden contener letras, números, <code>_</code> o <code>$</code>.</li>
+<li>No pueden contener espacios.</li>
+<li>No pueden utilizar palabras reservadas de Java.</li>
+<li>Java diferencia entre mayúsculas y minúsculas.</li>
+</ul>
+<p>Ejemplos válidos:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-22-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+</span><span id="__span-22-2"><span class="linenos" data-linenos="2 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edadAlumno</span><span class="p">;</span>
+</span><span id="__span-22-3"><span class="linenos" data-linenos="3 "></span><span class="kt">int</span><span class="w"> </span><span class="n">alumno1</span><span class="p">;</span>
+</span><span id="__span-22-4"><span class="linenos" data-linenos="4 "></span><span class="kt">int</span><span class="w"> </span><span class="n">numeroAlumnos</span><span class="p">;</span>
+</span><span id="__span-22-5"><span class="linenos" data-linenos="5 "></span><span class="kt">int</span><span class="w"> </span><span class="n">_contador</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Ejemplos incorrectos:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-23-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="mi">1</span><span class="n">alumno</span><span class="p">;</span><span class="w">          </span><span class="c1">// Empieza por un número</span>
+</span><span id="__span-23-2"><span class="linenos" data-linenos="2 "></span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="n">alumnos</span><span class="p">;</span><span class="w">   </span><span class="c1">// Contiene un espacio</span>
+</span><span id="__span-23-3"><span class="linenos" data-linenos="3 "></span><span class="kt">int</span><span class="w"> </span><span class="kd">class</span><span class="err">;</span>            <span class="err">//</span> <span class="nc">class</span><span class="w"> </span><span class="n">es</span><span class="w"> </span><span class="n">una</span><span class="w"> </span><span class="n">palabra</span><span class="w"> </span><span class="n">reservada</span>
+</span><span id="__span-23-4"><span class="linenos" data-linenos="4 "></span><span class="kt">int</span><span class="w"> </span><span class="kt">double</span><span class="p">;</span><span class="w">           </span><span class="c1">// double es una palabra reservada</span>
+</span></code></pre></div>
+<p>Aunque <code>$</code> puede utilizarse legalmente, no es recomendable utilizarlo en los nombres habituales de nuestras variables.</p>
+<h3 id="java-distingue-mayusculas-y-minusculas">Java distingue mayúsculas y minúsculas<a class="headerlink" href="#java-distingue-mayusculas-y-minusculas" title="Permanent link">¶</a></h3>
+<p>Java es <strong>case-sensitive</strong>, por lo que:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-24-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span><span id="__span-24-2"><span class="linenos" data-linenos="2 "></span><span class="kt">int</span><span class="w"> </span><span class="n">Edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+</span><span id="__span-24-3"><span class="linenos" data-linenos="3 "></span><span class="kt">int</span><span class="w"> </span><span class="n">EDAD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+</span></code></pre></div>
+<p>son tres variables diferentes.</p>
+<p>No es recomendable hacerlo porque dificulta la lectura del código.</p>
+<hr>
+<h2 id="convenciones-para-nombrar-variables">Convenciones para nombrar variables<a class="headerlink" href="#convenciones-para-nombrar-variables" title="Permanent link">¶</a></h2>
+<p>Además de las reglas obligatorias existen <strong>convenciones</strong> que permiten escribir código más legible.</p>
+<p>Los nombres de las variables deben describir claramente qué información contienen.</p>
+<p>Evita nombres como:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-25-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+</span><span id="__span-25-2"><span class="linenos" data-linenos="2 "></span><span class="kt">int</span><span class="w"> </span><span class="n">dato</span><span class="p">;</span>
+</span><span id="__span-25-3"><span class="linenos" data-linenos="3 "></span><span class="kt">int</span><span class="w"> </span><span class="n">cosa</span><span class="p">;</span>
+</span><span id="__span-25-4"><span class="linenos" data-linenos="4 "></span><span class="kt">int</span><span class="w"> </span><span class="n">n1</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Cuando puedan utilizarse nombres más descriptivos:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-26-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edadAlumno</span><span class="p">;</span>
+</span><span id="__span-26-2"><span class="linenos" data-linenos="2 "></span><span class="kt">int</span><span class="w"> </span><span class="n">numeroAlumnos</span><span class="p">;</span>
+</span><span id="__span-26-3"><span class="linenos" data-linenos="3 "></span><span class="kt">double</span><span class="w"> </span><span class="n">precioProducto</span><span class="p">;</span>
+</span><span id="__span-26-4"><span class="linenos" data-linenos="4 "></span><span class="kt">double</span><span class="w"> </span><span class="n">notaMedia</span><span class="p">;</span>
+</span><span id="__span-26-5"><span class="linenos" data-linenos="5 "></span><span class="kt">boolean</span><span class="w"> </span><span class="n">mayorDeEdad</span><span class="p">;</span>
+</span></code></pre></div>
+<p>En Java se utiliza normalmente la convención <strong>lowerCamelCase</strong> para nombrar variables.</p>
+<p>La primera palabra comienza en minúscula y las siguientes empiezan por mayúscula:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-27-1"><span class="linenos" data-linenos="1 "></span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+</span><span id="__span-27-2"><span class="linenos" data-linenos="2 "></span><span class="n">String</span><span class="w"> </span><span class="n">nombreAlumno</span><span class="p">;</span>
+</span><span id="__span-27-3"><span class="linenos" data-linenos="3 "></span><span class="n">String</span><span class="w"> </span><span class="n">nombreCompletoAlumno</span><span class="p">;</span>
+</span><span id="__span-27-4"><span class="linenos" data-linenos="4 "></span>
+</span><span id="__span-27-5"><span class="linenos" data-linenos="5 "></span><span class="kt">int</span><span class="w"> </span><span class="n">numeroAlumnos</span><span class="p">;</span>
+</span><span id="__span-27-6"><span class="linenos" data-linenos="6 "></span><span class="kt">double</span><span class="w"> </span><span class="n">precioProducto</span><span class="p">;</span>
+</span><span id="__span-27-7"><span class="linenos" data-linenos="7 "></span><span class="kt">boolean</span><span class="w"> </span><span class="n">tieneDescuento</span><span class="p">;</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Nombres descriptivos</p>
+<p>Es preferible escribir:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-28-1"><span class="linenos" data-linenos="1 "></span><span class="kt">double</span><span class="w"> </span><span class="n">precioConIva</span><span class="p">;</span>
+</span></code></pre></div>
+<p>en lugar de:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-29-1"><span class="linenos" data-linenos="1 "></span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+</span></code></pre></div>
+<p>El código se escribe una vez, pero se lee muchas veces.</p>
+</div>
+<hr>
+<h1 id="visibilidad-y-vida-de-las-variables">Visibilidad y vida de las variables<a class="headerlink" href="#visibilidad-y-vida-de-las-variables" title="Permanent link">¶</a></h1>
+<p>No todas las variables existen durante el mismo tiempo ni pueden utilizarse desde cualquier parte del programa.</p>
+<p>Según el lugar donde se declaran podemos distinguir principalmente:</p>
+<ol>
+<li><strong>Variables locales</strong></li>
+<li><strong>Variables de instancia</strong></li>
+<li><strong>Variables de clase o estáticas</strong></li>
+</ol>
+<hr>
+<h2 id="variables-locales">Variables locales<a class="headerlink" href="#variables-locales" title="Permanent link">¶</a></h2>
+<p>Una variable local se declara dentro de un método, constructor o bloque de código.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-30-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-30-2"><span class="linenos" data-linenos="2 "></span>
+</span><span id="__span-30-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span><span id="__span-30-4"><span class="linenos" data-linenos="4 "></span>
+</span><span id="__span-30-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">edad</span><span class="p">);</span>
+</span><span id="__span-30-6"><span class="linenos" data-linenos="6 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p>En este caso <code>edad</code> es una variable local del método <code>main()</code>.</p>
+<p>Solo puede utilizarse dentro del ámbito en el que ha sido declarada.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-31-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-31-2"><span class="linenos" data-linenos=" 2 "></span>
+</span><span id="__span-31-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span><span id="__span-31-4"><span class="linenos" data-linenos=" 4 "></span>
+</span><span id="__span-31-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-31-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Es mayor de edad"</span><span class="p">;</span>
+</span><span id="__span-31-7"><span class="linenos" data-linenos=" 7 "></span>
+</span><span id="__span-31-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">edad</span><span class="p">);</span><span class="w">     </span><span class="c1">// Correcto</span>
+</span><span id="__span-31-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mensaje</span><span class="p">);</span><span class="w">  </span><span class="c1">// Correcto</span>
+</span><span id="__span-31-10"><span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-31-11"><span class="linenos" data-linenos="11 "></span>
+</span><span id="__span-31-12"><span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">edad</span><span class="p">);</span><span class="w">         </span><span class="c1">// Correcto</span>
+</span><span id="__span-31-13"><span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="c1">// System.out.println(mensaje);   // ERROR</span>
+</span><span id="__span-31-14"><span class="linenos" data-linenos="14 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p><code>mensaje</code> solamente existe dentro del bloque del <code>if</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Las variables locales deben inicializarse</p>
+<p>Java no permite utilizar una variable local antes de haberle asignado un valor.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-32-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">;</span>
+</span><span id="__span-32-2"><span class="linenos" data-linenos="2 "></span>
+</span><span id="__span-32-3"><span class="linenos" data-linenos="3 "></span><span class="c1">// System.out.println(numero); // ERROR</span>
+</span><span id="__span-32-4"><span class="linenos" data-linenos="4 "></span>
+</span><span id="__span-32-5"><span class="linenos" data-linenos="5 "></span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-32-6"><span class="linenos" data-linenos="6 "></span>
+</span><span id="__span-32-7"><span class="linenos" data-linenos="7 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numero</span><span class="p">);</span><span class="w">    </span><span class="c1">// Correcto</span>
+</span></code></pre></div>
+</div>
+<hr>
+<h2 id="variables-de-instancia">Variables de instancia<a class="headerlink" href="#variables-de-instancia" title="Permanent link">¶</a></h2>
+<p>Las variables de instancia se declaran <strong>dentro de una clase pero fuera de sus métodos, constructores y bloques</strong>.</p>
+<p>Representan características o propiedades de los objetos.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-33-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Alumno</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-33-2"><span class="linenos" data-linenos="2 "></span>
+</span><span id="__span-33-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+</span><span id="__span-33-4"><span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+</span><span id="__span-33-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">nota</span><span class="p">;</span>
+</span><span id="__span-33-6"><span class="linenos" data-linenos="6 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p>En este ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><span class="linenos" data-linenos="1 "></span>nombre
+</span><span id="__span-34-2"><span class="linenos" data-linenos="2 "></span>edad
+</span><span id="__span-34-3"><span class="linenos" data-linenos="3 "></span>nota
+</span></code></pre></div>
+<p>son variables de instancia.</p>
+<p>Cada objeto de la clase <code>Alumno</code> dispone de sus propios valores:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-35-1"><span class="linenos" data-linenos="1 "></span><span class="n">Alumno</span><span class="w"> </span><span class="n">alumno1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">();</span>
+</span><span id="__span-35-2"><span class="linenos" data-linenos="2 "></span><span class="n">Alumno</span><span class="w"> </span><span class="n">alumno2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">();</span>
+</span><span id="__span-35-3"><span class="linenos" data-linenos="3 "></span>
+</span><span id="__span-35-4"><span class="linenos" data-linenos="4 "></span><span class="n">alumno1</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ana"</span><span class="p">;</span>
+</span><span id="__span-35-5"><span class="linenos" data-linenos="5 "></span><span class="n">alumno1</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span><span id="__span-35-6"><span class="linenos" data-linenos="6 "></span>
+</span><span id="__span-35-7"><span class="linenos" data-linenos="7 "></span><span class="n">alumno2</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Carlos"</span><span class="p">;</span>
+</span><span id="__span-35-8"><span class="linenos" data-linenos="8 "></span><span class="n">alumno2</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Por tanto:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-36-1"><span class="linenos" data-linenos="1 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">alumno1</span><span class="p">.</span><span class="na">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">// Ana</span>
+</span><span id="__span-36-2"><span class="linenos" data-linenos="2 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">alumno2</span><span class="p">.</span><span class="na">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">// Carlos</span>
+</span></code></pre></div>
+<p>Cada objeto mantiene su propio estado.</p>
+<hr>
+<h2 id="variables-de-clase-o-estaticas">Variables de clase o estáticas<a class="headerlink" href="#variables-de-clase-o-estaticas" title="Permanent link">¶</a></h2>
+<p>Una variable declarada utilizando <code>static</code> pertenece a la <strong>clase</strong> y no a cada objeto individual.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-37-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Alumno</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-37-2"><span class="linenos" data-linenos="2 "></span>
+</span><span id="__span-37-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numeroAlumnos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-37-4"><span class="linenos" data-linenos="4 "></span>
+</span><span id="__span-37-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+</span><span id="__span-37-6"><span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+</span><span id="__span-37-7"><span class="linenos" data-linenos="7 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p>La variable:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-38-1"><span class="linenos" data-linenos="1 "></span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numeroAlumnos</span><span class="p">;</span>
+</span></code></pre></div>
+<p>es compartida por todos los objetos de la clase <code>Alumno</code>.</p>
+<p>Normalmente se accede utilizando el nombre de la clase:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-39-1"><span class="linenos" data-linenos="1 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Alumno</span><span class="p">.</span><span class="na">numeroAlumnos</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Por ejemplo:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-40-1"><span class="linenos" data-linenos="1 "></span><span class="n">Alumno</span><span class="p">.</span><span class="na">numeroAlumnos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+</span><span id="__span-40-2"><span class="linenos" data-linenos="2 "></span>
+</span><span id="__span-40-3"><span class="linenos" data-linenos="3 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Alumno</span><span class="p">.</span><span class="na">numeroAlumnos</span><span class="p">);</span>
+</span></code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Una variable <code>static</code> no es una variable global</p>
+<p>En Java no existen variables globales en el mismo sentido que en algunos otros lenguajes.</p>
+<p>Una variable <code>static</code> sigue perteneciendo a una <strong>clase</strong>, aunque exista una única copia compartida por todos sus objetos.</p>
+</div>
+<hr>
+<h2 id="diferencias-principales">Diferencias principales<a class="headerlink" href="#diferencias-principales" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tipo de variable</th>
+<th>Se declara</th>
+<th>Pertenece a</th>
+<th style="text-align: right;">Copias</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Local</td>
+<td>Dentro de un método o bloque</td>
+<td>Al bloque donde se declara</td>
+<td style="text-align: right;">Una durante cada ejecución</td>
+</tr>
+<tr>
+<td>Instancia</td>
+<td>En una clase, fuera de métodos</td>
+<td>A cada objeto</td>
+<td style="text-align: right;">Una por objeto</td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>En una clase, fuera de métodos</td>
+<td>A la clase</td>
+<td style="text-align: right;">Una compartida</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-41-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Alumno</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-41-2"><span class="linenos" data-linenos=" 2 "></span>
+</span><span id="__span-41-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="c1">// Variable de clase</span>
+</span><span id="__span-41-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numeroAlumnos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-41-5"><span class="linenos" data-linenos=" 5 "></span>
+</span><span id="__span-41-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="c1">// Variables de instancia</span>
+</span><span id="__span-41-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+</span><span id="__span-41-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+</span><span id="__span-41-9"><span class="linenos" data-linenos=" 9 "></span>
+</span><span id="__span-41-10"><span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrarDatos</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-41-11"><span class="linenos" data-linenos="11 "></span>
+</span><span id="__span-41-12"><span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="c1">// Variable local</span>
+</span><span id="__span-41-13"><span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Datos del alumno"</span><span class="p">;</span>
+</span><span id="__span-41-14"><span class="linenos" data-linenos="14 "></span>
+</span><span id="__span-41-15"><span class="linenos" data-linenos="15 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mensaje</span><span class="p">);</span>
+</span><span id="__span-41-16"><span class="linenos" data-linenos="16 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
+</span><span id="__span-41-17"><span class="linenos" data-linenos="17 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">edad</span><span class="p">);</span>
+</span><span id="__span-41-18"><span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-41-19"><span class="linenos" data-linenos="19 "></span><span class="p">}</span>
+</span></code></pre></div>
+<hr>
+<h1 id="scope-ambito">Scope – Ámbito<a class="headerlink" href="#scope-ambito" title="Permanent link">¶</a></h1>
+<p>El <strong>ámbito</strong> (<em>scope</em>) de una variable determina <strong>desde qué partes del código podemos utilizarla</strong>.</p>
+<p>En las variables locales, su ámbito comienza en el punto donde se declaran y termina al finalizar el bloque <code>{ }</code> que las contiene.</p>
+<p>Por ejemplo:</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de ámbito</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-42-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-42-2"><span class="linenos" data-linenos=" 2 "></span>
+</span><span id="__span-42-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><span id="__span-42-4"><span class="linenos" data-linenos=" 4 "></span>
+</span><span id="__span-42-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-42-6"><span class="linenos" data-linenos=" 6 "></span>
+</span><span id="__span-42-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-42-8"><span class="linenos" data-linenos=" 8 "></span>
+</span><span id="__span-42-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// Correcto</span>
+</span><span id="__span-42-10"><span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"> </span><span class="c1">// Correcto</span>
+</span><span id="__span-42-11"><span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">y</span><span class="p">);</span><span class="w"> </span><span class="c1">// Correcto</span>
+</span><span id="__span-42-12"><span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-42-13"><span class="linenos" data-linenos="13 "></span>
+</span><span id="__span-42-14"><span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w">     </span><span class="c1">// Correcto</span>
+</span><span id="__span-42-15"><span class="linenos" data-linenos="15 "></span>
+</span><span id="__span-42-16"><span class="linenos" data-linenos="16 "></span><span class="w">    </span><span class="c1">// System.out.println(i);  // ERROR</span>
+</span><span id="__span-42-17"><span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="c1">// System.out.println(y);  // ERROR</span>
+</span><span id="__span-42-18"><span class="linenos" data-linenos="18 "></span><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<p>En este ejemplo:</p>
+<ul>
+<li><code>x</code> se declara dentro de <code>main()</code> y puede utilizarse desde su declaración hasta el final del método.</li>
+<li><code>i</code> se declara en el <code>for</code> y solamente puede utilizarse dentro de dicho bucle.</li>
+<li><code>y</code> se declara dentro del bloque <code>{ }</code> del <code>for</code> y solamente existe dentro de ese bloque.</li>
+</ul>
+<p>Podemos representarlo de forma simplificada:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-43-1"><span class="linenos" data-linenos=" 1 "></span>main {
+</span><span id="__span-43-2"><span class="linenos" data-linenos=" 2 "></span>    x ────────────────────────────────┐
+</span><span id="__span-43-3"><span class="linenos" data-linenos=" 3 "></span>                                     │
+</span><span id="__span-43-4"><span class="linenos" data-linenos=" 4 "></span>    for (i) {                         │
+</span><span id="__span-43-5"><span class="linenos" data-linenos=" 5 "></span>        i ───────────────┐            │
+</span><span id="__span-43-6"><span class="linenos" data-linenos=" 6 "></span>                         │            │
+</span><span id="__span-43-7"><span class="linenos" data-linenos=" 7 "></span>        y ───────────────┤            │
+</span><span id="__span-43-8"><span class="linenos" data-linenos=" 8 "></span>                         │            │
+</span><span id="__span-43-9"><span class="linenos" data-linenos=" 9 "></span>    } ← terminan i e y ──┘            │
+</span><span id="__span-43-10"><span class="linenos" data-linenos="10 "></span>                                     │
+</span><span id="__span-43-11"><span class="linenos" data-linenos="11 "></span>} ← termina x ────────────────────────┘
+</span></code></pre></div>
+<hr>
+<h2 id="variables-con-el-mismo-nombre">Variables con el mismo nombre<a class="headerlink" href="#variables-con-el-mismo-nombre" title="Permanent link">¶</a></h2>
+<p>No podemos declarar dos variables locales con el mismo nombre cuando sus ámbitos se solapan.</p>
+<p>Esto produce un error:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-44-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-44-2"><span class="linenos" data-linenos=" 2 "></span>
+</span><span id="__span-44-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-44-4"><span class="linenos" data-linenos=" 4 "></span>
+</span><span id="__span-44-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-44-6"><span class="linenos" data-linenos=" 6 "></span>
+</span><span id="__span-44-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="c1">// int numero = 20; // ERROR</span>
+</span><span id="__span-44-8"><span class="linenos" data-linenos=" 8 "></span>
+</span><span id="__span-44-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numero</span><span class="p">);</span>
+</span><span id="__span-44-10"><span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-44-11"><span class="linenos" data-linenos="11 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p>La variable <code>numero</code> declarada al principio continúa estando dentro del ámbito cuando entramos en el <code>if</code>.</p>
+<p>Sin embargo, dos métodos diferentes pueden tener variables locales con el mismo nombre:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-45-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">metodo1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-45-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-45-3"><span class="linenos" data-linenos="3 "></span><span class="p">}</span>
+</span><span id="__span-45-4"><span class="linenos" data-linenos="4 "></span>
+</span><span id="__span-45-5"><span class="linenos" data-linenos="5 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">metodo2</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-45-6"><span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+</span><span id="__span-45-7"><span class="linenos" data-linenos="7 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p>No existe ningún conflicto porque cada variable pertenece al ámbito de su propio método.</p>
+<hr>
+<h1 id="constantes">Constantes<a class="headerlink" href="#constantes" title="Permanent link">¶</a></h1>
+<p>En ocasiones necesitamos almacenar un valor que <strong>no queremos que pueda modificarse</strong> durante la ejecución del programa.</p>
+<p>Para ello Java proporciona la palabra reservada <code>final</code>.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-46-1"><span class="linenos" data-linenos="1 "></span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.141592</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Una vez asignado el valor, no puede modificarse:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-47-1"><span class="linenos" data-linenos="1 "></span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.141592</span><span class="p">;</span>
+</span><span id="__span-47-2"><span class="linenos" data-linenos="2 "></span>
+</span><span id="__span-47-3"><span class="linenos" data-linenos="3 "></span><span class="c1">// PI = 3.14; // ERROR</span>
+</span></code></pre></div>
+<p>Otro ejemplo:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-48-1"><span class="linenos" data-linenos="1 "></span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">EDAD_MINIMA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span><span id="__span-48-2"><span class="linenos" data-linenos="2 "></span>
+</span><span id="__span-48-3"><span class="linenos" data-linenos="3 "></span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+</span><span id="__span-48-4"><span class="linenos" data-linenos="4 "></span>
+</span><span id="__span-48-5"><span class="linenos" data-linenos="5 "></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">EDAD_MINIMA</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-48-6"><span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Puede acceder"</span><span class="p">);</span>
+</span><span id="__span-48-7"><span class="linenos" data-linenos="7 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p>Por convención, los nombres de las constantes se escriben en <strong>mayúsculas</strong>, separando las palabras mediante <code>_</code>:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-49-1"><span class="linenos" data-linenos="1 "></span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">EDAD_MINIMA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span><span id="__span-49-2"><span class="linenos" data-linenos="2 "></span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PRECIO_BASE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">29.95</span><span class="p">;</span>
+</span><span id="__span-49-3"><span class="linenos" data-linenos="3 "></span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAXIMO_INTENTOS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+</span></code></pre></div>
+<hr>
+<h2 id="constantes-de-clase-static-final">Constantes de clase: <code>static final</code><a class="headerlink" href="#constantes-de-clase-static-final" title="Permanent link">¶</a></h2>
+<p>Es muy habitual que una constante pertenezca a toda la clase.</p>
+<p>En ese caso se utilizan conjuntamente <code>static</code> y <code>final</code>:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-50-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Configuracion</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-50-2"><span class="linenos" data-linenos="2 "></span>
+</span><span id="__span-50-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">IVA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.21</span><span class="p">;</span>
+</span><span id="__span-50-4"><span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">EDAD_MINIMA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span><span id="__span-50-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAXIMO_INTENTOS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+</span><span id="__span-50-6"><span class="linenos" data-linenos="6 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p>Podemos utilizarlas mediante el nombre de la clase:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-51-1"><span class="linenos" data-linenos="1 "></span><span class="kt">double</span><span class="w"> </span><span class="n">precio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+</span><span id="__span-51-2"><span class="linenos" data-linenos="2 "></span>
+</span><span id="__span-51-3"><span class="linenos" data-linenos="3 "></span><span class="kt">double</span><span class="w"> </span><span class="n">impuestos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">precio</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Configuracion</span><span class="p">.</span><span class="na">IVA</span><span class="p">;</span>
+</span></code></pre></div>
+<hr>
+<h1 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">¶</a></h1>
+<p>Al estudiar variables en Java debemos diferenciar varios conceptos:</p>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Pregunta que responde</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tipo de dato</td>
+<td>¿Qué información almacena?</td>
+<td><code>int</code>, <code>double</code>, <code>boolean</code>, <code>String</code></td>
+</tr>
+<tr>
+<td>Nombre</td>
+<td>¿Cómo identificamos la variable?</td>
+<td><code>edad</code>, <code>precioProducto</code></td>
+</tr>
+<tr>
+<td>Valor</td>
+<td>¿Qué contiene actualmente?</td>
+<td><code>18</code>, <code>29.95</code>, <code>true</code></td>
+</tr>
+<tr>
+<td>Ámbito (<em>scope</em>)</td>
+<td>¿Desde dónde puedo utilizarla?</td>
+<td>Método, <code>if</code>, <code>for</code>...</td>
+</tr>
+<tr>
+<td>Tipo de variable</td>
+<td>¿A quién pertenece?</td>
+<td>Local, instancia, <code>static</code></td>
+</tr>
+<tr>
+<td>Constante</td>
+<td>¿Puede cambiar su valor?</td>
+<td><code>final int MAXIMO = 10;</code></td>
+</tr>
+</tbody>
+</table>
+<p>Por ejemplo:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-52-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Producto</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-52-2"><span class="linenos" data-linenos=" 2 "></span>
+</span><span id="__span-52-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">IVA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.21</span><span class="p">;</span>
+</span><span id="__span-52-4"><span class="linenos" data-linenos=" 4 "></span>
+</span><span id="__span-52-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+</span><span id="__span-52-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
+</span><span id="__span-52-7"><span class="linenos" data-linenos=" 7 "></span>
+</span><span id="__span-52-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrarPrecio</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-52-9"><span class="linenos" data-linenos=" 9 "></span>
+</span><span id="__span-52-10"><span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">impuestos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">precio</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">IVA</span><span class="p">;</span>
+</span><span id="__span-52-11"><span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">precioFinal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">precio</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">impuestos</span><span class="p">;</span>
+</span><span id="__span-52-12"><span class="linenos" data-linenos="12 "></span>
+</span><span id="__span-52-13"><span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Producto: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="p">);</span>
+</span><span id="__span-52-14"><span class="linenos" data-linenos="14 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Precio: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">precio</span><span class="p">);</span>
+</span><span id="__span-52-15"><span class="linenos" data-linenos="15 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"IVA: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">impuestos</span><span class="p">);</span>
+</span><span id="__span-52-16"><span class="linenos" data-linenos="16 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Precio final: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">precioFinal</span><span class="p">);</span>
+</span><span id="__span-52-17"><span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-52-18"><span class="linenos" data-linenos="18 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p>En este código:</p>
+<ul>
+<li><code>IVA</code> es una <strong>constante de clase</strong>.</li>
+<li><code>nombre</code> es una <strong>variable de instancia</strong> de tipo <code>String</code>.</li>
+<li><code>precio</code> es una <strong>variable de instancia</strong> de tipo <code>double</code>.</li>
+<li><code>impuestos</code> es una <strong>variable local</strong> de tipo <code>double</code>.</li>
+<li><code>precioFinal</code> es una <strong>variable local</strong> de tipo <code>double</code>.</li>
+<li>El ámbito de <code>impuestos</code> y <code>precioFinal</code> está limitado al método <code>mostrarPrecio()</code>.</li>
+</ul>
 <h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">¶</a></h2>
 <ul>
 <li>
