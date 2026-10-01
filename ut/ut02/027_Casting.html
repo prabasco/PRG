@@ -892,39 +892,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#casting-y-divisiones" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Casting y divisiones
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#casting-de-char-e-int" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Casting de char e int
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#un-caso-especial-con-constantes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Un caso especial con constantes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#ejemplo-completo" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1220,145 +1187,48 @@
 <p class="admonition-title">Casting no significa conversión segura</p>
 <p>El compilador permite realizar <code>(byte) numero</code>, pero es responsabilidad del programador comprobar que el valor se encuentra dentro del rango permitido.</p>
 </div>
-<h2 id="casting-y-divisiones">Casting y divisiones<a class="headerlink" href="#casting-y-divisiones" title="Permanent link">¶</a></h2>
-<p>El tipo de los operandos también determina cómo se realiza una división.</p>
-<p>Por ejemplo:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-21-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
-</span><span id="__span-21-2"><span class="linenos" data-linenos="2 "></span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-</span><span id="__span-21-3"><span class="linenos" data-linenos="3 "></span>
-</span><span id="__span-21-4"><span class="linenos" data-linenos="4 "></span><span class="kt">double</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-</span><span id="__span-21-5"><span class="linenos" data-linenos="5 "></span>
-</span><span id="__span-21-6"><span class="linenos" data-linenos="6 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">resultado</span><span class="p">);</span>
-</span></code></pre></div>
-<p>Podría parecer que el resultado será:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><span class="linenos" data-linenos="1 "></span>2.5
-</span></code></pre></div>
-<p>Pero realmente será:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><span class="linenos" data-linenos="1 "></span>2.0
-</span></code></pre></div>
-<p>La razón es que primero se realiza:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-24-1"><span class="linenos" data-linenos="1 "></span><span class="mi">5</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span>
-</span></code></pre></div>
-<p>Como ambos operandos son <code>int</code>, Java realiza una <strong>división entera</strong>:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><span class="linenos" data-linenos="1 "></span>5 / 2 = 2
-</span></code></pre></div>
-<p>Después convierte el resultado a <code>double</code>:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><span class="linenos" data-linenos="1 "></span>2 → 2.0
-</span></code></pre></div>
-<p>Para obtener el resultado decimal podemos realizar un casting antes de la división:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-27-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
-</span><span id="__span-27-2"><span class="linenos" data-linenos="2 "></span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-</span><span id="__span-27-3"><span class="linenos" data-linenos="3 "></span>
-</span><span id="__span-27-4"><span class="linenos" data-linenos="4 "></span><span class="kt">double</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-</span><span id="__span-27-5"><span class="linenos" data-linenos="5 "></span>
-</span><span id="__span-27-6"><span class="linenos" data-linenos="6 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">resultado</span><span class="p">);</span>
-</span></code></pre></div>
-<p>Ahora Java realiza:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><span class="linenos" data-linenos="1 "></span>5.0 / 2 = 2.5
-</span></code></pre></div>
-<p>Resultado:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><span class="linenos" data-linenos="1 "></span>2.5
-</span></code></pre></div>
-<p>También podríamos escribir:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-30-1"><span class="linenos" data-linenos="1 "></span><span class="kt">double</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-</span></code></pre></div>
-<h2 id="casting-de-char-e-int">Casting de <code>char</code> e <code>int</code><a class="headerlink" href="#casting-de-char-e-int" title="Permanent link">¶</a></h2>
-<p>El tipo <code>char</code> representa caracteres mediante valores Unicode.</p>
-<p>Por ello puede convertirse a <code>int</code>:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-31-1"><span class="linenos" data-linenos="1 "></span><span class="kt">char</span><span class="w"> </span><span class="n">letra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'A'</span><span class="p">;</span>
-</span><span id="__span-31-2"><span class="linenos" data-linenos="2 "></span>
-</span><span id="__span-31-3"><span class="linenos" data-linenos="3 "></span><span class="kt">int</span><span class="w"> </span><span class="n">codigo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">letra</span><span class="p">;</span>
-</span><span id="__span-31-4"><span class="linenos" data-linenos="4 "></span>
-</span><span id="__span-31-5"><span class="linenos" data-linenos="5 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">codigo</span><span class="p">);</span>
-</span></code></pre></div>
-<p>Resultado:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><span class="linenos" data-linenos="1 "></span>65
-</span></code></pre></div>
-<p>También podemos realizar la conversión contraria mediante casting:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-33-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">codigo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">65</span><span class="p">;</span>
-</span><span id="__span-33-2"><span class="linenos" data-linenos="2 "></span>
-</span><span id="__span-33-3"><span class="linenos" data-linenos="3 "></span><span class="kt">char</span><span class="w"> </span><span class="n">letra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="n">codigo</span><span class="p">;</span>
-</span><span id="__span-33-4"><span class="linenos" data-linenos="4 "></span>
-</span><span id="__span-33-5"><span class="linenos" data-linenos="5 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">letra</span><span class="p">);</span>
-</span></code></pre></div>
-<p>Resultado:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><span class="linenos" data-linenos="1 "></span>A
-</span></code></pre></div>
-<p>Otro ejemplo:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-35-1"><span class="linenos" data-linenos="1 "></span><span class="kt">char</span><span class="w"> </span><span class="n">letra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'A'</span><span class="p">;</span>
-</span><span id="__span-35-2"><span class="linenos" data-linenos="2 "></span>
-</span><span id="__span-35-3"><span class="linenos" data-linenos="3 "></span><span class="n">letra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">letra</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-</span><span id="__span-35-4"><span class="linenos" data-linenos="4 "></span>
-</span><span id="__span-35-5"><span class="linenos" data-linenos="5 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">letra</span><span class="p">);</span>
-</span></code></pre></div>
-<p>Resultado:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><span class="linenos" data-linenos="1 "></span>B
-</span></code></pre></div>
-<p>El casting es necesario porque la expresión:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-37-1"><span class="linenos" data-linenos="1 "></span><span class="n">letra</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
-</span></code></pre></div>
-<p>produce un <code>int</code>.</p>
-<h2 id="un-caso-especial-con-constantes">Un caso especial con constantes<a class="headerlink" href="#un-caso-especial-con-constantes" title="Permanent link">¶</a></h2>
-<p>Java permite algunas asignaciones que inicialmente pueden parecer un casting automático.</p>
-<p>Por ejemplo:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-38-1"><span class="linenos" data-linenos="1 "></span><span class="kt">byte</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
-</span></code></pre></div>
-<p>El literal <code>100</code> es normalmente un <code>int</code>, pero el compilador sabe que es una <strong>constante</strong> y comprueba que el valor cabe dentro del rango de <code>byte</code>.</p>
-<p>También:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-39-1"><span class="linenos" data-linenos="1 "></span><span class="kt">byte</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">14</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-</span></code></pre></div>
-<p>es válido porque <code>14 / 2</code> es una expresión constante cuyo resultado (<code>7</code>) puede representarse mediante un <code>byte</code>.</p>
-<p>Sin embargo:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-40-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">14</span><span class="p">;</span>
-</span><span id="__span-40-2"><span class="linenos" data-linenos="2 "></span>
-</span><span id="__span-40-3"><span class="linenos" data-linenos="3 "></span><span class="c1">// byte resultado = a / 2; // ERROR</span>
-</span></code></pre></div>
-<p>Ahora la expresión no es una constante conocida completamente en tiempo de compilación y su resultado es de tipo <code>int</code>.</p>
-<p>Debemos escribir:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-41-1"><span class="linenos" data-linenos="1 "></span><span class="kt">byte</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-</span></code></pre></div>
 <h2 id="ejemplo-completo">Ejemplo completo<a class="headerlink" href="#ejemplo-completo" title="Permanent link">¶</a></h2>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-42-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-42-2"><span class="linenos" data-linenos=" 2 "></span>
-</span><span id="__span-42-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-42-4"><span class="linenos" data-linenos=" 4 "></span>
-</span><span id="__span-42-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="c1">// Conversión automática</span>
-</span><span id="__span-42-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
-</span><span id="__span-42-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">numeroDecimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numero</span><span class="p">;</span>
-</span><span id="__span-42-8"><span class="linenos" data-linenos=" 8 "></span>
-</span><span id="__span-42-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numeroDecimal</span><span class="p">);</span><span class="w"> </span><span class="c1">// 25.0</span>
-</span><span id="__span-42-10"><span class="linenos" data-linenos="10 "></span>
-</span><span id="__span-42-11"><span class="linenos" data-linenos="11 "></span>
-</span><span id="__span-42-12"><span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="c1">// Casting double → int</span>
-</span><span id="__span-42-13"><span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">precio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">19.95</span><span class="p">;</span>
-</span><span id="__span-42-14"><span class="linenos" data-linenos="14 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">precioEntero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
-</span><span id="__span-42-15"><span class="linenos" data-linenos="15 "></span>
-</span><span id="__span-42-16"><span class="linenos" data-linenos="16 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">precioEntero</span><span class="p">);</span><span class="w"> </span><span class="c1">// 19</span>
-</span><span id="__span-42-17"><span class="linenos" data-linenos="17 "></span>
-</span><span id="__span-42-18"><span class="linenos" data-linenos="18 "></span>
-</span><span id="__span-42-19"><span class="linenos" data-linenos="19 "></span><span class="w">        </span><span class="c1">// Casting en una división</span>
-</span><span id="__span-42-20"><span class="linenos" data-linenos="20 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
-</span><span id="__span-42-21"><span class="linenos" data-linenos="21 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-</span><span id="__span-42-22"><span class="linenos" data-linenos="22 "></span>
-</span><span id="__span-42-23"><span class="linenos" data-linenos="23 "></span><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">division</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-</span><span id="__span-42-24"><span class="linenos" data-linenos="24 "></span>
-</span><span id="__span-42-25"><span class="linenos" data-linenos="25 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">division</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2.5</span>
-</span><span id="__span-42-26"><span class="linenos" data-linenos="26 "></span>
-</span><span id="__span-42-27"><span class="linenos" data-linenos="27 "></span>
-</span><span id="__span-42-28"><span class="linenos" data-linenos="28 "></span><span class="w">        </span><span class="c1">// char → int</span>
-</span><span id="__span-42-29"><span class="linenos" data-linenos="29 "></span><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">letra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'A'</span><span class="p">;</span>
-</span><span id="__span-42-30"><span class="linenos" data-linenos="30 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">codigo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">letra</span><span class="p">;</span>
-</span><span id="__span-42-31"><span class="linenos" data-linenos="31 "></span>
-</span><span id="__span-42-32"><span class="linenos" data-linenos="32 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">codigo</span><span class="p">);</span><span class="w"> </span><span class="c1">// 65</span>
-</span><span id="__span-42-33"><span class="linenos" data-linenos="33 "></span>
-</span><span id="__span-42-34"><span class="linenos" data-linenos="34 "></span>
-</span><span id="__span-42-35"><span class="linenos" data-linenos="35 "></span><span class="w">        </span><span class="c1">// int → char</span>
-</span><span id="__span-42-36"><span class="linenos" data-linenos="36 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">codigoLetra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">66</span><span class="p">;</span>
-</span><span id="__span-42-37"><span class="linenos" data-linenos="37 "></span><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">otraLetra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="n">codigoLetra</span><span class="p">;</span>
-</span><span id="__span-42-38"><span class="linenos" data-linenos="38 "></span>
-</span><span id="__span-42-39"><span class="linenos" data-linenos="39 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">otraLetra</span><span class="p">);</span><span class="w"> </span><span class="c1">// B</span>
-</span><span id="__span-42-40"><span class="linenos" data-linenos="40 "></span><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-42-41"><span class="linenos" data-linenos="41 "></span><span class="p">}</span>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-21-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-2"><span class="linenos" data-linenos=" 2 "></span>
+</span><span id="__span-21-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-4"><span class="linenos" data-linenos=" 4 "></span>
+</span><span id="__span-21-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="c1">// Conversión automática</span>
+</span><span id="__span-21-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+</span><span id="__span-21-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">numeroDecimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numero</span><span class="p">;</span>
+</span><span id="__span-21-8"><span class="linenos" data-linenos=" 8 "></span>
+</span><span id="__span-21-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numeroDecimal</span><span class="p">);</span><span class="w"> </span><span class="c1">// 25.0</span>
+</span><span id="__span-21-10"><span class="linenos" data-linenos="10 "></span>
+</span><span id="__span-21-11"><span class="linenos" data-linenos="11 "></span>
+</span><span id="__span-21-12"><span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="c1">// Casting double → int</span>
+</span><span id="__span-21-13"><span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">precio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">19.95</span><span class="p">;</span>
+</span><span id="__span-21-14"><span class="linenos" data-linenos="14 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">precioEntero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
+</span><span id="__span-21-15"><span class="linenos" data-linenos="15 "></span>
+</span><span id="__span-21-16"><span class="linenos" data-linenos="16 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">precioEntero</span><span class="p">);</span><span class="w"> </span><span class="c1">// 19</span>
+</span><span id="__span-21-17"><span class="linenos" data-linenos="17 "></span>
+</span><span id="__span-21-18"><span class="linenos" data-linenos="18 "></span>
+</span><span id="__span-21-19"><span class="linenos" data-linenos="19 "></span><span class="w">        </span><span class="c1">// Casting en una división</span>
+</span><span id="__span-21-20"><span class="linenos" data-linenos="20 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><span id="__span-21-21"><span class="linenos" data-linenos="21 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</span><span id="__span-21-22"><span class="linenos" data-linenos="22 "></span>
+</span><span id="__span-21-23"><span class="linenos" data-linenos="23 "></span><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">division</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-21-24"><span class="linenos" data-linenos="24 "></span>
+</span><span id="__span-21-25"><span class="linenos" data-linenos="25 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">division</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2.5</span>
+</span><span id="__span-21-26"><span class="linenos" data-linenos="26 "></span>
+</span><span id="__span-21-27"><span class="linenos" data-linenos="27 "></span>
+</span><span id="__span-21-28"><span class="linenos" data-linenos="28 "></span><span class="w">        </span><span class="c1">// char → int</span>
+</span><span id="__span-21-29"><span class="linenos" data-linenos="29 "></span><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">letra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'A'</span><span class="p">;</span>
+</span><span id="__span-21-30"><span class="linenos" data-linenos="30 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">codigo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">letra</span><span class="p">;</span>
+</span><span id="__span-21-31"><span class="linenos" data-linenos="31 "></span>
+</span><span id="__span-21-32"><span class="linenos" data-linenos="32 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">codigo</span><span class="p">);</span><span class="w"> </span><span class="c1">// 65</span>
+</span><span id="__span-21-33"><span class="linenos" data-linenos="33 "></span>
+</span><span id="__span-21-34"><span class="linenos" data-linenos="34 "></span>
+</span><span id="__span-21-35"><span class="linenos" data-linenos="35 "></span><span class="w">        </span><span class="c1">// int → char</span>
+</span><span id="__span-21-36"><span class="linenos" data-linenos="36 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">codigoLetra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">66</span><span class="p">;</span>
+</span><span id="__span-21-37"><span class="linenos" data-linenos="37 "></span><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">otraLetra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="n">codigoLetra</span><span class="p">;</span>
+</span><span id="__span-21-38"><span class="linenos" data-linenos="38 "></span>
+</span><span id="__span-21-39"><span class="linenos" data-linenos="39 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">otraLetra</span><span class="p">);</span><span class="w"> </span><span class="c1">// B</span>
+</span><span id="__span-21-40"><span class="linenos" data-linenos="40 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-21-41"><span class="linenos" data-linenos="41 "></span><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">¶</a></h2>
 <table>
@@ -1440,13 +1310,13 @@
 </tbody>
 </table>
 <p>Como regla general:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-43-1"><span class="linenos" data-linenos="1 "></span>Tipo pequeño → Tipo grande
-</span><span id="__span-43-2"><span class="linenos" data-linenos="2 "></span>        Conversión automática
-</span><span id="__span-43-3"><span class="linenos" data-linenos="3 "></span>
-</span><span id="__span-43-4"><span class="linenos" data-linenos="4 "></span>Tipo grande → Tipo pequeño
-</span><span id="__span-43-5"><span class="linenos" data-linenos="5 "></span>        Casting explícito
-</span><span id="__span-43-6"><span class="linenos" data-linenos="6 "></span>        Posible pérdida de información
-</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Importante</p>
+<p><strong>Tipo pequeño → Tipo grande</strong><br>
+Conversión automática.</p>
+<p><strong>Tipo grande → Tipo pequeño</strong><br>
+Casting explícito. Puede producir <strong>pérdida de información</strong>.</p>
+</div>
 <!-- Resultados de Aprendizaje & Criterios de Evaluación -->
 <!-- Instrumentos de Evaluación -->
 <!-- Instrumentos de Calificación -->
