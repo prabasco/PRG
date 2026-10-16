@@ -1310,11 +1310,28 @@
 <p><strong><abbr title="Actividades de clase.">AC</abbr> 318</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Escribe un programa que pida que se introduzcan dos números enteros N1 y N2 por teclado (mediante la clase Scanner) y muestre los números pares que hay entre ellos. N1 debe ser menor que N2. Si no es así se mostrará un mensaje indicándolo y se volverán a introducir. Utiliza la estructura de control <code>for</code>.</p>
 <p><strong><abbr title="Actividades de clase.">AC</abbr> 319</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Genera un programa que permita seleccionar por teclado una opción de las que
 aparecen en el siguiente menú:</p>
-<div class="language-text highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>1. Primera opción.
-<span class="linenos" data-linenos="2 "></span>2. Segunda opción.
-<span class="linenos" data-linenos="3 "></span>3. Tercera opción.
-<span class="linenos" data-linenos="4 "></span>4. Salir del programa.
-</code></pre></div>
+<ul>
+<li>
+<ol>
+<li>Primera opción.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>Segunda opción.</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>Tercera opción.</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>Salir del programa.</li>
+</ol>
+</li>
+</ul>
 <p>Al escoger cualquiera de las opciones 1 a 3 mostrará por pantalla el texto: “Has escogido la opción 1”, “Has escogido la opción 2” ó “Has escogido la opción 3” y, tras ello, permitirá escoger de nuevo una opción. En caso de escoger la opción 4 el programa seguirá su ejecución y acabará. Utiliza la estructura de control <code>Do..While</code>.</p>
 <p><strong><abbr title="Actividades de clase.">AC</abbr> 320</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Utiliza un bucle for para escribir las siguientes secuencias.</p>
 <ul>
@@ -1322,10 +1339,8 @@ aparecen en el siguiente menú:</p>
 <li><strong>Secuencia 2</strong>: 1 2 4 8 16 32 64  </li>
 </ul>
 <p><strong><abbr title="Actividades de clase.">AC</abbr> 321</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Crea un programa que lea una fecha representada por dos enteros solicitados al usuario, mes y año, y dé como resultado los días que tiene ese mes teniendo en cuenta el año. El programa finaliza tras mostrar un resultado.</p>
-<div class="language-text highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>Hay que tener en cuenta que febrero puede tener 28 días, o bien 29 si el año es bisiesto. Un año es bisiesto cuando es múltiplo de 4 y no de 100 o cuando es múltiplo de 400.
-<span class="linenos" data-linenos="2 "></span>
-<span class="linenos" data-linenos="3 "></span>Por ejemplo, el año 2000 por las dos primeras condiciones no sería bisiesto, pero sí lo es porque es múltiplo de 400; el año 2100 no es bisiesto porque, aunque sea múltiplo de 4, también lo es de 100 y no es múltiplo de 400.
-</code></pre></div>
+<p>Hay que tener en cuenta que febrero puede tener 28 días, o bien 29 si el año es bisiesto. Un año es bisiesto cuando es múltiplo de 4 y no de 100 o cuando es múltiplo de 400.</p>
+<p>Por ejemplo, el año 2000 por las dos primeras condiciones no sería bisiesto, pero sí lo es porque es múltiplo de 400; el año 2100 no es bisiesto porque, aunque sea múltiplo de 4, también lo es de 100 y no es múltiplo de 400.</p>
 <p><strong><abbr title="Actividades de clase.">AC</abbr> 322</strong> (<abbr title="Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.">RA3</abbr> / <abbr title="Se han utilizado estructuras de repetición.">CE3b</abbr> <abbr title="Se han creado programas ejecutables utilizando diferentes estructuras de control.">CE3e</abbr> <abbr title="Se ha comentado y documentado el código.">CE3g</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 3p) Desarrolla un programa que pida al usuario introducir números por teclado, haga la suma de éstos y muestre el resultado al salir del programa. El usuario controla si desea continuar o no ingresando números, ya que si inserta un 0 sale del bucle, el mensaje que se muestra al usuario iterativamente es: “Inserta un número (0 para salir)”. Al finalizar se muestra: “La suma de los valores es X”, donde X es el total.</p>
 <div class="language-text highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>Además de mostrar la suma de los valores introducidos por el usuario, muestra también el número de valores totales distintos de cero que se insertaron. Para ello, necesitarás agregar otra variable, llámala contador, y dado que cualquier número distinto de cero ejecutará el cuerpo del bucle, todo lo que necesitas hacer es contador++ en el cuerpo del bucle para contar. Muestra el recuento en la salida después de mostrar la suma.
 <span class="linenos" data-linenos=" 2 "></span>
