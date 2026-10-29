@@ -1290,6 +1290,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.2. Estructura de una clase
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="042_EstructuraClase.html" class="md-nav__link md-nav__link--active">
         
   
@@ -1306,6 +1324,103 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#nombres-de-las-clases-y-sus-miembros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nombres de las clases y sus miembros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miembros-de-una-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Miembros de una clase
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Miembros de una clase">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modificadores-de-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modificadores de acceso
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura general
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-clase-coche" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo práctico: clase Coche
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplo práctico: clase Coche">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explicacion-del-ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explicación del ejemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1421,48 +1536,158 @@
 
 
 <h1 id="estructura-y-miembros-de-una-clase">Estructura y miembros de una clase<a class="headerlink" href="#estructura-y-miembros-de-una-clase" title="Permanent link">¶</a></h1>
-<p>Teniendo en cuenta todo esto, podemos pasar a hablar de clase. Una clase es una plantilla para crear objetos. Para crear un clase en Java utilizamos la palabra reservada <code>class</code>.</p>
-<p>La nomenclatura del nombre de la clase es primera letra en mayúsculas y usar la regla <code>CamelCase</code> para palabras compuestas.</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Coche</span><span class="p">{</span>
-</span><span id="__span-0-2"><span class="linenos" data-linenos="2 "></span>
-</span><span id="__span-0-3"><span class="linenos" data-linenos="3 "></span><span class="p">}</span>
+<p>Una <strong>clase</strong> es una plantilla que define los datos y las operaciones que tendrán los objetos creados a partir de ella. En Java se declara mediante la palabra reservada <code>class</code>.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Coche</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><span class="linenos" data-linenos="2 "></span><span class="p">}</span>
 </span></code></pre></div>
+<p>En este ejemplo, <code>Coche</code> es el nombre de la clase y las llaves <code>{ }</code> delimitan su contenido. Si la clase es <code>public</code>, el archivo debe llamarse <strong><code>Coche.java</code></strong>.</p>
+<h2 id="nombres-de-las-clases-y-sus-miembros">Nombres de las clases y sus miembros<a class="headerlink" href="#nombres-de-las-clases-y-sus-miembros" title="Permanent link">¶</a></h2>
+<p>En Java se utilizan convenciones de escritura para facilitar la lectura del código:</p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Convención</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clase</td>
+<td><code>UpperCamelCase</code>: cada palabra comienza en mayúscula</td>
+<td><code>Coche</code>, <code>CocheElectrico</code></td>
+</tr>
+<tr>
+<td>Atributo</td>
+<td><code>lowerCamelCase</code>: primera palabra en minúscula</td>
+<td><code>marca</code>, <code>velocidadActual</code></td>
+</tr>
+<tr>
+<td>Método</td>
+<td><code>lowerCamelCase</code></td>
+<td><code>mostrarDatos()</code>, <code>acelerar()</code></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition info">
 <p class="admonition-title">CamelCase</p>
-<p><em>Camel Case</em> es una convención muy popular para nombrar nuestras variables. Podemos usarlo en modo <em>Upper Camel Case</em> o <em>Lower Camel Case</em>, la diferencia es si comenzamos el nombre de la variable con mayúscula o minúscula. Debemos usar <em>Upper Camel Case</em> en los nombres de las clases y archivos. Y <em>Lower Camel Case</em> en los nombres de las variables o métodos.</p>
-<p>Ejemplos: CocheRojo, totalNinyos</p>
+<p><em>CamelCase</em> consiste en unir varias palabras sin espacios, utilizando mayúsculas para distinguirlas. Para las clases se emplea <code>UpperCamelCase</code> y para los atributos y métodos, <code>lowerCamelCase</code>.</p>
 </div>
-<p>A partir de ahora ya sabes cómo llamar a tus funciones, y es la manera que seguiremos, de ahora en adelante, para nombrar nuestras clases. </p>
-<p>Existen tres tipos de modificadores de acceso, cada uno nos indicia lo que queremos que otros accedan a nuestra clase:</p>
+<h2 id="miembros-de-una-clase">Miembros de una clase<a class="headerlink" href="#miembros-de-una-clase" title="Permanent link">¶</a></h2>
+<p>Una clase puede contener los siguientes elementos:</p>
 <ul>
-<li><code>public</code>: en este caso, public especifica que no hay ninguna restricción de acceso.</li>
-<li><code>private</code>: nadie puede acceder a la clase.</li>
-<li><code>protected</code>: permite a las clases de este paquete acceder y subclases.</li>
+<li><strong>Atributos o campos:</strong> variables que almacenan el estado de un objeto, como su marca o velocidad.</li>
+<li><strong>Métodos:</strong> operaciones que puede realizar un objeto, como mostrar sus datos o acelerar.</li>
+<li><strong>Constructores:</strong> bloques especiales que se ejecutan al crear un objeto y permiten inicializarlo. Se estudiarán con más detalle posteriormente.</li>
+<li><strong>Otras clases:</strong> Java permite declarar clases dentro de otras clases, aunque no es necesario utilizarlas en los primeros ejemplos.</li>
 </ul>
-<p>La definición de una clase incluye varios componentes:</p>
-<ul>
-<li>Sus atributos. Es decir, los datos miembros de esa clase. Los datos pueden ser públicos (accesibles desde otra clase), privados (solo accesibles desde su propia clase), etc, es decir tener distintos modificadores de acceso. A los atributos también se les llama campos.</li>
-<li>Sus métodos. Las funciones miembro de la clase. Son las acciones (u operaciones) que puede realizar la clase. También pueden tener distintos modificadores de acceso.</li>
-<li>Código de inicialización. Para crear una clase normalmente hace falta realizar operaciones previas (es lo que se conoce como constructor de la clase).</li>
-<li>Otras clases. Dentro de una clase se pueden definir otras</li>
-</ul>
-<p>Los atributos se encuentran en la zona más interna, oculta a los usuarios del objeto. El acceso a esta zona se realizará a través de los métodos.</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut04/01_Atributos.png" data-desc-position="bottom"><img alt="Atributos de una clase" src="../../img/ut04/01_Atributos.png" width="500"></a>
 </figure>
-<p>El formato general para crear una clase en Java es:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos=" 1 "></span><span class="o">[</span><span class="n">acceso</span><span class="o">]</span><span class="w"> </span><span class="kd">class</span> <span class="nc">NombreClase</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="o">[</span><span class="n">acceso</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="kd">static</span><span class="o">]</span><span class="w"> </span><span class="n">tipo</span><span class="w"> </span><span class="n">atributo1</span><span class="p">;</span>
-</span><span id="__span-1-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="o">[</span><span class="n">acceso</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="kd">static</span><span class="o">]</span><span class="w"> </span><span class="n">tipo</span><span class="w"> </span><span class="n">atributo2</span><span class="p">;</span>
-</span><span id="__span-1-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="o">[</span><span class="n">acceso</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="kd">static</span><span class="o">]</span><span class="w"> </span><span class="n">tipo</span><span class="w"> </span><span class="n">atributo3</span><span class="p">;</span>
-</span><span id="__span-1-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="p">...</span>
-</span><span id="__span-1-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="o">[</span><span class="n">acceso</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="kd">static</span><span class="o">]</span><span class="w"> </span><span class="n">tipo</span><span class="w"> </span><span class="nf">metodo1</span><span class="p">(</span><span class="n">listaDeArgumentos</span><span class="p">){</span>
-</span><span id="__span-1-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="p">...</span>
-</span><span id="__span-1-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-1-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="p">...</span>
-</span><span id="__span-1-10"><span class="linenos" data-linenos="10 "></span><span class="p">}</span>
+<h3 id="modificadores-de-acceso">Modificadores de acceso<a class="headerlink" href="#modificadores-de-acceso" title="Permanent link">¶</a></h3>
+<p>Los modificadores de acceso determinan desde dónde se puede utilizar una clase o uno de sus miembros.</p>
+<table>
+<thead>
+<tr>
+<th>Modificador</th>
+<th>Acceso permitido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>public</code></td>
+<td>Desde cualquier clase que pueda acceder a ella.</td>
+</tr>
+<tr>
+<td><code>private</code></td>
+<td>Solo desde la propia clase donde se declara el miembro.</td>
+</tr>
+<tr>
+<td><code>protected</code></td>
+<td>Desde el mismo paquete y desde las subclases, con las reglas de acceso de Java.</td>
+</tr>
+<tr>
+<td>Sin modificador</td>
+<td>Desde las clases del mismo paquete (<em>package-private</em>).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Importante</p>
+<p>En una clase de nivel superior (no anidada) solo se puede utilizar <code>public</code> o ningún modificador de acceso. Los modificadores <code>private</code> y <code>protected</code> sí se pueden aplicar a miembros de una clase y a determinados tipos de clases anidadas.</p>
+</div>
+<p>Como buena práctica, los atributos suelen declararse <code>private</code> para controlar su acceso a través de métodos.</p>
+<h2 id="estructura-general">Estructura general<a class="headerlink" href="#estructura-general" title="Permanent link">¶</a></h2>
+<p>El siguiente esquema representa los elementos más habituales de una clase. Los textos entre corchetes indican partes opcionales; <strong>no es código Java ejecutable</strong>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos=" 1 "></span>[modificador] class NombreClase {
+</span><span id="__span-1-2"><span class="linenos" data-linenos=" 2 "></span>    [modificador] tipo atributo;
+</span><span id="__span-1-3"><span class="linenos" data-linenos=" 3 "></span>
+</span><span id="__span-1-4"><span class="linenos" data-linenos=" 4 "></span>    [modificador] NombreClase(parámetros) {
+</span><span id="__span-1-5"><span class="linenos" data-linenos=" 5 "></span>        // Constructor
+</span><span id="__span-1-6"><span class="linenos" data-linenos=" 6 "></span>    }
+</span><span id="__span-1-7"><span class="linenos" data-linenos=" 7 "></span>
+</span><span id="__span-1-8"><span class="linenos" data-linenos=" 8 "></span>    [modificador] tipoRetorno nombreMetodo(parámetros) {
+</span><span id="__span-1-9"><span class="linenos" data-linenos=" 9 "></span>        // Instrucciones
+</span><span id="__span-1-10"><span class="linenos" data-linenos="10 "></span>    }
+</span><span id="__span-1-11"><span class="linenos" data-linenos="11 "></span>}
 </span></code></pre></div>
-<p>La palabra opcional <code>static</code> sirve para hacer que el método o la propiedad a la que precede se pueda utilizar de manera estática los métodos o propiedades así definidos se llaman atributos de clase y métodos de clase respectivamente. Su uso se verá más adelante.</p>
+<p>La palabra opcional <code>static</code> permite declarar atributos y métodos que pertenecen a la <strong>clase</strong>, en lugar de pertenecer a cada objeto individual. Su funcionamiento se estudiará más adelante.</p>
+<h2 id="ejemplo-practico-clase-coche">Ejemplo práctico: clase Coche<a class="headerlink" href="#ejemplo-practico-clase-coche" title="Permanent link">¶</a></h2>
+<p>Vamos a definir una clase sencilla que represente un coche. Tendrá dos atributos (<code>marca</code> y <code>velocidad</code>) y dos métodos (<code>mostrarDatos</code> y <code>acelerar</code>).</p>
+<p><strong>Archivo <code>Coche.java</code>:</strong></p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Coche</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="c1">// Atributos</span>
+</span><span id="__span-2-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">marca</span><span class="p">;</span>
+</span><span id="__span-2-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">velocidad</span><span class="p">;</span>
+</span><span id="__span-2-5"><span class="linenos" data-linenos=" 5 "></span>
+</span><span id="__span-2-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="c1">// Constructor</span>
+</span><span id="__span-2-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Coche</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">marca</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">marca</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">marca</span><span class="p">;</span>
+</span><span id="__span-2-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">velocidad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-2-10"><span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-11"><span class="linenos" data-linenos="11 "></span>
+</span><span id="__span-2-12"><span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="c1">// Métodos</span>
+</span><span id="__span-2-13"><span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">acelerar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-14"><span class="linenos" data-linenos="14 "></span><span class="w">        </span><span class="n">velocidad</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-2-15"><span class="linenos" data-linenos="15 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-16"><span class="linenos" data-linenos="16 "></span>
+</span><span id="__span-2-17"><span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrarDatos</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-18"><span class="linenos" data-linenos="18 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Marca: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">marca</span><span class="p">);</span>
+</span><span id="__span-2-19"><span class="linenos" data-linenos="19 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Velocidad: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">velocidad</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" km/h"</span><span class="p">);</span>
+</span><span id="__span-2-20"><span class="linenos" data-linenos="20 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-21"><span class="linenos" data-linenos="21 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Archivo <code>Main.java</code>:</strong></p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><span class="linenos" data-linenos="3 "></span><span class="w">        </span><span class="n">Coche</span><span class="w"> </span><span class="n">miCoche</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Coche</span><span class="p">(</span><span class="s">"Toyota"</span><span class="p">);</span>
+</span><span id="__span-3-4"><span class="linenos" data-linenos="4 "></span>
+</span><span id="__span-3-5"><span class="linenos" data-linenos="5 "></span><span class="w">        </span><span class="n">miCoche</span><span class="p">.</span><span class="na">mostrarDatos</span><span class="p">();</span>
+</span><span id="__span-3-6"><span class="linenos" data-linenos="6 "></span><span class="w">        </span><span class="n">miCoche</span><span class="p">.</span><span class="na">acelerar</span><span class="p">();</span>
+</span><span id="__span-3-7"><span class="linenos" data-linenos="7 "></span><span class="w">        </span><span class="n">miCoche</span><span class="p">.</span><span class="na">mostrarDatos</span><span class="p">();</span>
+</span><span id="__span-3-8"><span class="linenos" data-linenos="8 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-9"><span class="linenos" data-linenos="9 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Salida por consola:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><span class="linenos" data-linenos="1 "></span>Marca: Toyota
+</span><span id="__span-4-2"><span class="linenos" data-linenos="2 "></span>Velocidad: 0 km/h
+</span><span id="__span-4-3"><span class="linenos" data-linenos="3 "></span>Marca: Toyota
+</span><span id="__span-4-4"><span class="linenos" data-linenos="4 "></span>Velocidad: 10 km/h
+</span></code></pre></div>
+<h3 id="explicacion-del-ejemplo">Explicación del ejemplo<a class="headerlink" href="#explicacion-del-ejemplo" title="Permanent link">¶</a></h3>
+<ol>
+<li><code>class Coche</code> define la plantilla del objeto.</li>
+<li><code>marca</code> y <code>velocidad</code> son los <strong>atributos</strong> que almacenan su información.</li>
+<li><code>Coche(String marca)</code> es el <strong>constructor</strong> que inicializa los atributos cuando se crea el objeto. <code>this.marca</code> identifica el atributo del objeto.</li>
+<li><code>acelerar()</code> es un <strong>método</strong> que aumenta la velocidad en 10 km/h.</li>
+<li><code>mostrarDatos()</code> es un <strong>método</strong> que imprime los valores de los atributos.</li>
+<li><code>new Coche("Toyota")</code> crea un <strong>objeto</strong> de la clase <code>Coche</code>.</li>
+<li><code>miCoche.acelerar()</code> invoca un método de ese objeto.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Clase y objeto</p>
+<p><strong>Clase:</strong> define cómo serán los coches. <strong>Objeto:</strong> representa un coche concreto creado a partir de esa clase. Podemos crear varios objetos <code>Coche</code>, cada uno con su propia marca y velocidad.</p>
+</div>
 <!-- Resultados de Aprendizaje & Criterios de Evaluación -->
 <!-- Instrumentos de Evaluación -->
 <!-- Instrumentos de Calificación -->

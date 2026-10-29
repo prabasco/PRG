@@ -1262,6 +1262,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.1. Concepto de clase
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="041_ConceptoClase.html" class="md-nav__link md-nav__link--active">
         
   
@@ -1278,6 +1296,36 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-sencillo-clase-alumno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo sencillo: clase Alumno
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1421,10 +1469,54 @@
 
 
 <h1 id="concepto-de-clase">Concepto de clase<a class="headerlink" href="#concepto-de-clase" title="Permanent link">¶</a></h1>
-<p>Para poder seguir en nuestro camino como programadores, necesitamos definir y conocer el concepto de clase. La clase es la definición de un tipo de objeto. Al definir una clase lo que se hace es indicar cómo funciona un determinado tipo de objetos. Luego, a partir de la clase, podremos crear objetos de ella.</p>
-<p>Java es un lenguaje orientado a objetos, es decir su paradigma principal (modelo o estilo de programación) es la <abbr title="Programación Orientada a Objetos">POO</abbr> (programación orientada a objetos). La <abbr title="Programación Orientada a Objetos">POO</abbr> permite abstraernos un nivel más y construir sistemas de mayor complejidad de una forma sencilla y organizada dividiendo el problema en subproblemas más simples. </p>
-<p>Está división se realiza en objetos, de forma que cada objeto funcione de forma totalmente independiente. Un objeto es un elemento del programa que posee sus propios datos y su propio funcionamiento. Es decir, un objeto está formado por datos (<em>propiedades</em>) y funciones que es capaz de realizar (<em>métodos</em>).</p>
-<p>Más adelante, nos adentraremos en la <abbr title="Programación Orientada a Objetos">POO</abbr> y veremos realmente la relevancia que esto tiene. En esta unidad nos centraremos en los conceptos básicos que, a lo largo del curso, nos permitirán programar con el paradigma de <abbr title="Programación Orientada a Objetos">POO</abbr>.</p>
+<p>Java es un lenguaje de programación cuyo paradigma principal es la <strong>programación orientada a objetos (<abbr title="Programación Orientada a Objetos">POO</abbr>)</strong>. Este paradigma permite organizar programas complejos dividiéndolos en elementos más pequeños y fáciles de comprender y mantener: los <strong>objetos</strong>.</p>
+<p>Un <strong>objeto</strong> es un elemento del programa que contiene:</p>
+<ul>
+<li><strong>Atributos o propiedades:</strong> datos que describen su estado.</li>
+<li><strong>Métodos:</strong> operaciones que puede realizar.</li>
+</ul>
+<p>Una <strong>clase</strong> es una plantilla que define qué atributos y métodos tendrán los objetos de un determinado tipo. A partir de una clase podemos crear varios objetos, cada uno con sus propios datos.</p>
+<p>En esta unidad de <strong>programación modular</strong> comenzaremos utilizando clases y métodos para organizar el código. Más adelante estudiaremos con mayor profundidad la programación orientada a objetos.</p>
+<h2 id="ejemplo-sencillo-clase-alumno">Ejemplo sencillo: clase <code>Alumno</code><a class="headerlink" href="#ejemplo-sencillo-clase-alumno" title="Permanent link">¶</a></h2>
+<p>El siguiente programa define una clase <code>Alumno</code> con dos atributos y un método para mostrar sus datos.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">class</span> <span class="nc">Alumno</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+</span><span id="__span-0-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+</span><span id="__span-0-4"><span class="linenos" data-linenos=" 4 "></span>
+</span><span id="__span-0-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrarDatos</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Nombre: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="p">);</span>
+</span><span id="__span-0-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Edad: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">edad</span><span class="p">);</span>
+</span><span id="__span-0-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-9"><span class="linenos" data-linenos=" 9 "></span><span class="p">}</span>
+</span><span id="__span-0-10"><span class="linenos" data-linenos="10 "></span>
+</span><span id="__span-0-11"><span class="linenos" data-linenos="11 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-12"><span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-13"><span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="n">Alumno</span><span class="w"> </span><span class="n">alumno1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumno</span><span class="p">();</span>
+</span><span id="__span-0-14"><span class="linenos" data-linenos="14 "></span><span class="w">        </span><span class="n">alumno1</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Laura"</span><span class="p">;</span>
+</span><span id="__span-0-15"><span class="linenos" data-linenos="15 "></span><span class="w">        </span><span class="n">alumno1</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">19</span><span class="p">;</span>
+</span><span id="__span-0-16"><span class="linenos" data-linenos="16 "></span>
+</span><span id="__span-0-17"><span class="linenos" data-linenos="17 "></span><span class="w">        </span><span class="n">alumno1</span><span class="p">.</span><span class="na">mostrarDatos</span><span class="p">();</span>
+</span><span id="__span-0-18"><span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-19"><span class="linenos" data-linenos="19 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p>Guarda el código en un archivo llamado <strong><code>Main.java</code></strong>.</p>
+<p><strong>Salida del programa:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos="1 "></span>Nombre: Laura
+</span><span id="__span-1-2"><span class="linenos" data-linenos="2 "></span>Edad: 19
+</span></code></pre></div>
+<p>En este ejemplo:</p>
+<ol>
+<li><code>class Alumno</code> define la <strong>clase</strong>.</li>
+<li><code>nombre</code> y <code>edad</code> son sus <strong>atributos</strong>.</li>
+<li><code>mostrarDatos()</code> es un <strong>método</strong> que muestra información por pantalla.</li>
+<li><code>new Alumno()</code> crea un <strong>objeto</strong> de la clase <code>Alumno</code>.</li>
+<li><code>alumno1.nombre</code> y <code>alumno1.edad</code> permiten asignar valores a sus atributos.</li>
+<li><code>alumno1.mostrarDatos()</code> ejecuta el método del objeto.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Recuerda</p>
+<p>Una <strong>clase</strong> define cómo serán los objetos; un <strong>objeto</strong> es una instancia concreta de esa clase. Los <strong>métodos</strong> permiten organizar las instrucciones del programa en bloques reutilizables.</p>
+</div>
 <!-- Resultados de Aprendizaje & Criterios de Evaluación -->
 <!-- Instrumentos de Evaluación -->
 <!-- Instrumentos de Calificación -->
