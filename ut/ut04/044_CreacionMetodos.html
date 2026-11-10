@@ -2507,9 +2507,9 @@
 <li><code>repostar</code>: recibirá una cantidad de litros y la añadirá al depósito. No permitirá cantidades menores o iguales a cero ni superar los 50 litros de capacidad. Si se supera la capacidad, no realizará el repostaje.</li>
 <li>
 <p><code>calcularAutonomia</code>: calculará y devolverá los kilómetros estimados que puede recorrer el vehículo con el combustible disponible, mediante la fórmula:</p>
-<p>[
+<div class="arithmatex">\[
 \text{Autonomía (km)} = \frac{\text{Combustible (L)} \times 100}{\text{Consumo medio (L/100 km)}}
-]</p>
+\]</div>
 </li>
 <li>
 <p><code>mostrarDatos</code>: mostrará la marca, el modelo, la matrícula, la velocidad actual, el combustible disponible y la autonomía estimada.</p>
@@ -2796,6 +2796,10 @@
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   
