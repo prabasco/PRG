@@ -2488,35 +2488,164 @@
 </div>
 </li>
 <li>
-<p><strong><abbr title="Actividades de profundización.">AP</abbr> 409</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr> / <abbr title="Se han escrito programas simples.">CE2b</abbr>, <abbr title="Se han utilizado métodos y propiedades de los objetos.">CE2d</abbr>, <abbr title="Se han escrito llamadas a métodos estáticos.">CE2e</abbr>, <abbr title="Se han utilizado parámetros en la llamada a métodos.">CE2f</abbr>, <abbr title="Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples.">CE2i</abbr>  / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 3p). Desarrolla un programa modular que trabaje con cadenas de texto:</p>
+<p><strong><abbr title="Prácticas">PR</abbr> 409</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr> / <abbr title="Se han escrito programas simples.">CE2b</abbr>, <abbr title="Se han utilizado métodos y propiedades de los objetos.">CE2d</abbr>, <abbr title="Se han escrito llamadas a métodos estáticos.">CE2e</abbr>, <abbr title="Se han utilizado parámetros en la llamada a métodos.">CE2f</abbr>, <abbr title="Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples.">CE2i</abbr>  / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p).</p>
+<p>Desarrolla un programa que permita gestionar la información y el funcionamiento básico de un vehículo mediante una clase llamada <code>Coche</code>. El programa deberá permitir crear vehículos, modificar su velocidad, controlar el combustible disponible y calcular su autonomía.</p>
+<p>La clase <code>Coche</code> deberá contener los siguientes <strong>atributos</strong>:</p>
+<ul>
+<li><code>marca</code>: almacena la marca del vehículo (<code>String</code>).</li>
+<li><code>modelo</code>: almacena el modelo del vehículo (<code>String</code>).</li>
+<li><code>matricula</code>: almacena la matrícula del vehículo (<code>String</code>).</li>
+<li><code>velocidad</code>: almacena la velocidad actual en km/h (<code>int</code>).</li>
+<li><code>combustible</code>: almacena la cantidad de combustible disponible en litros (<code>double</code>).</li>
+<li><code>consumoMedio</code>: almacena el consumo medio en litros por cada 100 km (<code>double</code>).</li>
+</ul>
+<p>El programa deberá contener los siguientes <strong>métodos</strong>:</p>
+<ul>
+<li><code>Coche</code>: constructor que recibirá como parámetros la marca, el modelo, la matrícula y el consumo medio. La velocidad inicial será de 0 km/h y el combustible inicial será de 20 litros.</li>
+<li><code>acelerar</code>: recibirá una cantidad de km/h y aumentará la velocidad actual. No permitirá cantidades negativas ni superar los 120 km/h. Si la operación supera ese límite, deberá informar de ello y mantener la velocidad anterior.</li>
+<li><code>frenar</code>: recibirá una cantidad de km/h y reducirá la velocidad actual. No permitirá cantidades negativas ni velocidades inferiores a 0 km/h.</li>
+<li><code>repostar</code>: recibirá una cantidad de litros y la añadirá al depósito. No permitirá cantidades menores o iguales a cero ni superar los 50 litros de capacidad. Si se supera la capacidad, no realizará el repostaje.</li>
+<li>
+<p><code>calcularAutonomia</code>: calculará y devolverá los kilómetros estimados que puede recorrer el vehículo con el combustible disponible, mediante la fórmula:</p>
+<p>[
+\text{Autonomía (km)} = \frac{\text{Combustible (L)} \times 100}{\text{Consumo medio (L/100 km)}}
+]</p>
+</li>
+<li>
+<p><code>mostrarDatos</code>: mostrará la marca, el modelo, la matrícula, la velocidad actual, el combustible disponible y la autonomía estimada.</p>
+</li>
+</ul>
+<p><strong>Requisitos:</strong></p>
+<ol>
+<li>Crear dos objetos <code>Coche</code> con diferentes marcas, modelos, matrículas y consumos medios válidos (mayores que cero).</li>
+<li>Mostrar los datos iniciales de ambos vehículos.</li>
+<li>Acelerar el primer vehículo 80 km/h y el segundo 100 km/h.</li>
+<li>Frenar el primer vehículo 30 km/h.</li>
+<li>Repostar 15 litros en el primer vehículo y 20 litros en el segundo.</li>
+<li>Intentar acelerar el segundo vehículo 50 km/h adicionales y comprobar que no supera la velocidad máxima permitida.</li>
+<li>Calcular la autonomía de ambos vehículos.</li>
+<li>Mostrar los datos finales de los dos vehículos.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Info</p>
+<p>Es obligatorio el uso de <strong>clases, objetos, constructores, encapsulación, métodos y comentarios en <code>javadoc</code></strong> para obtener la máxima puntuación del ejercicio.</p>
+</div>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 410</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr> / <abbr title="Se han escrito programas simples.">CE2b</abbr>, <abbr title="Se han utilizado métodos y propiedades de los objetos.">CE2d</abbr>, <abbr title="Se han escrito llamadas a métodos estáticos.">CE2e</abbr>, <abbr title="Se han utilizado parámetros en la llamada a métodos.">CE2f</abbr>, <abbr title="Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples.">CE2i</abbr>  / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p). Desarrolla un programa que contenga:</p>
+<p>Este programa permitirá gestionar una cuenta bancaria mediante una clase llamada <code>CuentaBancaria</code>. El programa deberá permitir crear una cuenta, ingresar dinero, retirar dinero y consultar el saldo disponible.</p>
+<p>La clase <code>CuentaBancaria</code> deberá contener los siguientes <strong>atributos</strong>:</p>
+<ul>
+<li><code>titular</code>: almacena el nombre del titular (<code>String</code>).</li>
+<li><code>numeroCuenta</code>: almacena el número de cuenta (<code>String</code>).</li>
+<li><code>saldo</code>: almacena el dinero disponible (<code>double</code>).</li>
+</ul>
+<p>El programa deberá contener los siguientes <strong>métodos</strong>:</p>
+<ul>
+<li><code>CuentaBancaria</code>: constructor que recibirá el nombre del titular, el número de cuenta y el saldo inicial (que no podrá ser negativo).</li>
+<li><code>ingresarDinero</code>: recibirá una cantidad y la sumará al saldo. No permitirá cantidades menores o iguales a cero.</li>
+<li><code>retirarDinero</code>: recibirá una cantidad y la restará del saldo. No permitirá cantidades menores o iguales a cero ni superiores al saldo disponible.</li>
+<li><code>consultarSaldo</code>: devolverá el saldo actual de la cuenta.</li>
+<li><code>mostrarDatos</code>: mostrará el nombre del titular, el número de cuenta y el saldo disponible.</li>
+</ul>
+<p><strong>Requisitos:</strong></p>
+<ol>
+<li>Crear un objeto <code>CuentaBancaria</code> con un saldo inicial de 1000 €.</li>
+<li>Realizar un ingreso de 500 €.</li>
+<li>Intentar retirar 2000 € y comprobar que la operación se rechaza.</li>
+<li>Retirar 300 €.</li>
+<li>Consultar el saldo y mostrar los datos finales de la cuenta.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Info</p>
+<p>Es obligatorio el uso de <strong>clases, objetos, constructores, encapsulación, métodos y comentarios en <code>javadoc</code></strong> para obtener la máxima puntuación del ejercicio.</p>
+</div>
+</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 411</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr> / <abbr title="Se han escrito programas simples.">CE2b</abbr>, <abbr title="Se han utilizado métodos y propiedades de los objetos.">CE2d</abbr>, <abbr title="Se han escrito llamadas a métodos estáticos.">CE2e</abbr>, <abbr title="Se han utilizado parámetros en la llamada a métodos.">CE2f</abbr>, <abbr title="Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples.">CE2i</abbr>  / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p). Desarrolla un programa que contenga:</p>
+<p>Este programa permitirá gestionar la información académica de un alumno mediante una clase llamada <code>Alumno</code>. El programa deberá almacenar sus datos personales, registrar las notas de dos exámenes y calcular su nota media.</p>
+<p>La clase <code>Alumno</code> deberá contener los siguientes <strong>atributos</strong>:</p>
+<ul>
+<li><code>nombre</code>: almacena el nombre (<code>String</code>).</li>
+<li><code>apellidos</code>: almacena los apellidos (<code>String</code>).</li>
+<li><code>edad</code>: almacena la edad (<code>int</code>).</li>
+<li><code>notaExamen1</code>: almacena la nota del primer examen (<code>double</code>).</li>
+<li><code>notaExamen2</code>: almacena la nota del segundo examen (<code>double</code>).</li>
+</ul>
+<p>El programa deberá contener los siguientes <strong>métodos</strong>:</p>
+<ul>
+<li><code>Alumno</code>: constructor que recibirá el nombre, los apellidos y la edad. Las notas se inicializarán a 0.</li>
+<li><code>asignarNotas</code>: recibirá las notas de los dos exámenes y las almacenará. Ambas deberán estar comprendidas entre 0 y 10; si alguna no es válida, no modificará ninguna nota.</li>
+<li><code>calcularMedia</code>: calculará y devolverá la media aritmética de los dos exámenes.</li>
+<li><code>estaAprobado</code>: devolverá <code>true</code> si la media es mayor o igual a 5 y <code>false</code> en caso contrario.</li>
+<li><code>mostrarDatos</code>: mostrará el nombre, los apellidos, la edad, las notas, la media y si el alumno está aprobado o suspenso.</li>
+</ul>
+<p><strong>Requisitos:</strong></p>
+<ol>
+<li>
+<p>Crear dos objetos de la clase <code>Alumno</code> con los siguientes datos:</p>
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Alumno 1</th>
+<th>Alumno 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nombre</td>
+<td>Laura</td>
+<td>Carlos</td>
+</tr>
+<tr>
+<td>Apellidos</td>
+<td>García López</td>
+<td>Martínez Ruiz</td>
+</tr>
+<tr>
+<td>Edad</td>
+<td>19</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Examen 1</td>
+<td>7</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Examen 2</td>
+<td>8</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Asignar las notas mediante el método correspondiente.</p>
+</li>
+<li>Calcular la media y comprobar si cada alumno está aprobado.</li>
+<li>Mostrar los datos y resultados académicos de ambos alumnos.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Info</p>
+<p>Es obligatorio el uso de <strong>clases, objetos, constructores, encapsulación, métodos y comentarios en <code>javadoc</code></strong> para obtener la máxima puntuación del ejercicio.</p>
+</div>
+</li>
+<li>
+<p><strong><abbr title="Actividades de profundización.">AP</abbr> 412</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr> / <abbr title="Se han escrito programas simples.">CE2b</abbr>, <abbr title="Se han utilizado métodos y propiedades de los objetos.">CE2d</abbr>, <abbr title="Se han escrito llamadas a métodos estáticos.">CE2e</abbr>, <abbr title="Se han utilizado parámetros en la llamada a métodos.">CE2f</abbr>, <abbr title="Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples.">CE2i</abbr>  / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 3p). Desarrolla un programa modular que trabaje con cadenas de texto:</p>
 <ul>
 <li>Crea un método <code>contarVocales(String texto)</code> que devuelva cuántas vocales contiene una cadena.</li>
 <li>Crea un método <code>invertirCadena(String texto)</code> que devuelva la cadena invertida.</li>
 <li>Crea un método <code>esPalindromo(String texto)</code> que devuelva true si la cadena es palíndroma.</li>
-<li>Implementa un menú que permita al usuario introducir una cadena y elegir qué operación realizar.</li>
-</ul>
-</li>
-<li>
-<p><strong><abbr title="Actividades de profundización.">AP</abbr> 410</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr> / <abbr title="Se han escrito programas simples.">CE2b</abbr>, <abbr title="Se han utilizado métodos y propiedades de los objetos.">CE2d</abbr>, <abbr title="Se han escrito llamadas a métodos estáticos.">CE2e</abbr>, <abbr title="Se han utilizado parámetros en la llamada a métodos.">CE2f</abbr>, <abbr title="Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples.">CE2i</abbr>  / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 3p). Desarrolla un programa que trabaje con funciones matemáticas y retorno de valores:</p>
-<ul>
-<li>Implementa un método <code>calcularAreaCirculo(double radio)</code> que devuelva el área de un círculo.</li>
-<li>Implementa un método <code>calcularPerimetroCirculo(double radio)</code> que devuelva su perímetro.</li>
-<li>Implementa un método <code>mostrarResultados(double radio)</code> que, usando los dos métodos anteriores, muestre en pantalla el área y el perímetro.</li>
-<li>En el main, pide el valor del radio al usuario y llama a <code>mostrarResultados(radio)</code>.</li>
-</ul>
-</li>
-<li>
-<p><strong><abbr title="Actividades de profundización.">AP</abbr> 411</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr> / <abbr title="Se han escrito programas simples.">CE2b</abbr>, <abbr title="Se han utilizado métodos y propiedades de los objetos.">CE2d</abbr>, <abbr title="Se han escrito llamadas a métodos estáticos.">CE2e</abbr>, <abbr title="Se han utilizado parámetros en la llamada a métodos.">CE2f</abbr>, <abbr title="Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples.">CE2i</abbr>  / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 3p). Crea un programa modular que analice una cadena introducida por el usuario y permita:</p>
-<ul>
 <li>Crea un método <code>contarLetras(String texto)</code> que devuelva el número total de letras (sin contar espacios).</li>
-<li>Crea un método <code>contarVocales(String texto)</code> que devuelva el número de vocales que contiene.</li>
 <li>Crea un método <code>mayusculas(String texto)</code> que devuelva la cadena en mayúsculas.</li>
 <li>Crea un método <code>invertirCadena(String texto)</code> que devuelva el texto invertido.</li>
 <li>Desde el <code>main</code>, pide al usuario que introduzca una frase y muestra los resultados de todos los métodos anteriores.</li>
 </ul>
 </li>
 <li>
-<p><strong><abbr title="Actividades de profundización.">AP</abbr> 412</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr> / <abbr title="Se han escrito programas simples.">CE2b</abbr>, <abbr title="Se han utilizado métodos y propiedades de los objetos.">CE2d</abbr>, <abbr title="Se han escrito llamadas a métodos estáticos.">CE2e</abbr>, <abbr title="Se han utilizado parámetros en la llamada a métodos.">CE2f</abbr>, <abbr title="Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples.">CE2i</abbr>  / <abbr title="Escala de valores.">IC1</abbr> / 3p). Desarrolla un programa modular que ayude al usuario a realizar cálculos científicos simples. </p>
+<p><strong><abbr title="Actividades de profundización.">AP</abbr> 413</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr> / <abbr title="Se han escrito programas simples.">CE2b</abbr>, <abbr title="Se han utilizado métodos y propiedades de los objetos.">CE2d</abbr>, <abbr title="Se han escrito llamadas a métodos estáticos.">CE2e</abbr>, <abbr title="Se han utilizado parámetros en la llamada a métodos.">CE2f</abbr>, <abbr title="Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples.">CE2i</abbr>  / <abbr title="Escala de valores.">IC1</abbr> / 3p). Desarrolla un programa modular que ayude al usuario a realizar cálculos científicos simples. </p>
 <ul>
 <li>
 <p>Crea los siguientes métodos:</p>
@@ -2532,31 +2661,6 @@
 </li>
 <li>Cada opción debe pedir los datos necesarios, invocar al método correspondiente y mostrar el resultado.</li>
 <li>Utiliza la clase <code>Math</code> para las operaciones (<code>Math.pow()</code>, <code>Math.sqrt()</code>, <code>Math.abs()</code>).</li>
-<li><strong><abbr title="Actividades de refuerzo.">AR</abbr> 413</strong> (<abbr title="Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.">RA2</abbr> / <abbr title="Se han escrito programas simples.">CE2b</abbr>, <abbr title="Se han utilizado métodos y propiedades de los objetos.">CE2d</abbr>, <abbr title="Se han escrito llamadas a métodos estáticos.">CE2e</abbr>, <abbr title="Se han utilizado parámetros en la llamada a métodos.">CE2f</abbr>, <abbr title="Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples.">CE2i</abbr>  / <abbr title="Escala de valores.">IC1</abbr> / 3p). A partir del siguiente código:</li>
-</ul>
-<p></p><div class="language-java highlight"><pre><span></span><code><span id="__span-24-1"><span class="linenos" data-linenos=" 1 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
-</span><span id="__span-24-2"><span class="linenos" data-linenos=" 2 "></span>
-</span><span id="__span-24-3"><span class="linenos" data-linenos=" 3 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Calculadora</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-24-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-24-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-</span><span id="__span-24-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Introduce un número:"</span><span class="p">);</span>
-</span><span id="__span-24-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-</span><span id="__span-24-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Introduce otro número:"</span><span class="p">);</span>
-</span><span id="__span-24-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-</span><span id="__span-24-10"><span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"La suma es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
-</span><span id="__span-24-11"><span class="linenos" data-linenos="11 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"La resta es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
-</span><span id="__span-24-12"><span class="linenos" data-linenos="12 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"La multiplicación es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
-</span><span id="__span-24-13"><span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"La división es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
-</span><span id="__span-24-14"><span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-24-15"><span class="linenos" data-linenos="15 "></span><span class="p">}</span>
-</span></code></pre></div>
-Realiza las siguientes tareas:<p></p>
-<ul>
-<li>Identifica las tareas repetidas o que puedan modularizarse.</li>
-<li>Crea los métodos necesarios (<code>leerNumero</code>, <code>sumar</code>, <code>restar</code>, <code>multiplicar</code>, <code>dividir</code>, <code>mostrarResultado…</code>), de forma que el main solo coordine las llamadas.</li>
-<li>Documenta cada método con comentarios tipo <em>Javadoc</em> explicando qué hace, qué parámetros recibe y qué devuelve.</li>
-<li>Valida los datos: controla la división entre cero mediante un método auxiliar.</li>
-<li>Comprueba que el programa sigue funcionando igual tras la modularización.</li>
 </ul>
 </li>
 </ul>
