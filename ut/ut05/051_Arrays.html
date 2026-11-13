@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#arrays" class="md-skip">
+        <a href="#ut-05-arrays-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1547,6 +1547,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#declaracion" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1558,22 +1569,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instancia" class="md-nav__link">
+  <a href="#instanciacion-creacion-del-array" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Instancia
+        Instanciación (creación del array)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Instancia">
+    <nav class="md-nav" aria-label="Instanciación (creación del array)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#diferencia-entre-la-referencia-y-el-contenido-del-array" class="md-nav__link">
+  <a href="#diferencia-entre-referencia-y-contenido-del-array" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Diferencia entre la referencia y el contenido del array.
+        Diferencia entre referencia y contenido del array
       
     </span>
   </a>
@@ -1724,78 +1735,196 @@
 
 
 
-<h1 id="arrays">Arrays<a class="headerlink" href="#arrays" title="Permanent link">¶</a></h1>
-<p>En programación, un array (o arreglo en español) es una estructura de datos que permite almacenar múltiples elementos del mismo tipo en una secuencia o lista. Los elementos de un array están organizados en posiciones indexadas, lo que significa que cada elemento tiene una posición o índice dentro del array, comenzando generalmente desde 0.</p>
-<p>Para acceder a cada elemento del array se utiliza el nombre del array y un índice que indica la posición que ocupa el elemento dentro del array. El índice se escribe entre corchetes [ ] y debe ser entero positivo. El <strong>primer elemento del array ocupa la posición 0</strong>, el segundo la posición 1, etc. En un <ins>array de n elementos el último ocupará la posición n-1</ins>.</p>
+<h1 id="ut-05-arrays-en-java"><abbr title="Unidad de Trabajo">UT</abbr> 05. Arrays en Java<a class="headerlink" href="#ut-05-arrays-en-java" title="Permanent link">¶</a></h1>
+<h2 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">¶</a></h2>
+<p>Un <strong>array</strong> (o arreglo) es una estructura de datos que permite almacenar <strong>varios elementos del mismo tipo</strong> bajo un único nombre. Cada elemento ocupa una posición identificada por un <strong>índice</strong>.</p>
+<p>En Java, los índices comienzan en <strong>0</strong>. Por tanto, en un array de <code>n</code> elementos, el primer índice es <code>0</code> y el último es <code>n - 1</code>.</p>
+<p>Para acceder a un elemento se escribe el nombre del array seguido del índice entre corchetes: <code>nombreArray[indice]</code>. El índice debe ser un número entero comprendido entre <code>0</code> y <code>n - 1</code>.</p>
 <figure>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut05/05_array.png" data-desc-position="bottom"><img alt="Array" src="../../img/ut05/05_array.png" width="500"></a>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut05/05_array.png" data-desc-position="bottom"><img alt="Array de notas" src="../../img/ut05/05_array.png" width="500"></a>
 </figure>
-<p>En el ejemplo anterior, <code>notas[0]</code> contiene la nota del primer alumno y <code>notas[19]</code> contiene la del último.</p>
+<p>En el ejemplo de la imagen, <code>notas[0]</code> corresponde al primer alumno y <code>notas[19]</code> al vigésimo alumno.</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo: posiciones de un array</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">notas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">};</span>
+</span><span id="__span-0-2"><span class="linenos" data-linenos="2 "></span>
+</span><span id="__span-0-3"><span class="linenos" data-linenos="3 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">notas</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span><span class="w"> </span><span class="c1">// 7: primer elemento</span>
+</span><span id="__span-0-4"><span class="linenos" data-linenos="4 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">notas</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span><span class="w"> </span><span class="c1">// 5: tercer elemento</span>
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Índice</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Valor</td>
+<td>7</td>
+<td>8</td>
+<td>5</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Importante</p>
+<p>En el ejemplo anterior, <code>notas[4]</code> <strong>no existe</strong>. Acceder a un índice fuera de los límites del array provoca una excepción <code>ArrayIndexOutOfBoundsException</code>.</p>
+</div>
 <h2 id="declaracion">Declaración<a class="headerlink" href="#declaracion" title="Permanent link">¶</a></h2>
-<p>En la declaración se crea la referencia al array. La referencia será el nombre con el que manejaremos el array en el programa. Se debe indicar el nombre del array y el tipo de datos que contendrá. De forma general, un array unidimensional se puede declarar en Java de cualquiera de las siguientes formas:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span><span class="n">tipo</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">nombreArray</span><span class="p">;</span>
-</span><span id="__span-0-2"><span class="linenos" data-linenos="2 "></span><span class="n">tipo</span><span class="w"> </span><span class="n">nombreArray</span><span class="o">[]</span><span class="p">;</span>
+<p>Declarar un array significa crear una <strong>variable de referencia</strong> que podrá apuntar a un array. La declaración, por sí sola, <strong>no crea los elementos</strong>.</p>
+<p>En Java se admiten estas dos formas:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos="1 "></span><span class="n">tipo</span><span class="o">[]</span><span class="w"> </span><span class="n">nombreArray</span><span class="p">;</span><span class="w">  </span><span class="c1">// Forma recomendada</span>
+</span><span id="__span-1-2"><span class="linenos" data-linenos="2 "></span><span class="n">tipo</span><span class="w"> </span><span class="n">nombreArray</span><span class="o">[]</span><span class="p">;</span><span class="w">  </span><span class="c1">// Forma válida, menos habitual</span>
 </span></code></pre></div>
 <ul>
-<li>tipo: indica el tipo de datos que contendrá. Aun array puede contener elementos de tipo básico o primitivo o referencias a objetos.</li>
-<li>nombreArray: es la referencia al array. Es el nombre que se usará en el programa para manejarlo.</li>
+<li><strong><code>tipo</code></strong>: tipo de los elementos (<code>int</code>, <code>double</code>, <code>char</code>, <code>boolean</code>, <code>String</code>, etc.).</li>
+<li><strong><code>nombreArray</code></strong>: nombre de la variable con la que se manejará el array.</li>
 </ul>
 <div class="admonition example">
-<p class="admonition-title">Ejemplos de arrays</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">ventas</span><span class="p">;</span><span class="w"> </span><span class="c1">// array de datos de tipo int llamado ventas</span>
-</span><span id="__span-1-2"><span class="linenos" data-linenos="2 "></span><span class="kt">double</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">temperaturas</span><span class="p">;</span><span class="w"> </span><span class="c1">// array de datos de tipo double llamado temperaturas</span>
-</span><span id="__span-1-3"><span class="linenos" data-linenos="3 "></span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">nombres</span><span class="p">;</span><span class="w"> </span><span class="c1">// array de tipo String llamado nombres</span>
+<p class="admonition-title">Ejemplos de declaración</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">ventas</span><span class="p">;</span><span class="w">            </span><span class="c1">// Números enteros</span>
+</span><span id="__span-2-2"><span class="linenos" data-linenos="2 "></span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">temperaturas</span><span class="p">;</span><span class="w">   </span><span class="c1">// Números decimales</span>
+</span><span id="__span-2-3"><span class="linenos" data-linenos="3 "></span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">nombres</span><span class="p">;</span><span class="w">        </span><span class="c1">// Cadenas de texto</span>
+</span><span id="__span-2-4"><span class="linenos" data-linenos="4 "></span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">letrasDni</span><span class="p">;</span><span class="w">        </span><span class="c1">// Caracteres</span>
 </span></code></pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">A tener en cuenta</p>
-<p>En un array podemos almacenar cualquier tipo de elementos, desde un byte a un objeto. Aunque la <abbr title="Programación Orientada a Objetos">POO</abbr> se inicia en la <abbr title="Unidad de Trabajo">UT</abbr> 06, es importante que vayáis teniendo esto en cuenta.</p>
+<p>Un array puede almacenar valores de tipos primitivos o referencias a objetos, como <code>String</code>. <strong>Todos sus elementos deben ser compatibles con el tipo declarado</strong>.</p>
 </div>
-<h2 id="instancia">Instancia<a class="headerlink" href="#instancia" title="Permanent link">¶</a></h2>
-<p>Mediante la instanciación se reserva un bloque de memoria para almacenar todos los elementos del array. La dirección donde comienza el bloque de memoria donde se almacenará el array se asigna al nombre del array. De forma general:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos="1 "></span><span class="n">nombreArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">tipo</span><span class="o">[</span><span class="n">tamaño</span><span class="o">]</span><span class="p">;</span>
-</span><span id="__span-2-2"><span class="linenos" data-linenos="2 "></span><span class="n">ventas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">//se reserva memoria para 5 enteros y se asigna la dirección de inicio del array a ventas.</span>
+<h2 id="instanciacion-creacion-del-array">Instanciación (creación del array)<a class="headerlink" href="#instanciacion-creacion-del-array" title="Permanent link">¶</a></h2>
+<p>Para crear el array y reservar espacio para sus elementos se utiliza <code>new</code>:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><span class="linenos" data-linenos="1 "></span><span class="n">nombreArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">tipo</span><span class="o">[</span><span class="n">tamaño</span><span class="o">]</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Por ejemplo:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">ventas</span><span class="p">;</span><span class="w">        </span><span class="c1">// Declaración de la referencia</span>
+</span><span id="__span-4-2"><span class="linenos" data-linenos="2 "></span><span class="n">ventas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// Creación de un array de 5 enteros</span>
 </span></code></pre></div>
 <ul>
-<li>nombreArray: es el nombre creado en la declaración.</li>
-<li>tipo: indica el tipo de datos que contiene.</li>
-<li>tamaño: es el número de elementos del array. Debe ser una expresión entera positiva. El tamaño del array no se puede modificar durante la ejecución del programa.</li>
-<li>new: operador para crear objetos. Mediante new se asigna la memoria necesaria para ubicar el objeto. Java implementa los arrays como objetos.</li>
+<li><strong><code>new</code></strong>: crea el array en memoria.</li>
+<li><strong><code>tipo</code></strong>: indica qué tipo de elementos almacenará.</li>
+<li><strong><code>tamaño</code></strong>: número de elementos que tendrá el array.</li>
 </ul>
-<p>Lo normal es que la declaración y la instanciación se hagan en una sola instrucción:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><span class="linenos" data-linenos="1 "></span><span class="n">tipo</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">nombreArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">tipo</span><span class="o">[</span><span class="n">tamaño</span><span class="o">]</span><span class="p">;</span>
-</span><span id="__span-3-2"><span class="linenos" data-linenos="2 "></span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+<p>El tamaño debe ser un valor entero <strong>mayor o igual que 0</strong>. Una vez creado el array, su tamaño es fijo: no se puede ampliar ni reducir.</p>
+<p>Lo habitual es declarar y crear el array en una sola instrucción:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
 </span></code></pre></div>
-<p>El tamaño del array también se puede indicar durante la ejecución del programa, es decir, en tiempo de ejecución se puede pedir por teclado el tamaño del array y crearlo:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><span class="linenos" data-linenos="1 "></span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-</span><span id="__span-4-2"><span class="linenos" data-linenos="2 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Número de elementos del array: "</span><span class="p">);</span>
-</span><span id="__span-4-3"><span class="linenos" data-linenos="3 "></span><span class="kt">int</span><span class="w"> </span><span class="n">numeroElementos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-</span><span id="__span-4-4"><span class="linenos" data-linenos="4 "></span><span class="kt">int</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">numeroElementos</span><span class="o">]</span><span class="p">;</span>
+<p>También podemos decidir el tamaño durante la ejecución, por ejemplo, preguntándolo por teclado:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-6-1"><span class="linenos" data-linenos=" 1 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+</span><span id="__span-6-2"><span class="linenos" data-linenos=" 2 "></span>
+</span><span id="__span-6-3"><span class="linenos" data-linenos=" 3 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EjemploArray</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+</span><span id="__span-6-6"><span class="linenos" data-linenos=" 6 "></span>
+</span><span id="__span-6-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Número de elementos del array: "</span><span class="p">);</span>
+</span><span id="__span-6-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">numeroElementos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+</span><span id="__span-6-9"><span class="linenos" data-linenos=" 9 "></span>
+</span><span id="__span-6-10"><span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numeroElementos</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-11"><span class="linenos" data-linenos="11 "></span><span class="w">            </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">numeroElementos</span><span class="o">]</span><span class="p">;</span>
+</span><span id="__span-6-12"><span class="linenos" data-linenos="12 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Array creado correctamente."</span><span class="p">);</span>
+</span><span id="__span-6-13"><span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-14"><span class="linenos" data-linenos="14 "></span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Introduce un número mayor que cero."</span><span class="p">);</span>
+</span><span id="__span-6-15"><span class="linenos" data-linenos="15 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-6-16"><span class="linenos" data-linenos="16 "></span>
+</span><span id="__span-6-17"><span class="linenos" data-linenos="17 "></span><span class="w">        </span><span class="n">sc</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</span><span id="__span-6-18"><span class="linenos" data-linenos="18 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-6-19"><span class="linenos" data-linenos="19 "></span><span class="p">}</span>
 </span></code></pre></div>
-<div class="admonition danger">
+<div class="admonition warning">
 <p class="admonition-title">Cuidado</p>
-<p>Si no hay memoria suficiente para crear el array, new lanza una excepción <code>java.lang.OutOfMemoryError</code>. El manejo de excepciones lo veremos mucho más adelante, en la <abbr title="Unidad de Trabajo">UT</abbr> 08.</p>
+<p>Un tamaño negativo provoca <code>NegativeArraySizeException</code>. Si no hay memoria suficiente para crear el array, puede producirse <code>OutOfMemoryError</code>. El tratamiento de errores y excepciones se estudiará más adelante.</p>
 </div>
-<h3 id="diferencia-entre-la-referencia-y-el-contenido-del-array">Diferencia entre la referencia y el contenido del array.<a class="headerlink" href="#diferencia-entre-la-referencia-y-el-contenido-del-array" title="Permanent link">¶</a></h3>
-<p>Debe quedar clara la diferencia entre la referencia (manejador del array o nombre del array) y el contenido del array. El nombre del array contiene la dirección de memoria del contenido del array.</p>
+<h3 id="diferencia-entre-referencia-y-contenido-del-array">Diferencia entre referencia y contenido del array<a class="headerlink" href="#diferencia-entre-referencia-y-contenido-del-array" title="Permanent link">¶</a></h3>
+<p>La <strong>referencia</strong> es la variable con la que accedemos al array. El <strong>contenido</strong> son los elementos almacenados en el objeto array.</p>
 <figure>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut05/01_ValorReferencia.png" data-desc-position="bottom"><img alt="Diferencia entre la referencia y el contenido del array" src="../../img/ut05/01_ValorReferencia.png" width="500"></a>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut05/01_ValorReferencia.png" data-desc-position="bottom"><img alt="Referencia y contenido de un array" src="../../img/ut05/01_ValorReferencia.png" width="500"></a>
 </figure>
-<h2 id="inicializacion">Inicialización<a class="headerlink" href="#inicializacion" title="Permanent link">¶</a></h2>
-<p>Un array es un objeto, por lo tanto, cuando se crea, a sus elementos se les asigna
-automáticamente un valor inicial:</p>
-<ul>
-<li>0 para arrays numéricos.</li>
-<li><code>\u0000</code> o <code>\0</code> (carácter nulo) para arrays de caracteres.</li>
-<li><code>false</code> para arrays booleanos.</li>
-<li><code>null</code> para arrays de String y de referencias a objetos.</li>
-</ul>
-<p>También podemos dar otros valores iniciales al array cuando se crea. Los valores iniciales se escriben entre llaves separados por comas. Los valores iniciales deberán aparecer en el orden en que serán asignados a los elementos del array. <strong>El número de valores determina el tamaño del array</strong>. </p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><span class="linenos" data-linenos="1 "></span><span class="c1">//creación de un array de 4 elementos booleanos</span>
-</span><span id="__span-5-2"><span class="linenos" data-linenos="2 "></span><span class="kt">boolean</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">resultados</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="kc">true</span><span class="p">,</span><span class="kc">false</span><span class="p">,</span><span class="kc">true</span><span class="p">,</span><span class="kc">false</span><span class="p">};</span>
-</span><span id="__span-5-3"><span class="linenos" data-linenos="3 "></span><span class="c1">//creación de un array de 7 elementos de tipo String</span>
-</span><span id="__span-5-4"><span class="linenos" data-linenos="4 "></span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">dias</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">"Lunes"</span><span class="p">,</span><span class="w"> </span><span class="s">"Martes"</span><span class="p">,</span><span class="w"> </span><span class="s">"Miércoles"</span><span class="p">,</span><span class="w"> </span><span class="s">"Jueves"</span><span class="p">,</span><span class="w"> </span><span class="s">"Viernes"</span><span class="p">,</span><span class="w"> </span><span class="s">"Sábado"</span><span class="p">,</span><span class="w"> </span><span class="s">"Domingo"</span><span class="p">};</span>
+<p>Por ejemplo:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-7-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">edades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span>
 </span></code></pre></div>
+<ul>
+<li><code>edades</code> es la variable que contiene una <strong>referencia</strong> al array.</li>
+<li><code>new int[3]</code> crea el array con espacio para tres enteros.</li>
+<li><code>edades[0]</code>, <code>edades[1]</code> y <code>edades[2]</code> son sus elementos.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Precisión</p>
+<p>Una referencia permite localizar el objeto array, pero en Java no se manipula directamente su dirección de memoria.</p>
+</div>
+<h2 id="inicializacion">Inicialización<a class="headerlink" href="#inicializacion" title="Permanent link">¶</a></h2>
+<p>Cuando creamos un array con <code>new</code>, Java asigna automáticamente un <strong>valor predeterminado</strong> a cada elemento:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo de elemento</th>
+<th>Valor inicial</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>byte</code>, <code>short</code>, <code>int</code>, <code>long</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>float</code>, <code>double</code></td>
+<td><code>0.0</code></td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td><code>'\u0000'</code> (carácter nulo)</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>String</code> y otras referencias a objetos</td>
+<td><code>null</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Inicialización automática</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-8-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">notas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span>
+</span><span id="__span-8-2"><span class="linenos" data-linenos="2 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">notas</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span><span class="w"> </span><span class="c1">// 0</span>
+</span><span id="__span-8-3"><span class="linenos" data-linenos="3 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">notas</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">);</span><span class="w"> </span><span class="c1">// 0</span>
+</span><span id="__span-8-4"><span class="linenos" data-linenos="4 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">notas</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span><span class="w"> </span><span class="c1">// 0</span>
+</span></code></pre></div>
+</div>
+<p>También podemos <strong>asignar valores iniciales al declarar el array</strong>, escribiéndolos entre llaves y separados por comas. En este caso, el número de valores determina el tamaño del array.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-9-1"><span class="linenos" data-linenos="1 "></span><span class="c1">// Array de 4 valores booleanos</span>
+</span><span id="__span-9-2"><span class="linenos" data-linenos="2 "></span><span class="kt">boolean</span><span class="o">[]</span><span class="w"> </span><span class="n">resultados</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">};</span>
+</span><span id="__span-9-3"><span class="linenos" data-linenos="3 "></span>
+</span><span id="__span-9-4"><span class="linenos" data-linenos="4 "></span><span class="c1">// Array de 7 cadenas de texto</span>
+</span><span id="__span-9-5"><span class="linenos" data-linenos="5 "></span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">dias</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-6"><span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="s">"Lunes"</span><span class="p">,</span><span class="w"> </span><span class="s">"Martes"</span><span class="p">,</span><span class="w"> </span><span class="s">"Miércoles"</span><span class="p">,</span><span class="w"> </span><span class="s">"Jueves"</span><span class="p">,</span>
+</span><span id="__span-9-7"><span class="linenos" data-linenos="7 "></span><span class="w">    </span><span class="s">"Viernes"</span><span class="p">,</span><span class="w"> </span><span class="s">"Sábado"</span><span class="p">,</span><span class="w"> </span><span class="s">"Domingo"</span>
+</span><span id="__span-9-8"><span class="linenos" data-linenos="8 "></span><span class="p">};</span>
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo completo: declarar, crear e inicializar</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-10-1"><span class="linenos" data-linenos="1 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EjemploNotas</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-3"><span class="linenos" data-linenos="3 "></span><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">notas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">};</span>
+</span><span id="__span-10-4"><span class="linenos" data-linenos="4 "></span>
+</span><span id="__span-10-5"><span class="linenos" data-linenos="5 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Primera nota: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">notas</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+</span><span id="__span-10-6"><span class="linenos" data-linenos="6 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Segunda nota: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">notas</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">);</span>
+</span><span id="__span-10-7"><span class="linenos" data-linenos="7 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Última nota: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">notas</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span><span class="p">);</span>
+</span><span id="__span-10-8"><span class="linenos" data-linenos="8 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-9"><span class="linenos" data-linenos="9 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Salida:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><span class="linenos" data-linenos="1 "></span>Primera nota: 7
+</span><span id="__span-11-2"><span class="linenos" data-linenos="2 "></span>Segunda nota: 8
+</span><span id="__span-11-3"><span class="linenos" data-linenos="3 "></span>Última nota: 9
+</span></code></pre></div>
+</div>
 <h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">¶</a></h2>
 <ul>
 <li>
