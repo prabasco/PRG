@@ -1819,28 +1819,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-errores-frecuentes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        9. Errores frecuentes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-resumen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        10. Resumen
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#actividades" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2380,92 +2358,6 @@
 </span><span id="__span-31-27"><span class="linenos" data-linenos="27 "></span><span class="p">}</span>
 </span></code></pre></div>
 <p>Se asignan las tres posiciones de forma explícita para centrar el ejemplo en la inicialización. <code>Locale.US</code> establece el punto como separador decimal en la lectura.</p>
-<h2 id="9-errores-frecuentes">9. Errores frecuentes<a class="headerlink" href="#9-errores-frecuentes" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>Error</th>
-<th>Causa</th>
-<th>Forma correcta</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>int[3] datos;</code></td>
-<td>El tamaño no se indica en el tipo de la variable.</td>
-<td><code>int[] datos = new int[3];</code></td>
-</tr>
-<tr>
-<td>Utilizar una variable local tras escribir solo <code>int[] datos;</code></td>
-<td>No tiene una referencia asignada.</td>
-<td>Crear o asignar el array antes de usarla.</td>
-</tr>
-<tr>
-<td><code>datos = {1, 2};</code> después de declarar</td>
-<td>Las llaves solas no son una expresión de asignación.</td>
-<td><code>datos = new int[] {1, 2};</code></td>
-</tr>
-<tr>
-<td><code>new int[2] {1, 2}</code></td>
-<td>Mezcla tamaño explícito e inicializador.</td>
-<td><code>new int[] {1, 2}</code></td>
-</tr>
-<tr>
-<td><code>datos.length()</code></td>
-<td><code>length</code> es una propiedad del array.</td>
-<td><code>datos.length</code></td>
-</tr>
-<tr>
-<td>Acceder a <code>datos[datos.length]</code></td>
-<td>El último índice es el tamaño menos uno.</td>
-<td><code>datos[datos.length - 1]</code>, si no está vacío.</td>
-</tr>
-<tr>
-<td>Esperar <code>""</code> en <code>new String[2]</code></td>
-<td>Las referencias se inicializan a <code>null</code>.</td>
-<td>Asignar <code>""</code> explícitamente si se necesita.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="10-resumen">10. Resumen<a class="headerlink" href="#10-resumen" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>Necesidad</th>
-<th>Sintaxis</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Declarar una referencia</td>
-<td><code>int[] datos;</code></td>
-</tr>
-<tr>
-<td>Crear con valores predeterminados</td>
-<td><code>int[] datos = new int[3];</code></td>
-</tr>
-<tr>
-<td>Crear con valores conocidos</td>
-<td><code>int[] datos = {10, 20, 30};</code></td>
-</tr>
-<tr>
-<td>Asignar un array nuevo tras declarar</td>
-<td><code>datos = new int[] {10, 20, 30};</code></td>
-</tr>
-<tr>
-<td>Asignar un valor a una posición</td>
-<td><code>datos[0] = 10;</code></td>
-</tr>
-<tr>
-<td>Consultar el número de elementos</td>
-<td><code>datos.length</code></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition tip">
-<p class="admonition-title">Idea clave</p>
-<p>Declarar una variable de tipo array no crea el objeto. Al crear el array, Java inicializa todos sus elementos. Si proporcionamos una lista de valores, esa lista determina su tamaño y su contenido inicial.</p>
-</div>
 <h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">¶</a></h2>
 <ul>
 <li>
