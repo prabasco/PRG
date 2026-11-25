@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#array-de-caracteres" class="md-skip">
+        <a href="#arrays-de-caracteres-y-de-cadenas-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1552,6 +1552,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.3. Array de caracteres
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="053_ArrayCaracteres.html" class="md-nav__link md-nav__link--active">
         
   
@@ -1568,6 +1586,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#array-de-caracteres-char" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Array de caracteres (char[])
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array-de-cadenas-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Array de cadenas (String[])
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1626,13 +1685,58 @@
 
 
 
-<h1 id="array-de-caracteres">Array de caracteres<a class="headerlink" href="#array-de-caracteres" title="Permanent link">¶</a></h1>
-<p>Un array de caracteres es un array que contiene datos de tipo char. Los arrays de caracteres en Java se crean de forma similar a un array unidimensional de cualquier otro tipo de datos. A diferencia de los demás arrays, se puede mostrar el contenido completo de un array de caracteres mediante una sola instrucción <code>print</code> o <code>printf</code>.</p>
+<h1 id="arrays-de-caracteres-y-de-cadenas-en-java">Arrays de caracteres y de cadenas en Java<a class="headerlink" href="#arrays-de-caracteres-y-de-cadenas-en-java" title="Permanent link">¶</a></h1>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Qué contiene cada posición</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>char[]</code></td>
+<td>Un valor <code>char</code>, como una letra</td>
+<td><code>{'a', 'e', 'i'}</code></td>
+</tr>
+<tr>
+<td><code>String[]</code></td>
+<td>Una referencia a un texto, como un nombre completo</td>
+<td><code>{"Ana García", "Luis Pérez"}</code></td>
+</tr>
+</tbody>
+</table>
+<p>En ambos tipos, el primer índice es <code>0</code> y la propiedad <code>length</code> indica cuántas posiciones tiene el array.</p>
+<h2 id="array-de-caracteres-char">Array de caracteres (<code>char[]</code>)<a class="headerlink" href="#array-de-caracteres-char" title="Permanent link">¶</a></h2>
+<p>Los literales de tipo <code>char</code> se escriben con comillas simples. Para comparar dos valores <code>char</code> se usa <code>==</code>.</p>
 <figure>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut05/09_Caracteres.png" data-desc-position="bottom"><img alt="Método de selección" src="../../img/ut05/09_Caracteres.png" width="500"></a>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut05/09_Caracteres.png" data-desc-position="bottom"><img alt="Ejemplo de un array de caracteres en Java" src="../../img/ut05/09_Caracteres.png"></a>
 </figure>
-<p>Mostrará: <code>aeiou</code></p>
-<p>El resto de operaciones son las mismas que las vistas para el resto de arrays. A esto hay que sumarle todas las funciones propias que vimos en temas pasados para el manejo de <code>Strings</code>, siendo de especial relevancia los de comparación.</p>
+<p>Este ejemplo imprime todas las vocales juntas y comprueba si la primera es una <code>'a'</code>.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">vocales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="sc">'a'</span><span class="p">,</span><span class="w"> </span><span class="sc">'e'</span><span class="p">,</span><span class="w"> </span><span class="sc">'i'</span><span class="p">,</span><span class="w"> </span><span class="sc">'o'</span><span class="p">,</span><span class="w"> </span><span class="sc">'u'</span><span class="p">};</span>
+</span><span id="__span-0-2"><span class="linenos" data-linenos="2 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">vocales</span><span class="p">);</span><span class="w"> </span><span class="c1">// aeiou</span>
+</span><span id="__span-0-3"><span class="linenos" data-linenos="3 "></span>
+</span><span id="__span-0-4"><span class="linenos" data-linenos="4 "></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vocales</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">'a'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"La primera vocal es a"</span><span class="p">);</span>
+</span><span id="__span-0-6"><span class="linenos" data-linenos="6 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p><code>println</code> tiene una versión específica para <code>char[]</code> que escribe sus caracteres seguidos.</p>
+<h2 id="array-de-cadenas-string">Array de cadenas (<code>String[]</code>)<a class="headerlink" href="#array-de-cadenas-string" title="Permanent link">¶</a></h2>
+<p>Los textos literales se escriben con comillas dobles. Cada posición puede guardar un texto de distinta longitud, incluso con espacios. Si creas el array con <code>new String[3]</code>, las tres posiciones empiezan con el valor <code>null</code>.</p>
+<p>Este ejemplo cambia el segundo nombre y busca la posición donde aparece.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos="1 "></span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">nombres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">"Ana García"</span><span class="p">,</span><span class="w"> </span><span class="s">"Luis Pérez"</span><span class="p">,</span><span class="w"> </span><span class="s">"Marta López"</span><span class="p">};</span>
+</span><span id="__span-1-2"><span class="linenos" data-linenos="2 "></span><span class="n">nombres</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Lucía Ruiz"</span><span class="p">;</span>
+</span><span id="__span-1-3"><span class="linenos" data-linenos="3 "></span>
+</span><span id="__span-1-4"><span class="linenos" data-linenos="4 "></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nombres</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="s">"Lucía Ruiz"</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">nombres</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-6"><span class="linenos" data-linenos="6 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Encontrada en el índice "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"> </span><span class="c1">// 1</span>
+</span><span id="__span-1-7"><span class="linenos" data-linenos="7 "></span><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-1-8"><span class="linenos" data-linenos="8 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-9"><span class="linenos" data-linenos="9 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p><code>equals()</code> compara el contenido de dos cadenas. Con <code>String</code>, el operador <code>==</code> comprueba si ambas referencias apuntan al mismo objeto. <code>nombres.length</code> devuelve el número de posiciones (3) y <code>nombres[1].length()</code> devuelve la longitud del texto <code>"Lucía Ruiz"</code> (10).</p>
+<p>Para mostrar el array completo en una línea, usa <code>System.out.println(java.util.Arrays.toString(nombres));</code>.</p>
 <!-- Resultados de Aprendizaje & Criterios de Evaluación -->
 <!-- Instrumentos de Evaluación -->
 <!-- Instrumentos de Calificación -->
