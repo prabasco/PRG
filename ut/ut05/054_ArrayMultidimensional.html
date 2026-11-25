@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#arrays-multidimensionales" class="md-skip">
+        <a href="#arrays-multidimensionales-en-java" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1629,10 +1629,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#concepto-de-matriz" class="md-nav__link">
+  <a href="#matrices-y-arrays-de-arrays" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Concepto de matriz
+        Matrices y arrays de arrays
       
     </span>
   </a>
@@ -1640,10 +1640,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#inicializacion-de-matrices" class="md-nav__link">
+  <a href="#declarar-crear-e-inicializar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Inicialización de matrices
+        Declarar, crear e inicializar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recorrer-filas-y-columnas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recorrer filas y columnas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-completo-con-datos-de-teclado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo completo con datos de teclado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filas-de-distinta-longitud-y-mas-dimensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filas de distinta longitud y más dimensiones
       
     </span>
   </a>
@@ -1694,56 +1727,194 @@
 
 
 
-<h1 id="arrays-multidimensionales">Arrays multidimensionales<a class="headerlink" href="#arrays-multidimensionales" title="Permanent link">¶</a></h1>
-<h2 id="concepto-de-matriz">Concepto de matriz<a class="headerlink" href="#concepto-de-matriz" title="Permanent link">¶</a></h2>
-<p>Un array en Java puede tener más de una dimensión. El caso más general son los arrays bidimensionales también llamados matrices o tablas. La dimensión de un array la determina el número de índices necesarios para acceder a sus elementos. Los vectores que hemos visto hasta ahora son arrays unidimensionales porque solo utilizan un índice para acceder a cada elemento. Pero una matriz necesita dos índices para el acceso a sus elementos. </p>
-<p>Gráficamente podemos representar una matriz como una tabla de n filas y m columnas cuyos elementos son todos del mismo tipo. La siguiente figura representa un array denominado M de 3 filas y 5 columnas:</p>
+<h1 id="arrays-multidimensionales-en-java">Arrays multidimensionales en Java<a class="headerlink" href="#arrays-multidimensionales-en-java" title="Permanent link">¶</a></h1>
+<h2 id="matrices-y-arrays-de-arrays">Matrices y arrays de arrays<a class="headerlink" href="#matrices-y-arrays-de-arrays" title="Permanent link">¶</a></h2>
+<p>Hasta ahora hemos usado arrays de una dimensión, como <code>int[]</code>, en los que basta un índice para acceder a un valor. Un array bidimensional, como <code>int[][]</code>, utiliza dos índices. Podemos representarlo como una tabla en la que el primer índice identifica la fila y el segundo identifica la columna.</p>
+<p>La figura muestra una matriz <code>M</code> de 3 filas y 5 columnas.</p>
 <figure>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut05/10_Matriz.png" data-desc-position="bottom"><img alt="Método de selección" src="../../img/ut05/10_Matriz.png" width="500"></a>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut05/10_Matriz.png" data-desc-position="bottom"><img alt="Matriz M de tres filas y cinco columnas" src="../../img/ut05/10_Matriz.png"></a>
 </figure>
-<p>Pero en realidad una matriz en Java es un array de arrays. Gráficamente podemos representar la disposición real en memoria del array anterior así:</p>
+<p>En Java, un <code>int[][]</code> es un <strong>array de arrays</strong>. El array exterior guarda referencias a las filas, y cada fila es un <code>int[]</code>. El siguiente esquema representa esa relación.</p>
 <figure>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut05/11_Matriz.png" data-desc-position="bottom"><img alt="Método de selección" src="../../img/ut05/11_Matriz.png" width="500"></a>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/ut05/11_Matriz.png" data-desc-position="bottom"><img alt="El array exterior contiene referencias a los arrays de cada fila" src="../../img/ut05/11_Matriz.png"></a>
 </figure>
-<p>La longitud del array M (<code>M.lentgh</code>) es 3. La longitud de cada fila del array (<code>M[i].length</code>) es 5. Para acceder a cada elemento de la matriz se utilizan dos índices. El primero indica la fila y el segundo la columna. De esta forma vemos que el elemento <code>M[1][3]</code> tiene valor 8.
-Se crean de forma similar a los arrays unidimensionales, añadiendo un índice. Por ejemplo, para declarar una matriz de datos de tipo int llamada ventas de 4 filas y 6 columnas:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span>int [][] ventas = new int[4][6];
+<ul>
+<li><code>M.length</code> vale 3 y expresa el número de filas.</li>
+<li><code>M[1].length</code> vale 5 y expresa la longitud de la segunda fila.</li>
+<li><code>M[1][3]</code> vale 8 en la figura. Está en la segunda fila y la cuarta columna, porque ambos índices empiezan en 0.</li>
+</ul>
+<h2 id="declarar-crear-e-inicializar">Declarar, crear e inicializar<a class="headerlink" href="#declarar-crear-e-inicializar" title="Permanent link">¶</a></h2>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">ventas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">4</span><span class="o">][</span><span class="mi">6</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// 4 filas, 6 columnas por fila</span>
+</span><span id="__span-0-2"><span class="linenos" data-linenos="2 "></span><span class="n">ventas</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span><span class="w">             </span><span class="c1">// Primera fila, tercera columna</span>
+</span><span id="__span-0-3"><span class="linenos" data-linenos="3 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ventas</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span><span class="w"> </span><span class="c1">// 15</span>
 </span></code></pre></div>
-<h2 id="inicializacion-de-matrices">Inicialización de matrices<a class="headerlink" href="#inicializacion-de-matrices" title="Permanent link">¶</a></h2>
-<p>Un array es un objeto, por lo tanto, cuando se crea, a sus elementos se les asigna automáticamente un valor inicial.
-También podemos dar otros valores iniciales al array cuando se crea. Los valores iniciales se escriben entre llaves separados por comas. Los valores que se le asignen a cada fila aparecerán a su vez entre llaves separados por comas. El número de valores determina el tamaño de la matriz.</p>
-<p>Por ejemplo: <code>int [][] números = {{6,7,5}, {3, 8, 4}, {1,0,2}, {9,5,2}};</code></p>
-<p>se crea la matriz números de tipo int, de 4 filas y 3 columnas, y se le asignan esos valores iniciales.</p>
-<div class="admonition note">
-<p class="admonition-title">Recorriendo matrices</p>
-<p>Para recorrer una matriz se anidan dos bucles <code>for</code>. En general, para recorrer un array multidimensional se anidan tantas instrucciones <code>for</code> como dimensiones tenga el array.</p>
-<div class="language-java highlight"><span class="filename">Recorriendo matriz 4x4</span><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos="1 "></span><span class="w">  </span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">4</span><span class="o">][</span><span class="mi">4</span><span class="o">]</span><span class="p">;</span>
-</span><span id="__span-1-2"><span class="hll"><span class="linenos" data-linenos="2 "></span><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">matrix</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-</span></span><span id="__span-1-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"row "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" : "</span><span class="p">);</span>
-</span><span id="__span-1-4"><span class="hll"><span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">matrix</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
-</span></span><span id="__span-1-5"><span class="linenos" data-linenos="5 "></span><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"col "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"  "</span><span class="p">);</span>
-</span><span id="__span-1-6"><span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-1-7"><span class="linenos" data-linenos="7 "></span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-</span><span id="__span-1-8"><span class="linenos" data-linenos="8 "></span><span class="w">  </span><span class="p">}</span>
+<p>Al crear la matriz con <code>new int[4][6]</code>, Java crea las cuatro filas y llena sus posiciones con <code>0</code>. Los valores iniciales dependen del tipo de elemento.</p>
+<table>
+<thead>
+<tr>
+<th>Tipo de matriz</th>
+<th>Valor inicial de cada celda</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int[][]</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>double[][]</code></td>
+<td><code>0.0</code></td>
+</tr>
+<tr>
+<td><code>boolean[][]</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>String[][]</code></td>
+<td><code>null</code></td>
+</tr>
+</tbody>
+</table>
+<p>Si ya conoces los datos, inicializa cada fila entre llaves. En este ejemplo, cada fila representa un día y cada columna representa un producto.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">unidadesVendidas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="p">{</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">},</span>
+</span><span id="__span-1-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span>
+</span><span id="__span-1-4"><span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span>
+</span><span id="__span-1-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="p">{</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span>
+</span><span id="__span-1-6"><span class="linenos" data-linenos="6 "></span><span class="p">};</span>
 </span></code></pre></div>
-</div>
+<h2 id="recorrer-filas-y-columnas">Recorrer filas y columnas<a class="headerlink" href="#recorrer-filas-y-columnas" title="Permanent link">¶</a></h2>
+<p>El bucle exterior elige la fila. El interior recorre las columnas de esa fila. El salto de línea se hace al terminar cada fila.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos="1 "></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">fila</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">fila</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">unidadesVendidas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">fila</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">columna</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">columna</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">unidadesVendidas</span><span class="o">[</span><span class="n">fila</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">columna</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-3"><span class="linenos" data-linenos="3 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%4d"</span><span class="p">,</span><span class="w"> </span><span class="n">unidadesVendidas</span><span class="o">[</span><span class="n">fila</span><span class="o">][</span><span class="n">columna</span><span class="o">]</span><span class="p">);</span>
+</span><span id="__span-2-4"><span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+</span><span id="__span-2-6"><span class="linenos" data-linenos="6 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p>Para sumar las unidades de un producto, fija su columna y recorre las filas.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="w"> </span><span class="n">producto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Segundo producto</span>
+</span><span id="__span-3-2"><span class="linenos" data-linenos="2 "></span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-3-3"><span class="linenos" data-linenos="3 "></span>
+</span><span id="__span-3-4"><span class="linenos" data-linenos="4 "></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">dia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">dia</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">unidadesVendidas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">dia</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">unidadesVendidas</span><span class="o">[</span><span class="n">dia</span><span class="o">][</span><span class="n">producto</span><span class="o">]</span><span class="p">;</span>
+</span><span id="__span-3-6"><span class="linenos" data-linenos="6 "></span><span class="p">}</span>
+</span><span id="__span-3-7"><span class="linenos" data-linenos="7 "></span>
+</span><span id="__span-3-8"><span class="linenos" data-linenos="8 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">total</span><span class="p">);</span><span class="w"> </span><span class="c1">// 20</span>
+</span></code></pre></div>
+<p>Cuando el usuario elige un día del 1 al 4, valida el intervalo antes de acceder a la matriz. El índice correspondiente se obtiene con <code>diaElegido - 1</code>.</p>
+<h2 id="ejemplo-completo-con-datos-de-teclado">Ejemplo completo con datos de teclado<a class="headerlink" href="#ejemplo-completo-con-datos-de-teclado" title="Permanent link">¶</a></h2>
+<p>El programa registra las incidencias de cada aula en dos turnos. Las filas representan aulas, y las columnas representan los turnos de mañana y tarde. Un método recibe la matriz y calcula el total de un turno.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><span class="linenos" data-linenos=" 1 "></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+</span><span id="__span-4-2"><span class="linenos" data-linenos=" 2 "></span>
+</span><span id="__span-4-3"><span class="linenos" data-linenos=" 3 "></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RegistroIncidencias</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">teclado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+</span><span id="__span-4-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">incidencias</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span>
+</span><span id="__span-4-7"><span class="linenos" data-linenos=" 7 "></span>
+</span><span id="__span-4-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">aula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">aula</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">incidencias</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">aula</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">turno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">turno</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">incidencias</span><span class="o">[</span><span class="n">aula</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">turno</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-10"><span class="linenos" data-linenos="10 "></span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Aula %d, turno %d (1 mañana, 2 tarde): "</span><span class="p">,</span>
+</span><span id="__span-4-11"><span class="linenos" data-linenos="11 "></span><span class="w">                        </span><span class="n">aula</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">turno</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-4-12"><span class="linenos" data-linenos="12 "></span><span class="w">                </span><span class="n">incidencias</span><span class="o">[</span><span class="n">aula</span><span class="o">][</span><span class="n">turno</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">teclado</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+</span><span id="__span-4-13"><span class="linenos" data-linenos="13 "></span><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-4-14"><span class="linenos" data-linenos="14 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-4-15"><span class="linenos" data-linenos="15 "></span>
+</span><span id="__span-4-16"><span class="linenos" data-linenos="16 "></span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Incidencias de tarde: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">totalTurno</span><span class="p">(</span><span class="n">incidencias</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span>
+</span><span id="__span-4-17"><span class="linenos" data-linenos="17 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-18"><span class="linenos" data-linenos="18 "></span>
+</span><span id="__span-4-19"><span class="linenos" data-linenos="19 "></span><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">totalTurno</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">incidencias</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">turno</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-20"><span class="linenos" data-linenos="20 "></span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-4-21"><span class="linenos" data-linenos="21 "></span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">aula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">aula</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">incidencias</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">aula</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-22"><span class="linenos" data-linenos="22 "></span><span class="w">            </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">incidencias</span><span class="o">[</span><span class="n">aula</span><span class="o">][</span><span class="n">turno</span><span class="o">]</span><span class="p">;</span>
+</span><span id="__span-4-23"><span class="linenos" data-linenos="23 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-4-24"><span class="linenos" data-linenos="24 "></span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">total</span><span class="p">;</span>
+</span><span id="__span-4-25"><span class="linenos" data-linenos="25 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-26"><span class="linenos" data-linenos="26 "></span><span class="p">}</span>
+</span></code></pre></div>
+<p>Si introduces <code>2</code>, <code>4</code>, <code>1</code> y <code>3</code>, el programa muestra <code>Incidencias de tarde: 7</code>. Suma el segundo valor de cada fila.</p>
+<h2 id="filas-de-distinta-longitud-y-mas-dimensiones">Filas de distinta longitud y más dimensiones<a class="headerlink" href="#filas-de-distinta-longitud-y-mas-dimensiones" title="Permanent link">¶</a></h2>
+<p>Cada fila puede tener su propio tamaño. Por ejemplo, si dos grupos han realizado distinto número de pruebas, sus notas se pueden guardar así.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><span class="linenos" data-linenos="1 "></span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">notas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="p">{</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">},</span>
+</span><span id="__span-5-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="p">{</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">}</span>
+</span><span id="__span-5-4"><span class="linenos" data-linenos="4 "></span><span class="p">};</span>
+</span><span id="__span-5-5"><span class="linenos" data-linenos="5 "></span>
+</span><span id="__span-5-6"><span class="linenos" data-linenos="6 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">notas</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">);</span><span class="w"> </span><span class="c1">// 3</span>
+</span><span id="__span-5-7"><span class="linenos" data-linenos="7 "></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">notas</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2</span>
+</span></code></pre></div>
+<p>El recorrido con <code>matriz[fila].length</code> se adapta a cada fila creada. En este ejemplo, <code>notas[1][2]</code> provocaría una excepción porque la segunda fila solo tiene los índices 0 y 1.</p>
+<p>Con tres dimensiones se añade un tercer índice. Por ejemplo, <code>int[][][] stock = new int[2][3][4];</code> puede representar 2 almacenes, 3 estanterías por almacén y 4 huecos por estantería. <code>stock[0][2][1]</code> accede al segundo hueco de la tercera estantería del primer almacén.</p>
 <h2 id="actividad">Actividad<a class="headerlink" href="#actividad" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong><abbr title="Prácticas">PR</abbr> 513</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> /<abbr title="Se han escrito programas que utilicen matrices (arrays).">CE6a</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p) Se solicita crear la APP de los GymBros. Para ello vamos a usar una matriz en la que almacenaremos el progreso de una semana. La APP nos permitirá realizar las siguientes funciones:<ul>
-<li>Introducir peso diario, el día que se introduzca será la posición del array menos 1. Todos los días se introducirán todos los pesos de:<ul>
-<li>Back Squat</li>
-<li>Front Squat</li>
-<li>Bench Press</li>
-<li>Dead Lift</li>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 513</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> /<abbr title="Se han escrito programas que utilicen matrices (arrays).">CE6a</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p) Operaciones con matrices. Desarrolla un programa que analice dos matrices de <strong>5 filas x 5 columnas</strong>. Cada matriz contiene números enteros entre <strong>0 y 99</strong>, ambos incluidos.</p>
+<p>Usa estas matrices para probar el programa.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-6-1"><span class="linenos" data-linenos=" 1 "></span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">matrizA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="p">{</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w">  </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">83</span><span class="p">,</span><span class="w"> </span><span class="mi">29</span><span class="p">},</span>
+</span><span id="__span-6-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="p">{</span><span class="mi">56</span><span class="p">,</span><span class="w">  </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">72</span><span class="p">},</span>
+</span><span id="__span-6-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="p">{</span><span class="mi">91</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">53</span><span class="p">,</span><span class="w">  </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">37</span><span class="p">},</span>
+</span><span id="__span-6-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">46</span><span class="p">},</span>
+</span><span id="__span-6-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="p">{</span><span class="mi">73</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">62</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">  </span><span class="mi">5</span><span class="p">}</span>
+</span><span id="__span-6-7"><span class="linenos" data-linenos=" 7 "></span><span class="p">};</span>
+</span><span id="__span-6-8"><span class="linenos" data-linenos=" 8 "></span>
+</span><span id="__span-6-9"><span class="linenos" data-linenos=" 9 "></span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">matrizB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-10"><span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="p">{</span><span class="mi">40</span><span class="p">,</span><span class="w">  </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">65</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">88</span><span class="p">},</span>
+</span><span id="__span-6-11"><span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">76</span><span class="p">,</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">},</span>
+</span><span id="__span-6-12"><span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="p">{</span><span class="mi">58</span><span class="p">,</span><span class="w"> </span><span class="mi">43</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="mi">96</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">},</span>
+</span><span id="__span-6-13"><span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="p">{</span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">81</span><span class="p">,</span><span class="w">  </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">39</span><span class="p">,</span><span class="w"> </span><span class="mi">70</span><span class="p">},</span>
+</span><span id="__span-6-14"><span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="p">{</span><span class="mi">35</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w">  </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">67</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">}</span>
+</span><span id="__span-6-15"><span class="linenos" data-linenos="15 "></span><span class="p">};</span>
+</span></code></pre></div>
+<p>Para <strong>cada matriz</strong>, el programa debe mostrar los siguientes resultados.</p>
+<ul>
+<li><strong>Suma por filas.</strong> Suma los cinco elementos de cada fila y muestra su índice junto al resultado.</li>
+<li><strong>Valor mayor.</strong> Encuentra el mayor valor de cada fila y de toda la matriz.</li>
+<li><strong>Valor menor.</strong> Encuentra el menor valor de cada fila y de toda la matriz.</li>
+<li><strong>Suma de la diagonal principal.</strong> Suma los elementos que van de la esquina superior izquierda a la inferior derecha.</li>
+<li><strong>Suma de la diagonal inversa o secundaria.</strong> Suma los elementos que van de la esquina superior derecha a la inferior izquierda.</li>
+<li><strong>Promedio.</strong> Divide la suma de los 25 elementos entre el número de elementos y muestra el resultado con dos decimales.</li>
 </ul>
 </li>
-<li>La opción de ordenar los pesos por ejercicio, de menor a mayor de cada uno de
-los ejercicios y mostrarlo por pantalla.</li>
-<li>Calcular el RM de todos los ejercicios y mostrar el número del día de la semana original.</li>
-<li>Mostrar los días que has entrenado el ejercicio.</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Recomendaciones</p>
+<p>Implementa un método para cada operación. Cada método debe recibir un <code>int[][]</code> como parámetro. Utiliza los mismos métodos para analizar <code>matrizA</code> y <code>matrizB</code>. El promedio debe ser de tipo <code>double</code>.</p>
+</div>
+<ul>
+<li>
+<p><strong><abbr title="Prácticas">PR</abbr> 514</strong> (<abbr title="Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.">RA6</abbr> /<abbr title="Se han escrito programas que utilicen matrices (arrays).">CE6a</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p) Vamos a implementar el software para una máquina expendedora de golosinas.</p>
+<p>Cada golosina tiene un nombre y un precio. Para ahorrar tiempo, os paso los datos que tenéis que usar.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-7-1"><span class="linenos" data-linenos=" 1 "></span><span class="n">String</span><span class="o">[][]</span><span class="w"> </span><span class="n">nombresGolosinas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="p">{</span><span class="s">"KitKat"</span><span class="p">,</span><span class="w"> </span><span class="s">"Chicles de fresa"</span><span class="p">,</span><span class="w"> </span><span class="s">"Lacasitos"</span><span class="p">,</span><span class="w"> </span><span class="s">"Palotes"</span><span class="p">},</span>
+</span><span id="__span-7-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="p">{</span><span class="s">"Kinder Bueno"</span><span class="p">,</span><span class="w"> </span><span class="s">"Bolsa variada Haribo"</span><span class="p">,</span><span class="w"> </span><span class="s">"Chetoos"</span><span class="p">,</span><span class="w"> </span><span class="s">"Twix"</span><span class="p">},</span>
+</span><span id="__span-7-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="p">{</span><span class="s">"Kinder Bueno"</span><span class="p">,</span><span class="w"> </span><span class="s">"M&amp;M'S"</span><span class="p">,</span><span class="w"> </span><span class="s">"Papa Delta"</span><span class="p">,</span><span class="w"> </span><span class="s">"Chicles de menta"</span><span class="p">},</span>
+</span><span id="__span-7-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="p">{</span><span class="s">"Lacasitos"</span><span class="p">,</span><span class="w"> </span><span class="s">"Crunch"</span><span class="p">,</span><span class="w"> </span><span class="s">"Milkybar"</span><span class="p">,</span><span class="w"> </span><span class="s">"KitKat"</span><span class="p">}</span>
+</span><span id="__span-7-6"><span class="linenos" data-linenos=" 6 "></span><span class="p">};</span>
+</span><span id="__span-7-7"><span class="linenos" data-linenos=" 7 "></span>
+</span><span id="__span-7-8"><span class="linenos" data-linenos=" 8 "></span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">precio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="p">{</span><span class="mf">1.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.9</span><span class="p">},</span>
+</span><span id="__span-7-10"><span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="p">{</span><span class="mf">1.8</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span>
+</span><span id="__span-7-11"><span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="p">{</span><span class="mf">1.8</span><span class="p">,</span><span class="w"> </span><span class="mf">1.3</span><span class="p">,</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">},</span>
+</span><span id="__span-7-12"><span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="p">{</span><span class="mf">1.5</span><span class="p">,</span><span class="w"> </span><span class="mf">1.1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.1</span><span class="p">}</span>
+</span><span id="__span-7-13"><span class="linenos" data-linenos="13 "></span><span class="p">};</span>
+</span></code></pre></div>
+<p>Cada posición tendrá una cantidad inicial de 5 unidades.</p>
+<p>El menú tendrá las siguientes opciones.</p>
+<ul>
+<li><strong>Pedir golosina.</strong> Pide la posición de la golosina. Cada posición se identifica por su fila y su columna. Por ejemplo, si el usuario teclea <code>20</code>, está pidiendo la golosina de la fila 2, columna 0. Si no quedan unidades, avisa al usuario. En cada pedido solo se puede comprar una unidad y se supone que el usuario siempre tiene dinero. Reduce la cantidad disponible cuando se realice la compra.</li>
+<li><strong>Mostrar golosinas.</strong> Muestra el código, el nombre y el precio de cada golosina disponible. La cantidad se omite.</li>
+<li><strong>Rellenar golosinas.</strong> Esta opción es exclusiva del técnico. Pide una contraseña. Si el usuario escribe <code>Espeñetas2026</code>, pide la posición de la golosina y la cantidad.</li>
+<li><strong>Apagar máquina.</strong> Muestra las ventas totales durante la ejecución y termina el programa.</li>
+</ul>
+<p>El programa debe ser modular. Crea las funciones que necesites y agrupa en funciones las acciones que se repitan.</p>
 </li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Recomendaciones</p>
+<p>Las funciones deben ser lo más genéricas posibles.</p>
+<p>No se debe utilizar <abbr title="Programación Orientada a Objetos">POO</abbr> para este ejercicio.</p>
+</div>
 <!-- Resultados de Aprendizaje & Criterios de Evaluación -->
 <!-- Instrumentos de Evaluación -->
 <!-- Instrumentos de Calificación -->
